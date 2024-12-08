@@ -1,5 +1,6 @@
 ---
-title: Home 
+title: Prasanth | Data Scientist, Technologist, and Innovator 
+description: Welcome to Prasanth's official website. Discover insights on data science, AI, technology leadership, and personal projects that shape the future.
 ---
 *Welcome to My Blog (a.k.a. Digital Garden)*
 
