@@ -1,11 +1,9 @@
 ---
 longform:
   format: scenes
-  title: My first project
+  title: Blogs
   workflow: Default Workflow
   sceneFolder: /
-  scenes:
-    - Introduction
-  sceneTemplate: templates/chapter.md
+  scenes: []
   ignoredFiles: []
 ---

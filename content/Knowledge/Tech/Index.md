@@ -1,10 +1,9 @@
 ---
 longform:
   format: scenes
-  title: Knowledge
+  title: AI, ML, DS & SE
   workflow: Default Workflow
   sceneFolder: /
   scenes: []
-  sceneTemplate: templates/chapter.md
   ignoredFiles: []
 ---
