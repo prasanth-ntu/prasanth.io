@@ -8,3 +8,4 @@ longform:
   sceneTemplate: templates/chapter.md
   ignoredFiles: []
 ---
+[[Knowledge/Tech]]

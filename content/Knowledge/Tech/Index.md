@@ -7,3 +7,5 @@ longform:
   scenes: []
   ignoredFiles: []
 ---
+[[AI-ML-DS-and-SE Glossary]]
+[[Data Science Canvas - Rendered]]
