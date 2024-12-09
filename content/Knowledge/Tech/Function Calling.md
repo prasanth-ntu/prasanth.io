@@ -42,7 +42,7 @@ Function calling is useful for a large number of use cases, such as:
 # The lifecycle of a function call 
 ![Lifecycle of a function call](https://cdn.openai.com/API/docs/images/function-calling-diagram.png)
 
-![[content/Knowledge/Tech/attachments/What-is-Function-Calling.png]]
+![[content/Knowledge/Tech/attachments/images/What-is-Function-Calling.png]]
 
 # Function call mechanisms
 ## Vanilla OpenAI Function Calls
