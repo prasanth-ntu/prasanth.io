@@ -43,4 +43,9 @@ Here are some of the figures used by the author to support his claim.
 ![[Situational Awareness - Professional forecast made in 2021 for 2022.png]]
 *Figure: Gray: Professional forecasts, made in August 2021, for June 2022 performance on the MATH benchmark (difficult mathematics problems from high-school math competitions). Red star: actual state-of-the-art performance by June 2022, far exceeding even the upper range forecasters gave.*
 
+### *Compute*
 
+![[Situational Awareness - Estimates of compute for GPT-2 to GPT-4.png]]
+*Table: Estimates of compute in [[FLOPS|FLOP]] for [[GPT-2]] to [[GPT-4]] by Epoch AI.*
+
+![[GPT comparison]]
