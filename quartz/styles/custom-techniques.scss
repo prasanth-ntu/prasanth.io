@@ -1,0 +1,31 @@
+/* Responsive Grid Layout */
+.techniques-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .technique-card {
+    background-color: #1f1f1f; /* Dark background for cards */
+    color: #fff; /* Text color */
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .technique-card:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+  }
+  
+  @media (max-width: 600px) {
+    .technique-card {
+      font-size: 0.8rem;
+      padding: 0.8rem;
+    }
+  }

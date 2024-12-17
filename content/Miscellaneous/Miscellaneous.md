@@ -29,6 +29,10 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 - [ ] [The Checklist Manifesto: How to Get Things Right](https://www.goodreads.com/book/show/6667514-the-checklist-manifesto?from_search=true&from_srp=true&qid=UDkR6CkEjo&rank=1)
 
 # Blogs & Papers to read
+- [ ] [talk by @ilyasutat the Neural Information Processing Systems (December 10 - 15, 2024, Vancouver)](https://x.com/johnrushx/status/1867735273230282936?s=19)
+- [ ] Multimodal AI agents - Gemini 2.0 | Project Astra | Project Mariner (deepmind.google/gemini)
+- [ ] (https://www.linkedin.com/posts/armand-ruiz_this-project-got-more-than-11000-stars-on-activity-7273668186598785024-f0ji/?utm_source=share&utm_medium=member_android)
+- [ ] [LinkedIn Post by Prof on AI agents, and couple of other related stuff](https://www.linkedin.com/posts/zhou-jo-yu-95327378_this-is-the-time-of-year-when-my-inboxes-activity-7273367390971641857-Ex3O?utm_source=share&utm_medium=member_desktop)
 - [ ] [# Leopold Aschenbrenner's "Situational Awareness": AI from now to 2034](https://www.axios.com/2024/06/23/leopold-aschenbrenner-ai-future-silicon-valley)
 - [ ] [Against Netflix](https://www.forourposterity.com/against-netflix/)
 - [ ] https://www.jasonwei.net/thoughts
@@ -43,10 +47,13 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 - [ ] [Reinforcement Learning for Language Models](https://gist.github.com/yoavg/6bff0fecd65950898eba1bb321cfbd81)
 - [ ] [# Measuring the impact of post-training enhancements](https://metr.github.io/autonomy-evals-guide/elicitation-gap/)
 - [ ] [GPT-4o System Card](https://arxiv.org/pdf/2410.21276v1)
+- [ ] [Will we run out of data? Limits of LLM scaling based on human-generated data](https://arxiv.org/pdf/2211.04325)
 - [ ] [An Opinionated Guide to ML Research](http://joschu.net/blog/opinionated-guide-ml-research.html)
 - [ ] [# Advancing medical AI with Med-Gemin](https://research.google/blog/advancing-medical-ai-with-med-gemini/)
 - [ ] [Biocene thoughts](https://shelbyann.substack.com/)
-- [ ] [Introducing ChatGPT](https://openai.com/index/chatgpt/)
+- [ ] [Now Playing: Continuous low-power music recognition](https://arxiv.org/abs/1711.10958) - Arxiv
+	- [ ] https://research.google/blog/googles-next-generation-music-recognition/
+- [ ] [Introducing Chat. PT](https://openai.com/index/chatgpt/)
 - [ ] [Introducing Structured Outputs in the API](https://openai.com/index/introducing-structured-outputs-in-the-api/)
 - [ ] [OpenAI JSON Mode vs. Function Calling for Data Extraction](https://docs.llamaindex.ai/en/stable/examples/llm/openai_json_vs_function_calling/)
 - [ ] [Open AI function calling tutorial](https://www.datacamp.com/tutorial/open-ai-function-calling-tutorial)
@@ -76,6 +83,7 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 - [ ] [Hugging Face Course Workshops: Question Answering](https://www.youtube.com/watch?v=Ihgk8kGLpIE)
 - [ ] Dwarkesh podcast
 	- [ ] [Dario Amodei (Anthropic CEO) - Scaling, Alignment, & AI Progress](https://www.dwarkeshpatel.com/p/dario-amodei?open=false#%C2%A7transcript) - 
+	- [ ] [Will scaling work?](https://www.dwarkeshpatel.com/p/will-scaling-work)
 
 # Tools to try
 - [ ] [Introduction to NotebookLM](https://notebooklm.google.com/) by Google
