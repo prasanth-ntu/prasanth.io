@@ -11,18 +11,6 @@
 ![[Semiotic Management Systems.png]]
 Source: https://www.gapingvoid.com/semiotic-management-systems/
 
-# Obsidian Site Inspirations
-- [ ] https://www.youtube.com/watch?v=6s6DT1yN4dw&t=227s
-- [ ] https://yomaru.dev/projects
-- [ ] https://www.youtube.com/watch?v=ICpoyMv6KSs&t=600s
-- [ ] https://www.rcook.net/How-I-use-Obsidian,-Quartz,-Git-and-Apache-to-publish-these-notes
-- [ ] https://wfhbrian.com/obsidian/introducing-smart-chat-transform-your-obsidian-notes-into-interactive-ai-powered-conversations
-- [ ] https://oliverfalvai.com/Personal-changelog
-	- [ ] https://oliverfalvai.com/evergreen/obsidian-tips-and-tricks
-- [ ] https://tfthacker.com/article-obsidian-dashboardplusplus2022
-- [ ] https://hermitage.utsob.me/
-- [ ] https://collapsedwave.com/Machine-Learning/Autodiff
-
 # Books to read
 - [ ] [Situational Awareness: The Decade Ahead](https://www.forourposterity.com/situational-awareness-the-decade-ahead/) - #InProgress 
 - [ ] The Psychology of Money
