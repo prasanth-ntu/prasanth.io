@@ -7,11 +7,12 @@ tags:
   - LLM
   - IlyaSutskever
   - NeurIPS
-speakers: Ilya Sutskever
-sources: "[Youtube](https://www.youtube.com/watch?v=1yvBqasHLZs&lc=UgzXzpb6-xtqarqsnjF4AaABAg), [Twitter](https://x.com/vincentweisser/status/1867719020444889118?s=46&t=tEmhgZYSVl1JiqOPdrWljQ)"
+description: 'Summarised the key points from *Ilya Sutskever full talk "Sequence to sequence learning with neural networks: what a decade" at NeurIPS 2024 in Vancouver, Canada.*'
 ---
-Summarised the key points from *Ilya Sutskever full talk "Sequence to sequence learning with neural networks: what a decade" at NeurIPS 2024 in Vancouver, Canada.*
-
+|          |                                                                                                                                                                                        |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Speakers | Ilya Sutskever                                                                                                                                                                         |
+| Sources  | [Youtube](https://www.youtube.com/watch?v=1yvBqasHLZs&lc=UgzXzpb6-xtqarqsnjF4AaABAg), [Twitter](https://x.com/vincentweisser/status/1867719020444889118?s=46&t=tEmhgZYSVl1JiqOPdrWljQ) |
 > The overarching message is that while the original approach was revolutionary and led to tremendous progress, the field must evolve beyond current methods (e.g., pre-training) to achieve next-level AI capabilities (superintelligence, self-awareness, etc.).
 
 >  Interestingly, some of these points are corroborating with [[Situational Awareness]] written by *Leopold Aschenbrenner*

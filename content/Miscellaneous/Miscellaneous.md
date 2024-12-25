@@ -17,7 +17,8 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 - [ ] [The Checklist Manifesto: How to Get Things Right](https://www.goodreads.com/book/show/6667514-the-checklist-manifesto?from_search=true&from_srp=true&qid=UDkR6CkEjo&rank=1)
 
 # Blogs & Papers to read
-- [ ] [talk by @ilyasutat the Neural Information Processing Systems (December 10 - 15, 2024, Vancouver)](https://x.com/johnrushx/status/1867735273230282936?s=19)
+- [x] [talk by @ilyasutat the Neural Information Processing Systems (December 10 - 15, 2024, Vancouver)](https://x.com/johnrushx/status/1867735273230282936?s=19)
+- [ ] https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/ai_agent_tutorials/ai_medical_imaging_agent/ai_medical_imaging.py
 - [ ] Multimodal AI agents - Gemini 2.0 | Project Astra | Project Mariner (deepmind.google/gemini)
 - [ ] (https://www.linkedin.com/posts/armand-ruiz_this-project-got-more-than-11000-stars-on-activity-7273668186598785024-f0ji/?utm_source=share&utm_medium=member_android)
 - [ ] [LinkedIn Post by Prof on AI agents, and couple of other related stuff](https://www.linkedin.com/posts/zhou-jo-yu-95327378_this-is-the-time-of-year-when-my-inboxes-activity-7273367390971641857-Ex3O?utm_source=share&utm_medium=member_desktop)
