@@ -12,27 +12,27 @@ const Content: QuartzComponent = ({ fileData, tree }: QuartzComponentProps) => {
       <div class="frontmatter">
         <div class="speaker">{speaker}</div>
         {source && (
-  <div class="source">
-    {/* Extract URL and text from markdown-style link */}
-    {source.match(/\[(.*?)\]\((.*?)\)/) ? (
-      source.split(',').map((link, i) => {
-        const [_, text, url] = link.trim().match(/\[(.*?)\]\((.*?)\)/) || [];
-        return (
-          <>
-            <a href={url} target="_blank" rel="noopener noreferrer">
-              {text}
-            </a>
-            {i < source.split(',').length - 1 && ', '}
-          </>
-        );
-      })
-    ) : (
-      <a href={source} target="_blank" rel="noopener noreferrer">
-        {source}
-      </a>
-    )}
-  </div>
-)}
+          <div class="source">
+            {/* Extract URL and text from markdown-style link */}
+            {source.match(/\[(.*?)\]\((.*?)\)/) ? (
+              source.split(',').map((link, i) => {
+                const [_, text, url] = link.trim().match(/\[(.*?)\]\((.*?)\)/) || [];
+                return (
+                  <>
+                    <a href={url} target="_blank" rel="noopener noreferrer">
+                      {text}
+                    </a>
+                    {i < source.split(',').length - 1 && ', '}
+                  </>
+                );
+              })
+            ) : (
+              <a href={source} target="_blank" rel="noopener noreferrer">
+                {source}
+              </a>
+            )}
+          </div>
+        )}
       </div>
     )}
   </div>
