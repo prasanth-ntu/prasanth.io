@@ -56,6 +56,7 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 - [ ] [Developers with AI assistants need to follow the pair programming model](https://stackoverflow.blog/2024/04/03/developers-with-ai-assistants-need-to-follow-the-pair-programming-model/?mkt_tok=NzE5LUVNSC01NjYAAAGShquC-HhsJPnnn1LgfI8FyQ3zj8M7OSAnEoMUaIzTayO0K4Mhx2dASZrCbdIzPj4xf0hTrv53GJckxevCusC_udkZPMPAup_Wl9ETUDiOR8xSTW70UCK_pDw&utm_campaign=teams-newsletter&utm_content=april-newsletter&utm_medium=email&utm_source=marketo)
 - [ ] [Stack Overflow and OpenAI Partner to Strengthen the World’s Most Popular Large Language Models](https://stackoverflow.co/company/press/archive/openai-partnership)
 - [ ] [Generative AI is coming for healthcare, and not everyone’s thrilled](https://techcrunch.com/2024/04/14/generative-ai-is-coming-for-healthcare-and-not-everyones-thrilled/?utm_campaign=tc_week_in_review&utm_medium=newsletter&_hsenc=p2ANqtz-9uj9q9pDoLscRLycmFwtp27j84gJtMp-abjFeN29oKsohZzNMGlYS5cjfiJFBQmWuhQS00cIqZLdAg6oyzSOsGvaaHTGe-P2RAgeHNCfGW72Y8n0s&_hsmi=303479898&utm_source=tc)
+- [ ] https://www.linkedin.com/posts/gisenberg_someone-will-make-10m-in-2025-just-by-rebuilding-activity-7274777913143525376-4etF?utm_source=share&utm_medium=member_desktop
 
 # Potential courses
 *Note: Don't have to take all of them*

@@ -29,3 +29,33 @@
       padding: 0.8rem;
     }
   }
+
+  // Speaker and source styling for frontmatter
+.article-header {
+  .frontmatter {
+    .speaker, .source {
+      display: block;
+      margin-top: 0.5rem;
+      color: var(--gray);
+    }
+    
+    .speaker::before {
+      content: "Speaker: ";
+      font-weight: 500;
+    }
+    
+    .source::before {
+      content: "Source: ";
+      font-weight: 500;
+    }
+    
+    .source a {
+      color: var(--secondary);
+      text-decoration: underline;
+      
+      &:hover {
+        color: var(--tertiary);
+      }
+    }
+  }
+}

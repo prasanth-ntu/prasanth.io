@@ -2,22 +2,6 @@
 tags:
   - SoftwareEngineering
 ---
-- [**Who Defined the OpenAPI Specification?**](#**Who%20Defined%20the%20OpenAPI%20Specification?**)
-- [**What Is the OpenAPI Specification Used For?**](#**What%20Is%20the%20OpenAPI%20Specification%20Used%20For?**)
-	- [**Key Uses of OpenAPI Specification:**](#**Key%20Uses%20of%20OpenAPI%20Specification:**)
-	- [**Components of an OpenAPI Specification**](#**Components%20of%20an%20OpenAPI%20Specification**)
-	- [**Example OpenAPI Specification (YAML Format)**](#**Example%20OpenAPI%20Specification%20(YAML%20Format)**)
-- [OpenAPI Specification vs. OpenAISchema comparison](#OpenAPI%20Specification%20vs.%20OpenAISchema%20comparison)
-		- [**1. Purpose**](#**1.%20Purpose**)
-		- [**2. Scope**](#**2.%20Scope**)
-		- [**3. Data Definition and Structure**](#**3.%20Data%20Definition%20and%20Structure**)
-			- [Example:](#Example:)
-		- [**4. Interaction Mechanism**](#**4.%20Interaction%20Mechanism**)
-		- [**5. Tooling and Ecosystem**](#**5.%20Tooling%20and%20Ecosystem**)
-		- [**6. Use Cases**](#**6.%20Use%20Cases**)
-		- [**Key Differences**](#**Key%20Differences**)
-		- [**When to Use Which?**](#**When%20to%20Use%20Which?**)
-		- [**Summary**](#**Summary**)
 # **Who Defined the OpenAPI Specification?**
 
 The **OpenAPI Specification (OAS)** was originally developed by **Swagger**, a project created by Tony Tam in 2010 while he was at Wordnik. It was designed to describe [[RESTful API]]s in a machine-readable format. Swagger became widely adopted due to its simplicity and developer-friendly approach.
