@@ -5,6 +5,35 @@ description: Welcome to Prasanth's official website. Discover insights on data s
 *Welcome to My Blog (a.k.a. Digital Garden)*
 
 Shortcuts (WIP): [[Featured links]]
+
+
+```mermaid
+timeline
+    title Professional Journey
+    section Current
+        2021-Present : Grab
+                     : Senior Data Scientist
+                     : ML/DL Systems, Dynamic Pricing
+                     : NLP/LLM Solutions, GrabGPT
+    section Previous
+        2019-2021 : JobShine
+                  : Co-founder & CTO
+                  : Tech Team Lead
+                  : NLP Chatbot & Search Systems
+        2019-Present : General Assembly
+                  : Lead Instructor
+                  : Data Analytics & Data Science
+        2017-2022 : NTU
+                  : PhD Research Scholar
+                  : Detecting Epilesy from EEG using ML
+    section Skills & Expertise
+        Data Science : Machine Learning
+                    : Deep Learning
+                    : Signal Processing
+        AI Tech     : NLP & LLMs
+                    : Transformers & GenAI
+                    : Real-time Systems
+```
 # 👋 Introduction
 Hi, I'm Prasanth Thangavel, a Senior Data Scientist with a passion for developing AI-driven solutions for real-time applications. Currently, I enhance user experiences for millions at Grab, Singapore. My expertise spans signal processing, machine learning (ML), deep learning (DL), Natural Language Processing (NLP), and Large Language Models (LLMs). I combine startup leadership and corporate data science experience to drive innovation in dynamic environments. I'm particularly passionate about using advanced AI technologies, especially Generative AI (GenAI), to solve real-world problems.
 

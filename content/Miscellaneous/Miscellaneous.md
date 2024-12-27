@@ -122,3 +122,60 @@ Knowledge/
         ├── Valuations/
         ├── Market-Analysis/
         └── Exit-Strategies/
+
+
+# Scrapped
+```mermaid
+mindmap
+  root((Prasanth))
+    Professional
+      Grab
+        Senior Data Scientist
+          ML/DL Systems
+          Dynamic Pricing
+          NLP/LLM Solutions
+          GrabGPT
+      JobShine
+        Co-founder and CTO
+          Tech Team Lead
+          NLP Chatbot
+          Search Systems
+      General Assembly
+        Lead Instructor
+          Data Analytics
+          Data Science
+    Skills
+      Data Science
+        Machine Learning
+        Deep Learning
+        Signal Processing
+      AI Technologies
+        NLP
+        LLMs
+        Transformers
+        GenAI
+      Programming
+        Python
+    Interests
+      Building AI Models
+      Data Analysis
+      Knowledge Sharing
+      Chatbots
+      Real-time Applications
+```
+
+
+```mermaid
+gantt
+    title Professional Journey
+    dateFormat  YYYY-MM
+    axisFormat  %Y
+    section Education
+    PhD (NTU)            :2017-07, 2022-03
+    section Corporate
+    Grab                 :2021-11, 2024-03
+    section Startup
+    JobShine            :2019-07, 2021-10
+    section Teaching
+    General Assembly    :2019-07, 2024-03
+```
