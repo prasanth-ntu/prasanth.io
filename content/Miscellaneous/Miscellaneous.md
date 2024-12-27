@@ -18,6 +18,11 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 
 # Blogs & Papers to read
 - [x] [talk by @ilyasutat the Neural Information Processing Systems (December 10 - 15, 2024, Vancouver)](https://x.com/johnrushx/status/1867735273230282936?s=19)
+- [ ] [[Build a LLM from Scratch]]
+	- [ ] https://github.com/JohnMachado11/Build-a-Large-Language-Model-from-Scratch
+	- [ ] [[A Vaswani - Attention Is All You Need - 2017]]
+- [ ] https://karpathy.ai/zero-to-hero.html
+- [ ] https://github.com/peggy1502/Amazing-Resources
 - [ ] https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/ai_agent_tutorials/ai_medical_imaging_agent/ai_medical_imaging.py
 - [ ] Multimodal AI agents - Gemini 2.0 | Project Astra | Project Mariner (deepmind.google/gemini)
 - [ ] (https://www.linkedin.com/posts/armand-ruiz_this-project-got-more-than-11000-stars-on-activity-7273668186598785024-f0ji/?utm_source=share&utm_medium=member_android)
@@ -87,3 +92,33 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 - [ ] Test time compute overhang
 - [ ] Model compression techniques like Pruning, quantization, distillation
 - [x] [[FLOPS]] - second <- Train/test time compute are measured using this unit
+
+# Notes strategy
+- [ ] Effective way to take notes and condense them ([recommendations from ChatGPT](https://chatgpt.com/share/676e4333-aaf8-8013-bd5e-fda0950b52dc))
+
+# Delete asap
+## Startup structure
+Knowledge/
+└── Startups/
+    ├── _index.md                     # Overview & navigation
+    ├── Ecosystem/
+    │   ├── Incubators/
+    │   │   ├── YCombinator.md
+    │   │   └── TechStars.md
+    │   ├── Accelerators/
+    │   ├── VCs/
+    │   │   ├── a16z.md
+    │   │   └── Sequoia.md
+    │   └── Angel-Investors/
+    ├── Companies/
+    │   ├── Early-Stage/
+    │   ├── Growth/
+    │   └── Unicorns/
+    ├── Resources/
+    │   ├── Fundraising/
+    │   ├── Pitch-Decks/
+    │   └── Business-Models/
+    └── Topics/
+        ├── Valuations/
+        ├── Market-Analysis/
+        └── Exit-Strategies/

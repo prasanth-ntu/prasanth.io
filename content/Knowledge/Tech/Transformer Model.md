@@ -1,9 +1,12 @@
 ---
 tags:
   - DataScience
+  - ArtificialIntelligence
+  - MachineLearning
+  - LLM
 ---
 
-
+> Most model LLMs rely on the *transformer* architecture, which is a DNN architecture introduced in the [[A Vaswani - Attention Is All You Need - 2017]]"
 ## Transformers are language models
 All the Transformer models (such as GPT, BERT, BART, T5, etc.) have been trained as language models. This means they have been trained on large amounts of raw text in a **[[Self-supervised learning|self-supervised learning]]**. Self-supervised learning is a type of training in which the objective is automatically computed from the inputs of the model. That means that humans are not needed to label the data!
 
