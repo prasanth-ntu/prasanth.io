@@ -10,21 +10,21 @@ draft: true
 In **Machine Learning (ML)** and **Deep Learning (DL)**, as well as in **Large Language Models (LLMs)**, different **learning paradigms** define how models are trained based on data, labels, and objectives. Below is a comprehensive overview:
 
 # Summary of Learning Paradigms in LLMs:
-| **Paradigm**             | **LLM Applications**                                              |
-| ------------------------ | ----------------------------------------------------------------- |
-| Supervised Learning      | Fine-tuning for specific tasks like classification.               |
-| Unsupervised Learning    | Pretraining via next-word prediction or embeddings learning.      |
-| Self-Supervised Learning | Pretraining (e.g., BERT, GPT).                                    |
-| Reinforcement Learning   | Alignment with RLHF for safety and utility.                       |
-| Transfer Learning        | Domain adaptation of pretrained LLMs.                             |
-| Zero-Shot Learning       | In-context learning with prompts (no input/output examples).      |
-| Few-Shot Learning        | In-context learning with prompts including input/output examples. |
-| Multi-Task Learning      | Training multi-purpose LLMs.                                      |
-| Meta-Learning            | Rapid generalization across diverse NLP tasks.                    |
-| Online Learning          | Adapting LLMs incrementally from real-time interactions.       |
-| Curriculum Learning         | Gradual training on increasingly complex datasets or tasks.    |
-| Active Learning             | Selecting ambiguous prompts for human labeling.                |
-| Generative Learning         | Generating creative text or responses (e.g., GPT text outputs).|
+| **Paradigm**                | **LLM Applications**                                              |
+| --------------------------- | ----------------------------------------------------------------- |
+| Supervised Learning         | Fine-tuning for specific tasks like classification.               |
+| Unsupervised Learning       | Pretraining via next-word prediction or embeddings learning.      |
+| Self-Supervised Learning    | Pretraining (e.g., BERT, GPT).                                    |
+| Reinforcement Learning      | Alignment with RLHF for safety and utility.                       |
+| Transfer Learning           | Domain adaptation of pretrained LLMs.                             |
+| Zero-Shot Learning          | In-context learning with prompts (no input/output examples).      |
+| Few-Shot Learning           | In-context learning with prompts including input/output examples. |
+| Multi-Task Learning         | Training multi-purpose LLMs.                                      |
+| Meta-Learning               | Rapid generalization across diverse NLP tasks.                    |
+| Online Learning             | Adapting LLMs incrementally from real-time interactions.          |
+| Curriculum Learning         | Gradual training on increasingly complex datasets or tasks.       |
+| Active Learning             | Selecting ambiguous prompts for human labeling.                   |
+| Generative Learning         | Generating creative text or responses (e.g., GPT text outputs).   |
 
 ---
 ## **1. Supervised Learning**
