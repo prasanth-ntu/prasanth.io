@@ -200,6 +200,12 @@ export default (() => {
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")
           .map((res) => JSResourceToScriptElement(res, true))}
+        {/* Add GoatCounter tracking - Custom feature */}
+        <script 
+          data-goatcounter="https://santh-ntu.goatcounter.com/count"
+          async 
+          src="//gc.zgo.at/count.js"
+        ></script>
       </head>
     )
   }

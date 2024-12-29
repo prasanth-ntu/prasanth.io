@@ -4,7 +4,7 @@ description: Welcome to Prasanth's official website. Discover insights on data s
 ---
 *Welcome to My Blog (a.k.a. Digital Garden)*
 
-Shortcuts (WIP): [[Featured links]]
+Shortcuts (WIP): 📍[[Featured links]]📍
 
 
 ```mermaid

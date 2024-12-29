@@ -1,10 +1,11 @@
 ---
-longform: 
 tags:
   - ArtificialIntelligence
   - DataScience
   - LLM
   - AGI
+  - Book
+  - Reading
 author: Leopold Aschenbrenner
 ---
 Read the book here: [situational-awareness.ai](https://situational-awareness.ai/?ref=forourposterity.com) or find [the full series as a 165-page PDF here](https://situational-awareness.ai/wp-content/uploads/2024/06/situationalawareness.pdf?ref=forourposterity.com).

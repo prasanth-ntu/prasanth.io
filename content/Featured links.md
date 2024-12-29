@@ -1,11 +1,13 @@
 - [[Knowledge/Tech]]
 	- [[AI-ML-DS-and-SE Glossary]]
 	- [[Data Science Canvas - Rendered]]
+- [[Courses|Courses]]
 	- [[DeepLearning.AI - Functions, Tools and Agents with LangChain]]
--  [[Books/Index|Books]] 
+-  [[Books/Index|Books]]
 	- [[Situational Awareness]]
-- [[Knowledge/Startups/Index|Startups]]
-- [[Pet Projects/Index|Pet Projects]] 
+- [[Pet Projects|Pet Projects]] 
 	- [[YouTube Downloader]]
+- [[Knowledge/Startups/Index|Startups]]
+	- Yet to be added
 - [[Blog/Index|Blog]]
 	- Yet to be added
