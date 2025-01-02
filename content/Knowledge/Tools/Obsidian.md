@@ -4,6 +4,8 @@ tags:
   - Obsidian
   - Quartz
   - PKM
+  - Tool
+  - OpenSource
 title: Obsidian - The best personal knowledge management (PKM) tool
 ---
 # Updating the Site
@@ -49,3 +51,6 @@ For more details, refer  [Quartz 4.0](https://quartz.jzhao.xyz/) official docume
 ## Documentations
 - [Quartz 4.0](https://quartz.jzhao.xyz/) 
 	- The documentation I referred to publish my Obsidian notes for free with Quarts
+
+# Non-obsidian Site Inspirations
+- http://saratchandranagavarapu.rf.gd/index.html
