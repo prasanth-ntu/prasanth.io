@@ -6,7 +6,6 @@ description: Welcome to Prasanth's official website. Discover insights on data s
 
 Shortcuts (WIP): 📍[[Featured links]]📍
 
-
 ```mermaid
 timeline
     title Professional Journey

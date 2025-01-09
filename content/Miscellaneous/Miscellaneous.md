@@ -18,9 +18,14 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 
 # Blogs & Papers to read
 - [x] [talk by @ilyasutat the Neural Information Processing Systems (December 10 - 15, 2024, Vancouver)](https://x.com/johnrushx/status/1867735273230282936?s=19)
-- [ ] [[Build a LLM from Scratch]]
-	- [ ] https://github.com/JohnMachado11/Build-a-Large-Language-Model-from-Scratch
+- [ ] Build an LLM
+	- [ ] [[Build a LLM from Scratch]]
+		- [ ] https://github.com/JohnMachado11/Build-a-Large-Language-Model-from-Scratch
 	- [ ] [[A Vaswani - Attention Is All You Need - 2017]]
+- [ ] [Introducing _smolagents_, a simple library to build agents](https://huggingface.co/blog/smolagents)
+- [ ] Emergent abilities of LLM
+	- [ ] [Emergent Abilities of Large Language Models](https://arxiv.org/abs/2206.07682)
+	- [ ] https://www.assemblyai.com/blog/emergent-abilities-of-large-language-models/
 - [ ] https://karpathy.ai/zero-to-hero.html
 - [ ] https://github.com/peggy1502/Amazing-Resources
 - [ ] https://github.com/Shubhamsaboo/awesome-llm-apps/blob/main/ai_agent_tutorials/ai_medical_imaging_agent/ai_medical_imaging.py
