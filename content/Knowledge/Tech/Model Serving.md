@@ -32,29 +32,29 @@ Model serving refers to the deployment and operationalization of a trained machi
 > [!tip] Model serving spans across multiple domains and requires a combination of skills and infrastructure.
 
 ## 1. DevOps
-•	**Relevance**: DevOps practices are essential for automating and monitoring the deployment pipeline of ML models.
-•	**Key Responsibilities**:
-	•	Continuous integration/continuous deployment (CI/CD) pipelines for ML models.
-	•	Infrastructure-as-Code (IaC) to provision serving environments (e.g., using Terraform, Kubernetes).
-	•	Monitoring tools like Prometheus, Grafana, or CloudWatch for tracking performance and availability.
+- **Relevance**: DevOps practices are essential for automating and monitoring the deployment pipeline of ML models.
+- **Key Responsibilities**:
+	- Continuous integration/continuous deployment (CI/CD) pipelines for ML models.
+	- Infrastructure-as-Code (IaC) to provision serving environments (e.g., using Terraform, Kubernetes).
+	- Monitoring tools like Prometheus, Grafana, or CloudWatch for tracking performance and availability.
 
 ## 2. Infrastructure
-•	**Relevance**: Model serving requires compute resources (e.g., CPUs, GPUs) and networking infrastructure to operate efficiently.
-•	**Key Responsibilities**:
-	•	Setting up on-premises or cloud infrastructure for hosting models.
-	•	Managing resource allocation, scaling, and failover mechanisms.
-	•	Ensuring low-latency networking for API calls.
+- **Relevance**: Model serving requires compute resources (e.g., CPUs, GPUs) and networking infrastructure to operate efficiently.
+- **Key Responsibilities**:
+	- Setting up on-premises or cloud infrastructure for hosting models.
+	- Managing resource allocation, scaling, and failover mechanisms.
+	- Ensuring low-latency networking for API calls.
 
 ## 3. Cloud
-•	**Relevance**: Cloud platforms simplify model serving with managed services and scalable infrastructure.
-•	**Key Responsibilities**:
-	•	Using managed services like AWS SageMaker, Google AI Platform, or Azure ML for serving models.
-	•	Leveraging auto-scaling, storage (e.g., S3 buckets), and container orchestration (e.g., Kubernetes on EKS/GKE/AKS).
+- **Relevance**: Cloud platforms simplify model serving with managed services and scalable infrastructure.
+- **Key Responsibilities**:
+	- Using managed services like AWS SageMaker, Google AI Platform, or Azure ML for serving models.
+	- Leveraging auto-scaling, storage (e.g., S3 buckets), and container orchestration (e.g., Kubernetes on EKS/GKE/AKS).
 
 ## Combination
-•	**Practical Overlap**:
-	•	Model serving often sits at the intersection of these domains.
-	•	A MLOps engineer typically bridges these areas, combining ML expertise with DevOps and cloud skills.
+- **Practical Overlap**:
+	- Model serving often sits at the intersection of these domains.
+	- A MLOps engineer typically bridges these areas, combining ML expertise with DevOps and cloud skills.
 
 | Domain | Role in Model Serving                                |
 | ------ | ---------------------------------------------------- |
@@ -64,9 +64,9 @@ Model serving refers to the deployment and operationalization of a trained machi
 ## Real-World Analogy
 
 Think of model serving as running a restaurant:
-	•	DevOps: The kitchen staff and tools ensure smooth preparation and flow (CI/CD, monitoring).
-	•	Infrastructure: The dining area and kitchen are your physical resources (hardware and networking).
-	•	Cloud: Outsourcing to a managed caterer who can scale up or down as needed (cloud services).
+- **DevOps**: The kitchen staff and tools ensure smooth preparation and flow (CI/CD, monitoring).
+- **Infrastructure**: The dining area and kitchen are your physical resources (hardware and networking).
+- **Cloud**: Outsourcing to a managed caterer who can scale up or down as needed (cloud services).
 
 Thus, model serving is a combination of all three, with significant overlap between DevOps, infrastructure, and cloud practices.
 
@@ -109,11 +109,11 @@ In the context of serving a PyTorch model, proxy layer and serving layer serve d
 > [!summary] The proxy layer acts as a <i>middleware between the client (user or application) and the actual serving infrastructure</i>. 
 
 Its primary functions include:
-•	**Routing**: It determines which model-serving instance should handle the incoming request, especially in multi-model or distributed setups.
-•	**Load Balancing**: Distributes incoming traffic across multiple instances of the serving layer to ensure efficient resource utilization.
-•	**Authentication and Authorization**: Verifies the identity of the client and ensures they have access to the requested model or API.
-•	**Protocol Translation**: Converts client requests (e.g., HTTP or gRPC) into a format understood by the serving layer.
-•	**Request Preprocessing**: Performs lightweight operations like logging, validation, or attaching metadata before forwarding requests.
+- **Routing**: It determines which model-serving instance should handle the incoming request, especially in multi-model or distributed setups.
+- **Load Balancing**: Distributes incoming traffic across multiple instances of the serving layer to ensure efficient resource utilization.
+- **Authentication and Authorization**: Verifies the identity of the client and ensures they have access to the requested model or API.
+- **Protocol Translation**: Converts client requests (e.g., HTTP or gRPC) into a format understood by the serving layer.
+- **Request Preprocessing**: Performs lightweight operations like logging, validation, or attaching metadata before forwarding requests.
 
 **Example**: If you’re using Kubernetes, an Ingress Controller or API Gateway (like NGINX or Envoy) often serves as a proxy layer.
 ## 2. Serving Layer
@@ -121,13 +121,13 @@ Its primary functions include:
 > [!summary] The serving layer is responsible for <i>model inference</i>—the actual computation and processing of the client’s request using the PyTorch model. 
 
 Its primary functions include:
-•	**Model Loading and Management:** Loads PyTorch models from storage (e.g., a model registry) into memory and ensures they are ready for inference.
-**•	Inference Execution:** Runs the model on the input data provided by the client and returns the predictions or outputs.
-•	**Hardware Utilization:** Utilizes appropriate compute resources (CPU, GPU, or TPU) to serve the model efficiently.
-•	**Batching and Optimization:** Combines multiple incoming requests into a batch for efficient processing (if supported by the model) and applies optimizations like TorchScript or ONNX for faster inference.
-•	**Scalability**: Scales horizontally to handle increasing loads.
+- **Model Loading and Management:** Loads PyTorch models from storage (e.g., a model registry) into memory and ensures they are ready for inference.
+- **Inference Execution:** Runs the model on the input data provided by the client and returns the predictions or outputs.
+- **Hardware Utilization:** Utilizes appropriate compute resources (CPU, GPU, or TPU) to serve the model efficiently.
+- **Batching and Optimization:** Combines multiple incoming requests into a batch for efficient processing (if supported by the model) and applies optimizations like TorchScript or ONNX for faster inference.
+- **Scalability**: Scales horizontally to handle increasing loads.
 
-Example: A PyTorch model served using TorchServe, Triton Inference Server, or a custom Flask/FastAPI-based serving application forms part of the serving layer.
+**Example**: A PyTorch model served using TorchServe, Triton Inference Server, or a custom Flask/FastAPI-based serving application forms part of the serving layer.
 ## Key Differences
 
 This table highlights the complementary nature of these two layers, each optimized for their specific responsibilities in the ML serving architecture.
