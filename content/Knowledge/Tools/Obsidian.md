@@ -41,13 +41,15 @@ Note
 Inline footnotes only work in reading view, not in Live Preview.
 
 ### Comments
-You can add comments by wrapping text with `%%`. Comments are only visible in Editing view.
+You can add comments by wrapping text with `%` by using it twice. Comments are only visible in Editing view.
 
-Testing out a ...%%comment%%... (comment), which is hidden.
+Testing out a ...%%comment%%... (inline comment), which is hidden.
+
 
 ```md
-This is an %%inline%% comment.
+This is an %%inline%% (inline) comment where the word inline is enclosed with % twice.
 
+Below is a block comment, which is hidden in view mode.
 %%
 This is a block comment.
 
@@ -55,22 +57,25 @@ Block comments can span multiple lines.
 %%
 ```
 
-## Obsidian Flvored Markdown
+## Obsidian Flavored Markdown
 
-|Syntax|Description|
-|---|---|
-|`[[Link]]`|[Internal links](https://help.obsidian.md/Linking+notes+and+files/Internal+links)|
-|`![[Link]]`|[Embed files](https://help.obsidian.md/Linking+notes+and+files/Embed+files)|
-|`![[Link#^id]]`|[Block references](https://help.obsidian.md/Linking+notes+and+files/Internal+links#Link%20to%20a%20block%20in%20a%20note)|
-|`^id`|[Defining a block](https://help.obsidian.md/Linking+notes+and+files/Internal+links#Link%20to%20a%20block%20in%20a%20note)|
-|`%%Text%%`|[Comments](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Comments)|
-|`~~Text~~`|[Strikethroughs](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Bold,%20italics,%20highlights)|
-|`==Text==`|[Highlights](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Bold,%20italics,%20highlights)|
-|` ``` `|[Code blocks](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Code%20blocks)|
-|`- [ ]`|[Incomplete task](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Task%20lists)|
-|`- [x]`|[Completed task](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Task%20lists)|
-|`> [!note]`|[Callouts](https://help.obsidian.md/Editing+and+formatting/Callouts)|
-|(see link)|[Tables](https://help.obsidian.md/Editing+and+formatting/Advanced+formatting+syntax#Tables)|
+| Syntax          | Description                                                                                                               | Example                                                                                                                    |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `[[Link]]`      | [Internal links](https://help.obsidian.md/Linking+notes+and+files/Internal+links)                                         |                                                                                                                            |
+| `![[Link]]`     | [Embed files](https://help.obsidian.md/Linking+notes+and+files/Embed+files)                                               |                                                                                                                            |
+| `![[Link#^id]]` | [Block references](https://help.obsidian.md/Linking+notes+and+files/Internal+links#Link%20to%20a%20block%20in%20a%20note) |                                                                                                                            |
+| `^id`           | [Defining a block](https://help.obsidian.md/Linking+notes+and+files/Internal+links#Link%20to%20a%20block%20in%20a%20note) | [[Obsidian#^6c454f]]<br><br>[[Obsidian#Non-obsidian Site Inspirations]]<br><br>[[AI-ML-DS-and-SE Glossary#^casual-effect]] |
+| `%%Text%%`      | [Comments](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Comments)                              |                                                                                                                            |
+| `~~Text~~`      | [Strikethroughs](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Bold,%20italics,%20highlights)   |                                                                                                                            |
+| `==Text==`      | [Highlights](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Bold,%20italics,%20highlights)       |                                                                                                                            |
+| ` ``` `         | [Code blocks](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Code%20blocks)                      |                                                                                                                            |
+| `- [ ]`         | [Incomplete task](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Task%20lists)                   |                                                                                                                            |
+| `- [x]`         | [Completed task](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Task%20lists)                    |                                                                                                                            |
+| `> [!note]`     | [Callouts](https://help.obsidian.md/Editing+and+formatting/Callouts)                                                      |                                                                                                                            |
+| (see link)      | [Tables](https://help.obsidian.md/Editing+and+formatting/Advanced+formatting+syntax#Tables)                               |                                                                                                                            |
+### Plugins
+- [ ] https://quartz.jzhao.xyz/plugins/ObsidianFlavoredMarkdown - Need to revisit this, and explore deeper for Block references (https://help.obsidian.md/Linking+notes+and+files/Internal+links#Link%20to%20a%20block%20in%20a%20note)
+
 ## Callouts
 - [Callouts](https://help.obsidian.md/Editing+and+formatting/Callouts)
 ### Supported callout types
@@ -87,7 +92,7 @@ Block comments can span multiple lines.
 	- Aliases: `help`, `faq`
 - `> [!warning]`
 	- Aliases: `caution`, `attention`
-- `> [!failure]
+- `> [!failure]`
 	- Aliases: `fail`, `missing`
 - `> [!danger]`
 	- Aliases: `error`
