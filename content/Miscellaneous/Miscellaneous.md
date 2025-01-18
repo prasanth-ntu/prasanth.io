@@ -68,6 +68,7 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 - [ ] [Stack Overflow and OpenAI Partner to Strengthen the World’s Most Popular Large Language Models](https://stackoverflow.co/company/press/archive/openai-partnership)
 - [ ] [Generative AI is coming for healthcare, and not everyone’s thrilled](https://techcrunch.com/2024/04/14/generative-ai-is-coming-for-healthcare-and-not-everyones-thrilled/?utm_campaign=tc_week_in_review&utm_medium=newsletter&_hsenc=p2ANqtz-9uj9q9pDoLscRLycmFwtp27j84gJtMp-abjFeN29oKsohZzNMGlYS5cjfiJFBQmWuhQS00cIqZLdAg6oyzSOsGvaaHTGe-P2RAgeHNCfGW72Y8n0s&_hsmi=303479898&utm_source=tc)
 - [ ] https://www.linkedin.com/posts/gisenberg_someone-will-make-10m-in-2025-just-by-rebuilding-activity-7274777913143525376-4etF?utm_source=share&utm_medium=member_desktop
+- [ ] [Rogue superintelligence and merging with machines: Inside the mind of OpenAI’s chief scientist](https://www.technologyreview.com/2023/10/26/1082398/exclusive-ilya-sutskever-openais-chief-scientist-on-his-hopes-and-fears-for-the-future-of-ai/)
 
 # Potential courses
 *Note: Don't have to take all of them*
@@ -76,6 +77,8 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 - [ ] [Udemy course - Generative AI - GPT function calling, whisper, and langchain](https://www.udemy.com/course/generativeai-gpt-function-calling-whisper-langchain/?kw=function+calling&src=sac&couponCode=LETSLEARNNOW)
 - [ ] [AI Agents in LangGraph](https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/)
 - [ ] [Encode Club - AI Bootcamp Q2 2024](https://encodeclub.notion.site/AI-Bootcamp-Q2-2024-2ff2d3d04af8445a926d14843a3d5198)
+- [ ] [DeepLearning.AI](https://learn.deeplearning.ai/)
+	- [ ] [DeepLearning.AI - Reasoning with o1](https://learn.deeplearning.ai/courses/reasoning-with-o1/lesson/1/introduction)
 
 # Talks to listen
 - [ ] [Stanford - Past Talks](https://stanford-medai.github.io/previous-talks/)
@@ -97,6 +100,13 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 - [ ] Test time compute overhang
 - [ ] Model compression techniques like Pruning, quantization, distillation
 - [x] [[FLOPS]] - second <- Train/test time compute are measured using this unit
+- [ ] Log levels ([Blog 1](https://betterstack.com/community/guides/logging/log-levels-explained/), [Blog 2](https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels), [Blog 3](https://www.sumologic.com/glossary/log-levels/))
+- [ ] Conveyor | Spinnaker | Grab https://engineering.grab.com/our-journey-to-continuous-delivery-at-grab
+- [ ] Fast API - Gunicorn vs Uvicorn | [GeekforGeeks](https://www.geeksforgeeks.org/fast-api-gunicorn-vs-uvicorn/) | [Stack Overflow](https://stackoverflow.com/questions/66362199/what-is-the-difference-between-uvicorn-and-gunicornuvicorn)
+- [ ] Docker | [Get Started - Docs](https://docs.docker.com/get-started/) | [HF - Docker Spaces](https://huggingface.co/docs/hub/en/spaces-sdks-docker) | [HF Docker Space Examples](https://huggingface.co/docs/hub/en/spaces-sdks-docker-examples) | [Hf - Deploying a Gradio app with Docker](https://www.gradio.app/guides/deploying-gradio-with-docker)
+- [ ] m4a vs mp3 | [which is better](https://www.musicianwave.com/m4a-vs-mp3-which-is-better/)
+- [ ] Prompting
+	- [ ] COT Prompting | [Chain-of-Thought Prompting](https://www.promptingguide.ai/techniques/cot)
 
 # Notes strategy
 - [ ] Effective way to take notes and condense them ([recommendations from ChatGPT](https://chatgpt.com/share/676e4333-aaf8-8013-bd5e-fda0950b52dc))
