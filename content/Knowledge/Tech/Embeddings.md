@@ -8,22 +8,24 @@ tags:
   - NLP
 ---
 # Definition
-...
+> [!SUMMARY] Embedding - The concept of converting text (or other data) into a numerical vector representations, a format that NNs can understand and process.
 
+Refer [[GPT comparison]] for embedding size of different GPT models.
+- For e.g., GPT-1 and GPT-2 Small (both 117M parameters) use an embedding size of 768 dimensions, where as GPT-3 Davinci (175B parameters) use an embedding size of 12,288 dimensions (16x of the former).
 # Different type of embeddings
 
-| Type of Embedding                     | Definition                                                      | Purpose                                                                                   | Example                                           |
-| :------------------------------------ | :-------------------------------------------------------------- | :---------------------------------------------------------------------------------------- | :------------------------------------------------ |
-| Word Embeddings                       | Represent individual words as dense vector.                     | Capture semantic & synatic relationship between words.                                    | [[Word2Vec]], GloVe, FastText, ELMo, BERT         |
-| Subword/Character Embeddings          | Represent subword units or characters                           | Handle rar or out-of-vocabulary words by breaking them into small units.                  | Pyte Pair Encoding (BPE), SentencePiece, FastText |
-| Sentence Embeddings                   | Represent entire sentence as a single vector                    | Capture the overall meaning or intent of a sentence                                       | InferSent, Universal Sentence Encoder, SBERT      |
-| Paragrah Embeddings                   | Represent a paragraph as a single vector, aggregating sentences | Summarize a collection of sentences in a coherent representation.                         | Doc2Vec(Paragraph Vector)                         |
-| Document Embeddings                   | Represent an entire document or text as a single vector         | Enable document-level tasks like clustering, classification, and retrieval.               | Doc2Vec, Longformer, BigBird                      |
-| Contextualized Token Embeddings       | Represent tokens in a sequence, influenced by their context     | Essential for tasks where token meaning depend on the surrounding context (e.g, NER)      | Outputs from BERT, GPT, RoBERTa                   |
-| Multi-modal Embeddings                | Combine text with other modalities like images or audio.        | Enable tasks like image captioning, video description, or cross-modal retrieval           | CLIP, ALIGN                                       |
-| Knowledge Graph Embeddings            | Represent entities and relationships in a knowledge graph.      | Enable reasoning over structured data like knowledge graphs.                              | TransE, TransR, Node2Vec, DeepWalk                |
-| Cross-lingual/Multilingual Embeddings | Align semantic meaning across multiple languages.               | Useful for translation and multilingual NLP.                                              | mBERT, XLM-R                                      |
-| Task-Specific Embeddings              | Embeddings tailored for specific NLP tasks or domains.          | Fine-tuned to optimize for specific tasks (e.g., sentiment analysis, question answering). | Fine-tuned BERT, GPT, BioBERT, SciBERT            |
+| Type of Embedding                     | Definition                                                      | Purpose                                                                                   | Example                                               |
+| :------------------------------------ | :-------------------------------------------------------------- | :---------------------------------------------------------------------------------------- | :---------------------------------------------------- |
+| Word Embeddings                       | Represent individual words as dense vector.                     | Capture semantic & synatic relationship between words.                                    | [[Word2Vec]], GloVe, FastText, ELMo, BERT             |
+| Subword/Character Embeddings          | Represent subword units or characters                           | Handle rar or out-of-vocabulary words by breaking them into small units.                  | Byte Pair Encoding ([[BPE]]), SentencePiece, FastText |
+| Sentence Embeddings                   | Represent entire sentence as a single vector                    | Capture the overall meaning or intent of a sentence                                       | InferSent, Universal Sentence Encoder, SBERT          |
+| Paragrah Embeddings                   | Represent a paragraph as a single vector, aggregating sentences | Summarize a collection of sentences in a coherent representation.                         | Doc2Vec(Paragraph Vector)                             |
+| Document Embeddings                   | Represent an entire document or text as a single vector         | Enable document-level tasks like clustering, classification, and retrieval.               | Doc2Vec, Longformer, BigBird                          |
+| Contextualized Token Embeddings       | Represent tokens in a sequence, influenced by their context     | Essential for tasks where token meaning depend on the surrounding context (e.g, NER)      | Outputs from BERT, GPT, RoBERTa                       |
+| Multi-modal Embeddings                | Combine text with other modalities like images or audio.        | Enable tasks like image captioning, video description, or cross-modal retrieval           | CLIP, ALIGN                                           |
+| Knowledge Graph Embeddings            | Represent entities and relationships in a knowledge graph.      | Enable reasoning over structured data like knowledge graphs.                              | TransE, TransR, Node2Vec, DeepWalk                    |
+| Cross-lingual/Multilingual Embeddings | Align semantic meaning across multiple languages.               | Useful for translation and multilingual NLP.                                              | mBERT, XLM-R                                          |
+| Task-Specific Embeddings              | Embeddings tailored for specific NLP tasks or domains.          | Fine-tuned to optimize for specific tasks (e.g., sentiment analysis, question answering). | Fine-tuned BERT, GPT, BioBERT, SciBERT                |
 # Word embeddings vs. Contextualised token embeddings
 
 > [!summary]
