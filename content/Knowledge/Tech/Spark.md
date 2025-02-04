@@ -64,3 +64,49 @@ For more details, refer [PySpark Overview](https://spark.apache.org/docs/latest/
 - Spark is the core framework, while PySpark is its Python API.
 - Use Spark for performance-critical applications in Scala/Java.
 - Use PySpark for ease of use and integration with Python ecosystems.
+
+# Important concepts
+## `persist` vs. `cache`
+> [!SUMMARY]
+> - **`cache`**: Simple, in-memory storage with no customization.
+> - **`persist`**: Flexible, allows custom storage levels for optimized performance and fault tolerance.
+> - **`StorageLevel`**: Controls how data is stored (memory, disk, replication, etc.).
+
+| **Aspect**      | **`persist`**                                                                                        | **`cache`**                                                               |
+| --------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| **Definition**  | Allows you to specify a custom storage level for an RDD or DataFrame.                                | A shorthand for `persist` with a default storage level (`MEMORY_ONLY`).   |
+| **Flexibility** | Highly flexible. You can choose from multiple storage levels (e.g., `MEMORY_AND_DISK`, `DISK_ONLY`). | Less flexible. Uses a fixed storage level (`MEMORY_ONLY`).                |
+| **Use Case**    | Use when you need fine-grained control over how data is stored (e.g., memory, disk, or both).        | Use for quick caching in memory when no specific storage level is needed. |
+| **Example**     | `rdd.persist(StorageLevel.MEMORY_AND_DISK)`                                                          | `rdd.cache()`                                                             |
+### **What is `StorageLevel`?**
+The `StorageLevel` class in PySpark defines how an RDD or DataFrame is stored (e.g., in memory, on disk, or both). It provides control over the following attributes:
+1. **`useDisk`**: Whether to store data on disk.
+2. **`useMemory`**: Whether to store data in memory.
+3. **`useOffHeap`**: Whether to use off-heap memory (outside the JVM heap).
+4. **`deserialized`**: Whether the data is stored in deserialized format (not applicable in PySpark, as data is always serialized).
+5. **`replication`**: The number of replicas of the data to store across nodes (default is 1).
+### **Common `StorageLevel` Options**
+
+| **Storage Level**           | **Description**                                                                                |
+| --------------------------- | ---------------------------------------------------------------------------------------------- |
+| **`MEMORY_ONLY`**           | Stores RDD/DataFrame in memory only. If memory is insufficient, partitions will be recomputed. |
+| **`MEMORY_ONLY_2`**         | Same as `MEMORY_ONLY`, but with 2 replicas for fault tolerance.                                |
+| **`MEMORY_AND_DISK`**       | Stores RDD/DataFrame in memory, but spills to disk if memory is insufficient.                  |
+| **`MEMORY_AND_DISK_2`**     | Same as `MEMORY_AND_DISK`, but with 2 replicas for fault tolerance.                            |
+| **`DISK_ONLY`**             | Stores RDD/DataFrame only on disk.                                                             |
+| **`DISK_ONLY_2`**           | Same as `DISK_ONLY`, but with 2 replicas for fault tolerance.                                  |
+| **`MEMORY_AND_DISK_DESER`** | Stores data in memory and disk in deserialized format (not applicable in PySpark).             |
+For more details, refer [`pyspark.StorageLevel`](https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.StorageLevel.html#pyspark-storagelevel "Permalink to this headline")
+### **When to Use `persist` vs `cache`**
+1. **Use `cache`**:
+    - When you want a quick and easy way to store an RDD or DataFrame in memory.
+    - When you don’t need to customize the storage level.
+    - Example: `df.cache()`.
+2. **Use `persist`**:
+    - When you need to optimize storage for specific use cases (e.g., memory constraints, fault tolerance).        
+    - When you want to store data on disk or use a combination of memory and disk.
+    - Example: `df.persist(StorageLevel.MEMORY_AND_DISK)`.
+### **Key Considerations**
+- **Memory Usage**: `MEMORY_ONLY` is faster but requires sufficient memory. Use `MEMORY_AND_DISK` if memory is limited.
+- **Fault Tolerance**: Higher replication levels (e.g., `MEMORY_ONLY_2`) improve fault tolerance but increase storage overhead.
+- **Performance**: Storing data in memory (`MEMORY_ONLY`) is faster than disk (`DISK_ONLY`), but disk storage is more reliable for large datasets.

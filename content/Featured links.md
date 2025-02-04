@@ -15,7 +15,6 @@
 	- [[The Psychology of Money]]
 	- [[Build a LLM from Scratch]]
 - [[Pet Projects/Index|Pet Projects]] 
-	- [[YouTube Downloader]]
-	- [[Music Player]]
+	- Media related: [[YouTube Downloader]] | [[Music Player]] | [[Media Converter]]
 - [[Blog/Index|Blog]]
 	- Yet to be added
