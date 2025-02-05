@@ -17,4 +17,4 @@
 - [[Pet Projects/Index|Pet Projects]] 
 	- Media related: [[YouTube Downloader]] | [[Music Player]] | [[Media Converter]]
 - [[Blog/Index|Blog]]
-	- Yet to be added
+	- [[2025-02-01 Reflections on Meeting with Magesh]]
