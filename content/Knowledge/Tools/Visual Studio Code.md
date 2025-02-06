@@ -17,3 +17,6 @@ For more details, visit the [VS code Marketplace](https://marketplace.visualstud
 > - Windows: `Alt + Shift + F`
 
 For more details, refer [How to Format Jupyter notebook in VSCode](https://stackoverflow.com/questions/65747615/how-to-format-jupyter-notebook-in-vscode)
+
+# Resources
+- [ ] https://oliverfalvai.com/resources/entities/vscode

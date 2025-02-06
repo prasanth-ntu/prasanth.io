@@ -116,5 +116,5 @@ graph TD;
 ```
 
 ## Conclusion
-•	**Without attention**, the model must encode the entire sentence into a single vector, which can cause loss of information.
+•	**Without attention**, the model must encode the entire sentence into a single vector, which can cause loss of information.<br>
 •	**With attention**, the model can selectively focus on the relevant parts of the input sentence at each decoding step, leading to better translations, especially for long sentences.
