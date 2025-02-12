@@ -13,8 +13,9 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 
 # Books to read
 - [x] [Situational Awareness: The Decade Ahead](https://www.forourposterity.com/situational-awareness-the-decade-ahead/) - #Completed
-- [x] The Psychology of Money - #Completed 
-- [ ] [[Build a LLM from Scratch]] - #InProgress 
+- [x] The Psychology of Money - #Completed
+- [ ] [[Build a LLM from Scratch]] - #InProgress
+- [ ] Atomic Habits - #Completed 
 - [ ] [Why Skills Trump Passion in the Quest for Work You Love] - Book by Cal Newport - #InProgress 
 - [ ] [The Checklist Manifesto: How to Get Things Right](https://www.goodreads.com/book/show/6667514-the-checklist-manifesto?from_search=true&from_srp=true&qid=UDkR6CkEjo&rank=1)
 - [ ] How to fail at almost everything and still win big

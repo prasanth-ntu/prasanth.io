@@ -18,3 +18,5 @@
 	- Media related: [[YouTube Downloader]] | [[Music Player]] | [[Media Converter]]
 - [[Blog/Index|Blog]]
 	- [[2025-02-01 Reflections on Meeting with Magesh]]
+- [[Miscellaneous]]
+	- [[Philosophy]]
