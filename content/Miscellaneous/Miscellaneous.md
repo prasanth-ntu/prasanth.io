@@ -12,16 +12,20 @@
 Source: https://www.gapingvoid.com/semiotic-management-systems/
 
 # Books to read
-- [ ] [Situational Awareness: The Decade Ahead](https://www.forourposterity.com/situational-awareness-the-decade-ahead/) - #InProgress 
-- [ ] The Psychology of Money
+- [x] [Situational Awareness: The Decade Ahead](https://www.forourposterity.com/situational-awareness-the-decade-ahead/) - #Completed
+- [x] The Psychology of Money - #Completed 
+- [ ] [[Build a LLM from Scratch]] - #InProgress 
+- [ ] [Why Skills Trump Passion in the Quest for Work You Love] - Book by Cal Newport - #InProgress 
 - [ ] [The Checklist Manifesto: How to Get Things Right](https://www.goodreads.com/book/show/6667514-the-checklist-manifesto?from_search=true&from_srp=true&qid=UDkR6CkEjo&rank=1)
+- [ ] How to fail at almost everything and still win big
+- [ ] [Practicing Trustworthy Machine Learning](https://github.com/matthew-mcateer/practicing_trustworthy_machine_learning)
 
 # Blogs & Papers to read
 - [x] [talk by @ilyasutat the Neural Information Processing Systems (December 10 - 15, 2024, Vancouver)](https://x.com/johnrushx/status/1867735273230282936?s=19)
 - [ ] Build an LLM
-	- [ ] [[Build a LLM from Scratch]]
-		- [ ] https://github.com/JohnMachado11/Build-a-Large-Language-Model-from-Scratch
+	- [ ] https://github.com/JohnMachado11/Build-a-Large-Language-Model-from-Scratch
 	- [ ] [[A Vaswani - Attention Is All You Need - 2017]]
+- [ ] [Nitpicking Machine Learning Technical Debt](https://matthewmcateer.me/blog/machine-learning-technical-debt/)
 - [ ] [Introducing _smolagents_, a simple library to build agents](https://huggingface.co/blog/smolagents)
 - [ ] Emergent abilities of LLM
 	- [ ] [Emergent Abilities of Large Language Models](https://arxiv.org/abs/2206.07682)
@@ -69,6 +73,8 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 - [ ] [Generative AI is coming for healthcare, and not everyone’s thrilled](https://techcrunch.com/2024/04/14/generative-ai-is-coming-for-healthcare-and-not-everyones-thrilled/?utm_campaign=tc_week_in_review&utm_medium=newsletter&_hsenc=p2ANqtz-9uj9q9pDoLscRLycmFwtp27j84gJtMp-abjFeN29oKsohZzNMGlYS5cjfiJFBQmWuhQS00cIqZLdAg6oyzSOsGvaaHTGe-P2RAgeHNCfGW72Y8n0s&_hsmi=303479898&utm_source=tc)
 - [ ] https://www.linkedin.com/posts/gisenberg_someone-will-make-10m-in-2025-just-by-rebuilding-activity-7274777913143525376-4etF?utm_source=share&utm_medium=member_desktop
 - [ ] [Rogue superintelligence and merging with machines: Inside the mind of OpenAI’s chief scientist](https://www.technologyreview.com/2023/10/26/1082398/exclusive-ilya-sutskever-openais-chief-scientist-on-his-hopes-and-fears-for-the-future-of-ai/)
+- [ ] Microsoft Research Blog
+	- [ ] [PromptWizard: The future of prompt optimization through feedback-driven self-evolving prompts](https://www.microsoft.com/en-us/research/blog/promptwizard-the-future-of-prompt-optimization-through-feedback-driven-self-evolving-prompts/)
 
 # Potential courses
 *Note: Don't have to take all of them*
@@ -81,6 +87,7 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 	- [ ] [DeepLearning.AI - Reasoning with o1](https://learn.deeplearning.ai/courses/reasoning-with-o1/lesson/1/introduction)
 
 # Talks to listen
+- [ ] [Latent Space Podcasts](https://www.latent.space/p/bret?hide_intro_popup=true) - Especially the "The AI Architect — Bret Taylor". Recommended by Dharmesh Shah (Founder and CTO, HubSpot) in his [LinkedIn Post](https://www.linkedin.com/posts/dharmesh_goals-activity-7295218047521349632-pcYG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAcOLFMBUn1o8NEoEvAqJrA0ZzVgH3csPQ0)
 - [ ] [Stanford - Past Talks](https://stanford-medai.github.io/previous-talks/)
 	- [ ] [MedAI #130: Me-LLaMA: Medical Foundation LLMs for Text Analysis and Beyond | Qianqian Xie](https://www.youtube.com/watch?v=V5FZBQMGSog)
 - [ ] [Hugging Face Course Workshops: Question Answering](https://www.youtube.com/watch?v=Ihgk8kGLpIE)

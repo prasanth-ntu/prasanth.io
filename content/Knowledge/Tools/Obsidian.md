@@ -73,9 +73,6 @@ Block comments can span multiple lines.
 | `- [x]`         | [Completed task](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Task%20lists)                    |                                                                                                                            |
 | `> [!note]`     | [Callouts](https://help.obsidian.md/Editing+and+formatting/Callouts)                                                      |                                                                                                                            |
 | (see link)      | [Tables](https://help.obsidian.md/Editing+and+formatting/Advanced+formatting+syntax#Tables)                               |                                                                                                                            |
-### Plugins
-- [ ] https://quartz.jzhao.xyz/plugins/ObsidianFlavoredMarkdown - Need to revisit this, and explore deeper for Block references (https://help.obsidian.md/Linking+notes+and+files/Internal+links#Link%20to%20a%20block%20in%20a%20note)
-
 ## Callouts
 - [Callouts](https://help.obsidian.md/Editing+and+formatting/Callouts)
 ### Supported callout types
@@ -112,6 +109,9 @@ Block comments can span multiple lines.
  > This is a foldable callout
 ```
 
+# Plugins
+- [ ] https://quartz.jzhao.xyz/plugins/ObsidianFlavoredMarkdown - Need to revisit this, and explore deeper for Block references (https://help.obsidian.md/Linking+notes+and+files/Internal+links#Link%20to%20a%20block%20in%20a%20note)
+- [ ] [LongForm](obsidian://show-plugin?id=longform) - Helps to create long projects. Need to revisit this to understand its features properl
 # Updating the Site
 ## Key commands
 - **Building the quartz**
@@ -139,6 +139,7 @@ For more details, refer  [Quartz 4.0](https://quartz.jzhao.xyz/) official docume
 - Line wrap in source mode of when editing table entry
 	- Solution provided in [Obsidian forum](https://forum.obsidian.md/t/line-wrap-in-source-mode-or-when-editing-table-entry/60901)
 ---
+
 # Obsidian References
 ## Site Inspirations
 -  https://notes.yxy.ninja/ - NUS CS student 
