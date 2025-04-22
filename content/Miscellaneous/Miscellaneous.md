@@ -23,6 +23,11 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 
 # Blogs & Papers to read
 - [x] [talk by @ilyasutat the Neural Information Processing Systems (December 10 - 15, 2024, Vancouver)](https://x.com/johnrushx/status/1867735273230282936?s=19)
+- [ ] Deepseek vs Llama
+	- [ ] https://medium.com/@anilAmbharii/demystifying-deepseek-ai-llama-and-openai-8d28c7857bda
+	- [ ] https://sapling.ai/llm/deepseek-vs-llama
+	- [ ] https://www.civo.com/blog/deepseek-vs-llama-vs-gpt4-ai-models
+	- [ ] https://aws.amazon.com/blogs/machine-learning/deploy-deepseek-r1-distilled-llama-models-with-amazon-bedrock-custom-model-import/
 - [ ] Build an LLM
 	- [ ] https://github.com/JohnMachado11/Build-a-Large-Language-Model-from-Scratch
 	- [ ] [[A Vaswani - Attention Is All You Need - 2017]]
@@ -74,8 +79,12 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 - [ ] [Generative AI is coming for healthcare, and not everyone’s thrilled](https://techcrunch.com/2024/04/14/generative-ai-is-coming-for-healthcare-and-not-everyones-thrilled/?utm_campaign=tc_week_in_review&utm_medium=newsletter&_hsenc=p2ANqtz-9uj9q9pDoLscRLycmFwtp27j84gJtMp-abjFeN29oKsohZzNMGlYS5cjfiJFBQmWuhQS00cIqZLdAg6oyzSOsGvaaHTGe-P2RAgeHNCfGW72Y8n0s&_hsmi=303479898&utm_source=tc)
 - [ ] https://www.linkedin.com/posts/gisenberg_someone-will-make-10m-in-2025-just-by-rebuilding-activity-7274777913143525376-4etF?utm_source=share&utm_medium=member_desktop
 - [ ] [Rogue superintelligence and merging with machines: Inside the mind of OpenAI’s chief scientist](https://www.technologyreview.com/2023/10/26/1082398/exclusive-ilya-sutskever-openais-chief-scientist-on-his-hopes-and-fears-for-the-future-of-ai/)
+- [ ] [# Meta’s Hyperscale Infrastructure: Overview and Insights](https://cacm.acm.org/research/metas-hyperscale-infrastructure-overview-and-insights/)
 - [ ] Microsoft Research Blog
 	- [ ] [PromptWizard: The future of prompt optimization through feedback-driven self-evolving prompts](https://www.microsoft.com/en-us/research/blog/promptwizard-the-future-of-prompt-optimization-through-feedback-driven-self-evolving-prompts/)
+
+# News
+- [ ] ['We are not for sale,' ChatGPT boss says after Musk bid](https://www.bbc.com/news/articles/cpdx75zgg88o.amp)
 
 # Potential courses
 *Note: Don't have to take all of them*
@@ -86,6 +95,8 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 - [ ] [Encode Club - AI Bootcamp Q2 2024](https://encodeclub.notion.site/AI-Bootcamp-Q2-2024-2ff2d3d04af8445a926d14843a3d5198)
 - [ ] [DeepLearning.AI](https://learn.deeplearning.ai/)
 	- [ ] [DeepLearning.AI - Reasoning with o1](https://learn.deeplearning.ai/courses/reasoning-with-o1/lesson/1/introduction)
+- [ ] https://jewel-snapdragon-5a9.notion.site/GenAI-Course-by-Armand-Ruiz-1acaccc688c78083a0b7f30fc66b2876
+- [ ]  https://community.genai.works/spaces/18408418/events/past - Weekly Started on Mar 10
 
 # Talks to listen
 - [ ] [Latent Space Podcasts](https://www.latent.space/p/bret?hide_intro_popup=true) - Especially the "The AI Architect — Bret Taylor". Recommended by Dharmesh Shah (Founder and CTO, HubSpot) in his [LinkedIn Post](https://www.linkedin.com/posts/dharmesh_goals-activity-7295218047521349632-pcYG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAcOLFMBUn1o8NEoEvAqJrA0ZzVgH3csPQ0)
@@ -95,6 +106,7 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 - [ ] Dwarkesh podcast
 	- [ ] [Dario Amodei (Anthropic CEO) - Scaling, Alignment, & AI Progress](https://www.dwarkeshpatel.com/p/dario-amodei?open=false#%C2%A7transcript) - 
 	- [ ] [Will scaling work?](https://www.dwarkeshpatel.com/p/will-scaling-work)
+- [ ]
 
 # Tools to try
 - [ ] [Introduction to NotebookLM](https://notebooklm.google.com/) by Google
@@ -110,11 +122,14 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 - [x] [[FLOPS]] - second <- Train/test time compute are measured using this unit
 - [ ] Log levels ([Blog 1](https://betterstack.com/community/guides/logging/log-levels-explained/), [Blog 2](https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels), [Blog 3](https://www.sumologic.com/glossary/log-levels/))
 - [ ] Conveyor | Spinnaker | Grab https://engineering.grab.com/our-journey-to-continuous-delivery-at-grab
+- [ ] Ingress | https://kubernetes.io/docs/concepts/services-networking/ingress/
 - [ ] Fast API - Gunicorn vs Uvicorn | [GeekforGeeks](https://www.geeksforgeeks.org/fast-api-gunicorn-vs-uvicorn/) | [Stack Overflow](https://stackoverflow.com/questions/66362199/what-is-the-difference-between-uvicorn-and-gunicornuvicorn)
 - [ ] Docker | [Get Started - Docs](https://docs.docker.com/get-started/) | [HF - Docker Spaces](https://huggingface.co/docs/hub/en/spaces-sdks-docker) | [HF Docker Space Examples](https://huggingface.co/docs/hub/en/spaces-sdks-docker-examples) | [Hf - Deploying a Gradio app with Docker](https://www.gradio.app/guides/deploying-gradio-with-docker)
 - [ ] m4a vs mp3 | [which is better](https://www.musicianwave.com/m4a-vs-mp3-which-is-better/)
 - [ ] Prompting
 	- [ ] COT Prompting | [Chain-of-Thought Prompting](https://www.promptingguide.ai/techniques/cot)
+- [ ] UTM
+	- [ ] [Hubspot blog post about it](https://blog.hubspot.com/marketing/what-are-utm-tracking-codes-ht)
 
 # Notes strategy
 - [ ] Effective way to take notes and condense them ([recommendations from ChatGPT](https://chatgpt.com/share/676e4333-aaf8-8013-bd5e-fda0950b52dc))

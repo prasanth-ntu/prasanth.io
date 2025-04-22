@@ -3,18 +3,19 @@ tags:
   - SoftwareEngineering
   - Projects
   - Hacks
-  - HuggingFace
   - OpenSource
-  - Music
-  - YouTube
+  - Chatbot
+  - GAI
+  - LLM
+  - Agents
 ---
-🎵 Simple Music Player.
+🤖 Personal Chatbot connected to my Personal Blog.
 
 **Useful links**
 - [Source code](https://huggingface.co/spaces/prasanthntu/music-player/tree/main)
 
 <iframe
-  src="https://prasanthntu-music-player.hf.space" 
+  src="https://github.com/prasanth-ntu/personal-chatbot" 
   allow="autoplay 'none'"
   loading="lazy"
   frameborder="0"

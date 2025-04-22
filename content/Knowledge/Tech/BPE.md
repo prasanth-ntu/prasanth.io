@@ -10,8 +10,8 @@ title: Byte Pair Encoding (BPE)
 ---
 # What's Byte Pair Encoding (BPE), and where is it used?
 - The BPE tokenizer is a subword [[Tokenizer|tokenizer]], which means it can split words into smaller parts.
-- The BPE tokenizer was used to train LLMs such as GPT-2, GPT-3, and the original model used in ChatGPT.
-  - Has a total vocabulary size of 50,257 tokens, with `<|<endoftex|>` being assigned the largest token ID.
+- The BPE tokenizer was used to train LLMs such as different [[GPT]]s, including [[GPT-2]], [[GPT-3]], and the original model used in ChatGPT.
+  - <span style="color:#4ea9fb">Has a total vocabulary size of 50,257 tokens, with <code>&lt;|endoftext|&gt;</code> being assigned the largest token ID.</span>
 - <span style="color:green"><b>The BPE tokenizer can handle any unknown words.</b></span>
   
 # How does BPE work and handle unknown words?

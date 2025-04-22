@@ -108,10 +108,98 @@ Block comments can span multiple lines.
  > [!note]- Foldable
  > This is a foldable callout
 ```
-
+---
 # Plugins
-- [ ] https://quartz.jzhao.xyz/plugins/ObsidianFlavoredMarkdown - Need to revisit this, and explore deeper for Block references (https://help.obsidian.md/Linking+notes+and+files/Internal+links#Link%20to%20a%20block%20in%20a%20note)
-- [ ] [LongForm](obsidian://show-plugin?id=longform) - Helps to create long projects. Need to revisit this to understand its features properl
+- [ ] https://quartz.jzhao.xyz/plugins/ObsidianFlavoredMarkdown - Need to revisit this, and explore deeper for [Block references](https://help.obsidian.md/Linking+notes+and+files/Internal+links#Link%20to%20a%20block%20in%20a%20note)
+- [ ] [LongForm](obsidian://show-plugin?id=longform) - Helps to create long projects. Need to revisit this to understand its features properly
+- [ ] [canvas2document](obsidian://show-plugin?id=canvas2document) - [Github](https://github.com/slnsys/obsidian-canvas2document)
+- [ ] [Templated](obsidian://show-plugin?id=templater-obsidian) - [Github](https://github.com/SilentVoid13/Templater)
+- [ ] [Emoji Toolbar](obsidian://show-plugin?id=obsidian-emoji-toolbar) - [Github](https://github.com/oliveryh/obsidian-emoji-toolbar)
+---
+# Extending Obsidian
+## CSS Snippets
+- For more details, refer https://help.obsidian.md/Extending+Obsidian/CSS+snippets
+
+### table-wrap.css
+```css
+/* 
+	Cribbed from the excellent ITS Theme
+	https://github.com/SlRvb/Obsidian--ITS-Theme 
+*/
+.cm-s-obsidian .HyperMD-table-row.HyperMD-table-row.HyperMD-table-row {
+	white-space: pre-wrap;
+	min-width: min-content;
+	}
+```
+
+### frozen-headers.css
+```css
+/* Freeze table headers in Obsidian */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    background-color: var(--background-primary);
+    z-index: 2; /* Ensure it stays above the content */
+}
+
+th {
+    background-color: var(--background-secondary);
+    color: var(--text-normal);
+    text-align: left;
+    padding: 8px;
+}
+
+td {
+    padding: 8px;
+    border: 1px solid var(--background-modifier-border);
+}
+```
+
+### mermaid-tweak.css
+```css
+/*
+Source(s): 
+    - https://stackoverflow.com/questions/78935770/how-to-set-rendered-mermaid-diagrams-width-to-be-based-on-screen-size-in-obsidia
+    - https://forum.obsidian.md/t/resize-and-align-mermaid-diagrams/7019
+    - https://www.reddit.com/r/ObsidianMD/comments/1crsgop/til_about_mermaid_diagrams/?rdt=50293
+Date updated: 2024-02-14 (YYYY-MM-DD)
+*/
+
+/** Set Mermaid Diagrams to 100% width of screen by default */
+
+.mermaid svg {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/** On hover, make the diagram full width and enable horizontal scrolling */
+
+div:has(> .mermaid):hover {
+    width: auto !important;
+}
+
+.mermaid:hover {
+    overflow: scroll;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.mermaid:hover svg {
+    display: block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+```
+---
 # Updating the Site
 ## Key commands
 - **Building the quartz**

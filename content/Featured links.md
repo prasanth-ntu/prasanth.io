@@ -15,7 +15,8 @@
 	- [[The Psychology of Money]]
 	- [[Build a LLM from Scratch]]
 - [[Pet Projects/Index|Pet Projects]] 
-	- Media related: [[YouTube Downloader]] | [[Music Player]] | [[Media Converter]]
+	- Media related: [[YouTube Downloader]] | [[Music Player]] | [[Media Converter | 
+	- AI related: [[Personal Chatbot]]
 - [[Blog/Index|Blog]]
 	- [[2025-02-01 Reflections on Meeting with Magesh]]
 - [[Miscellaneous]]
