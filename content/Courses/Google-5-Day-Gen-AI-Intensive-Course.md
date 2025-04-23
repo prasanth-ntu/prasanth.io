@@ -40,33 +40,48 @@ tags:
 		- Make sure you phone verify your Kaggle account before starting, it's necessary for the codelabs.
 		- Want to have an interactive conversation? Try adding the whitepapers to NotebookLM.
 ---
-**Summary of the key points & callouts**
+## **Summary of the key points & callouts**
+###  [Day 1 - Prompting [TP]](https://www.kaggle.com/code/prasanth07/day-1-prompting-tp/)
 - The examples were built leveraging Gemini 2.0 and  the latest `google-genai` SDK
-- Models covered are
+- **Models** covered are
 	- `gemini-2.0-flash` 
 	- `gemini-2.0-flash-thinking-exp`
-		- Thinking model: Trained to generate the "thinking process" the model goes through as part of it's response. This provides us with high quality responses without needing specialised prompting like CoT or ReAct.
-- Two types of content generation covered are
+> [!TIP] Thinking model: Trained to generate the "thinking process" the model goes through as part of it's response. This provides us with high quality responses without needing specialised prompting like CoT or ReAct.
+- **Two types of content generation** covered are
 	- `client.models.generate_content`
-	- `client.chats.create`
-- Configs covered are
-	- `max_output_tokens`
-	- `temperature
+		- Single-turn text-in/text out structure
+	- `client.models.generate_content_stream`
+		- Instead of waiting for the entire response, the model sends back chunks or parts of the generated content as they become available as an **iterable**.
+	- `client.chats.create
+		- Multi-turn chat structure
+- **Configs** covered are
+	- `temperature`
 	- `top_p`
-- Prompting techinques covered are
+	- `max_output_tokens`
+> [!warning] Specifying this parameter does not influence the generation of the output tokens, so the output will not become more stylistically or textually succinct, but it will stop generating tokens once the specified length is reached.
+- **Prompting techniques** covered are
 	- [[Zero-shot Prompting]]
 	- One-shot Prompting
 	- [[Few-shot Prompting]]
 	- Chain of Thought ([[CoT]])
-	- ReAct: Reason and Act
-- Techniques to enforce the LLM output to follow the supplied schema
+		- Reason only
+	- [[ReAct]]: Reason and Act
+		- Thought > Acton > Observation > 
+- Techniques to **enforce the LLM output to follow the supplied schema**
 	- `enum` mode
 	- `json` mode
-- Code prompting scenario covered are
+		- Can be achieved using `typingTypedDict` or `dataclass`
+- **Code prompting scenarios** covered are
 	- Generating code
 	- Code execution
 		- Can automatically run generated code using `ToolCodeExecution`
 	- Explaining code
+### [Day 1 - Evaluation and structured output [TP]](https://www.kaggle.com/code/prasanth07/day-1-evaluation-and-structured-output-tp/)
+- **Models** covered are
+	- `gemini-2.0-flash`
+- **Concepts** covered include
+	- Summarising a (pdf) document
+	- Evaluating agent to gauge the quality of the LLM generated summary for the user request
 ---
 # Day 2: Embeddings & Vector Databases
 
@@ -76,10 +91,13 @@ tags:
 
 # Day 5: MLOps for Generative AI
 
-  
-  
-  
+---
+# Miscellaneous
+- [[Gemini comparison]]
+	- [[Gemini comparison#Model comparison]]
+	- [[Gemini comparison#Rate limits|Rate Limits]]
 
+---
 # To clarify
 - [ ] Day 1: Foundational Large Language Models & Text Generation and Prompt Engineering
-	- [ ] Temperature vs. Top P
+	- [ ] Temperature vs. Top P vs. Top K

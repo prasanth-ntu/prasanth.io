@@ -6,6 +6,8 @@ tags:
   - LLM
   - GPU
   - MachineLearning
+  - OpenAI
+  - GPT
 ---
 # Compute time, Parameter  count, Embedding Size, Context Window
 
