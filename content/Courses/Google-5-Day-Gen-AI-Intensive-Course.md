@@ -112,7 +112,6 @@ tags:
 	    3. [Build](https://notifications.googleapis.com/email/redirect?t=AFG8qyUQYtTe2ZgXJcAp4SCyIx_DY0gOuG1rO7NoY9sK6KlpYWH8metiZy4qhbPN-QbHig7xBCFKr0rk9AgnYBA2Xdm1d-vAln_QmoM1cNHpBrv7T8yX0pe8SgSWodb_t8Vpvry-0tlSfch-L9mTxN2CiQ6vO6dpzINtK7lWamgPFi4YHZfecnYbcQHS1SjyK2DGyJSsqXQRgwKoFBOisMOf4CKxhGOZIU6In-COy-sEh3NGrqxg86wUkEHOGJks_CEDOF6e2kF-4KM&r=eJwNxlEOgCAIANATIVuf3YaAlKnZxI15-3pfr6z1-okYEalSzk0Tj448RLHTrOZFp6LQhgO4kbvd254M2i8V-ecQtgpUneQfe6MdWw&s=ALHZ2r7FED2hEmwsFTqNB6EPKaFv) a neural classification network with Keras using embeddings. 
 - 💡**What You’ll Learn**
 	- Today you will learn about the conceptual underpinning of embeddings and vector databases and how they can be used to bring live or specialist data into your LLM application. You’ll also explore their geometrical powers for classifying and comparing textual data.
-
 ## **Summary of the key points & callouts**
 ### [Day 2 - Document Q&A with RAG [TP]](https://www.kaggle.com/code/prasanth07/day-2-document-q-a-with-rag-tp)
 - **Gemini Models** covered include
@@ -146,7 +145,8 @@ tags:
 ---
 # Day 3: AI Agents
  - 📝 **My Kaggle Notebooks**
-	- ...
+	- [Day 3 - Function calling with the Gemini AP [TP]](https://www.kaggle.com/code/prasanth07/day-3-function-calling-with-the-gemini-ap-tp)
+	- [Day 3 - Building an agent with LangGraph [TP]](https://www.kaggle.com/code/prasanth07/day-3-building-an-agent-with-langgraph-tp)
 - 🎒**Assignment**
 	- Complete Unit 3: “Generative AI Agents”, which is:
 		-  [Optional] Listen to the summary [podcast episode](https://notifications.googleapis.com/email/redirect?t=AFG8qyUVvH7wTpgN9aM0ywkCB93ZoG684sSHfkIlep67X6LU9mvajSEb1SzCRf4TisEPskUEGl0O7JqXrySJCaG4xEis7jx-Pn-TjYP9-5LATeLtuu0C0UGMDwWHN2uKkp6zLzBkNsDax5Uysz9nm73R7DLj9EQs27eFzHH0v2eJREGZURWuwg97TT-N8eNBCIT_bFh5wxQyAErx17DPLaa7ZiGuKyjtZSeevNA_KDmFsYOaS19cy6nQqrrQFfxii8tLaiH8NTZW67A&r=eJzLKCkpKLbS16_MLy0p1UtK1fcwSY9KMXFyLnIJBACSrQmX&s=ALHZ2r4m5hX4Rl0iDJOghEDBKSYn) for this unit (created by [NotebookLM](https://notifications.googleapis.com/email/redirect?t=AFG8qyXku4nR9SqQavNASqTNFREIVVFZG8k4DbNaiTt8pcj2Hl_DCAq6sz6x7fnWzR-eI8JztT_gw3iHg4QqyAwW87Fy4dyq4VxoGvbAZ0fqRf3JxIeqSaLjxg2ZOyyMOYuYdwpBw3P1JIDerN1bB4PvGR6ytaezOcUdb5WzoKbMfqenJHlghKJTmjHtqIvoCTFcCLw8vtMMT-ZySqXK6ogRMP1qJ1FMZ92ms7cYDbGf3dWmCP4nVshRaNuqu2bCMhMnhAU7gcTPFeY&r=eJzLKCkpKLbS18_LL0lNys_PzsnVS8_PT89J1QcAhrkJ4A&s=ALHZ2r6Nt_RXkvWfceOBL-nw_4WA)).
@@ -157,6 +157,11 @@ tags:
 - 💡**What You’ll Learn**
 	- Learn to build sophisticated AI agents by understanding their core components and the iterative development process.
 	- The code labs cover how to connect LLMs to existing systems and to the real world. Learn about function calling by giving SQL tools to a chatbot, and learn how to build a LangGraph agent that takes orders in a café.
+## **Summary of the key points & callouts**
+### [Day 3 - Function calling with the Gemini AP [TP]](https://www.kaggle.com/code/prasanth07/day-3-function-calling-with-the-gemini-ap-tp)
+- 
+###  [Day 3 - Building an agent with LangGraph [TP]](https://www.kaggle.com/code/prasanth07/day-3-building-an-agent-with-langgraph-tp)
+- 
 ---
 # Day 4: Domain-Specific Models
 - 📝 **My Kaggle Notebooks**
@@ -195,8 +200,14 @@ tags:
 		- [Metric prompt templates for model-based evaluation](https://cloud.google.com/vertex-ai/generative-ai/docs/models/metrics-templates#pairwise_question_answering_quality)
 
 ---
-# To clarify
+# To do or clarify
 - [ ] Day 1: Foundational Large Language Models & Text Generation and Prompt Engineering
 	- [ ] Temperature vs. Top P vs. Top K
 - [ ] Day 2:
 	- [ ] What would happen if we try to embed a text that has 5000 words using `/text-embedding-004` gemini model which only support upto 2048 input tokens?
+	- [ ] https://github.com/google-gemini/cookbook/blob/main/examples/Search_reranking_using_embeddings.ipynb
+	- [ ] https://github.com/google-gemini/cookbook/blob/main/examples/Anomaly_detection_with_embeddings.ipynb
+- [ ] Day 3: 
+	- [ ] I don't understand the "Compositional function calling" section properly.
+		- [ ] https://github.com/google-gemini/cookbook/blob/main/quickstarts/Function_calling.
+		https://github.com/google-gemini/cookbook/blob/main/quickstarts/Function_calling_config.ipynb
