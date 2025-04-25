@@ -200,6 +200,10 @@ div:has(> .mermaid):hover {
 }
 ```
 ---
+# Animated gifs
+Example
+- <picture style="display: inline-block; vertical-align: middle;"><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2705/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2705/512.gif" alt="✅" width="25" height="25" style="display: inline-block; vertical-align: middle;"></picture> [Day 1 - Evaluation and structured output [TP]](https://www.kaggle.com/code/prasanth07/day-1-evaluation-and-structured-output-tp/)
+
 # Updating the Site
 ## Key commands
 - **Building the quartz**

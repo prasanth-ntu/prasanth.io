@@ -8,6 +8,10 @@ tags:
   - Programming
 ---
 # Different Error Codes
-- 404
-- 502
-- 503
+
+| Error Code | Description         |     |
+| ---------- | ------------------- | --- |
+| 404        |                     |     |
+| 429        | Too Many Requests   |     |
+| 502        |                     |     |
+| 503        | Service Unavailable |     |

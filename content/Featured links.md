@@ -2,6 +2,7 @@
 	- [[Knowledge/Tech/Index|Tech]]
 		- [[AI-ML-DS-and-SE Glossary]]
 		- [[Data Science Canvas - Rendered]]
+		- [[Core concepts in OOP, Metaprogramming, and Optimization]]
 	- [[Knowledge/Tools/Index|Tools]]
 		- [[Obsidian]]
 	- [[Knowledge/Startups/Index|Startups]]
@@ -10,12 +11,13 @@
 		- Yet to be added
 - [[Courses/Index|Courses]]
 	- [[DeepLearning.AI - Functions, Tools and Agents with LangChain]]
+	- [[Google-5-Day-Gen-AI-Intensive-Course]]
 -  [[Books/Index|Books]]
 	- [[Situational Awareness]]
 	- [[The Psychology of Money]]
 	- [[Build a LLM from Scratch]]
 - [[Pet Projects/Index|Pet Projects]] 
-	- Media related: [[YouTube Downloader]] | [[Music Player]] | [[Media Converter | 
+	- Media related: [[YouTube Downloader]] | [[Music Player]] | [[Media Converter]]
 	- AI related: [[Personal Chatbot]]
 - [[Blog/Index|Blog]]
 	- [[2025-02-01 Reflections on Meeting with Magesh]]
