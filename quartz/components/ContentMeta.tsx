@@ -12,11 +12,13 @@ interface ContentMetaOptions {
    */
   showReadingTime: boolean
   showComma: boolean
+  showAuthor: boolean
 }
 
 const defaultOptions: ContentMetaOptions = {
   showReadingTime: true,
   showComma: true,
+  showAuthor: true,
 }
 
 export default ((opts?: Partial<ContentMetaOptions>) => {
@@ -31,6 +33,11 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
 
       if (fileData.dates) {
         segments.push(<Date date={getDate(cfg, fileData)!} locale={cfg.locale} />)
+      }
+
+      // Display author if enabled and available
+      if (options.showAuthor && fileData.frontmatter?.author) {
+        segments.push(<span>Book by {fileData.frontmatter.author}</span>)
       }
 
       // Display reading time if enabled

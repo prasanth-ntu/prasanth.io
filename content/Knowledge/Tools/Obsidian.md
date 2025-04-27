@@ -199,11 +199,34 @@ div:has(> .mermaid):hover {
     padding: 0;
 }
 ```
----
-# Animated gifs
-Example
-- <picture style="display: inline-block; vertical-align: middle;"><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2705/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2705/512.gif" alt="✅" width="25" height="25" style="display: inline-block; vertical-align: middle;"></picture> [Day 1 - Evaluation and structured output [TP]](https://www.kaggle.com/code/prasanth07/day-1-evaluation-and-structured-output-tp/)
 
+### `customer.scss` for Animated GIFs
+```css
+@use "./base.scss";
+
+// put your custom CSS here!
+
+/* Animated emoji styles */
+.animated-emoji {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+  }
+}
+```
+
+Example: Without custom css
+- <picture style="display: inline-block; vertical-align: middle;"><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2705/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2705/512.gif" alt="✅" width="25" height="25" style="display: inline-block; vertical-align: middle;"></picture> 
+**Example: With custom css class in quartz styles**
+- <picture class="animated-emoji"><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f613/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f613/512.gif" alt="✅" width="25" height="25"></picture>
+---
 # Updating the Site
 ## Key commands
 - **Building the quartz**
@@ -230,6 +253,29 @@ For more details, refer  [Quartz 4.0](https://quartz.jzhao.xyz/) official docume
 	- Preview and generate using this site: https://www.opengraph.xyz/url/https%3A%2F%2Fprasanth.io
 - Line wrap in source mode of when editing table entry
 	- Solution provided in [Obsidian forum](https://forum.obsidian.md/t/line-wrap-in-source-mode-or-when-editing-table-entry/60901)
+### `ContentMeta.tsx`
+```
+interface ContentMetaOptions {
+  ...
+  showAuthor: boolean
+}
+
+const defaultOptions: ContentMetaOptions = {
+  ...
+  showAuthor: true,
+}
+
+export default ((opts?: Partial<ContentMetaOptions>) => {
+  ...
+  
+  function ContentMetadata({ cfg, fileData, displayClass }: QuartzComponentProps) {
+      ...
+      
+      // Display author if enabled and available
+      if (options.showAuthor && fileData.frontmatter?.author) {
+        segments.push(<span>Book by {fileData.frontmatter.author}</span>)
+      }
+```
 ---
 
 # Obsidian References
