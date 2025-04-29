@@ -5,7 +5,7 @@ tags:
   - Reading
 ---
 
-# My Book Collection
+<!-- # My Book Collection -->
 
 Here are the books I've read, currently reading, or plan to read:
 
@@ -44,7 +44,7 @@ Here are the books I've read, currently reading, or plan to read:
   </a>
 
 <!-- Let's Talk Money -->
-<!--
+<!-- <!-- -->
 <a href="Let's Talk Money.md" class="book-card">
 <div class="book-image-placeholder">📚</div>
 <div class="book-content">
@@ -54,6 +54,5 @@ Here are the books I've read, currently reading, or plan to read:
     <div class="book-status status-to-read">#ToRead</div>
 </div>
 </a>
--->
   <!-- Add more books as needed -->
 </div>
