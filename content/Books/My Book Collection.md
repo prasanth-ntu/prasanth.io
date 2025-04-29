@@ -12,7 +12,7 @@ Here are the books I've read, currently reading, or plan to read:
 <div class="books-grid">
   <!-- Atomic Habits -->
   <a href="Atomic Habits.md" class="book-card">
-    <div class="book-image"><img src="attachments/images/atomic-habits-cover.webp" alt="Atomic Habits cover"></div>
+    <div class="book-image"><img src="../Books/attachments/images/atomic-habits-cover.webp" alt="Atomic Habits cover"></div>
     <div class="book-content">
       <div class="book-title">Atomic Habits</div>
       <div class="book-author">by James Clear</div>
@@ -23,7 +23,7 @@ Here are the books I've read, currently reading, or plan to read:
 
   <!-- The Psychology of Money -->
   <a href="The Psychology of Money.md" class="book-card">
-        <div class="book-image"><img src="attachments/images/the-psychology-of-money-cover.webp" alt="Atomic Habits cover"></div>
+        <div class="book-image"><img src="../Books/attachments/images/the-psychology-of-money-cover.webp" alt="Atomic Habits cover"></div>
     <div class="book-content">
       <div class="book-title">The Psychology of Money</div>
       <div class="book-author">by Morgan Housel</div>
@@ -44,6 +44,7 @@ Here are the books I've read, currently reading, or plan to read:
   </a>
 
 <!-- Let's Talk Money -->
+<!--
 <a href="Let's Talk Money.md" class="book-card">
 <div class="book-image-placeholder">📚</div>
 <div class="book-content">
@@ -53,7 +54,6 @@ Here are the books I've read, currently reading, or plan to read:
     <div class="book-status status-to-read">#ToRead</div>
 </div>
 </a>
-
-
+-->
   <!-- Add more books as needed -->
 </div>

@@ -8,7 +8,10 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
   const baseDir = pathToRoot(fileData.slug!)
   return (
     <h2 class={classNames(displayClass, "page-title")}>
-      <a href={baseDir}>{title}</a>
+      <a href={baseDir}>
+        <span class="desktop-only">{title}</span>
+        <span class="mobile-only">TP</span>
+      </a>
     </h2>
   )
 }
@@ -18,6 +21,20 @@ PageTitle.css = `
   font-size: 1.75rem;
   margin: 0;
   font-family: var(--titleFont);
+}
+
+.desktop-only {
+  display: initial;
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+  @media (max-width: 800px) {
+    display: initial;
+  }
 }
 `
 
