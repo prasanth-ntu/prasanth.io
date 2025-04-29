@@ -325,28 +325,28 @@ e.g., If Rs 1 lakh will grow to Rs 2 lakh in 15 yrs, our return per year is ~72/
 > [!IMPORTANT ] *There's a purpose for each financial product we buy, and each product needs to fight with others to grab that place in our money box.*
 
 > [!IMPORTANT] 3 asset classes we need to understand
-> 1. **Debt**: Umbrella term for all financial products that are based on borrowing.
-> 2. **Equity**: Ownership of a business and the risk it brings, either directly (through stocks) or indirectly (through mutual funds).
-> 3. **Real assets**: Can be physically seen.
+> 1. **Debt**: Umbrella term for all financial products that are *based on borrowing*.
+> 2. **Equity**: *Ownership of a business* and the risk it brings, either *directly* (through stocks) or *indirectly* (through mutual funds).
+> 3. **Real assets**: Can be *physically* seen.
 
 > [!NOTE] Financial assets
 > Debt & equity
 
 > [!NOTE] Real assets
-> Real estate and gold 
+> Real estate & gold 
 
 **Debt**
 - Products that usually give us an assured return. Example include
 	- FD
 	- Corporate deposites
 	- Bond
-	- Provident Fund
+	- *Provident* Fund
 	- Public Provident Fund (PPF)
 - The core of the product is loan.
 	- <span style="color:red"> Higher the return it promises, the higher is the risk</span> of non-payment of both of our investment and the interest.
 
 > [!NOTE] Two things are fixed in debt financial products
-> 1. How much we will get back
+> 1. How much we will get back, and
 > 2. When we will get back
 
 > [!INFO] Debt mutual funds
@@ -354,7 +354,7 @@ e.g., If Rs 1 lakh will grow to Rs 2 lakh in 15 yrs, our return per year is ~72/
 
 > [!INFO] *The goal of debt products in our money box is to provide money at short notice, and to provide stability in our long-term investments.* 
 
-> [!HINT] Debt products are good for stability, but not for growth.
+> [!HINT] Debt products are good for stability, but <span style="color:red">not for growth</span>.
 
 **Gold**
 > [!NOTE] Gold is a good as a hedge against inflation.
@@ -363,10 +363,10 @@ e.g., If Rs 1 lakh will grow to Rs 2 lakh in 15 yrs, our return per year is ~72/
 
 > [!question] How good is gold for getting capital gains or profits?
 > It depends on 
-> 1. when we bough it, and
-> 2. how long we held it
+> 1. When we bough it, and
+> 2. How long we held it
 
-> [!Warning] Not more than 5-10% of our total portfolio goes into gold. We do not buy jewellery as investment.
+> [!Warning] Not more than 5-10% of our total portfolio goes into gold. <span style="color:red">We do not buy jewellery as investment.</span>
 
 **Real estate**
 > [!DANGER] We forget how many of our money decisions are related to emotions, power equations within the family and suppressed issues that tend to erupt at some random trigger.
@@ -396,7 +396,7 @@ e.g., If Rs 1 lakh will grow to Rs 2 lakh in 15 yrs, our return per year is ~72/
 > [!BUG] Dealing with black-money is like a treadmill
 > Once we get on it, we have to keep running with the money.
 
-> [!DANGER] Irony of our investment fears
+> [!DANGER] Irony of our investment fears!
 > We are happy to invest in dodgy property deals, to risk builders running with our money, and to turn our white into black so that we can invest for the long term in something we are familiar with and can 'trust'.
 
 > [!HINT] Rule of thumb to see the true face of our investment returns
@@ -450,19 +450,44 @@ e.g., If Rs 1 lakh will grow to Rs 2 lakh in 15 yrs, our return per year is ~72/
 - In a growing economy, stock prices go up over long run.
 - Good profits and potential growth are the basis for the stock price rise.
 
-**Why does the author likes giving her money an equity exposure so much?**
+**Why does the author likes giving her money an equity exposure rather than direct stocks so much?**
 - We will gasp on ROI on Rs 1 lakh invested 40 yrs back in 
 	1. Fixed deposit
 	2. Gold
 	3. Public provident fund
 	4. Sensex
+> [!SUCCESS] $1.13^{40} = 133$ ⇒ The power of compounding over long term!
+> Assuming Sensex gains 13% p.a. steadily every year, after 40 years, an investment of Rs. 1 lakh would be worth Rs. 1.33 crores. 
 
 - Depending on a number of factors, the year at which the minimum return is positive in equity is between 7 and 10 yrs.
 
 > [!IMPORTANT] It's not timing the market, rather the time in the market that matters.
 
-> [!DANGER] We should not put money into the equity market if we need it next year
- 
+> [!DANGER] We should not put money into the equity market if we need it next year.
+
+> [!HINT] Rules of equity investing
+> 1. *When investing in stock market, give it the same patience & respect we give real estate - a good equity portfolio needs 5 years of patients, ten years to see consistent returns, but actually will slow-cook over 15-20 years.*
+> 2. Our risk is choosing poor products, and finding out after 15 years that our fund (manager) has malfunctioned.
+> 3. If we find ourselves frozen while choosing equity products in the market - and don't want to take risk of choosing a fund manager, go with ETF or an index fund linked to a broad market index or mid-cap index. 
+> 	- This is the safest way to get average market returns.
+> 4. Do not invest into any product that locks you into a particular company or asset manager.
+> 	- We want a product which is portable, where exit is possible, cheap, and easy.
+> 5. If we want to invest in managed funds, start learning.
+> 	- Read through Mint50 coverage, Value Research data, and Morningstar ratings.
+
+> [!SUCCESS] Our money box can handle the risk that equity brings in short term now, because 
+> 1. We have created an Emergency fund
+> 2. We bought Medical & life covers
+
+> [!Question] What's best way to buy equity?
+> Mutual funds
+
+ > [!HINT] TL;DR: We are doing OK if ...
+> 1. we understand that equity cooks over time, and we need atleast 7-10 yrs of patience to see returns;
+> 2. we understand that we will not double our money overnight, but will get a return that is between 12-15% a year;
+> 3. we understand that mutual funds are best way to give our money an equity exposure;
+> 4. we understand that if we don't have the ability to choose funds, we invest through index funds or ETFs.
+
 ---
 # 9. Mutual funds
 
@@ -499,14 +524,24 @@ e.g., If Rs 1 lakh will grow to Rs 2 lakh in 15 yrs, our return per year is ~72/
 	- [ ] Revisit the benefits section for both our insurance, and the insurance we are planning for Tharshi's mom as mentioned in [[Let's Talk Money#4. Building our protection]]
 - [ ] What's considered as annual take home income? Is it post-tax, PF deductions?
 - [ ] Can we buy life insurance cover (term) from multiple parties? What is defined as existing medical condition when applying for these insurances? Should we include permanent disability and critical illness in it?
-- [ ] In chatper 7, why is the author saying owning real estate house as part of investment and rental yield is wrong? is it because the returns does not add up?
+- [ ] In [[Let's Talk Money#7. Let's de-jargon investing]], 
+	- [ ] why is the author saying owning real estate house as part of investment and rental yield is wrong? is it because the returns does not add up?
+	- [ ] why is the author saying "we have our FDs; PF and PPF, debt funds, and no other debt products, no corporate deposits, no chit funds, no ATI bonds;"?
 - [x] What's inflation?
-- [ ] You need an equity exposure rather than direct stocks. What does this mean in [[Let's Talk Money#8. Equity]]?
+- [ ]  In [[Let's Talk Money#8. Equity]],
+	- [ ] You need an equity exposure rather than direct stocks. What does this mean?
+	- [ ] I still don't understand some of the 5 points in "Rules of equity investing"
+	- [ ] Why "Mutual funds" is the best way to buy equity?
+- [ ] In [[Let's Talk Money#9. Mutual funds]],
+	- [ ] 
 - [ ] What's index fund?
 - [ ] What's ETF?
-- [ ] What's mutual fund?
+- [ ] What's mutual fund? How's related or different to index fund and ETF?
 
 ---
-# Distracting thoughts
-- [ ] Message/Call Ernest, Chithi and Mom, and Kanagaraj anna
+# Miscellaneous
 - [ ] Doing the actual calculation for [[Let's Talk Money#2. Don't stash that cash]] 
+- [ ] https://www.mas.gov.sg/bonds-and-bills/singapore-government-bonds-information-for-individuals
+- [ ] https://www.dbs.com.sg/personal/articles/nav/investing/investing-in-gold
+- [ ] https://www.lia.org.sg/tools-and-resources/insurance-calculator-intro/
+- [ ] https://www.fwd.com.sg/life-insurance/term-life-plus/?utm_source=Google&utm_medium=Search&utm_campaign=Termlife_Generic_Core_Broad&utm_term=life%20insurance&gad_source=1&gbraid=0AAAAADRXNb_Y1TvOSh8FHAXdXcdlb-ol0&gclid=Cj0KCQjwiLLABhCEARIsAJYS6un0IGLlOVQOPGqeT1-MaKch17XSS6tqZRpYqRxc8C59iFeuxfw_vf0aAvPDEALw_wcB
