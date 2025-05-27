@@ -8,6 +8,7 @@ tags:
   - Finance
 author: Monika Halan
 ---
+****
 
 |                 |               |
 | --------------- | ------------- |
@@ -18,7 +19,8 @@ author: Monika Halan
 # Preface to the Revised Edition
 
 -  <span style="color:red">We worry about investment the way we worry about weight. Instead of dieting or investing being a habit, we only think of them as remedial measures when our weight or our bank balance goes too high or too low</span>.
-- Happiness is a choice - we can choose to be or not to be.
+
+>[!TIP] Happiness is a choice - we can choose to be or not to be.
 
 **Pandemic Money Lessons** 
 - **Lesson 1:** *We can up our saving target sharply the day we decide to go to back into lockdown mode.*
@@ -30,8 +32,8 @@ author: Monika Halan
 - **Lesson 3**: *There is no safe haven for our money. Each investment comes with a risk and we have to decided which one we are able to take.*
 	- Investments such as liquid cash, FD, debt funds, equity, gold, real estate, etc.
 - **Lesson 4:** *Asset allocation is not an option.* <span style="color:green"><i>Understand the difference between risk capacity and risk appetite, and align them.</i></span>
-		- Risk capacity: Ability to take risk. Capacity is about our age, stage, number of dependents, confidence of our ability to keep generating income for long time, etc.
-		- Risk appetite: Willingness or desire to take risk. This depends on how well we understand money, finance, our own skills, our ability to manage portfolio, etc.
+		- **Risk capacity**: Ability to take risk. Capacity is about our age, stage, number of dependents, **confidence** of our ability to keep generating income for long time, etc.
+		- **Risk appetite**: Willingness or desire to take risk. This depends on how well we understand money, finance, our own skills, our ability to manage portfolio, etc.
 - **Lesson 5**: *Our total fixed obligation-to-income ratio (FOIR) should be 30% or less.* 
 	- i.e., Our equated monthly instalments (EMIs) should not be more than 30% of our take home money. Preferably, 15% to 20% ratio..
 
@@ -43,6 +45,7 @@ author: Monika Halan
 - Everyone need two things
 	- 1. Always strive for deeper understanding of what you do, and then try and stretch beyond what the ask is.
 	- 2. Plan for a career 10 years ahead of today. 
+	
 > [!Question] What you want to be doing 10 years from today, and what you are going to do about to do about it today.
  
 > [!HINT]  TL;DR: We are doing OK if ...
@@ -108,11 +111,13 @@ author: Monika Halan
 
 > [!HINT] Getting a good medical cover is probably more important than buying life insurance - we're more likely to go to hospital with an illness or accident than die.
 
-- **Do we need cover? My office covers me**
-	- Yes, we do. 
+- **Do we need medical cover? What if my office already covers me**
+	- Yes, we still do need a personal medical cover. 
 	- Especially if we are in our forties or when there is a change in our circumstances (e.g., retrenchment, quitting work during/post pregnancy, etc.) or post retirement (lifestyle diseases might have already set in).
-	- <span style="color:red">Companies are reluctant cover older people, and with 'pre-existing' disease, the reluctance is even stronger.</span>
-- **What policy do we buy?**
+	- <span style="color:red">Companies are reluctant to cover older people, and with 'pre-existing' disease, the reluctance is even stronger.</span>
+
+> [!QUESTION] What policy do we buy?
+
 > [!ERROR] Cheapest policy is not necessarily a good plan.
 
 > [!HINT] 3 factors to decide on a policy
@@ -120,11 +125,11 @@ author: Monika Halan
 > 2. Benefits
 > 3. Claims
 
-> [!TIP] 1 Price
+> [!TIP] **1. Price**
 > 1. How does the price compare with policies from other companies right now?
 > 2. How does the price compares over the years?
 
-> [!HINT] 2 Benefits
+> [!HINT] **2. Benefits**
 > 1. *Ensure that we have a policy that does not have something called a 'co-pay' clause.*
 > 2. *Check for a 'pre-existing' disease clause.*
 > 3. *Check if the policy has 'disease waiting period*'.
@@ -134,7 +139,7 @@ author: Monika Halan
 > 7. *List of 'day-care' procedures that don't need us to stay for 24 hours in a hopital anymore.*
 > 8. *Check the 'no-claims' bonus feature*.
 
-> [!HINT] 3 Claims
+> [!HINT] **3. Claims**
 > 1. *Check how many claims does the company settle? Only choose the firm that settles more than 95% of claims.*
 > 2. *Look at claim-complaints data and look for policy that has <30 complaints on every 10,000 claims made*.
 
@@ -188,9 +193,13 @@ author: Monika Halan
 > - We buy life insurance for all the wrong reasons - fear, greed, pity, frustration, taxes, pressure, investment, etc.. 
 > - *The real & only reason for a life cover is to protect our family's financial health (lifestyle & future goals) if we die.*
 
-- **Is the life insurance cover a 'waste'**?
-	- When we buy this policy, if we live beyond the policy term, we get nothing back.
-	- It's not a waste. Rather, it's price we pay for buying a life cover (an income replacement - an income replacement - a lump sum that we need today so that our income will not be missed by the family if we are not around).
+> [!IDEA] My personal analogy
+> - Medical cover is to cover us when we live.
+> - Life insurance is to protect our family when we die.
+
+> [!QUESTION] Is the life insurance cover a 'waste'?
+- When we buy this policy, if we live beyond the policy term, we get nothing back.
+- It's not a waste. Rather, it's price we pay for buying a life cover (an income replacement - an income replacement - a lump sum that we need today so that our income will not be missed by the family if we are not around).
 
 > [!HINT] Rule of 72
 > Versatile rule to know the rate of return of every year of a double-your-money proposition.
@@ -241,11 +250,11 @@ e.g., If Rs 1 lakh will grow to Rs 2 lakh in 15 yrs, our return per year is ~72/
 > 1. Not having money to invest.
 > 2. Desire to keep money in liquid form for future emergency.
 > 3. Fear of making a mistake.
-> 4. Lack of knowedlge.
+> 4. Lack of knowledge.
 > 
 
 1. **Not having money to invest**
-	- <span style="color:red"> Waiting to invest because we don't have a large corpus is like waiting to get fit before we join a diet and fitness routine</span>.
+> [!WARNING] Waiting to invest because we don't have a large corpus is like waiting to get fit before we join a diet and fitness routine.
 	
 > [!DANGER] We are not stock market traders or speculators. We are investors. Understand the difference.
 
@@ -285,7 +294,7 @@ e.g., If Rs 1 lakh will grow to Rs 2 lakh in 15 yrs, our return per year is ~72/
 > 	3. Far Away (7+ yrs)	
 
 - **Examples of Almost there**
-	- Getting marries
+	- Getting married
 	- Sending kid to school
 	- Buying a house
 	- Buying a car
@@ -299,12 +308,12 @@ e.g., If Rs 1 lakh will grow to Rs 2 lakh in 15 yrs, our return per year is ~72/
 	- Our retirement
 
 > [!DANGER] Not everything suites everybody
-> *we need to match our financial needs to financial products.* 
+> *We need to match our financial needs to financial products.* 
 
 - Each financial product has certain time period over which it works best.
 	- A product that's safe in long run becomes risky in short term, and vice versa.
 
-> [!TODO] Learn to ask the question
+> [!TIP] Learn to ask the question
 > Over what holding time period does this financial product work the best?
 
 > [!TIP] Even if we were the unluckiest investor <picture class="animated-emoji"><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f613/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f613/512.gif" alt="✅" width="25" height="25"></picture> in the world, and bought into the market on the worst day possible, there is a way in which we can still win <picture class="animated-emoji"><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f4b8/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f4b8/512.gif" alt="✅" width="25" height="25"></picture><picture class="animated-emoji"><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a9/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a9/512.gif" alt="✅" width="25" height="25"></picture>.
@@ -324,21 +333,21 @@ e.g., If Rs 1 lakh will grow to Rs 2 lakh in 15 yrs, our return per year is ~72/
 
 > [!IMPORTANT ] *There's a purpose for each financial product we buy, and each product needs to fight with others to grab that place in our money box.*
 
-> [!IMPORTANT] 3 asset classes we need to understand
+> [!IMPORTANT] 3 <u>asset classes</u> we need to understand
 > 1. **Debt**: Umbrella term for all financial products that are *based on borrowing*.
 > 2. **Equity**: *Ownership of a business* and the risk it brings, either *directly* (through stocks) or *indirectly* (through mutual funds).
 > 3. **Real assets**: Can be *physically* seen.
 
 > [!NOTE] Financial assets
-> Debt & equity
+> Debt & equity.
 
 > [!NOTE] Real assets
-> Real estate & gold 
+> Real estate & gold.
 
 **Debt**
 - Products that usually give us an assured return. Example include
 	- FD
-	- Corporate deposites
+	- Corporate deposits
 	- Bond
 	- *Provident* Fund
 	- Public Provident Fund (PPF)
@@ -381,8 +390,8 @@ e.g., If Rs 1 lakh will grow to Rs 2 lakh in 15 yrs, our return per year is ~72/
 > - Purchase stamp duty and registration fee
 > - Agent fee/commission
 > - Yearly property tax
->   
->  **Challenges include**
+> 
+> **Challenges include**
 >  - Title disputes
 >  - Land/flat can be grabbed
 >  - Tenant may refuse to get out
@@ -429,13 +438,13 @@ e.g., If Rs 1 lakh will grow to Rs 2 lakh in 15 yrs, our return per year is ~72/
 - A stock market index, that’s made up of 30 most representative companies that are listed in BSE.
 - The Sensex and Nifty50 are broad market indices and are also called large market-cap indices.
   
-> [!Question] As long-term investors, Can we ignore Sensex?
+> [!Question] As long-term investors, can we ignore Sensex?
 > We can ignore it. However, before we do that, we need to understand
 > - What is Sensex?
 > - Why is it irrelevant to our life in the short term, but very important in the long term?
 
 > [!Question] What's market cap?
-> No. of shares of company × Price per share.
+> **No. of shares of company** × **Price per share**.
 > 
 > Based on market cap, company may fall under
 > - Large-cap
@@ -476,8 +485,8 @@ e.g., If Rs 1 lakh will grow to Rs 2 lakh in 15 yrs, our return per year is ~72/
 > 	- Read through Mint50 coverage, Value Research data, and Morningstar ratings.
 
 > [!SUCCESS] Our money box can handle the risk that equity brings in short term now, because 
-> 1. We have created an Emergency fund
-> 2. We bought Medical & life covers
+> 1. We have created an Emergency Fund.
+> 2. We bought Medical & Life Covers.
 
 > [!Question] What's best way to buy equity?
 > Mutual funds
@@ -490,7 +499,323 @@ e.g., If Rs 1 lakh will grow to Rs 2 lakh in 15 yrs, our return per year is ~72/
 
 ---
 # 9. Mutual funds
+> [!note] I personally found this chapter to be the most heaviest and intense 🤯. Next to that would be [[Let's Talk Money#8. Equity |Equity]] topic.
 
+> [!INFO] Mutual funds
+> - A way to pool the money of large number of small investors and hand it over to experts to manage it.
+> - Market linked products => Current value of the products the fund buys reflects in the price, as these products are "marked to the market".
+
+> [!Question] Are the mutual funds safe to invest?
+> - Our money is safe from being stolen
+> - But, our money is not safe from the ups and downs of the market - aka volatility.
+
+
+> [!Question] How many kind of mutual funds are there?
+> - Gold mutual funds
+> - Equity mutual funds
+> - Debt mutual funds
+> - Real estate mutual funds or Real estate investment trusts (REITs)
+
+## Debt mutual funds
+> [!INFO] Debt funds
+> Buy bonds and debt papers issues by the government or firms, or both.
+
+> [!Question] What's a debt paper or a bond?
+> - It will pay regular interest to the lender, and then at maturity, it will repay the principal - not very different from the FD.
+
+> [!INFO] Different kind of bonds according to the maturity duration
+> 
+> **Short-term bonds**
+> - Issued by both government and companies.
+> - e.g., Bonds that mature in a day.
+>   
+> **Long-term bonds**
+> - Mostly issued by the government.
+> - e.g., Bonds that mature in 30 years.
+
+> [!Question] Why not buy bonds directly from the company? Why buy from debt mutual funds?
+> - <span style="color:red">As an individual, it's very difficult to keep track of the health of the business</span>. 
+> 	  - e.g., If one of our 3 bonds does badly, we lose 1/3rd of our portfolio.
+> 
+>  - A debt mutual fund will hold bonds of at least 25 - 30 firms.
+
+> [!TIP] Diversification - we reduce our risk by increasing the number of products we hold.
+
+> [!TIP] Buy debt funds to match the investment horizon of the mutual fund scheme with ours.
+- e.g., If we need our money in the near term, we will buy debt mutual funds that invest in short-term bonds.
+
+> [!INFO] Ways to differentiate debt funds
+> 1. According to tenor or holding period of the bond.
+> 	- <span style="color:red">If we want money next week, we should not invest in fund that has average maturity of of 3 years.</span>
+> 2. According to the quality of the debt paper bought by the fund.
+> 	- Better the quality, lower will be the potential return.
+
+> [!TIP] Two categories of debt funds we should have (according to the author)
+> 1. Liquid funds
+> 2. Ultra-short-term funds
+
+1. **Liquid funds**
+	- Purpose is to keep money liquid or ready to use.
+	- Liquid fund buys short-maturity or short-term bonds (i.e., bonds that will mature within ~3 months) 
+
+> [!IMPORTANT] Money we put in a liquid fund must be the money we need in the short term.
+	
+> [!Question] What's average maturity of 3 months mean?
+> The average holding period of all bonds is about 3 months in a liquid fund.
+
+> [!Question] What are overnight funds?
+> - These schemes buy paper with a maturity of 1 day.
+> - These are the safest but returns are too low.
+
+> [!HINT] For an average household, a good credit quality liquid fund is better option than overnight funds which are great for treasury managers and entrepreneurs..
+
+2. **Ultra-short-term funds**
+	- Invest in these funds if we need the money anytime in the next 3-6 months, as they have the average maturity that matches this holding period.
+
+> [!WARNING] Constantly watch out for mutual funds buying lower-quality bonds to spike returns.
+
+> [!TIP] Government bonds are safest. and therefore carry the lowest interest rates. 
+
+> [!INFO] Other types of debt funds
+> - **Low duration funds**: Have an average maturity of between 6 months and a year.
+> - Corporate bond funds
+> - Medium-term bond funds
+> - Credit risk funds
+> - Long-term bond funds
+> - G-Sec funds
+> - Floater funds
+
+> [!INFO] Look for bond rating to understand the "credit risk" of the debt funds.
+> - AAA - safest
+> - BB - fairly high levels of risk
+
+> [!WARNING] If an ultra-short-term fund is showing very high return rates compared to the overall category of ultra-short-term funds, look deeper into why!
+
+> [!TIP] Usually safe to stay with large funds from large well-known fund houses. 
+
+> [!Question] What to do if our investment horizon is 2 years?
+> - We should stay with the low duration of ultra-short-term funds. 
+> - However, the author uses a conservative balance fund (debt funds with small flavour of equity).
+
+> [!NOTE] Once we understand the mutual funds better, we can switch out of debt funds for cash needs beyond 1 or 1.5 years and buy a balanced funds too.
+
+> [!TIP] We must match our investment horizon to that of the fund we buy.
+> - We need short-term product for our short-term needs.
+> - We need medium-term product for our medium-term needs.
+> - We need long-term product for our long-term needs.
+
+> [!Quote] Author says "I use debt funds to keep my emergency money" to keep money that I need in next 18 months. For horizons more than that, I use balanced fund"
+
+## Gold mutual funds
+> [!INFO] Gold mutual funds
+> - Funds that invest in gold.
+> - They buy actual gold and track the price in real time.
+> - The product is called ETF.
+
+> [!Question] What is Gold ETF?
+> - Instead of buying physical gold, we can buy fold that is held by the mutual fund through Gold ETF.
+> - **1 unit of gold ETG = 1 gram of gold.**
+
+>[!TIP] Benefits of Gold ETF
+> - Lower cost than buying physical gold.
+> - Close to 100% purity.
+> - No "making" charges
+> - Safer - no need to rent a locker to store our gold.
+
+> [!TIP] *Remember, the role of gold in our money box is to provide diversification and a hedge against inflation.*
+
+## Equity mutual funds
+
+> [!QUOTE] Author says "I love equity funds".
+
+> [!INFO] Equity funds
+> - Buy stocks of companies listed in the stock market.
+
+> [!Question] Why not buy stocks directly? Why should we buy a equity mutual fund?
+> - Similar answer to "*Why not buy bonds directly from the company? Why buy from debt mutual funds?*"
+> How will we know which stock to buy?
+> When we buy a mutual fund, we outsource the decision to pick stocks to a team of experts (AMCs) that track companies, markets, international events, politices, interest rates, etc.
+
+> [!WARNING] Why not buy one or three blue-chip stocks and sit on it?
+> - We will have to track the stock to see when it stops being a blue chip.
+> - Growth that the blue chip sees may be slower than smaller and more aggressive firms, which also carries higher risk.
+> - Sometimes, blue chips can tank.
+
+> [!TIP] Diversification 
+> - Reduces the -ve imapct of an imploding stock
+> - Reduces the +ve impact of an exploding stock.
+
+### Active vs. Passive funds
+| Active fund                                                                                                                                                                      | Passive fund                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Like a taxi                                                                                                                                                                      | Like a Metro                                                                                                           |
+| We are choosing a mutual fund where the fund manager has a view on the market, chooses his stock to fit the investment mandate, and then manages the money by trading every day. | We know the cost, we know the distance, and we known when we will reach. <br><br>Just buys the index and stay with it. |
+| Performance of an active fund depends a lot on the active manager, which may both be a pros and cons.                                                                            | Don't invest in large research desks, or brokers and dealers.                                                          |
+|                                                                                                                                                                                  | Costs less than active funds                                                                                           |
+ 
+**Index returns**
+
+> [!Question] Why buy active funds when passive is cheaper and less risky?
+> The Indian market still has alpha left in it.
+
+> [!Question] What's an alpha?
+> The extra return that the fund manager can generate over the index.
+
+> [!Question] What's NAV?
+> - Price of 1 unit of a scheme (e.g., mutual fund).
+> - It's not "gross" as costs have been removed.
+> - Value of mutual fund holding per scheme = NAV $\times$ Number of units we hold. 
+
+**NAV example**
+- There are 100 investors
+- Each investor puts Rs 1,000 in equity mutual fund
+- So, in total Rs 1 lakh is invested in mutual fund by these 100 investors collectivey.
+- Each unit costs Rs 10. (i.e., NAV = Rs. 10)
+- So, each investor holds 100 units.
+
+- The mutual fund (AMC) invested the Rs 1 lakh in different stocks
+- Year later, the value of portfolio increased from Rs. 1 lakh to Rs 1.5 lakhs
+- => Profit of Rs. 50,000 
+
+- Before sharing this profit equally among all investors, the cost (e.g., Rs 10,000 ) needs to be removed.
+- => Net profit of Rs. 40,000
+- This profit gets reflect in the NAV that goes from Rs. 10 to Rs. 14
+- => Our 100 units which we purchased for Rs 1,000 now worth Rs 1,400
+
+#### Index passive fund vs. ETF passive fund
+
+> [!TIP] The difference between index passive fund and ETF passive fund is not relevant to retail investors like us.
+
+| Index fund                                                                                                                                                                      | ETF fund                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| e.g., Will buy 30 stocks in the same proportion as they have in Sensex and just stay with the investment. If the Sensex falls by 1%, the index fund's NAV will also fall by 1%. | ETF also tracks an index like the Sensex, but lists its units on a stock exchange, unlike a mutual fund |
+> [!INFO] There can be any number of Indices in the market
+> - Broad market index
+> - Mid-cap index
+> - Small-cap index
+> - Technology index
+> - PSU index
+> - ...
+
+> [!NOTE] Since there can be any number of indices, there can be any number of inde
+
+### Large cap vs. small- and mid-cap funds
+| Large-cap funds         | Small- and mid-cap funds                                                   |
+| ----------------------- | -------------------------------------------------------------------------- |
+| More mature and stable. | Higher returns than those from large-cap ones, but comes with higher risk. |
+|                         | A.k.a. Aggressive high growth firms.                                       |
+|                         | Engines of growth in a portfolio.                                          |
+ > [!WARNING] When the stock markets fall, it's the small and mid-cap stocks that fall harder than the large-cap stocks.
+
+> [!INFO] Sector funds
+> Allows to invest in stocks of particular sector
+> - Technology funds
+> - Banking funds
+> - Pharma
+> - FMCG
+> - Retail
+
+> [!INFO] Thematic funds
+> Track a bunch of sectors.
+> 
+> Infrastructure thematic fund will include sectors such as
+> - Construction funds
+> - Telecom funds
+> - Power funds
+
+> [!Question] What is diversified equity funds?
+> - Fund that is diversified mainly across large-cap stocks.
+> - Aims to give returns that are bit higher than index.
+
+### Open-ended vs. close ended funds
+| Open-ended funds                                  | Close-ended funds                                      |
+| ------------------------------------------------- | ------------------------------------------------------ |
+| Like a very long unending escalator.              | Like a lift.                                           |
+| Open for investors buying and selling it forever. | Comes to the market with fixed time (investing) frame. |
+
+### Growth vs. dividend mutual fund scheme
+| Growth scheme                                                                                                                                                                                                                                                                                                                                  | Dividend scheme                                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Allows us to stay invested and get the benefit of long-term growth of the portfolio. <br>In other words, our profits reflect in the rising price, much like the stock prices that goes up.<br>Till we sell, the profit is "unrealised" or notional.<br>The number of units we buy remains the same, but the price. or the NAV, keeps going up. | Allows us to book profits periodically.<br>The number of units remain the same, but the NAV keeps reflecting the booking profits. |
+| Good option if we don't need an income from the investment today, but are targeting a corpus for the future.                                                                                                                                                                                                                                   | Good for those who need periodic income from the investments.                                                                     |
+| NAV of the growth option will be higher than the dividend option.                                                                                                                                                                                                                                                                              |                                                                                                                                   |
+## Balanced funds
+> [!INFO] Balanced fund
+> - Balanced fund is a hybrid.
+> - Debt funds with a crust of equity to give higher return than a pure debt fund.
+> 
+> 3 kinds of balanced funds
+> 1. Conservative funds: 10% - 25% in equity.
+> 2. Balanced funds: 40% - 60% in equity
+> 3. Aggressive funds: 65% - 80% in equity
+
+> [!TIP] Balanced funds are a great first investment to make in order to taste equity funds.
+
+> [!Question] How do mutual funds make money?
+> 1. Front load
+> 2. Ongoing cost or Annual fees
+> 3. Exit cost
+
+**1. Front Load**
+- Cost to entire the product
+- e.g., If we invest Rs 100, and Rs 2 from that is cut out so that Rs 98 is invested, the Rs 2 is called a front load.
+
+**2. Ongoing cost or Annual fees**
+- The fee we pay to have experts manage our money.
+- This cost is captured in "expense ratio"
+
+> [!INFO] What's an "expense ratio"?
+> The fees that a mutual fund charges investors for its costs and the profit it makes.
+
+In the context of #India 
+
+| Fund type                                | Expense ratio per Rs 100 invested |
+| ---------------------------------------- | --------------------------------- |
+| Liquid fund                              | Rs 0.05 to 1                      |
+| Debt funds > Ultra-short-term funds      | Rs 0.06 to 1.5                    |
+| Equity funds > Large cap non-index funds | Rs 0.90 to 3                      |
+| Equity funds > Small cap non-index funds | Rs. 2 to 3                        |
+| Index funds, ETFs and direct plans       | Cost much less                    |
+
+**Example**: Investing 1 lakh over a 20 year period with two different expense ratio
+
+| Expense ratio        | 0.5% pa                                  | 1.5% pa                                    |
+| -------------------- | ---------------------------------------- | ------------------------------------------ |
+| **Pre-cost return**  | 15%                                      | 15% pa                                     |
+| **Net return**       | 14.5%  pa                                | 13.5% pa                                   |
+| Total after 20 years | $100000 \times 1.145^{20}$<br>$15$ lakhs | $100000 \times 1.135^{20}$<br>$12.5$ lakhs |
+
+**3. Exist cost**
+- Cost of selling the product
+	- Funds levy exit charges to deter frequent churning of money.
+	- This is a % of our corpus, and usually falls off to 0 after about 1 - 2 years.
+
+> [!Question] What's a direct plan?
+> - Remove the sales commission embedded in the "expense ratio" and make the product cheaper for us to buy.
+> - e.g., large cap direct fund will cost an expense ratio of 1.03%, and the same fund as a regular fund will cost 1.89%.
+
+> [!INFO] SIP
+> Similar to RD, we make periodic investments into mutual fund.
+
+> [!HINT] SIP is good for two reasons
+> 1. Matches the earning rhythm of most people.
+> 2. Allow us to average out our price over as invest over the year, either weekly, monthly, or quarterly.
+
+> [!TIP] Use SIP to make investments in a mutual fund.
+
+> [!INfO] STP
+> - Allows us to space out a big investment over time.
+> - e.g., If we suddenly get a big bonus, instead of investing it all in one go, we can put the money in a liquid fund, and set up a monthly/weekly/... transfer into an equity scheme.
+
+> [!INFO] SWP
+> - To periodically redeem our units to generate an income.
+> - Works like a dividend, but we control how much money we want to take from our fund periodically.
+
+ > [!HINT] TL;DR: We are doing OK if ...
+> 1. we understand we can invest in debt, equity, and gold through mutual funds;
+> 2. we understand that managed funds cost more.
+> 3. we understand that lowest cost and safest way to get an equity exposure is to use index funds or ETFs that track Sensex or Nifty50;
+> 4. we understand that churning our mutual fund portfolio benefits the seller and not us, and so, choose carefully and stay invested for years.
 
 ---
 # 10. Putting it all together
@@ -516,27 +841,61 @@ e.g., If Rs 1 lakh will grow to Rs 2 lakh in 15 yrs, our return per year is ~72/
 
 ---
 # Action items
-- [x] What's the definition of emergency fund?
-- [ ] What's considered as safe assets?
-- [ ] [[Let's Talk Money#2. Don't stash that cash]] > We are doing OK if ... (Compute the numbers for my use case)
-- [ ] Why can't we use our emergency fund even for the downpayment of the house? Isn't that sort of an investment? Or for any sort of investment besides FD and very safe debt funds for that matter?
-- [ ] Check what my office insurance covers? Personal insurance covers? Medisave? etc. Any gaps in it for me and Tharshi? How to go about the child?
-	- [ ] Revisit the benefits section for both our insurance, and the insurance we are planning for Tharshi's mom as mentioned in [[Let's Talk Money#4. Building our protection]]
-- [ ] What's considered as annual take home income? Is it post-tax, PF deductions?
-- [ ] Can we buy life insurance cover (term) from multiple parties? What is defined as existing medical condition when applying for these insurances? Should we include permanent disability and critical illness in it?
+- [ ] [[Let's Talk Money#Preface to the Revised Edition]]
+	- [x] What's the definition of emergency fund?
+	- [ ] Compute/understand for my usecase
+		- [ ] What's the my capacity vs. risk appetite
+		- [ ] Emergency fund rule of thumb. 
+		- [ ] Total fixed obligation-to-income ratio (FOIR). Why does our monthly installments have to be <30%? Why not more if we are using that money for investing?
+		- [ ] > [!Question] What you want to be doing 10 years from today, and what you are going to do about to do about it today. In other words, plan your career for next 10 yrs.
+		- [ ] We are doing okay if ...
+			- [ ] What's considered as safe assets?
+- [ ] [[Let's Talk Money#2. Don't stash that cash]]
+	- [ ] We are doing OK if ... (Compute the numbers for my/our use case)
+- [ ] [[Let's Talk Money#3. Emergencies need a fund]]
+	- [ ] Why can't we use our emergency fund even for the downpayment of the house? Isn't that sort of an investment? Or for any sort of investment besides FD and very safe debt funds for that matter?
+	- [ ] We are doing okay if ...
+- [ ] [[Let's Talk Money#4. Building our protection]]
+	- [ ] Check what my office insurance covers? Personal insurance covers? Medisave? etc. Any gaps in it for me and Tharshi? How to go about the child? 
+	- [ ] Should I purchase death cover/ life insurance/ medical cover in two different countries? 
+	- [ ] Revisit the benefits section (as part of 3 factors when choosing a policy) for both our insurance
+	- [ ] We are doing OK if ...
+- [ ] [[Let's Talk Money#5. What if we die?]]
+	- [ ] Address the qns in "How much cover do I need section", and all other qns in this section?
+		- [ ] How much life insurance cover do I buy?
+		- [ ] What's considered as annual take home income? Is it post-tax, PF deductions?
+	- [ ] Can we buy life insurance cover (term) from multiple parties? What is defined as existing medical condition when applying for these insurances? Should we include permanent disability and critical illness in it?
+	- [ ] Internalize the Rule of 72 concept
+	- [ ] Unbundle investment and insurance products
+	- [ ] We are doing OK if ...
+- [ ] [[Let's Talk Money#6. Finally, we're investing]]
+	- [ ] Am I investor or speculator/stock market trader?
+	- [ ] Work out "How much I want to invest?" section questions, and the money box section
+	- [ ] Over what holding period the financial product (of my choice) works the best?
+	- [ ] Internalize the difference between 3 asset classes, any why we should not hold lot of debt based fixed asstets, and real assets.
+	- [ ] We are doing OK if ...
 - [ ] In [[Let's Talk Money#7. Let's de-jargon investing]], 
 	- [ ] why is the author saying owning real estate house as part of investment and rental yield is wrong? is it because the returns does not add up?
 	- [ ] why is the author saying "we have our FDs; PF and PPF, debt funds, and no other debt products, no corporate deposits, no chit funds, no ATI bonds;"?
 - [x] What's inflation?
 - [ ]  In [[Let's Talk Money#8. Equity]],
+	- [ ] What's the equivalent of Sensex & Nifty50 stock market index in US stock market (NASDAQ & S&P)?
+		- [ ] What's the return if we invest in multiples of 5 years, and started the investment at different period in the past 30 yrs for US, SG and IN large-cap and mid cap stock market index (peg it to USD, INR and SGD)? What's the avg market return?
 	- [ ] You need an equity exposure rather than direct stocks. What does this mean?
-	- [ ] I still don't understand some of the 5 points in "Rules of equity investing"
+	- [ ] I still don't understand some of the five points in "Rules of equity investing"
 	- [ ] Why "Mutual funds" is the best way to buy equity?
 - [ ] In [[Let's Talk Money#9. Mutual funds]],
-	- [ ] 
-- [ ] What's index fund?
-- [ ] What's ETF?
-- [ ] What's mutual fund? How's related or different to index fund and ETF?
+	- [ ] What is asset allocation? fiscal deficit, inflation, capital gains.
+	- [ ] Why overnight fund is better for treasury managers and entrepreneurs, but not for average household?
+	- [ ] Difference between "Liquid funds" and "Ultra-short-term funds"
+	- [ ] Why author will stay with index passive fund over ETF passive fund for liquidity reasons?
+	- [ ] What's index fund?
+	- [ ] What's ETF?
+	- [ ] What's mutual fund? How's related or different to index fund and ETF?
+	- [ ] Compare the returns of different fund types/classifications/kinds inc. diversified equity funds and balanced funds.
+	- [ ] Why does author like open-ended funds? Or is it better than close-ended equity funds?
+	- [ ] What is the difference between direct plan and regular plan? is it just cutting the middle salesman?
+	- [ ] Work out SIP, STP and SWP.
 
 ---
 # Miscellaneous

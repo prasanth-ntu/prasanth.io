@@ -64,8 +64,48 @@ For more details, refer [PySpark Overview](https://spark.apache.org/docs/latest/
 - Spark is the core framework, while PySpark is its Python API.
 - Use Spark for performance-critical applications in Scala/Java.
 - Use PySpark for ease of use and integration with Python ecosystems.
-
+---
 # Important concepts
+## Spark configurations
+```mermaid
+graph TD
+    A[Client Machine] --> B[Driver]
+    B --> C[Cluster Manager]
+    C --> D[Worker Node 1]
+    C --> E[Worker Node 2]
+    C --> F[Worker Node 3]
+    D --> G[Executor 1]
+    E --> H[Executor 2]
+    F --> I[Executor 3]
+    B --> J[Task Scheduling]
+    J --> G
+    J --> H
+    J --> I
+    G --> K[Task Execution]
+    H --> L[Task Execution]
+    I --> M[Task Execution]
+    K --> N[Intermediate Data Storage]
+    L --> O[Intermediate Data Storage]
+    M --> P[Intermediate Data Storage]
+    K --> Q[Result Communication to Driver]
+    L --> Q
+    M --> Q
+    Q --> B
+    B --> R[Result Collection]
+    R --> S[Application Output]
+    B --> T[spark.driver.memory: 8g]
+    B --> U[spark.driver.memoryOverhead: 1g]
+    B --> V[spark.driver.maxResultSize: 2g]
+    G --> W[spark.executor.memory: 13g]
+    G --> X[spark.executor.memoryOverhead: 2g]
+    G --> Y[spark.executor.instances: 28]
+    B --> Z[spark.sql.catalogImplementation: hive]
+    B --> AA[spark.sql.shuffle.partitions: 200]
+    B --> AB[spark.sql.execution.arrow.pyspark.enabled: true]
+    B --> AC[spark.driver.allowMultipleContexts: true]
+    B --> AD[spark.hadoop.fs.s3.bucket.grab-ds-users.aws.credentials.provider: InstanceProfileCredentialsProvider]
+```
+
 ## `persist` vs. `cache`
 > [!SUMMARY]
 > - **`cache`**: Simple, in-memory storage with no customization.

@@ -56,7 +56,7 @@ tags:
 	- `client.models.generate_content_stream`
 		- Instead of waiting for the entire response, the model sends back chunks or parts of the generated content as they become available as an **iterable**.
 	- `client.chats.create
-		- Multi-turn chat structure
+		- Multi-turn chat structure including access to chat history. 
 - **Configs** covered are
 	- `temperature`
 	- `top_p`
@@ -69,7 +69,7 @@ tags:
 	- Chain of Thought ([[CoT]])
 		- Reason only
 	- [[ReAct]]: Reason and Act
-		- Thought > Acton > Observation > 
+		- Thought > Acton > Observation > ...
 - Techniques to **enforce the LLM output to follow the supplied schema**
 	- `enum` mode
 	- `json` mode
@@ -86,7 +86,7 @@ tags:
 	- **Summarising** a (pdf) document
 	- **Evaluating question answering quality**
 		- Gauge the quality of the LLM generated summary for the user question on a document.
-		- Criteria used are
+		- [Criteria](https://cloud.google.com/vertex-ai/generative-ai/docs/models/metrics-templates) used are
 			- Instruction following
 			- Groundedness
 			- Completeness
@@ -117,8 +117,8 @@ tags:
 - **Gemini Models** covered include
 	- `text-embedding-004`
 - **Two embedding task types** ([official documentation](https://ai.google.dev/api/embeddings#tasktype)) covered are
-	- `retrieval_document`
-	- `retrieval_query`
+	- `retrieval_document` - Specifies the given text is a document from the corpus being searched.
+	- `retrieval_query` - Specifies the given text is a query in a search/retrieval setting.
 - ChromaDB methods ([official documentation](https://docs.trychroma.com/reference/python/collection#peek)) covered are
 	- `db.add(...)`
 	- `db.count()`
@@ -141,7 +141,7 @@ tags:
 - **Embedding task types** ([official documentation](https://ai.google.dev/api/embeddings#tasktype)) covered are
 	- `classification`
 - **Concepts covered include**
-	- Building a simple classification model with 1 hidden layer (and 593,668 trainable params) using `keras.Sequential`
+	- Building a simple classification model with 1 hidden layer (and ~0.6M trainable params) using `keras.Sequential`
 ---
 # Day 3: AI Agents
  - 📝 **My Kaggle Notebooks**
@@ -159,9 +159,33 @@ tags:
 	- The code labs cover how to connect LLMs to existing systems and to the real world. Learn about function calling by giving SQL tools to a chatbot, and learn how to build a LangGraph agent that takes orders in a café.
 ## **Summary of the key points & callouts**
 ### [Day 3 - Function calling with the Gemini AP [TP]](https://www.kaggle.com/code/prasanth07/day-3-function-calling-with-the-gemini-ap-tp)
-- 
+- Gemini models covered include
+	- `gemini-2.0-flash`
+	- `gemini-2.0-flash-exp`
+- Concepts covered include
+	- **Function calling** (leveraging openAPI schema) with **tools**
+		- Three important parts that can be observed in chat history are
+			- 1) `text`, 2) `function_call`, 3) `function_response`
+	- Compositional function calling
+>[!WARNING] Need to revisit "Compositional function calling" concept as the code was not working completely as expected
+
+![[gemini-function-calling-state-diagram.png]]
 ###  [Day 3 - Building an agent with LangGraph [TP]](https://www.kaggle.com/code/prasanth07/day-3-building-an-agent-with-langgraph-tp)
-- 
+- Gemini models covered include
+	- `gemini-2.0-flash`
+- Concepts covered include
+	- LangGraph
+		- **graph** structure
+		- **state** schema
+		- **node** (action or a step) 
+		- **edge** (transition between states)
+			- conditional edge
+		- **tools**
+			- stateless tools
+			- stateful tools
+> [!WARNING] Model should not directly have access to the apps internal state, or it risks being manipulated arbitrarily. Rather, we provide tools that update the state.
+
+![[langgraph-based-cafe-order-bot-graph.png]]
 ---
 # Day 4: Domain-Specific Models
 - 📝 **My Kaggle Notebooks**
@@ -202,7 +226,7 @@ tags:
 ---
 # To do or clarify
 - [ ] Day 1: Foundational Large Language Models & Text Generation and Prompt Engineering
-	- [ ] Temperature vs. Top P vs. Top K
+	- [ ] Temperature vs. Top P vs. Top K:
 - [ ] Day 2:
 	- [ ] What would happen if we try to embed a text that has 5000 words using `/text-embedding-004` gemini model which only support upto 2048 input tokens?
 	- [ ] https://github.com/google-gemini/cookbook/blob/main/examples/Search_reranking_using_embeddings.ipynb
@@ -210,4 +234,5 @@ tags:
 - [ ] Day 3: 
 	- [ ] I don't understand the "Compositional function calling" section properly.
 		- [ ] https://github.com/google-gemini/cookbook/blob/main/quickstarts/Function_calling.
-		https://github.com/google-gemini/cookbook/blob/main/quickstarts/Function_calling_config.ipynb
+	- [ ] If time permits, try out Further exercises in [[Google-5-Day-Gen-AI-Intensive-Course]] > *Day 3 - Building an agent with LangGraph* 
+- [ ] 

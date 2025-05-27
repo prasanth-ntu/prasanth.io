@@ -11,25 +11,25 @@ tags:
 ---
 # Model comparison
 - We can read about the available models and their capabilities on the [model overview page](https://ai.google.dev/gemini-api/docs/models/gemini)
-- The table below is extracted from [Kaggle notebook](https://www.kaggle.com/code/markishere/day-0-troubleshooting-and-faqs/) as part of [[Google-5-Day-Gen-AI-Intensive-Course]]. As of writing this note, 
-	- It had 48 models under the hood
-	- Some of the models supported 
+- The table below is extracted from [Kaggle notebook](https://www.kaggle.com/code/markishere/day-0-troubleshooting-and-faqs/) as part of [[Google-5-Day-Gen-AI-Intensive-Course]]. As of writing this note (on 23-May-2025), 
+	- It had 56 models under the hood.
+	- Some of the models support an
 		- `input_token_limit` of `2000000`
 		- `output_token_limit`of `65536`
 	- Different actions supported are
-		- createTunedTextModel
-		- generateContent
-		- generateMessage
-		- predict
-		- createTunedModel
-		- countTokens
-		- createCachedContent
-		- bidiGenerateContent
-		- embedText
-		- embedContent
-		- countTextTokens
-		- countMessageTokens
-		- generateAnswer
+		- `createTunedTextModel`
+		- `generateContent`
+		- `generateMessage`
+		- `predict`
+		- `createTunedModel`
+		- `countTokens`
+		- `createCachedContent`
+		- `bidiGenerateContent`
+		- `embedText`
+		- `embedContent`
+		- `countTextTokens`
+		- `countMessageTokens`
+		- `generateAnswer`
 
 | name                                       | display_name                                       | description                                                                                                                                                                          | version           | input_token_limit | output_token_limit | supported_actions                                           |
 | :----------------------------------------- | :------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------- | ----------------: | -----------------: | :---------------------------------------------------------- |

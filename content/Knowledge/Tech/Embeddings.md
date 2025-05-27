@@ -47,8 +47,8 @@ The key difference between **word embeddings** (like Word2Vec or GloVe) and **co
 | **Granularity**    | Focused on capturing global relationships between words. | Captures both global and local (context-dependant) relationships.     |
 ## 3. Model and Architecture
 
-| Aspect           | Word Embedding                                    | Contextual Token Embedding                                                                                       |
-| ---------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Aspect               | Word Embedding                                    | Contextual Token Embedding                                                                                       |
+| -------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | **Underlying Model** | Simple architecture like shallow neural network.  | Deep architectures like [[Transformer Model\|transformers]] (e.g, [[BERT]], [[GPT]]).                            |
 | **Training Method**  | Trained to predict nearby words or co-occurrence. | Pre-trained on massive corpora with tasks like masked language modelling ([[MLM]]), or predicting the next word. |
 ## 4. Flexibility and Use Cases

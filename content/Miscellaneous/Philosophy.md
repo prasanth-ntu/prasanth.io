@@ -13,5 +13,8 @@
 ![[power-of-tiny-gains-graph.jpg]]
 
 > Disrupt or be disrupted
+
+
+>[!TIP] Happiness is a choice - we can choose to be or not to be.
 # Reflections
 - [[2025-02-01 Reflections on Meeting with Magesh]]
