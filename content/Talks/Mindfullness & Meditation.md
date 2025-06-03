@@ -6,6 +6,8 @@ tags:
   - Growth
   - Learning
   - Grab
+author: Diana Kraemer
+date: 2025-05-26
 ---
 # Welcome to Your Mindful Reset Aproach
 Speaker: https://www.linkedin.com/in/diana-kraemer-wellness/ | **[www.diana-kraemer.com](https://www.diana-kraemer.com/)**

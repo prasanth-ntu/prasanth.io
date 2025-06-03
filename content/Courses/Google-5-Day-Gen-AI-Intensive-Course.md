@@ -12,6 +12,7 @@ tags:
 - **Whitepapers**
 	- [Foundational Large Language Model & Text Generation](https://drive.google.com/open?id=1qe2ZNZXsiGH1Cm94poa7qzupJKqDnV3R&usp=drive_copy)
 	- [Prompt Engineering](https://drive.google.com/file/d/1wmRpzaS2JLQVQNrbrt7VCjEZp862f_HB/view?usp=sharing)
+	- [Solving Domain-Specific Problems using LLM](https://drive.google.com/file/d/1Ks83g__K7RAyghi3MDXNf-0E8elq-s1K/view?usp=sharing)
 
 # Day 0: Trouble shooting and FAQs
 - [Kaggle notebook](https://www.kaggle.com/code/markishere/day-0-troubleshooting-and-faqs/)
@@ -145,8 +146,8 @@ tags:
 ---
 # Day 3: AI Agents
  - 📝 **My Kaggle Notebooks**
-	- [Day 3 - Function calling with the Gemini AP [TP]](https://www.kaggle.com/code/prasanth07/day-3-function-calling-with-the-gemini-ap-tp)
-	- [Day 3 - Building an agent with LangGraph [TP]](https://www.kaggle.com/code/prasanth07/day-3-building-an-agent-with-langgraph-tp)
+	- ✅[Day 3 - Function calling with the Gemini AP [TP]](https://www.kaggle.com/code/prasanth07/day-3-function-calling-with-the-gemini-ap-tp)
+	- ✅[Day 3 - Building an agent with LangGraph [TP]](https://www.kaggle.com/code/prasanth07/day-3-building-an-agent-with-langgraph-tp)
 - 🎒**Assignment**
 	- Complete Unit 3: “Generative AI Agents”, which is:
 		-  [Optional] Listen to the summary [podcast episode](https://notifications.googleapis.com/email/redirect?t=AFG8qyUVvH7wTpgN9aM0ywkCB93ZoG684sSHfkIlep67X6LU9mvajSEb1SzCRf4TisEPskUEGl0O7JqXrySJCaG4xEis7jx-Pn-TjYP9-5LATeLtuu0C0UGMDwWHN2uKkp6zLzBkNsDax5Uysz9nm73R7DLj9EQs27eFzHH0v2eJREGZURWuwg97TT-N8eNBCIT_bFh5wxQyAErx17DPLaa7ZiGuKyjtZSeevNA_KDmFsYOaS19cy6nQqrrQFfxii8tLaiH8NTZW67A&r=eJzLKCkpKLbS16_MLy0p1UtK1fcwSY9KMXFyLnIJBACSrQmX&s=ALHZ2r4m5hX4Rl0iDJOghEDBKSYn) for this unit (created by [NotebookLM](https://notifications.googleapis.com/email/redirect?t=AFG8qyXku4nR9SqQavNASqTNFREIVVFZG8k4DbNaiTt8pcj2Hl_DCAq6sz6x7fnWzR-eI8JztT_gw3iHg4QqyAwW87Fy4dyq4VxoGvbAZ0fqRf3JxIeqSaLjxg2ZOyyMOYuYdwpBw3P1JIDerN1bB4PvGR6ytaezOcUdb5WzoKbMfqenJHlghKJTmjHtqIvoCTFcCLw8vtMMT-ZySqXK6ogRMP1qJ1FMZ92ms7cYDbGf3dWmCP4nVshRaNuqu2bCMhMnhAU7gcTPFeY&r=eJzLKCkpKLbS18_LL0lNys_PzsnVS8_PT89J1QcAhrkJ4A&s=ALHZ2r6Nt_RXkvWfceOBL-nw_4WA)).
@@ -185,11 +186,12 @@ tags:
 			- stateful tools
 > [!WARNING] Model should not directly have access to the apps internal state, or it risks being manipulated arbitrarily. Rather, we provide tools that update the state.
 
-![[langgraph-based-cafe-order-bot-graph.png]]
+![[langgraph-based-cafe-order-bot-graph.png|500]]
 ---
 # Day 4: Domain-Specific Models
 - 📝 **My Kaggle Notebooks**
-	- ...
+	- [Day 4 - Google Search grounding [TP]](https://www.kaggle.com/code/prasanth07/day-4-google-search-grounding-tp)
+	- [Day 4 - Fine tuning a custom model [TP]](https://www.kaggle.com/code/prasanth07/day-4-fine-tuning-a-custom-model-tp)
 - 🎒**Assignment**
 	- Complete Unit 4: “Domain-Specific LLMs”, which is:
 		- [Optional] Listen to the summary [podcast episode](https://notifications.googleapis.com/email/redirect?t=AFG8qyUGqrO7becV0KtRflxSRwpHGjZ2BJUxwvVST1LEgX46_Gspzv1XdRS_dWdCt-A2FXtm11boAV4sfj3rGmnAAV5hV6Dp1xB_g5Nor7Jb2nC1oa83e0uVAy9emBjvBpiA2Yrk6nwQdd-9ojNrDeGW-GgrLGc9zhdgJV_YpBejQtRtaX4_oYPTu5BOYq4dDqIda71CZsvES0FMr4RGeT3y2Ay2elcHMbvja347-6UWoqKuyIoctgTd8A813iKu7UAYUqyD8b07HRU&r=eJzLKCkpKLbS16_MLy0p1UtK1U8yTDSJ8g-0iEjxBACSrAmV&s=ALHZ2r7xXpPdcvoDUpOEq2Lnw1aH) for this unit (created by [NotebookLM](https://notifications.googleapis.com/email/redirect?t=AFG8qyUNAn2L8dYGrQ9grb32SemwXLbOFIzOtC1CLL0kSCMoPg8s-r-YVX2w_2sNqRiUEq5ph-VClruTMwDzF5i_Qr_e4fUgMHla3L2vlz8PC-H8S3W8ao8uY99bOSUgj8XBFZjtLxF8OXoaZNuWHDQjN9_g0to7LFt-C4tWzEHD8H4BVfmE22vYtu8XNDpABqW6EOJbDGBnF5z_0ILGc2RS78hqTGonNcS2ano1RZU7aNO-809OrcJuLPUCOdnE-m0RqWcvnhD0voE&r=eJzLKCkpKLbS18_LL0lNys_PzsnVS8_PT89J1QcAhrkJ4A&s=ALHZ2r4-X069NwwvX_UFzBBskSVd)).

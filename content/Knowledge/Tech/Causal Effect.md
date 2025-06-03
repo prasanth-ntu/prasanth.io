@@ -6,6 +6,11 @@ tags:
 ---
 > [!TIP] Casual effect refers to the direct impact that one variable (e.g., surge pricing) has on another variable (e.g., Book Through Rate), isolating this relationship from other influencing factors (e.g., day of time, weather, seasonal trends, etc.).
 
+---
+- **Definition**: A causal effect refers to the specific change in an outcome that can be attributed to a particular intervention, treatment, or action. It quantifies the impact of one variable on another, assuming a cause-and-effect relationship.
+- **Example**: If taking a medication reduces blood pressure, the causal effect of the medication is the reduction in blood pressure caused by its use.
+- **Focus**: It is often used in statistical and experimental contexts to measure the magnitude of the relationship between cause and effect.
+---
 A model is **causally correct** if it accurately captures and reflects the true cause-and-effect relationship between variables, ensuring that the observed effects are genuinely due to the changes in the variable of interest and not confounded by other factors.
 # Example: Causally Correct Model for Ad Campaign Effectiveness
 
