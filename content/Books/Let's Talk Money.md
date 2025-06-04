@@ -10,10 +10,9 @@ author: Monika Halan
 ---
 ****
 
-|                 |               |
-| --------------- | ------------- |
 | Original source | Physical Book ([Amazon](https://www.amazon.sg/Lets-Talk-Money-Youve-Worked/dp/9352779398)) |
-| Status          | #InProgress   |
+| --------------- | ------------------------------------------------------------------------------------------ |
+| Status          | #Completed                                                                                 |
 
 *I have summarised & highlighted the important points covered/that I liked in the book for speed reading.*
 # Preface to the Revised Edition
