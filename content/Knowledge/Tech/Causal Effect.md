@@ -3,6 +3,7 @@ tags:
   - MachineLearning
   - DataScience
   - Statistics
+  - Learning
 ---
 > [!TIP] Casual effect refers to the direct impact that one variable (e.g., surge pricing) has on another variable (e.g., Book Through Rate), isolating this relationship from other influencing factors (e.g., day of time, weather, seasonal trends, etc.).
 
@@ -48,3 +49,69 @@ A company wants to optimize its online advertising campaigns to maximize convers
 
 ## Conclusion
 By ensuring the ad campaign effectiveness model is causally correct, the company can make more reliable and effective decisions, optimizing ad spend, placement, and targeting to achieve the desired objectives of maximizing conversions and minimizing costs. The use of a two-step model allows for both high predictive accuracy and causal validity, providing a robust framework for ad campaign optimization.
+
+---
+# What does "Causal Impact Analysis" mean?
+
+In general terms, **Causal Impact Analysis** is a statistical method used to determine whether a specific action, event, or intervention had a significant effect on an outcome. It goes beyond simple correlation (observing that two things happened at the same time) and tries to establish a cause-and-effect relationship. It answers the question: "Did our action _cause_ this change, or would it have happened anyway?"
+
+For example, the Causal Impact Analysis could becperformed to evaluate if the BTR (Book Through Rate) model could accurately predict how a change in the discount value _caused_ a change in the BTR.
+
+---
+# What does "Average Treatment Effect" mean?
+
+Conceptually, the **Average Treatment Effect (ATE)** is a measure used within [[Causal Effect#What does "Causal Impact Analysis" mean?|causal analysis]] to quantify the impact of an intervention or "treatment." It calculates the average difference in outcomes between a group that received the treatment (the "treatment group") and a comparable group that did not (the "control group").
+
+## Example:
+- **Treatment:** The specific action being studied. Say, the "treatments" are the different discount values of $1.0, $1.5, and $2.0.
+- **Effect:** The outcome you are measuring. Say, this was the BTR.
+- **Average:** It represents the average impact across the entire group, not the effect on any single individual.
+
+---
+# Causal Impact Analysis vs. Average Treatment Effect
+
+> [!TIP] **Causal Impact Analysis is the _process_ or _method_, and the Average Treatment Effect (ATE) is the _result_ or _measurement_ you get from that process.**
+
+Think of it like a medical check-up:
+
+- **Causal Impact Analysis** is the entire procedure of going to the doctor to find out if a new diet is working. This includes designing the test (e.g., tracking your weight for 30 days while on the diet), finding a valid comparison (e.g., your weight trend before the diet), and analyzing the data.
+- **Average Treatment Effect (ATE)** is the specific number the scale shows you at the end: "-3 kg". It's the quantifiable outcome of the analysis.
+
+---
+## Example: Google Ads
+
+An e-commerce company wants to know if using a new ad format, "Video Discovery Ads," is more effective at driving sales than their standard "Image Ads."
+
+- **Business Question:** Does switching our ad budget from Image Ads to Video Discovery Ads _cause_ a higher return on investment?
+
+#### Causal Impact Analysis
+
+This is a classic use case for an A/B test, which is a straightforward way to conduct a causal analysis.
+
+- **How it's done:** The company uses Google Ads' built-in "Campaign Experiments" feature.
+    1. **Setup:** They create an experiment where their target audience is randomly split into two groups.
+    2. **Control Group (Group A):** This 50% of the audience continues to see the standard **Image Ads**.
+    3. **Treatment Group (Group B):** This 50% of the audience is shown the new **Video Discovery Ads**.
+    4. **Analysis:** The experiment runs for a set period (e.g., 30 days). Because the audience was split randomly, any significant difference in performance between the two groups can be confidently attributed to the different ad formats.
+
+#### Average Treatment Effect (ATE)
+
+The ATE measures precisely how much better (or worse) the new ad format performed.
+
+- **Treatment:** Being shown a Video Discovery Ad.    
+- **Outcome Metric:** Conversion Rate (the percentage of people who click the ad and then make a purchase).
+- **ATE Calculation:** After 30 days, the results are:
+    - Control Group (Image Ads) Conversion Rate = 2.0%
+    - Treatment Group (Video Ads) Conversion Rate = 2.5%
+    The Average Treatment Effect is the difference: **+0.5 percentage points**.
+- **Meaning:** The ATE shows that using Video Discovery Ads caused a 0.5 percentage point increase in the conversion rate. This tells the company that for every 1,000 people who click a video ad, they can expect 5 more sales than if those people had clicked an image ad. This provides a clear justification for shifting more budget to video.
+
+## Detailed breakdown:
+
+| **Aspect**                    | **Causal Impact Analysis**                                                                                                                      | **Average Treatment Effect (ATE)**                                                            |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **Role**                      | The overall **framework, methodology, or experiment** designed to isolate a cause-and-effect relationship.                                      | The specific, **quantitative metric** that measures the outcome of the analysis.              |
+| **Question it Answers**       | "**How** can we reliably determine if our action caused a change?"                                                                              | "**By how much** did our action change the outcome on average?"                               |
+| **In the Google Ads Example** | The analysis was the A/B test itself—the splitting of the audience and running the two ad versions simultaneously.                              | The ATE was the result of that test: **a +0.5 percentage point increase** in conversion rate. |
+
+> [!SUMMARY] In short, you perform a **Causal Impact Analysis** in order to calculate the **Average Treatment Effect**. The ATE is the main piece of evidence that the analysis provides to prove whether the intervention was successful and by how much.

@@ -12,7 +12,7 @@
 - [[Courses/Index|Courses]]
 	- [[DeepLearning.AI - Functions, Tools and Agents with LangChain]]
 	- [[Google-5-Day-Gen-AI-Intensive-Course]]
--  [[Books/Index|Books]]
+- [[My Book Collection]]
 	- [[Situational Awareness]]
 	- [[The Psychology of Money]]
 	- [[Build a LLM from Scratch]]
