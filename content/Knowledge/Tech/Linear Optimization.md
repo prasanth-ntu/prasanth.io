@@ -51,13 +51,5 @@ In essence, linear optimization provides a structured and mathematical way to ma
 ## Simple Profit Maximization Example
 Gist: https://gist.github.com/prasanth-ntu/eb5689334b9aa72410e4714f3d171761
 
-<iframe
-  src="https://colab.research.google.com/gist/prasanth-ntu/eb5689334b9aa72410e4714f3d171761/simple-profit-maximization-example-using-linear-programming.ipynb" 
-  allow="autoplay 'none'"
-  loading="lazy"
-  frameborder="0"
-  style="max-width: 850px; width: 100%; max-height: 1000px; height:800px"
-  style=""
-></iframe>
 # Maximizing Profit DP Example
-https://colab.research.google.com/drive/1A6TqIPzS_2zohu0dQojWi2sybg39MaMY?usp=sharing
+Google Colab: https://colab.research.google.com/drive/1A6TqIPzS_2zohu0dQojWi2sybg39MaMY?usp=sharing
