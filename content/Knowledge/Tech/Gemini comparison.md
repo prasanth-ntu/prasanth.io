@@ -11,7 +11,7 @@ tags:
 ---
 # Model comparison
 - We can read about the available models and their capabilities on the [model overview page](https://ai.google.dev/gemini-api/docs/models/gemini)
-- The table below is extracted from [Kaggle notebook](https://www.kaggle.com/code/markishere/day-0-troubleshooting-and-faqs/) as part of [[Google-5-Day-Gen-AI-Intensive-Course]]. As of writing this note (on 23-May-2025), 
+- The table below is extracted from [Kaggle notebook](https://www.kaggle.com/code/prasanth07/day-1-prompting-tp/) as part of [[Google-5-Day-Gen-AI-Intensive-Course]]. As of writing this note (on 23-May-2025), 
 	- It had 56 models under the hood.
 	- Some of the models support an
 		- `input_token_limit` of `2000000`
@@ -96,4 +96,16 @@ tags:
 | Gemini 1.5 Flash                                           | 15  | 1,000,000 | 1,500 |
 | Gemini 1.5 Flash-8B                                        | 15  | 1,000,000 | 1,500 |
 | ...                                                        | ... | ...       | ...   |
-  
+## Gemini 2.5 Flash Preview
+Google's first hybrid reasoning model which supports a 1M token context and has thinking budgets.
+
+|                                                                                                                                   | Free Tier                                     | Paid Tier, per 1M tokens in USD                                                          |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Input price                                                                                                                       | Free of charge                                | $0.15 (text / image / video)  <br>$1.00 (audio)                                          |
+| Output price                                                                                                                      | Free of charge                                | Non-thinking: $0.60  <br>Thinking: $3.50                                                 |
+| Context caching price                                                                                                             | Not available                                 | $0.0375 (text / image / video)  <br>$0.25 (audio)  <br>$1.00 / 1,000,000 tokens per hour |
+| Grounding with Google Search                                                                                                      | Free of charge, up to 500 RPD                 | 1,500 RPD (free), then $35 / 1,000 requests                                              |
+| Text-to-speech  <br>([`gemini-2.5-flash-preview-tts`](https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview-tts)) | Free of charge                                | $0.50 (Input)  <br>$10.00 (Output)                                                       |
+| Used to improve our products                                                                                                      | [Yes](https://ai.google.dev/gemini-api/terms) | [No](https://ai.google.dev/gemini-api/terms)                                             |
+# Gemini API Pricing
+https://ai.google.dev/gemini-api/docs/pricing

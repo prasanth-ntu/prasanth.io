@@ -12,7 +12,10 @@ tags:
 - **Whitepapers**
 	- [Foundational Large Language Model & Text Generation](https://drive.google.com/open?id=1qe2ZNZXsiGH1Cm94poa7qzupJKqDnV3R&usp=drive_copy)
 	- [Prompt Engineering](https://drive.google.com/file/d/1wmRpzaS2JLQVQNrbrt7VCjEZp862f_HB/view?usp=sharing)
+	- [Whitepaper_Emebddings_Vectorstores_v2](https://drive.google.com/open?id=1kG_EpOi-wYEV8_14969xY51WHdVueS9A&usp=drive_copy)
+	- [Agents_v8](https://drive.google.com/open?id=199zU0bmlNEpK4eyIuPjjeVaE7UTypCWs&usp=drive_copy)
 	- [Solving Domain-Specific Problems using LLM](https://drive.google.com/file/d/1Ks83g__K7RAyghi3MDXNf-0E8elq-s1K/view?usp=sharing)
+	- [Operationalizing Generative AI on Vertex AI_v7](https://drive.google.com/open?id=1CeNXgq2fFdPxrbAt1PSVRCD1Z-1nF16W&usp=drive_copy)
 
 # Day 0: Trouble shooting and FAQs
 - [Kaggle notebook](https://www.kaggle.com/code/markishere/day-0-troubleshooting-and-faqs/)
@@ -190,8 +193,8 @@ tags:
 ---
 # Day 4: Domain-Specific Models
 - 📝 **My Kaggle Notebooks**
-	- [Day 4 - Google Search grounding [TP]](https://www.kaggle.com/code/prasanth07/day-4-google-search-grounding-tp)
-	- [Day 4 - Fine tuning a custom model [TP]](https://www.kaggle.com/code/prasanth07/day-4-fine-tuning-a-custom-model-tp)
+	- ✅ [Day 4 - Google Search grounding [TP]](https://www.kaggle.com/code/prasanth07/day-4-google-search-grounding-tp)
+	- ✅ [Day 4 - Fine tuning a custom model [TP]](https://www.kaggle.com/code/prasanth07/day-4-fine-tuning-a-custom-model-tp)
 - 🎒**Assignment**
 	- Complete Unit 4: “Domain-Specific LLMs”, which is:
 		- [Optional] Listen to the summary [podcast episode](https://notifications.googleapis.com/email/redirect?t=AFG8qyUGqrO7becV0KtRflxSRwpHGjZ2BJUxwvVST1LEgX46_Gspzv1XdRS_dWdCt-A2FXtm11boAV4sfj3rGmnAAV5hV6Dp1xB_g5Nor7Jb2nC1oa83e0uVAy9emBjvBpiA2Yrk6nwQdd-9ojNrDeGW-GgrLGc9zhdgJV_YpBejQtRtaX4_oYPTu5BOYq4dDqIda71CZsvES0FMr4RGeT3y2Ay2elcHMbvja347-6UWoqKuyIoctgTd8A813iKu7UAYUqyD8b07HRU&r=eJzLKCkpKLbS16_MLy0p1UtK1U8yTDSJ8g-0iEjxBACSrAmV&s=ALHZ2r7xXpPdcvoDUpOEq2Lnw1aH) for this unit (created by [NotebookLM](https://notifications.googleapis.com/email/redirect?t=AFG8qyUNAn2L8dYGrQ9grb32SemwXLbOFIzOtC1CLL0kSCMoPg8s-r-YVX2w_2sNqRiUEq5ph-VClruTMwDzF5i_Qr_e4fUgMHla3L2vlz8PC-H8S3W8ao8uY99bOSUgj8XBFZjtLxF8OXoaZNuWHDQjN9_g0to7LFt-C4tWzEHD8H4BVfmE22vYtu8XNDpABqW6EOJbDGBnF5z_0ILGc2RS78hqTGonNcS2ano1RZU7aNO-809OrcJuLPUCOdnE-m0RqWcvnhD0voE&r=eJzLKCkpKLbS18_LL0lNys_PzsnVS8_PT89J1QcAhrkJ4A&s=ALHZ2r4-X069NwwvX_UFzBBskSVd)).
@@ -205,8 +208,24 @@ tags:
 
 ## **Summary of the key points & callouts**
 ### [Day 4 - Google Search grounding [TP]](https://www.kaggle.com/code/prasanth07/day-4-google-search-grounding-tp)
-
-
+- Gemini models covered include
+	- `gemini-2.0-flash`
+- Concepts covered include
+	- **Search Grounding** using `GoogleSearch`
+		- `grounding_metadata` - Includes link to search suggestions, supporting docs, and info on how they were used
+			- `grounding_chunks` - Contains source URI
+			- `grounding_supports` - For each output text chunk, contains the index of the grounding chunk and the corresponding confidence score (`start_index, `stop_index).
+	- **Search with Tools**
+		- GoogleSearch - Google Search Grounding Tool
+		- `ToolCodeExecution` - Code generation & execution tool
+### [Day 4 - Fine tuning a custom model [TP]](https://www.kaggle.com/code/prasanth07/day-4-fine-tuning-a-custom-model-tp)
+- Gemini models covered include
+	- `gemini-1.5-flash-001`
+	- `gemini-1.5-flash-001-tuning` - This is deprecated now 
+- Concepts covered include
+	- **Fine-tuning a custom model**
+		- Tuned model requires no prompting or system instructions and outputs succinct text from the classes we provide in the training data.
+		- Thereby, saving total tokens require,
 ---
 # Day 5: MLOps for Generative AI
 - 📝 **My Kaggle Notebooks**
@@ -218,7 +237,7 @@ tags:
 		- No codelab for today! During the livestream tomorrow, we will do a code walkthrough and live demo of [goo.gle/agent-starter-pack](https://notifications.googleapis.com/email/redirect?t=AFG8qyUmXLG6PnBRz1Scrbe1jjh660pP-9YEt17cfIbLXPLqIttmf7Ddz9qPx94sq94vEBMQFas2n42T3Gia-OkPeo6Zq6oSPYn8hlJdB55WOg66PhOYT1iGcolOVBKf0rmn56bk5y9C5qM66Mmpwcq3rej4JAeeW9emP7qal_5pyPJANgpaWorMouL1D2gjxsfdMTZnIMTAT1oxEsRjLRdGahXqD7bJOOWMbDBgT8ctgmG_D8LilMPr1R-gFBWPwMTQKRH_I1oo0is&r=eJzLKCkpKLbS10_Pz9dLz0nVTzVK1U1PzdNNzNRNLCjQLS5JLCpJLdItSEzOBgBOAg9s&s=ALHZ2r6K3Hw5jITg02FeVtq_3ify), a resource created for making MLOps for Gen AI easier and accelerating the path to production. Please go through the [repository](https://notifications.googleapis.com/email/redirect?t=AFG8qyX23YcMRGB8ltrAjo4f7JEpXeiikSlBnuq2bSVE2hz0oMCH8KEUxZUNhzBb1D4qupMszZYr_HHJ290s5PYAY3IObCD5QZ3sU3bO6XWR01y380I0bNm9Q7yH0rxaSlE5C9v-qppuj19Evq2WNtHOz7t6EltCwOk2q3H2CtQCzCrg8capXcaGJEBrzX5W5SDDNWveQSOURO54H17MgXOiFQms0lucgFO2TUpve1STDsPqxgaXBLFDH0rWHPbzwF1gGv3BXvevWks&r=eJzLKCkpKLbS10_Pz9dLz0nVTzVK1U1PzdNNzNRNLCjQLS5JLCpJLdItSEzOBgBOAg9s&s=ALHZ2r72Vwwk7qUyh_SSvyujjfxB) in advance.
 		- Want to have an [interactive conversation](https://notifications.googleapis.com/email/redirect?t=AFG8qyWCaYyOsTsUO23QZ9dJris3ZVZi0K4-GpOCekzWaWhNhATpGz1F9dZqm3slBvyoLNguIndu-O4Q2apIprGhBgsnwL5eoEJ-zyt8VQvvQB5jV0wc8-jwY6A5-plxNEGG17Dj5OHjNMVGEjNyaiKteEKh5gCrbONcVC58pgH3Mzcxz65_wOk80fVvS7nioJM8DoEPwPKIkgdwn--GteGSZcl11Kx9Ce4QAmHCuvlNVsMaOt-b_KjWeq5w_zWpBgNzOphd63ptxTE&r=eJwNyMEOgjAMANC_4Qalc65gsnDyEzwbgQroWJetxN-X28tbVVO5AZQjJcnaLCJL4GaSHaIojyLfsMMrlh9nwCtdkMgNa_Acq8zvp0raJo_WkHEtVuWzzR5Pme4sbG2HtnfU2_r--APkjiG9&s=ALHZ2r41C2sknQaR9FoHHPKXXDfE)? Try adding the whitepaper to [NotebookLM](https://notifications.googleapis.com/email/redirect?t=AFG8qyXLez2JF6mnhVcUftv5pLz-61VlA-CdNcpJ63J_OKK2lUMWGgv9Hl5OjkPEBKXU0oQ8gn1DXpmyHGnJ_iL_PLHupaKc1QKR9OJUITyFWdv-cFGNYMxta9kn_FI276k1u4fhwqwc9hFge3dgzX8mNcKJv6Fo6hYA4oH0CbwnplWVo4Gs6eokyivh6wTs7r5dJOE_-PiS6HKnZFsZeD0DnBGrt_NCMmUz9mGPbmlroam-vGiyM1PsdJoi11LwCq-4XneoZLySKe0&r=eJzLKCkpKLbS18_LL0lNys_PzsnVS8_PT89J1UvOz9W3zy_KTM_MS8yJL0pNSy1KLbLNAKtXNXIDovLyciTFqkbGagU5mbaGABuTHe8&s=ALHZ2r4MoWoTSC4P3hXTNRMyqXxx).
 - 💡**What You’ll Learn**
-	- 
+	- Discover how to adapt MLOps practices for Generative AI and leverage Vertex AI's tools for foundation models and generative AI applications such as AgentOps for agentic applications.
 
 ---
 # Miscellaneous
@@ -242,4 +261,6 @@ tags:
 	- [ ] I don't understand the "Compositional function calling" section properly.
 		- [ ] https://github.com/google-gemini/cookbook/blob/main/quickstarts/Function_calling.
 	- [ ] If time permits, try out Further exercises in [[Google-5-Day-Gen-AI-Intensive-Course]] > *Day 3 - Building an agent with LangGraph* 
-- [ ] 
+- [ ] Day 4
+	- [ ] The code execution using `ToolCodeExecution` is not working in  [Day 4 - Google Search grounding [TP]](https://www.kaggle.com/code/prasanth07/day-4-google-search-grounding-tp)
+	- [ ] Fine-tuning is not working in [Day 4 - Fine tuning a custom model [TP]](https://www.kaggle.com/code/prasanth07/day-4-fine-tuning-a-custom-model-tp). So, try this solution: [Tune Gemini models by using supervised fine-tuning](https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini-use-supervised-tuning?utm_source=chatgpt.com), [When to use supervised fine-tuning for Gemini](https://cloud.google.com/blog/products/ai-machine-learning/supervised-fine-tuning-for-gemini-llm), and [Gemma model fine-tuning](https://ai.google.dev/gemma/docs/tune)
