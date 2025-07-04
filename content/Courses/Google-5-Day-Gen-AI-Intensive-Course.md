@@ -264,3 +264,5 @@ tags:
 - [ ] Day 4
 	- [ ] The code execution using `ToolCodeExecution` is not working in  [Day 4 - Google Search grounding [TP]](https://www.kaggle.com/code/prasanth07/day-4-google-search-grounding-tp)
 	- [ ] Fine-tuning is not working in [Day 4 - Fine tuning a custom model [TP]](https://www.kaggle.com/code/prasanth07/day-4-fine-tuning-a-custom-model-tp). So, try this solution: [Tune Gemini models by using supervised fine-tuning](https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini-use-supervised-tuning?utm_source=chatgpt.com), [When to use supervised fine-tuning for Gemini](https://cloud.google.com/blog/products/ai-machine-learning/supervised-fine-tuning-for-gemini-llm), and [Gemma model fine-tuning](https://ai.google.dev/gemma/docs/tune)
+- [ ] Day 5
+	- [ ] The Agent Starter Pack was not working fully due to Vertex and Google Cloud Authentication/Setup issue. Will try it out during spare time as it seems quite interesting and useful for end-to-end agent development and deployment.

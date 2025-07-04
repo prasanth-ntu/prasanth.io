@@ -21,3 +21,7 @@ tags:
 6) **Games**: AI-native storytelling, living AI companions, faceless creators  
 7) **Growth-stage tech**: search disruption, sales renaissance  
 8) **Infrastructure** - AI computing centers, edge AI growth, AI reasoning progress
+
+
+# Podcasts
+<TBA>

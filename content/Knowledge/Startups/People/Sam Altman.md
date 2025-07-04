@@ -1,0 +1,3 @@
+- [[OpenAI]] founder
+- Intersting blog posts
+	- [[How to be Successful]]

@@ -150,3 +150,50 @@ For more details, refer [`pyspark.StorageLevel`](https://spark.apache.org/docs/l
 - **Memory Usage**: `MEMORY_ONLY` is faster but requires sufficient memory. Use `MEMORY_AND_DISK` if memory is limited.
 - **Fault Tolerance**: Higher replication levels (e.g., `MEMORY_ONLY_2`) improve fault tolerance but increase storage overhead.
 - **Performance**: Storing data in memory (`MEMORY_ONLY`) is faster than disk (`DISK_ONLY`), but disk storage is more reliable for large datasets.
+
+## User Defined Function (UDF)
+**Example: Demonstrates how to convert latitude and longitude to geohash6 in PySpark using UDF**
+```python
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import udf
+from pyspark.sql.types import StringType
+import geohash
+
+# Create a Spark session
+spark = SparkSession.builder \
+    .appName("Geohash Conversion") \
+    .getOrCreate()
+
+# Create a UDF for geohash conversion
+# The precision parameter 6 will give you geohash6
+@udf(returnType=StringType())
+def to_geohash6(lat, lon):
+    if lat is None or lon is None:
+        return None
+    try:
+        # Convert to float in case they are strings
+        lat_float = float(lat)
+        lon_float = float(lon)
+        # Generate geohash with precision 6
+        return geohash.encode(lat_float, lon_float, precision=6)
+    except:
+        return None
+
+# Example: Create a sample dataframe with lat/lon
+data = [
+    (37.7749, -122.4194, "San Francisco"),
+    (40.7128, -74.0060, "New York"),
+    (51.5074, -0.1278, "London"),
+    (None, -122.4194, "Invalid"),
+    (37.7749, None, "Invalid")
+]
+
+df = spark.createDataFrame(data, ["latitude", "longitude", "location"])
+
+# Apply the UDF to convert lat/lon to geohash6
+df_with_geohash = df.withColumn("geohash6", to_geohash6(df["latitude"], df["longitude"]))
+
+# Show the result
+df_with_geohash.show()
+
+```
