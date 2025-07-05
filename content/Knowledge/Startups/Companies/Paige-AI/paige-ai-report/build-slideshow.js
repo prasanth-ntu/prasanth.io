@@ -500,7 +500,7 @@ function generateSlideIframes(slides) {
   let iframes = '';
   slides.forEach((slide, index) => {
     const slideName = path.basename(slide, '.html');
-    const slideUrl = `/static/paige-slides/${slideName}.html`; // Use absolute path to static files
+    const slideUrl = `/static/paige-slides/${slideName}`; // Use clean URLs to match Quartz behavior
     iframes += `      <!-- Slide ${index + 1}: ${slideName} -->
       <div class="slide-outer ${index === 0 ? 'active' : ''}">
         <iframe class="slide-frame" 
