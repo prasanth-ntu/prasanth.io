@@ -1,30 +1,9 @@
-#!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Configuration
-const SLIDES_DIR = './slides';
-const OUTPUT_FILE = './slideshow.html';
-const STATIC_SLIDES_DIR = '../../../../../../quartz/static/paige-slides';
-
-// Project root - go up from current directory to find the project root
-const projectRoot = path.resolve(__dirname, '../../../../../../');
-
-// Output path for the slideshow HTML
-const outputPath = path.join(projectRoot, 'quartz', 'static', 'paige-slides', 'slideshow.html');
-
-// Simple slideshow template
-const SLIDESHOW_TEMPLATE = `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{TITLE}}</title>
+    <title>Slideshow Presentation</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
       body {
@@ -252,7 +231,7 @@ const SLIDESHOW_TEMPLATE = `<!DOCTYPE html>
   </head>
   <body>
     <div class="slide-counter">
-      <span id="currentSlide">1</span> / <span id="totalSlides">{{TOTAL_SLIDES}}</span>
+      <span id="currentSlide">1</span> / <span id="totalSlides">11</span>
     </div>
     
     <button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle Fullscreen">
@@ -260,7 +239,17 @@ const SLIDESHOW_TEMPLATE = `<!DOCTYPE html>
     </button>
     
     <div class="slide-indicators">
-      {{INDICATORS}}
+      <div class="indicator" onclick="goToSlide(0)" title="Go to slide 1"></div>
+      <div class="indicator" onclick="goToSlide(1)" title="Go to slide 2"></div>
+      <div class="indicator" onclick="goToSlide(2)" title="Go to slide 3"></div>
+      <div class="indicator" onclick="goToSlide(3)" title="Go to slide 4"></div>
+      <div class="indicator" onclick="goToSlide(4)" title="Go to slide 5"></div>
+      <div class="indicator" onclick="goToSlide(5)" title="Go to slide 6"></div>
+      <div class="indicator" onclick="goToSlide(6)" title="Go to slide 7"></div>
+      <div class="indicator" onclick="goToSlide(7)" title="Go to slide 8"></div>
+      <div class="indicator" onclick="goToSlide(8)" title="Go to slide 9"></div>
+      <div class="indicator" onclick="goToSlide(9)" title="Go to slide 10"></div>
+      <div class="indicator" onclick="goToSlide(10)" title="Go to slide 11"></div>
     </div>
     
     <div class="slideshow-container">
@@ -268,7 +257,137 @@ const SLIDESHOW_TEMPLATE = `<!DOCTYPE html>
         <i class="fas fa-spinner fa-spin"></i> Loading slides...
       </div>
       
-      {{SLIDE_IFRAMES}}
+      <!-- Slide 1: 01-title -->
+      <div class="slide-outer active">
+        <iframe class="slide-frame" 
+                id="slide-0" 
+                src="/static/paige-slides/01-title" 
+                title="Slide 1: 01-title"
+                allowfullscreen
+                loading="eager"
+                frameborder="0">
+        </iframe>
+      </div>
+      
+      <!-- Slide 2: 02-company-snapshot -->
+      <div class="slide-outer ">
+        <iframe class="slide-frame" 
+                id="slide-1" 
+                src="/static/paige-slides/02-company-snapshot" 
+                title="Slide 2: 02-company-snapshot"
+                allowfullscreen
+                loading="eager"
+                frameborder="0">
+        </iframe>
+      </div>
+      
+      <!-- Slide 3: 03-data-moat -->
+      <div class="slide-outer ">
+        <iframe class="slide-frame" 
+                id="slide-2" 
+                src="/static/paige-slides/03-data-moat" 
+                title="Slide 3: 03-data-moat"
+                allowfullscreen
+                loading="eager"
+                frameborder="0">
+        </iframe>
+      </div>
+      
+      <!-- Slide 4: 04-funding_valuation -->
+      <div class="slide-outer ">
+        <iframe class="slide-frame" 
+                id="slide-3" 
+                src="/static/paige-slides/04-funding_valuation" 
+                title="Slide 4: 04-funding_valuation"
+                allowfullscreen
+                loading="eager"
+                frameborder="0">
+        </iframe>
+      </div>
+      
+      <!-- Slide 5: 05-product_portfolio_clinical -->
+      <div class="slide-outer ">
+        <iframe class="slide-frame" 
+                id="slide-4" 
+                src="/static/paige-slides/05-product_portfolio_clinical" 
+                title="Slide 5: 05-product_portfolio_clinical"
+                allowfullscreen
+                loading="eager"
+                frameborder="0">
+        </iframe>
+      </div>
+      
+      <!-- Slide 6: 06-product_portfolio_research -->
+      <div class="slide-outer ">
+        <iframe class="slide-frame" 
+                id="slide-5" 
+                src="/static/paige-slides/06-product_portfolio_research" 
+                title="Slide 6: 06-product_portfolio_research"
+                allowfullscreen
+                loading="eager"
+                frameborder="0">
+        </iframe>
+      </div>
+      
+      <!-- Slide 7: 07-commercial_traction -->
+      <div class="slide-outer ">
+        <iframe class="slide-frame" 
+                id="slide-6" 
+                src="/static/paige-slides/07-commercial_traction" 
+                title="Slide 7: 07-commercial_traction"
+                allowfullscreen
+                loading="eager"
+                frameborder="0">
+        </iframe>
+      </div>
+      
+      <!-- Slide 8: 08-competitive_landscape -->
+      <div class="slide-outer ">
+        <iframe class="slide-frame" 
+                id="slide-7" 
+                src="/static/paige-slides/08-competitive_landscape" 
+                title="Slide 8: 08-competitive_landscape"
+                allowfullscreen
+                loading="eager"
+                frameborder="0">
+        </iframe>
+      </div>
+      
+      <!-- Slide 9: 09-swot_analysis -->
+      <div class="slide-outer ">
+        <iframe class="slide-frame" 
+                id="slide-8" 
+                src="/static/paige-slides/09-swot_analysis" 
+                title="Slide 9: 09-swot_analysis"
+                allowfullscreen
+                loading="eager"
+                frameborder="0">
+        </iframe>
+      </div>
+      
+      <!-- Slide 10: 10-strategic_outlook -->
+      <div class="slide-outer ">
+        <iframe class="slide-frame" 
+                id="slide-9" 
+                src="/static/paige-slides/10-strategic_outlook" 
+                title="Slide 10: 10-strategic_outlook"
+                allowfullscreen
+                loading="eager"
+                frameborder="0">
+        </iframe>
+      </div>
+      
+      <!-- Slide 11: 11-conclusion -->
+      <div class="slide-outer ">
+        <iframe class="slide-frame" 
+                id="slide-10" 
+                src="/static/paige-slides/11-conclusion" 
+                title="Slide 11: 11-conclusion"
+                allowfullscreen
+                loading="eager"
+                frameborder="0">
+        </iframe>
+      </div>
     </div>
 
     <div class="nav-controls">
@@ -282,7 +401,7 @@ const SLIDESHOW_TEMPLATE = `<!DOCTYPE html>
 
     <script>
       let currentSlideIndex = 0;
-      const totalSlides = {{TOTAL_SLIDES}};
+      const totalSlides = 11;
       let slidesLoaded = 0;
       
       // URL parameter handling
@@ -479,118 +598,4 @@ const SLIDESHOW_TEMPLATE = `<!DOCTYPE html>
       }, 10000);
     </script>
   </body>
-</html>`;
-
-function getSlidesList() {
-  try {
-    const files = fs.readdirSync(SLIDES_DIR);
-    return files
-      .filter(file => file.endsWith('.html'))
-      .sort()
-      .map(file => path.join(SLIDES_DIR, file));
-  } catch (error) {
-    console.error('Error reading slides directory:', error.message);
-    return [];
-  }
-}
-
-function generateIndicators(totalSlides) {
-  let indicators = '';
-  for (let i = 0; i < totalSlides; i++) {
-    indicators += `<div class="indicator" onclick="goToSlide(${i})" title="Go to slide ${i + 1}"></div>\n      `;
-  }
-  return indicators.trim();
-}
-
-function generateSlideIframes(slides) {
-  let iframes = '';
-  slides.forEach((slide, index) => {
-    const slideName = path.basename(slide, '.html');
-    const slideUrl = `/static/paige-slides/${slideName}`; // Use clean URLs to match Quartz behavior
-    iframes += `      <!-- Slide ${index + 1}: ${slideName} -->
-      <div class="slide-outer ${index === 0 ? 'active' : ''}">
-        <iframe class="slide-frame" 
-                id="slide-${index}" 
-                src="${slideUrl}" 
-                title="Slide ${index + 1}: ${slideName}"
-                allowfullscreen
-                loading="eager"
-                frameborder="0">
-        </iframe>
-      </div>
-      
-`;
-  });
-  return iframes.trim();
-}
-
-function copySlideToStatic(slidePath) {
-  try {
-    const slideName = path.basename(slidePath);
-    const staticSlidesDir = path.resolve(__dirname, STATIC_SLIDES_DIR);
-    
-    console.log(`📁 Attempting to copy ${slideName} to ${staticSlidesDir}`);
-    
-    // Create static slides directory if it doesn't exist
-    if (!fs.existsSync(staticSlidesDir)) {
-      fs.mkdirSync(staticSlidesDir, { recursive: true });
-      console.log(`📁 Created directory: ${staticSlidesDir}`);
-    }
-    
-    const destPath = path.join(staticSlidesDir, slideName);
-    const sourcePath = path.resolve(__dirname, slidePath);
-    
-    console.log(`📁 Copying from ${sourcePath} to ${destPath}`);
-    fs.copyFileSync(sourcePath, destPath);
-    console.log(`✅ Successfully copied ${slideName} to static directory`);
-  } catch (error) {
-    console.error(`❌ Error copying slide ${slidePath}:`, error.message);
-    console.error('Stack:', error.stack);
-  }
-}
-
-function buildSlideshow() {
-  console.log('🔍 Scanning slides directory...');
-  
-  const slides = getSlidesList();
-  const totalSlides = slides.length;
-  
-  if (totalSlides === 0) {
-    console.error('❌ No HTML files found in slides directory');
-    return;
-  }
-  
-  console.log(`📊 Found ${totalSlides} slides:`);
-  slides.forEach((slide, index) => {
-    console.log(`   ${index + 1}. ${path.basename(slide, '.html')}`);
-  });
-  
-  // Copy slides to static directory
-  console.log('📁 Copying slides to static directory...');
-  slides.forEach(copySlideToStatic);
-  
-  // Generate content
-  const indicators = generateIndicators(totalSlides);
-  const slideIframes = generateSlideIframes(slides);
-  
-  // Replace template placeholders
-  let output = SLIDESHOW_TEMPLATE
-    .replace(/{{TITLE}}/g, 'Slideshow Presentation')
-    .replace(/{{TOTAL_SLIDES}}/g, totalSlides)
-    .replace(/{{INDICATORS}}/g, indicators)
-    .replace(/{{SLIDE_IFRAMES}}/g, slideIframes);
-  
-  // Write output file
-  try {
-    fs.writeFileSync(outputPath, output);
-    console.log(`✅ Slideshow built successfully: ${outputPath}`);
-    console.log(`🎯 Slideshow available at: https://prasanth.io/static/paige-slides/slideshow.html`);
-    console.log(`📱 Features: Keyboard navigation, touch/swipe support, fullscreen mode`);
-    console.log(`🔗 URL navigation: Add ?slide=N to go directly to slide N`);
-  } catch (error) {
-    console.error('❌ Error writing output file:', error.message);
-  }
-}
-
-// Run the build
-buildSlideshow(); 
+</html>
