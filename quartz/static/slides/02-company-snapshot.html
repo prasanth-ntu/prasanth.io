@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<script>
+  // Override Chart.js immediately when it loads
+  (function() {
+    // Wait for Chart.js to be available
+    function enhanceChartJS() {
+      if (typeof Chart !== 'undefined') {
+        const originalChart = window.Chart;
+        
+        // Create enhanced constructor
+        function EnhancedChart(ctx, config) {
+          // Ensure config exists
+          if (!config) config = {};
+          if (!config.options) config.options = {};
+          
+          // Set default interactive options
+          config.options.responsive = true;
+          config.options.maintainAspectRatio = false;
+          
+          // Interaction settings
+          if (!config.options.interaction) {
+            config.options.interaction = {};
+          }
+          config.options.interaction.mode = 'nearest';
+          config.options.interaction.axis = 'xy';
+          config.options.interaction.intersect = false;
+          
+          // Hover settings
+          if (!config.options.hover) {
+            config.options.hover = {};
+          }
+          config.options.hover.enabled = true;
+          config.options.hover.mode = 'nearest';
+          config.options.hover.intersect = false;
+          config.options.hover.animationDuration = 200;
+          
+          // Plugin settings
+          if (!config.options.plugins) {
+            config.options.plugins = {};
+          }
+          if (!config.options.plugins.tooltip) {
+            config.options.plugins.tooltip = {};
+          }
+          config.options.plugins.tooltip.enabled = true;
+          config.options.plugins.tooltip.mode = 'nearest';
+          config.options.plugins.tooltip.intersect = false;
+          config.options.plugins.tooltip.backgroundColor = 'rgba(0,0,0,0.8)';
+          config.options.plugins.tooltip.titleColor = 'white';
+          config.options.plugins.tooltip.bodyColor = 'white';
+          config.options.plugins.tooltip.borderColor = '#4a90e2';
+          config.options.plugins.tooltip.borderWidth = 1;
+          config.options.plugins.tooltip.cornerRadius = 4;
+          config.options.plugins.tooltip.padding = 8;
+          config.options.plugins.tooltip.displayColors = true;
+          
+          // Create the chart with enhanced options
+          const chart = new originalChart(ctx, config);
+          
+          console.log('Enhanced chart created with interactivity:', chart);
+          return chart;
+        }
+        
+        // Copy all static methods and properties
+        Object.setPrototypeOf(EnhancedChart, originalChart);
+        Object.setPrototypeOf(EnhancedChart.prototype, originalChart.prototype);
+        
+        // Copy static properties
+        for (let prop in originalChart) {
+          if (originalChart.hasOwnProperty(prop)) {
+            EnhancedChart[prop] = originalChart[prop];
+          }
+        }
+        
+        // Replace the global Chart constructor
+        window.Chart = EnhancedChart;
+        
+        console.log('Chart.js enhanced with automatic interactivity');
+        return true;
+      }
+      return false;
+    }
+    
+    // Try to enhance immediately
+    if (!enhanceChartJS()) {
+      // If Chart.js isn't loaded yet, wait for it
+      const checkInterval = setInterval(() => {
+        if (enhanceChartJS()) {
+          clearInterval(checkInterval);
+        }
+      }, 50);
+      
+      // Also try on script load events
+      document.addEventListener('DOMContentLoaded', enhanceChartJS);
+      window.addEventListener('load', enhanceChartJS);
+    }
+  })();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Snapshot - Paige.AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: white;
+        color: #333;
+        font-family: 'Arial', sans-serif;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+      }
+      .header {
+        color: #1a365d;
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #4a90e2;
+      }
+      .content-container {
+        display: flex;
+        flex: 1;
+        gap: 30px;
+      }
+      .left-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .right-column {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .key-fact {
+        margin-bottom: 15px;
+        font-size: 20px;
+        display: flex;
+        align-items: flex-start;
+      }
+      .key-fact i {
+        color: #4a90e2;
+        margin-right: 10px;
+        margin-top: 5px;
+      }
+      .highlight-box {
+        background-color: #f0f7ff;
+        border-left: 4px solid #4a90e2;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 5px;
+      }
+      .highlight-title {
+        color: #1a365d;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <h1 class="header">Company Snapshot</h1>
+      
+      <div class="content-container">
+        <div class="left-column">
+          <div class="key-fact">
+            <i class="fas fa-building"></i>
+            <div>Founded in 2017 as a Memorial Sloan Kettering spin-out</div>
+          </div>
+          
+          <div class="key-fact">
+            <i class="fas fa-microscope"></i>
+            <div>Develops AI pathology software to transform cancer diagnosis and treatment</div>
+          </div>
+          
+          <div class="key-fact">
+            <i class="fas fa-award"></i>
+            <div>First FDA-cleared AI application in pathology</div>
+          </div>
+          
+          <div class="key-fact">
+            <i class="fas fa-brain"></i>
+            <div>Built Virchow, a pioneering million-slide foundation-model for cancer</div>
+          </div>
+          
+          <div class="key-fact">
+            <i class="fas fa-dollar-sign"></i>
+            <div>Raised ~US $239 million in venture funding</div>
+          </div>
+          
+          <div class="key-fact">
+            <i class="fas fa-globe"></i>
+            <div>Serves >1,000 institutions across 45 countries</div>
+          </div>
+          
+          <div class="key-fact">
+            <i class="fas fa-chart-line"></i>
+            <div>Estimated FY-2024 revenue of ~US $15 million</div>
+          </div>
+          
+          <div class="key-fact">
+            <i class="fas fa-users"></i>
+            <div>~80 staff members</div>
+          </div>
+        </div>
+        
+        <div class="right-column">
+          <img src="https://private-us-east-1.manuscdn.com/sessionFile/IEbTYK2tw8wkrTZAQCvLSj/sandbox/slides_resource_ia9r0p8g31xzqkx6ffa04-003cf956-e2b-prod-aws_1751640962491_na1fn_L2hvbWUvdWJ1bnR1L3BhaWdlX2FpX3ByZXNlbnRhdGlvbi9kaWdpdGFsX3BhdGhvbG9neQ.jpg?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvSUViVFlLMnR3OHdrclRaQVFDdkxTai9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pYTlyMHA4ZzMxeHpxa3g2ZmZhMDQtMDAzY2Y5NTYtZTJiLXByb2QtYXdzXzE3NTE2NDA5NjI0OTFfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzQmhhV2RsWDJGcFgzQnlaWE5sYm5SaGRHbHZiaTlrYVdkcGRHRnNYM0JoZEdodmJHOW5lUS5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xNTYwLGhfMTU2MC9mb3JtYXQsd2VicCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=pvNnCBnTOq4FMeeXQNS2SlSIQ3T7OMBniCPEtWz-me6dWDHOjlfFq2m8HnGgxDeoa8EE4jOgVmewkwzhWAR1Q~zW0Os~vt0bpo7fw8l92GA1SzXhlO4bXd4k8lHob8BDTnH5e48HjydAwJznuIXT9KHLq2KBWL3B3GSnDXNU2elFahzmpA4ffLVoPpQ6WG5dCmYLM4MFNYyZJO-iy2ijjwrVeGFBY762BuA6mBIj5hAuQjfUsKsjkJKw5gY9X9HJwIFhGvHzd3HRFHZ3QQWdu44EBLDRT2yxuMyZsdG5JZY~8uZw8EDeylTvVu9uNcx0EKq~w-wfJxYsDURyO7xCRA__" alt="Digital Pathology" style="width: 500px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        </div>
+      </div>
+      
+      <div class="highlight-box">
+        <div class="highlight-title">Key Achievements</div>
+        <div>Paige.AI distinguishes itself by developing the first FDA-cleared AI application in pathology and by building Virchow, a pioneering million-slide foundation-model for cancer analysis.</div>
+      </div>
+    </div>
+  <script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+<script>
+  function sendHeight() {
+    window.parent.postMessage(
+      { type: 'slideHeight', height: document.body.scrollHeight, slide: window.frameElement && window.frameElement.id },
+      '*'
+    );
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 100);
+</script>
+</body>
+</html>
+
