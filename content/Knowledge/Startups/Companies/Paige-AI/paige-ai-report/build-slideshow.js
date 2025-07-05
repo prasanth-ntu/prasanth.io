@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 // Configuration
 const SLIDES_DIR = './slides';
 const OUTPUT_FILE = './slideshow.html';
-const STATIC_SLIDES_DIR = '../../../../../../quartz/static/slides';
+const STATIC_SLIDES_DIR = './static-slides';
 
 // Simple slideshow template
 const SLIDESHOW_TEMPLATE = `<!DOCTYPE html>
@@ -500,7 +500,7 @@ function generateSlideIframes(slides) {
   let iframes = '';
   slides.forEach((slide, index) => {
     const slideName = path.basename(slide, '.html');
-    const slideUrl = `/static/slides/${slideName}`; // Use static directory with clean URLs (no .html)
+    const slideUrl = `static-slides/${slideName}`; // Use relative path to slides in same directory
     iframes += `      <!-- Slide ${index + 1}: ${slideName} -->
       <div class="slide-outer ${index === 0 ? 'active' : ''}">
         <iframe class="slide-frame" 
@@ -518,25 +518,25 @@ function generateSlideIframes(slides) {
   return iframes.trim();
 }
 
-function copySlideToStatic(slidePath) {
+function copySlideToLocal(slidePath) {
   try {
     const slideName = path.basename(slidePath);
-    const staticSlidesDir = path.resolve(__dirname, STATIC_SLIDES_DIR);
+    const localSlidesDir = path.resolve(__dirname, STATIC_SLIDES_DIR);
     
-    console.log(`📁 Attempting to copy ${slideName} to ${staticSlidesDir}`);
+    console.log(`📁 Attempting to copy ${slideName} to ${localSlidesDir}`);
     
-    // Create static slides directory if it doesn't exist
-    if (!fs.existsSync(staticSlidesDir)) {
-      fs.mkdirSync(staticSlidesDir, { recursive: true });
-      console.log(`📁 Created directory: ${staticSlidesDir}`);
+    // Create local slides directory if it doesn't exist
+    if (!fs.existsSync(localSlidesDir)) {
+      fs.mkdirSync(localSlidesDir, { recursive: true });
+      console.log(`📁 Created directory: ${localSlidesDir}`);
     }
     
-    const destPath = path.join(staticSlidesDir, slideName);
+    const destPath = path.join(localSlidesDir, slideName);
     const sourcePath = path.resolve(__dirname, slidePath);
     
     console.log(`📁 Copying from ${sourcePath} to ${destPath}`);
     fs.copyFileSync(sourcePath, destPath);
-    console.log(`✅ Successfully copied ${slideName} to static directory`);
+    console.log(`✅ Successfully copied ${slideName} to local directory`);
   } catch (error) {
     console.error(`❌ Error copying slide ${slidePath}:`, error.message);
     console.error('Stack:', error.stack);
@@ -559,9 +559,9 @@ function buildSlideshow() {
     console.log(`   ${index + 1}. ${path.basename(slide, '.html')}`);
   });
   
-  // Copy slides to static directory
-  console.log('📁 Copying slides to static directory...');
-  slides.forEach(copySlideToStatic);
+  // Copy slides to local directory
+  console.log('📁 Copying slides to local directory...');
+  slides.forEach(copySlideToLocal);
   
   // Generate content
   const indicators = generateIndicators(totalSlides);
