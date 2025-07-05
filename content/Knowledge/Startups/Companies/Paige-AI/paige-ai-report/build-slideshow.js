@@ -499,11 +499,12 @@ function generateSlideIframes(slides) {
   let iframes = '';
   slides.forEach((slide, index) => {
     const slideName = path.basename(slide, '.html');
+    const slideUrl = slide.replace('.html', ''); // Remove .html extension for Quartz clean URLs
     iframes += `      <!-- Slide ${index + 1}: ${slideName} -->
       <div class="slide-outer ${index === 0 ? 'active' : ''}">
         <iframe class="slide-frame" 
                 id="slide-${index}" 
-                src="${slide}" 
+                src="${slideUrl}" 
                 title="Slide ${index + 1}: ${slideName}"
                 allowfullscreen
                 loading="eager"
