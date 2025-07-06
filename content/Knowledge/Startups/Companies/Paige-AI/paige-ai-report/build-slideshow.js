@@ -41,7 +41,7 @@ const SLIDESHOW_TEMPLATE = `<!DOCTYPE html>
         position: relative;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start; /* Changed from center */
         padding: 0;
         box-sizing: border-box;
         overflow: hidden;
@@ -56,7 +56,7 @@ const SLIDESHOW_TEMPLATE = `<!DOCTYPE html>
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); /* This will be overridden by JS */
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
         pointer-events: none;
@@ -212,19 +212,20 @@ const SLIDESHOW_TEMPLATE = `<!DOCTYPE html>
         transform: translateY(-2px);
       }
       
-      /* Responsive design */
-      @media (max-width: 1400px) {
-        .slide-outer {
-          width: 95vw;
-          height: calc(95vw * 0.5625);
-        }
-        
-        .slide-frame {
-          width: 100%;
-          height: 100%;
-        }
+      /* Responsive design - JavaScript-controlled scaling like Manus */
+      .slide-outer {
+        width: 1280px;
+        height: 720px;
+        transform-origin: center center;
+        /* Default scale will be set by JavaScript */
       }
       
+      .slide-frame {
+        width: 1280px;
+        height: 720px;
+      }
+      
+      /* Mobile UI adjustments */
       @media (max-width: 768px) {
         .nav-controls {
           bottom: 10px;
@@ -246,6 +247,45 @@ const SLIDESHOW_TEMPLATE = `<!DOCTYPE html>
           top: 10px;
           right: 10px;
           padding: 8px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .nav-controls {
+          bottom: 5px;
+          padding: 6px;
+          gap: 6px;
+        }
+        
+        .nav-btn {
+          padding: 6px 10px;
+          font-size: 12px;
+        }
+        
+        .slide-counter {
+          top: 5px;
+          left: 5px;
+          padding: 6px 10px;
+          font-size: 12px;
+        }
+        
+        .fullscreen-btn {
+          top: 5px;
+          right: 120px;
+          padding: 6px 8px;
+          font-size: 12px;
+        }
+        
+        .slide-indicators {
+          top: 5px;
+          right: 5px;
+          padding: 6px;
+          gap: 4px;
+        }
+        
+        .indicator {
+          width: 10px;
+          height: 10px;
         }
       }
     </style>
@@ -321,6 +361,63 @@ const SLIDESHOW_TEMPLATE = `<!DOCTYPE html>
         }
       }
       
+      // Responsive scaling function (Manus-style)
+      function calculateAndApplyScale() {
+        const slides = document.querySelectorAll('.slide-outer');
+        const container = document.querySelector('.slideshow-container');
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+        
+        // Calculate UI space based on screen size
+        let uiSpace = 120; // Default for desktop
+        if (viewportWidth <= 480) {
+          uiSpace = 80;
+        } else if (viewportWidth <= 768) {
+          uiSpace = 100;
+        }
+        
+        // Calculate available space
+        const availableWidth = viewportWidth * 0.95; // 95% of viewport width
+        const availableHeight = viewportHeight - uiSpace; // Account for UI elements
+        
+        // Calculate scale factors
+        const scaleW = availableWidth / 1280;
+        const scaleH = availableHeight / 720;
+        const scale = Math.min(scaleW, scaleH); // Use the smaller scale to ensure fit
+        
+        // Calculate scaled dimensions
+        const scaledWidth = 1280 * scale;
+        const scaledHeight = 720 * scale;
+        
+        // Apply scale and positioning to all slides
+        slides.forEach(slide => {
+          if (scale >= 1) {
+            // No scaling needed for desktop
+            slide.style.transform = 'translate(-50%, -50%)';
+          } else {
+            // Apply scaling with proper positioning
+            slide.style.transform = \`translate(-50%, -50%) scale(\${scale})\`;
+          }
+        });
+        
+        // Update container to match scaled content
+        if (container) {
+          container.style.minHeight = \`\${scaledHeight + uiSpace}px\`;
+        }
+        
+        console.log('Scale applied:', {
+          viewportWidth,
+          viewportHeight,
+          availableWidth: availableWidth.toFixed(2),
+          availableHeight: availableHeight.toFixed(2),
+          scaleW: scaleW.toFixed(4),
+          scaleH: scaleH.toFixed(4),
+          finalScale: scale.toFixed(4),
+          scaledWidth: scaledWidth.toFixed(2),
+          scaledHeight: scaledHeight.toFixed(2)
+        });
+      }
+      
       // Initialize slideshow
       document.addEventListener('DOMContentLoaded', function() {
         const iframes = document.querySelectorAll('.slide-frame');
@@ -328,6 +425,17 @@ const SLIDESHOW_TEMPLATE = `<!DOCTYPE html>
         iframes.forEach((iframe, index) => {
           iframe.addEventListener('load', handleIframeLoad);
           iframe.addEventListener('error', handleIframeLoad);
+        });
+        
+        // Apply initial scaling
+        calculateAndApplyScale();
+        
+        // Reapply scaling on window resize
+        window.addEventListener('resize', calculateAndApplyScale);
+        
+        // Reapply scaling on orientation change
+        window.addEventListener('orientationchange', function() {
+          setTimeout(calculateAndApplyScale, 100); // Small delay for orientation change
         });
         
         // Initialize with slide from URL
