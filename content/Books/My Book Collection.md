@@ -42,24 +42,14 @@ Here are the books I've read, currently reading, or plan to read:
       <div class="book-status status-completed">#Completed</div>
     </div>
   </a>
-
-  <a href="Situational Awareness.md" class="book-card">
-    <div class="book-image"><img src="../Books/attachments/images/situational-awareness-cover.webp" alt="Situational awareness cover"></div>
-    <div class="book-content">
-      <div class="book-title">Situational Awareness</div>
-      <div class="book-author">by Leopold Aschenbrenner</div>
-      <div class="book-summary">The decade ahead: From GPT-4 to AGI to Superinteligence, and the challenges.</div>
-      <div class="book-status status-completed">#Completed</div>
-    </div>
-  </a>
   
- <a href="Atomic Habits.md" class="book-card">
-    <div class="book-image"><img src="../Books/attachments/images/atomic-habits-cover.webp" alt="Atomic habits cover"></div>
+ <a href="Build-a-LLM-from-Scratch.md" class="book-card">
+    <div class="book-image"><img src="../Books/attachments/images/build-a-llm-from-scratch-cover.webp" alt="Atomic habits cover"></div>
     <div class="book-content">
-      <div class="book-title">Atomic Habits</div>
-      <div class="book-author">by James Clear</div>
-      <div class="book-summary">An easy and proven way to build good habits and break bad ones.</div>
-      <div class="book-status status-completed">#Completed</div>
+      <div class="book-title">Build a Large Language Model from Scratch</div>
+      <div class="book-author">by Sebastian Raschka</div>
+      <div class="book-summary">Solid book for learning how to build an LLM from scratch.</div>
+      <div class="book-status status-in-progress">#InProgress</div>
     </div>
   </a>
 
@@ -72,6 +62,16 @@ Here are the books I've read, currently reading, or plan to read:
     <div class="book-status status-in-progress">#InProgress</div>
 </div>
 </a>
+
+  <a href="Situational Awareness.md" class="book-card">
+    <div class="book-image"><img src="../Books/attachments/images/situational-awareness-cover.webp" alt="Situational awareness cover"></div>
+    <div class="book-content">
+      <div class="book-title">Situational Awareness</div>
+      <div class="book-author">by Leopold Aschenbrenner</div>
+      <div class="book-summary">The decade ahead: From GPT-4 to AGI to Superinteligence, and the challenges.</div>
+      <div class="book-status status-completed">#Completed</div>
+    </div>
+  </a>
 
   <a href="Trends - Artificial Intelligence - 2025.md" class="book-card">
     <div class="book-image"><img src="../Books/attachments/images/trends-artificial-intelligence-cover.webp" alt="Trends - Artificial Intelligence cover"></div>

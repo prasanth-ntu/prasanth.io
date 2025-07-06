@@ -4,11 +4,11 @@ author: Sam Altman
 date: 2019-01-25
 ---
 
-| Author | Sam Altman             |
-| ------ | ---------------------- |
-| Source | [blog.samaltman.com]() |
+| Author | Sam Altman                                                            |
+| ------ | --------------------------------------------------------------------- |
+| Source | [blog.samaltman.com](https://blog.samaltman.com/how-to-be-successful) |
 
->[!SUMMARY] 13 thoughts about how to achieve such outlier success.
+>[!SUMMARY] 13 thoughts about how to achieve such outlier success
 >1. Compound yourself
 >2. Have almost too much self-belief
 >3. Learn to think independently

@@ -18,9 +18,12 @@
 
 ![[power-of-tiny-gains-graph.jpg]]
 
-> Disrupt or be disrupted
+> [!QUOTE] Dream is not that you see in sleep. Dream is something that does not ley you sleep.
+> *Dr A P J Abdul Kalam*
+ 
+> [!QUOTE] Disrupt or be disrupted
 
->[!TIP] Happiness is a choice - we can choose to be or not to be.
+> [!TIP] Happiness is a choice - we can choose to be or not to be.
 
 [[How to be Successful]] by [[Sam Altman]]
 
