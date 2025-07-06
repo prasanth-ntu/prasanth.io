@@ -216,7 +216,7 @@ const SLIDESHOW_TEMPLATE = `<!DOCTYPE html>
       .slide-outer {
         width: 1280px;
         height: 720px;
-        transform-origin: center center;
+        transform-origin: left top;
         /* Default scale will be set by JavaScript */
       }
       
@@ -410,29 +410,34 @@ const SLIDESHOW_TEMPLATE = `<!DOCTYPE html>
         
         // Detect orientation and device type
         const isLandscape = viewportWidth > viewportHeight;
-        const isMobile = viewportWidth <= 768;
-        const isSmallMobile = viewportWidth <= 480;
+        // Fix mobile detection: use the smaller dimension to detect mobile
+        const smallerDimension = Math.min(viewportWidth, viewportHeight);
+        const isMobile = smallerDimension <= 768;
+        const isSmallMobile = smallerDimension <= 480;
         
         // Calculate UI space based on orientation and screen size
         let uiSpace = 120; // Default for desktop
         if (isMobile) {
           if (isLandscape) {
-            // More aggressive in landscape - use minimal UI space
-            uiSpace = isSmallMobile ? 60 : 70;
+            // Much more aggressive in landscape - ultra minimal UI space
+            uiSpace = isSmallMobile ? 30 : 35;
           } else {
             // Portrait mode
             uiSpace = isSmallMobile ? 80 : 100;
           }
         }
         
-        // Calculate available space - more aggressive in landscape
+        // Calculate available space - much more aggressive in landscape
         let widthMultiplier = 0.95;
+        let heightMultiplier = 1.0;
+        
         if (isMobile && isLandscape) {
-          widthMultiplier = 0.98; // Use 98% of width in mobile landscape
+          widthMultiplier = 0.995; // Use 99.5% of width in mobile landscape
+          heightMultiplier = 0.99; // Use 99% of height too
         }
         
         const availableWidth = viewportWidth * widthMultiplier;
-        const availableHeight = viewportHeight - uiSpace;
+        const availableHeight = (viewportHeight * heightMultiplier) - uiSpace;
         
         // Calculate scale factors
         const scaleW = availableWidth / 1280;
@@ -442,15 +447,21 @@ const SLIDESHOW_TEMPLATE = `<!DOCTYPE html>
         // Calculate scaled dimensions
         const scaledWidth = 1280 * scale;
         const scaledHeight = 720 * scale;
+        const leftOffset = scale < 1 ? (viewportWidth - scaledWidth) / 2 : 0;
+        const topOffset = scale < 1 ? (viewportHeight - scaledHeight) / 2 : 0;
         
         // Apply scale and positioning to all slides
         slides.forEach(slide => {
           if (scale >= 1) {
-            // No scaling needed for desktop
+            // No scaling needed for desktop - center it
             slide.style.transform = 'translate(-50%, -50%)';
+            slide.style.left = '50%';
+            slide.style.top = '50%';
           } else {
-            // Apply scaling with proper positioning
-            slide.style.transform = \`translate(-50%, -50%) scale(\${scale})\`;
+            // Apply scaling with left-top origin like Manus
+            slide.style.transform = \`scale(\${scale})\`;
+            slide.style.left = \`\${leftOffset}px\`;
+            slide.style.top = \`\${topOffset}px\`;
           }
         });
         
@@ -466,13 +477,18 @@ const SLIDESHOW_TEMPLATE = `<!DOCTYPE html>
           deviceType: isMobile ? (isSmallMobile ? 'small-mobile' : 'mobile') : 'desktop',
           uiSpace,
           widthMultiplier,
+          heightMultiplier,
           availableWidth: availableWidth.toFixed(2),
           availableHeight: availableHeight.toFixed(2),
           scaleW: scaleW.toFixed(4),
           scaleH: scaleH.toFixed(4),
           finalScale: scale.toFixed(4),
           scaledWidth: scaledWidth.toFixed(2),
-          scaledHeight: scaledHeight.toFixed(2)
+          scaledHeight: scaledHeight.toFixed(2),
+          positioning: {
+            leftOffset: leftOffset.toFixed(2),
+            topOffset: topOffset.toFixed(2)
+          }
         });
       }
       
