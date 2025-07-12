@@ -5,7 +5,7 @@ tags:
   - MachineLearning
   - ArtificialIntelligence
 ---
-> *Fine-tuning is the training done **after** a model has been [[pre-training|Pre-trained]]. To perform fine-tuning, you first acquire a pretrained language model, then perform additional training with a **labelled dataset specific to your task**.* 
+> *Fine-tuning is the training done **after** a model has been [[Pre-training|Pre-trained]]. To perform fine-tuning, you first acquire a pretrained language model, then perform additional training with a **labelled dataset specific to your task**.* 
 
 ![Fine-tuning from pre-training](https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/finetuning.svg)
 

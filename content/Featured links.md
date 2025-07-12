@@ -1,6 +1,6 @@
 - [[Knowledge/Index|Knowledge]]
-	- [[Knowledge/Tech/Index|Tech]]
-		- [[AI-ML-DS-and-SE Glossary]]
+	- [[Knowledge/Tech-Science/Index|Tech]]
+		- [[Knowledge/Glossary]]
 		- [[Data Science Canvas - Rendered]]
 		- [[Core concepts in OOP, Metaprogramming, and Optimization]]
 	- [[Knowledge/Tools/Index|Tools]]

@@ -82,6 +82,9 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 - [ ] [# Meta’s Hyperscale Infrastructure: Overview and Insights](https://cacm.acm.org/research/metas-hyperscale-infrastructure-overview-and-insights/)
 - [ ] Microsoft Research Blog
 	- [ ] [PromptWizard: The future of prompt optimization through feedback-driven self-evolving prompts](https://www.microsoft.com/en-us/research/blog/promptwizard-the-future-of-prompt-optimization-through-feedback-driven-self-evolving-prompts/)
+- [ ] Crew AI use case
+	- [ ] https://www.analyticsvidhya.com/blog/2024/10/email-sorting-using-crewai/
+	- [ ] https://www.toolify.ai/ai-news/automate-email-responses-with-ai-agents-integrate-crewai-langgraph-2343138
 
 # News
 - [ ] ['We are not for sale,' ChatGPT boss says after Musk bid](https://www.bbc.com/news/articles/cpdx75zgg88o.amp)

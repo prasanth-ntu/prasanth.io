@@ -32,7 +32,7 @@ This slideshow covers:
 ## 🔗 Related Content
 
 - [[Knowledge/Startups/Companies/Index|Startup Companies]]
-- [[Knowledge/Tech/AI-ML-DS-and-SE Glossary|AI/ML Glossary]]
+- [[Knowledge/Glossary|AI/ML Glossary]]
 - [[Knowledge/Finance/Glossary|Finance Terms]]
 ---
 

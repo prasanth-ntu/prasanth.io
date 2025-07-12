@@ -17,15 +17,15 @@ Speaker: https://www.linkedin.com/in/diana-kraemer-wellness/ | **[www.diana-krae
 2. Strategy
 3. Soul
 
-![[Screenshot 2025-05-26 at 15.16.46.png]]
+![[the-biology-of-mindfulness.png]]
 
-![[Screenshot 2025-05-26 at 15.20.28.png]]
+![[what-is-happening-in-the-body.png]]
 
-![[Screenshot 2025-05-26 at 15.21.30.png]]
+![[the-role-of-vagus-nerve.png]]
 
 Our gut has more nerves than our brains
 
-![[Screenshot 2025-05-26 at 15.24.28.png]]
+![[nervous-system-tooks-for-real-life.png]]
 
 When you feel so much going on, so much stressed, just change your physiology by
 - Stand -> Sit, Sit -> Stand

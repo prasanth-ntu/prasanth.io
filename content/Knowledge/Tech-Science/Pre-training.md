@@ -9,7 +9,7 @@ tags:
 
 This pre-training is usually done on very large amounts of data. Therefore, it requires a very large corpus of data, and training can take up to several weeks.
 
-A typical example of such a model is the [[GPT-3]] model (the precursor to the original model offered in [[Knowledge/Tech/ChatGPT]]). 
+A typical example of such a model is the [[GPT-3]] model (the precursor to the original model offered in [[Knowledge/Tech-Science/ChatGPT]]). 
 
 The next step after model *pre-training where the LLM is trained to predict the next word in the text*, is [[Fine-tuning]].
 
