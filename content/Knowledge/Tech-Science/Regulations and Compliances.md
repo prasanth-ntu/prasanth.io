@@ -1,47 +1,5 @@
 
 # Medical Regulatory Flow across Different Regions
-```mermaid
-flowchart LR
-    A["Medical Device"] --> B["Region of Use?"]
-    B --> FDA["FDA Pathways"]
-    B --> CE["CE Marking"]
-    B --> UKCA["UKCA Marking"]
 
-    %% United States Swimlane
-    subgraph USGroup[🇺🇸 United States]
-        direction TB
-        %% USNode --> FDA["FDA Pathways"]
-        FDA --> FDA1["510(k) Clearance<br/>(Substantially equivalent device)"]
-        FDA --> FDA2["De Novo Clearance<br/>(New, low/moderate risk device)"]
-        FDA --> FDA3["PMA (Premarket Approval)<br/>(High-risk device)"]
-        FDA1 --> USMarket["➡️ Marketed in the U.S."]
-        FDA2 --> USMarket
-        FDA3 --> USMarket
-    end
+[![](https://mermaid.ink/img/pako:eNqNVdFu2jAU_RXLU6UiBRpCE0o0dYKQbRKjqprlZWUPhhiwSGLmONCs6vMe9web9jRp2gdU-5z9wPYJu04CLbSMWkogvudc-55zE1_jEQ8otvE45MvRlAiJ3lwMYgSjfTnAfRqwEQlRly7YiA7we1StnqIORC7ohPEY8THyE_oCIgWpkwNedhUZ7uicyOmSZMkWwHEh7rioT8SMxZOtqN9zFF_9bCAKzMEB8mMmaYA8SSRNkLdkUUhiWoSTdDgRZD5FvvdK8HR--ffrp19w3W6yygXVCJigI6mqedu5m1XLeGcgzr6K1FCBElYHnFnXD2cV5ISUCBKP6POhODo99NJhIkksGQnDDNEPKVuQkMYSBbm6lV0ZDcjYpeiML_h2yjO61BA4dxTBRgXUhQRLZvsSNiDheb-NDs8FjUBfKlF7PhcctlMp8r5mk2n1f6nqhVFeP6dDvt9fvv25_YyKZ1CZxUhOKfJrXm2ba2xwN0KNR0I0Du5Z76aCzymJlZvg2A7vXX_t_Q_l_xbtKea7_tr8Xd2qBkwXEOW7w-MxFxGTGWonCU2SCOzNFV0wAgZKNmagTYcH2VaSQk_X36en66-Jm7qUzd2D_QU82vlO9Na6_ITr-xbtSS9Fb63Lrvd0hc4DK6DS504UNMzKniv1KPouYRELiUCSQ6WbglUepC57sLe3B3uPaaZq8WQWqk2XU6OQJMnqu6GtulCDvlRXXd0MLe_SNFFUep9Wtpy28lBzXE35StMH0NIFbbV1TVWjFSWlsxJ-j9Cl49WKKJGCz6j9rGs5bedEKx6rSxbIqW3Mr7ZY5eJrltFsu5a-j1XuYc1y9EbL6DxgYQ1HVESEBXB-XKscAwx6R3BO2PA3gNoGeBDfAI6kkntZPMK2FCnVMJQ_mWJ7TMIEntJ5AJ-uLiPQpNF6dk7id5xHK8pEqHVKOvhIhcPTWGLbzKHYvsZX2K7Xrdqx2Tw2Tpq6pZuWbmg4w7ZxrNdO6nXdaJi62TINs3Gj4Y95dr1mWU2r1Wo1Grpp6FZDw3DoSS76xcGYn483_wBLWD6a?type=png)](https://mermaid.live/edit#pako:eNqNVdFu2jAU_RXLU6UiBRpCE0o0dYKQbRKjqprlZWUPhhiwSGLmONCs6vMe9web9jRp2gdU-5z9wPYJu04CLbSMWkogvudc-55zE1_jEQ8otvE45MvRlAiJ3lwMYgSjfTnAfRqwEQlRly7YiA7we1StnqIORC7ohPEY8THyE_oCIgWpkwNedhUZ7uicyOmSZMkWwHEh7rioT8SMxZOtqN9zFF_9bCAKzMEB8mMmaYA8SSRNkLdkUUhiWoSTdDgRZD5FvvdK8HR--ffrp19w3W6yygXVCJigI6mqedu5m1XLeGcgzr6K1FCBElYHnFnXD2cV5ISUCBKP6POhODo99NJhIkksGQnDDNEPKVuQkMYSBbm6lV0ZDcjYpeiML_h2yjO61BA4dxTBRgXUhQRLZvsSNiDheb-NDs8FjUBfKlF7PhcctlMp8r5mk2n1f6nqhVFeP6dDvt9fvv25_YyKZ1CZxUhOKfJrXm2ba2xwN0KNR0I0Du5Z76aCzymJlZvg2A7vXX_t_Q_l_xbtKea7_tr8Xd2qBkwXEOW7w-MxFxGTGWonCU2SCOzNFV0wAgZKNmagTYcH2VaSQk_X36en66-Jm7qUzd2D_QU82vlO9Na6_ITr-xbtSS9Fb63Lrvd0hc4DK6DS504UNMzKniv1KPouYRELiUCSQ6WbglUepC57sLe3B3uPaaZq8WQWqk2XU6OQJMnqu6GtulCDvlRXXd0MLe_SNFFUep9Wtpy28lBzXE35StMH0NIFbbV1TVWjFSWlsxJ-j9Cl49WKKJGCz6j9rGs5bedEKx6rSxbIqW3Mr7ZY5eJrltFsu5a-j1XuYc1y9EbL6DxgYQ1HVESEBXB-XKscAwx6R3BO2PA3gNoGeBDfAI6kkntZPMK2FCnVMJQ_mWJ7TMIEntJ5AJ-uLiPQpNF6dk7id5xHK8pEqHVKOvhIhcPTWGLbzKHYvsZX2K7Xrdqx2Tw2Tpq6pZuWbmg4w7ZxrNdO6nXdaJi62TINs3Gj4Y95dr1mWU2r1Wo1Grpp6FZDw3DoSS76xcGYn483_wBLWD6a)
 
-    %% European Union Swimlane
-    subgraph EUGroup[🇪🇺 European Union]
-        direction TB
-        %% EUNode --> CE["CE Marking"]
-        CE --> CE1["Conformity Assessment<br/>via Notified Body"]
-        CE1 --> EUMarket["➡️ Marketed in the EU"]
-    end
-
-    %% United Kingdom Swimlane
-    subgraph UKGroup[🇬🇧 United Kingdom]
-        direction TB
-        %% UKNode --> UKCA["UKCA Marking"]
-        UKCA --> UKCA1["Assessment by Approved Body<br/>(similar to EU Notified Body)"]
-        UKCA1 --> UKMarket["➡️ Marketed in the UK"]
-    end
-
-     %% Styling
-
-    class USGroup,USMarket,FDA,FDA1,FDA2,FDA3 usStyle
-    class EUGroup,EUMarket,CE,CE1 euStyle
-    class UKGroup,UKMarket,UKCA,UKCA1 ukStyle
-
-    classDef usStyle stroke:#D6CAC8,stroke-width:2px
-    classDef euStyle stroke:#27AE60,stroke-width:2px
-    classDef ukStyle stroke:#C0392B,stroke-width:2px
-```
