@@ -3,9 +3,9 @@ tags:
   - DataScience
   - SoftwareEngineering
 ---
-![[content/Knowledge/Tech/attachments/images/Pydantic-Introduction.png]]
 
-![[content/Knowledge/Tech/attachments/images/Pydantic-Example.png]]
+![[Pydantic-Introduction.png]]
+![[Pydantic-Example.png]]
 
 We will create a pydantic object that can be casted as a json schema, used for function calling in OpenAI. 
 

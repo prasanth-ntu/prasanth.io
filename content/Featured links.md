@@ -9,9 +9,10 @@
 		- Yet to be added
 	- [[Knowledge/Finance/Index|Finance]]
 		- Yet to be added
-- [[Courses/Index|Courses]]
+- [[Courses/Index|Recent Courses]]
 	- [[DeepLearning.AI - Functions, Tools and Agents with LangChain]]
 	- [[Google-5-Day-Gen-AI-Intensive-Course]]
+	- [[DeepLearning.AI - Multi AI Agent Systems with CrewAI]]
 - [[My Book Collection]]
 	- [[Situational Awareness]]
 	- [[The Psychology of Money]]
@@ -22,7 +23,9 @@
 	- Media related: [[YouTube Downloader]] | [[Music Player]] | [[Media Converter]]
 	- AI related: [[Personal Chatbot]]
 	- Finance related: [[Asset Class Comparison]]
-- [[Blog/Index|Blog]]
+- [[Writings/Index|Writings]]
 	- [[2025-02-01 Reflections on Meeting with Magesh]]
 - [[Miscellaneous]]
 	- [[Philosophy]]
+
+> [!NOTE] These lists are not exhaustive!
