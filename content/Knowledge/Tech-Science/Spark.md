@@ -6,13 +6,14 @@ tags:
   - DataAnalytics
   - Spark
   - SQL
+  - Python
 ---
 # What's Spark?
 > [!SUMMARY] Apache Spark™ is a powerful, open-source, multi-language engine designed for large-scale data processing. 
 
 It enables data engineering, data science, and machine learning workloads to be executed efficiently on both single-node machines and distributed clusters. Built for speed and ease of use, Spark simplifies complex data tasks by providing a unified framework for batch processing, real-time streaming, advanced analytics, and machine learning.
 
-At its core, Apache Spark™ is built on an advanced distributed SQL engine, making it highly scalable and capable of handling massive datasets across multiple nodes. Its in-memory processing capabilities significantly accelerate data operations, making it a preferred choice for organizations dealing with big data challenges. With support for programming languages like Python, Scala, Java, and R, Spark offers flexibility and accessibility to a wide range of developers and data professionals.
+At its core, Apache Spark™ is built on an advanced distributed SQL engine, making it highly scalable and capable of handling massive datasets across multiple nodes. Its in-memory processing capabilities significantly accelerate data operations, making it a preferred choice for organizations dealing with big data challenges. With support for programming languages like [[Python Documentation|Python]], Scala, Java, and R, Spark offers flexibility and accessibility to a wide range of developers and data professionals.
 ## Key Features of Apache Spark
 - **Unified Engine**: Combines batch processing, real-time streaming, SQL queries, and machine learning in one platform.
 - **Multi-Language Support**: APIs for Python (PySpark), Scala, Java, and R.
@@ -65,8 +66,13 @@ For more details, refer [PySpark Overview](https://spark.apache.org/docs/latest/
 - Use Spark for performance-critical applications in Scala/Java.
 - Use PySpark for ease of use and integration with Python ecosystems.
 ---
+# Apache Spark Architecture: End-to-End
+<iframe src="https://prasanth.io/static/pages/Spark%20Architecture.html" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+<a href="https://prasanth.io/static/pages/Spark%20Architecture.html" target="_blank" rel="noopener noreferrer"><b>Open in new tab</b></a> (*Note: Best viewed in desktop or landscape view)*
+
+
 # Important concepts
-## Spark configurations
+## Spark configurations Example
 ```mermaid
 graph TD
     A[Client Machine] --> B[Driver]

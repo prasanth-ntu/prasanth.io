@@ -10,7 +10,7 @@ tags:
 **Key resources**
 - Course [link](https://www.deeplearning.ai/short-courses/multi-ai-agent-systems-with-crewai/)
 	- Forum [link](https://community.deeplearning.ai/c/short-course-q-a/multi-ai-agent-systems-with-crewai/449)
-- My Github Repo [link]()
+- My Github Repo [link](https://github.com/prasanth-ntu/DeepLearningAI-Multi-AI-Agent-Systems-with-CrewAI)
 
 Below sections contain the key take aways from each lesson.
 
@@ -105,9 +105,9 @@ For more details, refer this [GitHub code](https://github.com/prasanth-ntu/DeepL
 > [!TIP] Memory makes huge, immense difference on our Agent.
 
 > [!INFO] 3 types of memory offered by CrewAI out of the box:
-> 3. Short term memory
-> 4. Long term memory
-> 5. Entity memory
+> 1. Short term memory
+> 2. Long term memory
+> 3. Entity memory
 
 ---
 # Multi agent customer support automation (L3)

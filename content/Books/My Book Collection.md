@@ -92,6 +92,26 @@ Here are the books I've read, currently reading, or plan to read:
       <div class="book-status status-to-read">#ToRead</div>
     </div>
   </a>
+
+   <a href="TBA: Deep Medicine: How Artificial Intelligence Can Make Healthcare Human Again" class="book-card">
+    <div class="book-image"><img src="../Books/attachments/images/Deep-Medicine-Cover-Page.jpg" alt="Deep Medicine: How Artificial Intelligence Can Make Healthcare Human Again Cover"></div>
+    <div class="book-content">
+      <div class="book-title">Deep Medicine: How Artificial Intelligence Can Make Healthcare Human Again</div>
+      <div class="book-author">by Eric topol M.D.</div>
+      <div class="book-summary"></div>
+      <div class="book-status status-to-read">#ToRead</div>
+    </div>
+  </a>
+
+  <a href="TBA: The AI Revolution in Medicine: GPT-4 and Beyond" class="book-card">
+    <div class="book-image"><img src="../Books/attachments/images/The-AI-Revolutoin-in-Medicine-Cover-Page.jpg" alt=The AI Revolution in Medicine: GPT-4 and Beyond Cover"></div>
+    <div class="book-content">
+      <div class="book-title">The AI Revolution in Medicine: GPT-4 and Beyond</div>
+      <div class="book-author">by Peter Lee, Carey Goldberg, Isaac Kohane</div>
+      <div class="book-summary"></div>
+      <div class="book-status status-to-read">#ToRead</div>
+    </div>
+  </a>
   
 <!--
   <a href="Let's Talk Money.md" class="book-card">
