@@ -9,9 +9,9 @@ tags:
   - Meetup
 title: 2025 Kickoff!! NeurIPS Recap and SOTA
 ---
-# Meet up event
-https://www.meetup.com/machine-learning-singapore/events/305605893/?eventOrigin=home_page_upcoming_events$all
-## Details
+# Meet up event details
+[Meetup link](https://www.meetup.com/machine-learning-singapore/events/305605893/?eventOrigin=home_page_upcoming_events$all)
+
 For our annual NeurIPS event, we're once again bringing back our thoughts/impressions/knee-jerk reactions from the December NeurIPS conference.
 
 Talks:

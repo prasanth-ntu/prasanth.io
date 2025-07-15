@@ -49,3 +49,7 @@ Below sections contain the key take aways from each lesson.
 
 > [!TIP] We can build Agents and Crews even with a YAML file
 <img src="building-ai-agents-with-yaml-file.png" alt="Building AI Agents with YAML file"  class="centered-img">
+
+---
+# Automated Project: Planning, Estimation and Allocation
+
