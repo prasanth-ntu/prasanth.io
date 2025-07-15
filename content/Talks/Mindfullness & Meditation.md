@@ -36,11 +36,11 @@ When you feel so much going on, so much stressed, just change your physiology by
 - Tap it out
 - Massage the temples
 
-![[Screenshot 2025-05-26 at 15.28.16.png]]
+![[Breath-to-Rewire-Strategy.png]]
 
-![[Screenshot 2025-05-26 at 15.46.15.png]]
+![[micro-practices-to-shift-state.png]]
 
-![[Screenshot 2025-05-26 at 15.46.45.png]]
+![[coming-home-to-heart.png]]
 
 4-7-8- breathing
 - 4 (inhale)-7 (hold on top)-8 (exhaling)
