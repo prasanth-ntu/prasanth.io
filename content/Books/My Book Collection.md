@@ -1,5 +1,7 @@
 ---
 title: My Book Collection
+description: "A curated collection of books I've read, currently reading, or plan to read - covering topics from personal development and finance to AI and technology."
+socialDescription: "Discover my reading journey through books on Atomic Habits, Psychology of Money, AI/ML, and more. From personal development to cutting-edge technology."
 tags:
   - Books
   - Reading

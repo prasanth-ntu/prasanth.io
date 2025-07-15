@@ -69,5 +69,36 @@ Discover how you can create agents faster with the Agent Development Kit (ADK), 
 		- Business Risk Team
 		- AI Tool Trainers
 		- Champion Users
-
+	- **Architecture and Solution design**
+		- Python vs Java
+		- Real-time vs. Near Real-time vs. Batch
+		- Databricks vs. Azure Kubernetes Service vs. Azure Functions
+		- Agentic vs. Workflow
+		- Function calling vs. text2sql vs. MCP
+	- **Model Choices**
+		- Model capabilities
+		- Cost
+		- Availability
+	- **DevOps - Proper Python Software Engineering**
+		- JIRA
+		- GitHub
+		- CI/CD, unit testing, SIT/UAT
+		- Logging and Monitoring
+	- **UI/UX Design - Iteration and Iteration**
+		- LLM Behaviour
+		- Manage user expectations
+		- Gather user feedbacks
+		- Risk disclaimer
+	- **Performance Testing**
+		- Latency vs Throughput
+		- ...
+	- **SIT & UAT**
+	- **Disaster recovery**
+	- GenAI Solution Monitoring and Ops
+		- Performance tracking (e.g., response time, accuracy)
+		- Cost tracking and optimization
+		- KPI tracking
+			- Lead KPIs (e.g., user adoption, log-in frequency, click rate)
+			- Lag KPIs (e.g., sales uplift)
+		- 
   

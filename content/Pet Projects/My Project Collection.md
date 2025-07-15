@@ -1,5 +1,7 @@
 ---
 title: My Project Collection
+description: "A showcase of my software engineering projects, including web apps, AI tools, and development utilities built with Python, Streamlit, and modern technologies."
+socialDescription: "Explore my portfolio of projects including Media Converter, Personal Chatbot, Asset Class Comparison, and more. Built with Python, Streamlit, and modern web technologies."
 tags:
   - Projects
   - Software Engineering
@@ -46,7 +48,8 @@ Here are the projects I've built, currently working on, or planning to develop:
   </a>
 
   <a href="Asset Class Comparison.md" class="project-card">
-    <div class="project-icon">📊</div>
+    <div class="project-icon">
+        <img src="../Pet Projects/attachments/images/asset-class-comparison-thumbnail.webp" alt="Asset Class Comparison"></div>
     <div class="project-content">
       <div class="project-title">Asset Class Comparison</div>
       <div class="project-description">Interactive dashboard to compare performance of different asset classes over time. Built with Python and deployed on Hugging Face.</div>
