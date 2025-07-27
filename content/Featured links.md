@@ -5,7 +5,7 @@
 		- [[Core concepts in OOP, Metaprogramming, and Optimization]]
 	- [[Knowledge/Tools/Index|Tools]]
 		- [[Obsidian]]
-	- [[Knowledge/Startups/Index|Startups]]
+	- [[Knowledge/Startups-BigTechs/Index|Startups]]
 		- Yet to be added
 	- [[Knowledge/Finance/Index|Finance]]
 		- Yet to be added

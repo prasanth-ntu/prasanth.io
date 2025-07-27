@@ -1,0 +1,6 @@
+- **Experience**
+	- [[OpenAI]] founder
+- **Blog**
+	- https://blog.samaltman.com/
+- **Interesting blog posts**
+	- [[How to be Successful]]

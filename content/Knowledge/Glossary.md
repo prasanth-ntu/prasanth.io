@@ -6,14 +6,17 @@ tags:
   - MachineLearning
   - DeepLearningAI
   - GPU
-title: AI, ML, DS & SE Glossary
+  - Finance
+  - Science
+title: Glossary
 ---
 
-This glossary defines key terms in Artificial Intelligence, Machine Learning, Data Science, and Software Engineering.
+This glossary defines key terms in Artificial Intelligence, Machine Learning, Data Science, Software Engineering, Finance and Science.
 
 # A
 
 ## Activation Functions
+#machinelearning #artificialintelligence
 
 Functions that enable neural networks to learn non-linear relationships between features and the label.
 
@@ -22,18 +25,22 @@ Popular activation functions include **ReLU** and **Sigmoid**.
 For more details, refer to [Google Developers ML Course](https://developers.google.com/machine-learning/crash-course/neural-networks/activation-functions) and [Keras Activations](https://keras.io/api/layers/activations/).
 
 ## Adenocarcinoma
+#medical
+
 Adenocarcinoma is a type of cancer that starts in glandular (secretory) cells—the cells that produce and release fluids like mucus.
 It can occur in organs such as the lungs, colon, breast, prostate, or pancreas.
 
 **Example**: The biopsy revealed that the tumor was an **adenocarcinoma** of the colon. 
 
 ## Anecdote
+#linguistics
 
 A short amusing or interesting story about a real incident or person.
 
 **Example:** He told anecdotes about his job.
 
 ## Antibodies
+#medical
 
 Antibodies are proteins produced by the immune system that recognize and attach to foreign substances like bacteria, viruses, or toxins to help destroy them.
 They are a vital part of your immune defense system.
@@ -45,15 +52,33 @@ Synonyms / Related Terms:
 	•	Disease-fighting proteins
 	•	Immune proteins
 ## Architecture
+#machinelearning #artificialintelligence
 
 The skeleton of the model — the definition of each layer and each operation that happens within the model.
 
 **Example:** BERT is an architecture while `bert-base-cased`, a set of weights trained by the Google team for the first release of BERT, is a checkpoint. However, one can say "the BERT model" and "the `bert-base-cased` model."
 
+## Alpha
+#finance
+
+The extra return the (active) fund manager can generate over the (passive) index.
+
+## Asset class
+#finance
+
+3 common asset classes are:
+1. **Debt**: Umbrella term for all financial products that are *based on borrowing*.
+2. **Equity**: *Ownership of a business* and the risk it brings, either *directly* (through stocks) or *indirectly* (through mutual funds).
+3. **Real assets**: Can be *physically* seen. Gold and Real estates fall into this category.
+
+## Asset Management Company (AMC)
+#finance
+
 ---
 # B
 
 ## Bilateral ureteral obstruction
+#medical
 
 <b><u>In patients with prostate cancer:</u></b>
 
@@ -80,8 +105,11 @@ The prostate is located just below the bladder, and when prostate cancer:
 - Nephrostomy tubes (drains urine directly from kidneys through the back)
 - Treating the underlying cancer (e.g. hormone therapy, radiation)
 
+## Bombay Stock Exchange (BSE)
+#finance #india
 
 ## Breakthrough Device Designation (by FDA)
+#regulatory #medical
 
 This is not a full approval but a special status granted to devices that:
 •	Provide more effective diagnosis or treatment for serious/life-threatening diseases
@@ -100,6 +128,7 @@ Paige.AI received this status in 2019, meaning the FDA saw its AI cancer diagnos
 # C
 
 ## Causal
+#datascience
 
 Relating to or acting as a cause.
 
@@ -108,6 +137,7 @@ Relating to or acting as a cause.
 **Pronunciation:** kaw·zl
 
 ## Causality
+#datascience
 
 The relationship between cause and effect.
 
@@ -115,13 +145,22 @@ The relationship between cause and effect.
 
 **Pronunciation:** kaw·za·luh·tee
 
+## Capital appreciation
+#finance
+
+## Central Provident Fund (CPF)
+#finance #singapore
+
 ## Conformité Européenne (CE Mark)
+#regulatory
+
 •	The CE mark is required for medical devices (including software) sold in the European Economic Area (EEA).
 •	It means the device meets EU safety, health, and environmental protection standards.
 
 A CE mark allows you to legally market a device in Europe.
 
 ## Coarse
+#linguistics
 
 Rough or harsh in texture or structure, inferior quality. Can also refer to a person or their speech being rude or vulgar.
 
@@ -133,10 +172,37 @@ Rough or harsh in texture or structure, inferior quality. Can also refer to a pe
 
 **Pronunciation:** kaws, **kors**
 
+## Cortex
+#medical
+
+In anatomy, cortex refers to ==the outer layer of an organ or body part==. It's often used to describe the outer layer of the brain (cerebral cortex), but also applies to other organs like the kidney (renal cortex) and adrenal glands. The cortex plays a crucial role in the function and protection of the organ it surrounds. 
+
+**Here's a more detailed breakdown:**
+- General Definition:
+	- The cortex is essentially the "bark" or outer layer of an organ, providing a protective and functional role. 
+- Cerebral Cortex:
+	- This is the outer layer of the cerebrum, the largest part of the brain. It's responsible for higher-level functions like thinking, memory, and language. 
+- Other Cortices:
+	The term "cortex" is also used for the outer layer of other organs like the kidney (renal cortex), adrenal glands (adrenal cortex), and even the outer layer of a hair. 
+- Plant Cortex:
+	- In botany, the cortex refers to the tissue between the epidermis (outer layer) and the vascular tissue in stems and roots. 
+- In Technology
+	- Often implies **core processing unit** or brain-like system.
+
+## Consumer Price Index (CPI)
+#finance
+
+Designed to measure the **average price changes** of a **fixed basket** of consumption goods and services commonly purchased by resident households over time. It is widely used as a measure of consumer price inflation.
+
+#Singapore CPI increased 2.4% in 2024. For more details, refer [SINGAPORE CONSUMER PRICE INDEX](https://www.singstat.gov.sg/modules/infographics/consumer-price-index) by Department of Statistics.
+
+#International CPI increased 5.7% in 2023. For more details, refer [IMF report](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?name_desc=false)
+
 ---
 # D
 
 ## De Novo Clearance (by FDA)
+#regulatory #medical
 
 This is an FDA regulatory pathway used to approve low- to moderate-risk medical devices that:
 •	Are novel (new to the market)
@@ -150,7 +216,36 @@ Once granted:
 > [!INFO] Paige Prostate Detect (PPD) has received de novo clearance (DEN200080) from the FDA in September 2021
 It became the first FDA-cleared AI software for detecting prostate cancer in digital slides.
 
+## Debt
+#finance
+
+## Debt financial products
+#finance
+
+Products that usually give us an assured return. Examples include:
+- FD
+- Corporate deposits
+- Bond
+- *Provident* Fund
+- Public Provident Fund (PPF)
+- The core of the product is loan.
+- <span style="color:red">Higher the return it promises, the higher is the risk</span> of non-payment of both of our investment and the interest.
+
+## Debt mutual funds
+#finance
+
+## Delineate
+#linguistics
+
+Describe or portray (something) precisely. 
+Indicate the exact position of (a border or boundary)
+
+**Example**:  He delineated the state of Texas on the map with a red pencil
+
+**Simiilar words**: describe, depict
+
 ## Distant metastasis
+#medical
 
 <b><u>In patients with prostate cancer</u></b>
 
@@ -178,18 +273,21 @@ Prostate cancer cells can:
 # E
 
 ## Ecological Fallacy
+#datascience
 
 Occurs when one draws conclusions about individuals based solely on group-level data.
 
 **Example:** [[Ecological Fallacy]]
 
 ## Ellipsis
+#linguistics
 
 A punctuation mark consisting of a series of three dots. An ellipsis can be used in many ways, such as for intentional omission of text or numbers.
 
 **Example:** A set of dots (…) indicating an ellipsis.
 
 ## Empirical
+#datascience
 
 Based on, concerned with, or verifiable by observation or experience rather than theory or pure logic.
 
@@ -197,10 +295,38 @@ Based on, concerned with, or verifiable by observation or experience rather than
 
 **Opposite words:** theoretical, non-empirical
 
+## Ephemeral
+#DataScience #linguistics  
+Lasting for a very short time
+
+**Similar words**: transitory, transiet, fleeting, passing, short-lived
+
+## Equated monthly instalments (EMI)
+#finance
+
+## Equity
+#finance
+
+## Equity Linked Savings Scheme (ELSS)
+#finance #india
+
+An equity fund that gets the tax benefit.
+
+## Exchange-traded fund (ETF)
+#finance
+
+Tracks an index like the Sensex, but also lists its units on a stock exchange, unlike a mutual fund.
+
+## Expense ratio
+#finance
+
+The fees that a mutual fund charges investors for its costs and the profit it makes.
+
 ---
 # F
 
 ## Fallacy
+#linguistics
 
 A mistaken belief, especially one based on unsound arguments. An idea which many people believe to be true, but which is in fact false because it is based on incorrect information or reasoning.
 
@@ -210,16 +336,44 @@ A mistaken belief, especially one based on unsound arguments. An idea which many
 
 **Pronunciation:** fa·luh·see
 
+## Face value
+#finance
+
+The value written on a financial instrument, like a bond or a stock.
+
+_Face value is the "official" value, not necessarily the "market" value._
+
+👉 Example: A bond might have a face value of $1,000, meaning the issuer will repay $1,000 at maturity.
+
+## Fast Moving Consumer Goods (FMCG)
+#finance
+
 ## FDA (Food and Drug Administration, USA)
+#regulatory
+
 The regulatory agency in the United States that approves drugs, medical devices, and diagnostics.
 
 ## Fidelity
+#linguistics
 
 The degree of exactness with which something is copied or reproduced.
+
+## Financial Assets
+#finance
+
+Debt, and Equity
+
+## Fixed Deposit (FD)
+#finance
+
+## Fixed obligation-to-income ratio (FOIR)
+#finance
 
 ---
 # G
 ## Genitourinary
+#medical
+
 **Genitourinary** refers to the **organs of the reproductive and urinary systems**. It combines **“genital”** (related to reproduction) and **“urinary”** (related to urine and the urinary tract).
 
 **Example**: The patient was referred to a genitourinary specialist for evaluation of kidney and bladder issues.
@@ -227,14 +381,23 @@ The degree of exactness with which something is copied or reproduced.
 **Similar words**: Urogenital, Reproductive and urinary
 
 ## Genitourinary Pathologists
+#medical
+
 What do they do?
 - Diagnoses **cancers** (e.g., prostate cancer, kidney cancer, bladder cancer)
 - Identifies **non-cancerous conditions** (like infections, inflammation, or benign tumors)
 - Works closely with **urologists** and **oncologists** to guide treatment decisions
+
+## GPT-Generated Unified Format (GGUF)
+#MachineLearning #DeepLearning #LLM 
+GGUF is a binary format designed for efficient loading and inference of large language models on various hardware, particularly CPUs and consumer GPUs, using tools like llama.cpp and Ollama.
+
 ---
 # I
 
 ## Immunohistochemistry (IHC)
+#medical
+
 **Immunohistochemistry (IHC)** is a **lab technique used to detect specific proteins in tissue samples** using antibodies.
 
 It’s a key method in diagnosing **cancers**, **infections**, and **autoimmune diseases** by revealing how cells behave under the microscope.
@@ -257,10 +420,15 @@ For more details, refer https://www.biomol.com/resources/applications/immunohist
 
 ---
 ## Incidence
+#medical
 
 The occurrence, rate, or frequency of a disease, crime, or other undesirable thing.
 
 **Example:** An increased incidence of cancer.
+
+## Index
+
+## Index fund
 
 ## Ingest
 
@@ -291,6 +459,10 @@ Hard to control or deal with.
 
 **Similar words:** unmanageable, ungovernable, out of control
 
+## Investment horizon
+
+Time for which we want to invest our money. Also known as "**tenor**"
+
 ---
 # L
 
@@ -299,6 +471,9 @@ Hard to control or deal with.
 A trivial or very small person or thing.
 
 **Example:** Lilliput is the name of a fictional island whose people, the Lilliputians, stand only about six inches high.
+
+## Low-Rank Adaptation of Large Language Models (LoRA)
+
 
 ---
 # M
@@ -315,6 +490,15 @@ Example:
 “meta” = beyond and “stasis” = standing/place
 💡 So: Metastasise = cancer goes “beyond its place.”
 
+## Market Capitalization (Market Cap)
+
+Market cap = No. of shares of company × Price per share.
+
+SEBI defines:
+- Large-cap company as one that features within first 100 companies by market cap on the stock market.
+- Mid-cap is a company that ranks between 101 to 250 by market cap, and
+- Small-caps are 251 and below.
+
 ---
 
 ## Mnemonic
@@ -330,6 +514,45 @@ They are super useful for memorizing complex topics, vocabulary, medical terms, 
 The condition of suffering from a disease or medical condition.
 
 Example: the therapy can substantially reduce respiratory morbidity in infants.
+
+## Mutual Fund
+
+---
+# N
+
+## National Stock Exchange (NSE)
+
+In context of #India
+
+## Net Asset Value (NAV)
+
+The price of one unit of a scheme (mutual fund).
+
+## Nexus
+"Nexus" generally means ==a connection, link, or central point of connection between things==. It can refer to a relationship, a link, or a core or center of something. It can also describe a connected group or series. 
+
+Here's a more detailed breakdown:
+- **Connection or Link:**
+    Nexus can describe a relationship or connection between two or more things, like the nexus between teachers and students. It can also refer to a causal link, such as the nexus between poverty and crime. 
+- **Central Point:**
+    It can also signify a central point, a hub, or a core, such as a bookstore being a nexus for a neighborhood. 
+- **Connected Group:**
+    Nexus can also refer to a connected group or series of things, like a nexus of theories or relationships. 
+- **Formal Usage:**    
+    It's often used in a formal context, particularly when discussing complex systems or relationships. 
+- In Technology:
+	Generally implies a **hub, bridge, or central integration point**.
+- **Example:**
+	A sentence like "The bookstore has become something of a nexus for the downtown neighborhood" illustrates how nexus can describe a central place or focus for a group of people or activities.
+
+## Nifty50
+
+Stock market index, that's made up of 50 stocks.
+
+## Non-Player Character (NPC)
+Non-player characters (NPCs) refers to any character that is not directly controlled by a player. Instead, NPCs are typically controlled by the game's AI (in video games) or the game master (in tabletop RPGs). They often interact with players and can be anything from shopkeepers and quest-givers to enemies and background characters.
+
+AI-powered NPCs (non-player characters) are ==characters in video games that are controlled by artificial intelligence rather than by human players==. These AI-driven characters can interact with players in more dynamic and realistic ways than traditional NPCs, leading to more immersive and engaging gameplay experiences.
 
 ---
 # O
@@ -371,6 +594,11 @@ A doctor who studies disease by analyzing samples such as:
 	•	Surgical specimens
 	•	Cytology (cells from urine, for example)
 
+## Parameter-Efficient Fine-Tuning (PEFT)
+Resources:
+- https://huggingface.co/docs/peft/en/index
+- https://github.com/huggingface/peft
+
 ## Prompt Engineering
 
 Engineering a prompt so that LLM does what we want.
@@ -388,6 +616,13 @@ It’s a part of the **male reproductive system** and is often discussed in rela
 •	Prostate gland (full name)
 •	Prostate cancer (a common male cancer)
 •	Prostatitis (inflammation of the prostate)
+
+## Provident Fund (PF)
+
+## Public Provident Fund (PPF)
+
+In context of #India
+
 ## [[Psuedo-Labels]]
 
 Automatically generated labels from the data itself. These labels are not manually annotated but are inferred based on the inherent structure or attributes of the data.
@@ -410,6 +645,19 @@ Pydantic is the most widely used data validation library for Python.
 
 For more details, refer to the [official website](https://docs.pydantic.dev/dev/).
 
+## Pylance
+
+Superchares our Python Experience in [[Visual Studio Code]]/ [[Cursor]].
+
+Pylance is a powerful and popular extension for Visual Studio Code that provides enhanced language support for Python developers. Developed by Microsoft, it has become the default language server for the official Python extension, significantly boosting productivity with its rich set of features focused on speed, accuracy, and intelligent code assistance.
+
+At its core, Pylance is powered by Microsoft's open-source static type checking tool, Pyright. This foundation allows Pylance to deliver a superior IntelliSense experience, offering intelligent autocompletions, detailed function signature help, and rapid code navigation. By leveraging type information, Pylance can provide more accurate and context-aware suggestions, helping developers write cleaner and more error-free code
+
+---
+# Q
+# Quantized Low-Rank Adaptation of Large Language Models (QLoRA)
+https://arxiv.org/abs/2305.14314
+
 ---
 # R
 
@@ -417,9 +665,17 @@ For more details, refer to the [official website](https://docs.pydantic.dev/dev/
 
 A popular activation function that outputs the input directly if it's positive, otherwise it outputs zero.
 
+## Real Assets
+
+Gold and Real estate
+
+## Recession
+
 ## Recurrent Neural Network ([[RNN]])
 
 A type of neural network designed for sequential data processing, where connections between nodes form a directed graph along a temporal sequence.
+
+## Recurring Deposit (RD)
 
 ## Regularization and Regularization Rate (λ)
 
@@ -453,6 +709,16 @@ A software architectural style that defines a set of constraints for creating we
 
 RoBERTa (Robustly Optimized BERT Pretraining Approach) is an optimized version of BERT that removes the Next Sentence Prediction task and uses different training configurations.
 
+## Rule of 72
+
+Versatile rule to know the rate of return of every year of a double-your-money proposition.
+> Over what time, my money doubles? Then, divide the 72 by the time window in years.
+
+From the book [[Let's Talk Money#5. What if we die? | Let's Talk Money]]
+
+## Role Playing Games (RPG)
+RPG involve players taking on the roles of fictional characters within a narrative, making choices and decisions that influence the story and character development. They can be played in various formats, including tabletop, video games, and live-action setting
+
 ---
 # S
 
@@ -474,6 +740,12 @@ Often used in natural language processing (NLP) and computer vision to pre-train
 
 **Example:** Transformer models like GPT, BERT, BART, T5, etc. have been trained as language models on large amounts of raw data in a self-supervised fashion. This type of model develops a statistical understanding of the language it has been trained on, but it's not very useful for specific practical tasks. Because of this, the general pretrained model then goes through a process called [[Transfer learning|transfer learning]].
 
+## Securities and Exchange Board (SEBI)
+
+In context of #India
+
+Sets up the rules of the game around the equity market. Stock exchanges have to abide by them. The firms that publicly list must abide by SEBI and stock exchange rules.
+
 ## [[Semantic Parsing]]
 
 Converting language into structured data, often for databases or code.
@@ -485,6 +757,18 @@ Converting language into structured data, often for databases or code.
 Detecting the emotional tone of text. Identifying and classifying entities like names, places, and dates.
 
 **Example:** BERT-based Sentiment Classifier analyzes text for sentiment polarity.
+
+## Sensex
+
+In context of #India
+
+A stock market index. It's made up of 30 most representative companies that are listed in BSE. The index has an initial value of 100, as on 1 Apr 1979.
+
+When we say Sensex went up, we mean that of the 30 companies in Sensex more prices rose than fell.
+
+Sensex is a barometer of the activity in stock market during the day, and over a long period of time.
+
+The Sensex and Nifty50 are broad market indices and are also called large-cap indices.
 
 ## [[Sequence-to-sequence transformer models]]
 
@@ -536,6 +820,22 @@ Briefly and clearly expressed.
 
 **Pronunciation:** suhk·singkt
 
+## Stock Exchange
+
+## Stock Market Index
+
+## Systematic Investment Plan (SIP)
+
+Think of this as a recurring deposit, but instead of putting money in a fixed deposit, we are making periodic investments into a mutual fund.
+
+## Systematic Transfer Plan (STP)
+
+A facility that allows us to space out a big investment over time.
+
+## Systematic Withdrawal Plan (SWP)
+
+A facility to periodically redeem our units to generate an income. It works like a dividend plan, but in this case the control remains in our hand of how much money we want to take from our fund periodically.
+
 ---
 # T
 
@@ -586,6 +886,8 @@ Of little value or importance.
 
 A UKCA mark ensures the product meets UK-specific safety and regulatory requirements.
 
+## Unit linked insurance plans (ULIP)
+
 ---
 # V
 
@@ -614,3 +916,5 @@ For more details, refer to [Google Developers ML Course](https://developers.goog
 
 - [Google Machine Learning Glossary](https://developers.google.com/machine-learning/glossary)
 - [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) 
+
+ 

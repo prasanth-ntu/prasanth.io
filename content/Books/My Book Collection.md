@@ -114,6 +114,28 @@ Here are the books I've read, currently reading, or plan to read:
       <div class="book-status status-to-read">#ToRead</div>
     </div>
   </a>
+
+  <a href="TBA: The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you" class="book-card">
+    <div class="book-image"><img src="../Books/attachments/images/mom-test-coverpage.jpg" alt="The AI Revolution in Medicine: GPT-4 and Beyond Cover"></div>
+    <div class="book-content">
+      <div class="book-title">The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you</div>
+      <div class="book-author">by Rob Fitzpatrick </div>
+      <div class="book-summary"><i>Note: Recommended by my book reading club peers.</i></div>
+      <div class="book-status status-to-read">#ToRead</div>
+    </div>
+  </a>
+
+
+
+  <a href="TBA: If You Live To 100, You Might As Well Be Happy: Lessons for a Long and Joyful Life: The Korean Bestseller" class="book-card">
+    <div class="book-image"><img src="../Books/attachments/images/   If-You-Live-To-100-You-Might-As-Well-Be-Happy-coverpage.jpg" alt="If You Live To 100, You Might As Well Be Happy: Lessons for a Long and Joyful Life: The Korean Bestseller"></div>
+    <div class="book-content">
+      <div class="book-title">If You Live To 100, You Might As Well Be Happy: Lessons for a Long and Joyful Life: The Korean Bestseller</div>
+      <div class="book-author">by Rhee Kun Ho </div>
+      <div class="book-summary"><i>Note: Recommended by my book reading club peers.</i></div>
+      <div class="book-status status-to-read">#ToRead</div>
+    </div>
+  </a>
   
 <!--
   <a href="Let's Talk Money.md" class="book-card">
