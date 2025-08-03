@@ -1,6 +1,6 @@
 ---
 tags:
-  - Scripts
+  - scripts
   - Mac
   - Hacks
 ---

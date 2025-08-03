@@ -1,8 +1,8 @@
 ---
 tags:
-  - MachineLearning
-  - DataScience
-  - ArtificialIntelligence
+  - machinelearning
+  - datascience
+  - artificialintelligence
   - DataAnalytics
   - Spark
   - SQL

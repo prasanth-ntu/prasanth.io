@@ -1,6 +1,6 @@
 ---
 tags:
-  - SoftwareEngineering
+  - softwareengineering
   - Authentication
   - Protocol
   - Token

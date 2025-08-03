@@ -1,7 +1,7 @@
 ---
 tags:
-  - ArtificialIntelligence
-  - MachineLearning
-  - DataScience
+  - artificialintelligence
+  - machinelearning
+  - datascience
 title: Masked AutoEncoder (MAE)
 ---

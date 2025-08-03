@@ -1,7 +1,7 @@
 ---
 tags:
-  - SoftwareEngineering
-  - DataScience
+  - softwareengineering
+  - datascience
   - Documentation
 ---
 > [!SUMMARY]

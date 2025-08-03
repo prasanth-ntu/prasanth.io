@@ -1,10 +1,10 @@
 ---
 tags:
-  - SoftwareEngineering
+  - softwareengineering
   - VSCode
   - Tool
-  - DataScience
-  - MachineLearning
+  - datascience
+  - machinelearning
 ---
 https://www.anaconda.com/
 

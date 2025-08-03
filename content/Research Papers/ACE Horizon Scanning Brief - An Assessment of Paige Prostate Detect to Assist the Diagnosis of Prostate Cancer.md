@@ -1,7 +1,7 @@
 ---
 tags:
   - HealthTech
-  - DataScience
+  - datascience
   - AI
   - Cancer
   - Review

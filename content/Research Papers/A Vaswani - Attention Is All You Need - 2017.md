@@ -1,7 +1,7 @@
 ---
 tags:
-  - ArtificialIntelligence
-  - MachineLearning
+  - artificialintelligence
+  - machinelearning
   - LLM
   - ResearchPaper
 ---

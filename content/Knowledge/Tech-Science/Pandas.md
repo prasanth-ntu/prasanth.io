@@ -5,7 +5,7 @@ tags:
   - Statistics
   - DataAnalytics
   - Coding
-  - DataScience
+  - datascience
   - Library
 ---
 Parent Doc: [[Python Documentation]]

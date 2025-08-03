@@ -1,6 +1,6 @@
 ---
 tags:
-  - DataScience
+  - datascience
 ---
 > The ideas is that **encoders are very powerful at extracting vectors (features) that carry meaningful information of the sequence**
 

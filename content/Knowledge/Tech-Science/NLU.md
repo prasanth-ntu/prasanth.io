@@ -1,6 +1,6 @@
 ---
 tags:
-  - DataScience
+  - datascience
 ---
 Natural Language Understanding (NLU) encompasses tasks focused on comprehending and interpreting human language in a structured way. It includes:
 

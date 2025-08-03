@@ -1,12 +1,12 @@
 ---
 tags:
-  - SoftwareEngineering
+  - softwareengineering
   - Tool
   - LLM
   - GAI
-  - DataScience
-  - ArtificialIntelligence
-  - MachineLearning
+  - datascience
+  - artificialintelligence
+  - machinelearning
   - Google
 title: Gemini - ChatGPT contendor
 ---

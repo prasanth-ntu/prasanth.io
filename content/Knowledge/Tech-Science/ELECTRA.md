@@ -1,6 +1,6 @@
 ---
 tags:
-  - DataScience
+  - datascience
 ---
 Pre-training Text [[Encoder Models|Encoders]] as Discriminators Rather Than Generators.
 

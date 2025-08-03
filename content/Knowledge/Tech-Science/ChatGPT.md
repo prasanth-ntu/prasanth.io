@@ -1,7 +1,7 @@
 ---
 tags:
-  - DataScience
+  - datascience
   - LLM
-  - MachineLearning
-  - ArtificialIntelligence
+  - machinelearning
+  - artificialintelligence
 ---

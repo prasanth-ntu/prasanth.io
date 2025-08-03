@@ -1,7 +1,7 @@
 ---
 tags:
-  - ArtificialIntelligence
-  - DataScience
+  - artificialintelligence
+  - datascience
   - LLM
   - AGI
   - Book

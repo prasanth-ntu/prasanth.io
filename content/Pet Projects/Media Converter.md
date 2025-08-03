@@ -1,6 +1,6 @@
 ---
 tags:
-  - SoftwareEngineering
+  - softwareengineering
   - Projects
   - Hacks
   - HuggingFace

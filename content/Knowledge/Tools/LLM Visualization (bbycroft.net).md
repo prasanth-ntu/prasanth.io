@@ -3,8 +3,8 @@ tags:
   - Tool
   - LLM
   - GAI
-  - ArtificialIntelligence
-  - MachineLearning
+  - artificialintelligence
+  - machinelearning
 author: Brendan Bycroft
 ---
 - Source: https://bbycroft.net/llm

@@ -1,7 +1,7 @@
 ---
 tags:
-  - DataScience
-  - GPU
+  - datascience
+  - gpu
 ---
 ```dataviewjs 
 dv.view('toc')

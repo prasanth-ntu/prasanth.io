@@ -1,6 +1,6 @@
 ---
 tags:
-  - DataScience
+  - datascience
 ---
 NLG encompasses a broader range of tasks, including generating coherent text, summaries, and more from given prompts. 
 

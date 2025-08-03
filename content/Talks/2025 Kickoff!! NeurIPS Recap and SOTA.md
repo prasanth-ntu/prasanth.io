@@ -1,8 +1,8 @@
 ---
 tags:
-  - DataScience
-  - MachineLearning
-  - ArtificialIntelligence
+  - datascience
+  - machinelearning
+  - artificialintelligence
   - Talks
   - MachineLearningSingapore
   - GoogleDevelopersSpace

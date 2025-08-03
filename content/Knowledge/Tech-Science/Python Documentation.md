@@ -1,11 +1,11 @@
 ---
 tags:
-  - DataScience
-  - SoftwareEngineering
-  - MachineLearning
+  - datascience
+  - softwareengineering
+  - machinelearning
   - Coding
   - Programming
-  - ArtificialIntelligence
+  - artificialintelligence
   - "#Python"
 ---
 # Glossary

@@ -1,18 +1,35 @@
 ---
 tags:
-  - DataScience
-  - SoftwareEngineering
-  - ArtificialIntelligence
-  - MachineLearning
-  - DeepLearningAI
-  - GPU
+  - datascience
+  - softwareengineering
+  - artificialintelligence
+  - machinelearning
+  - deeplearningai
+  - gpu
   - Finance
-  - Science
+  - science
 title: Glossary
 ---
 
 This glossary defines key terms in Artificial Intelligence, Machine Learning, Data Science, Software Engineering, Finance and Science.
 
+#  1
+## 1q43-44 chromosome
+#biology #science 
+
+The region 1q43-44 on chromosome 1 is associated with a syndrome characterized by intellectual disability, speech delays, and distinctive facial features. Deletions or duplications in this region can lead to a range of developmental issues, including microcephaly, corpus callosum abnormalities, and seizures.
+
+## 1q43-q44 Deletion/Duplication Syndrome
+#biology #science #syndrome
+
+- **Intellectual Disability:** Moderate to severe intellectual disability is a hallmark of this syndrome. 
+- **Speech Delay:** Limited or absent speech is common. 
+- **Facial Dysmorphism:** Characteristic facial features include a round face, flat nasal bridge, prominent forehead, hypertelorism (widely spaced eyes), epicanthal folds, and low-set ears. 
+- **Corpus Callosum Abnormalities:** Abnormalities of the corpus callosum (a part of the brain connecting the two hemispheres) are frequently observed. 
+- **Other Features:** Hypotonia (low muscle tone), poor growth, seizures, and microcephaly (small head size) can also occur. 
+- **Variability:** The severity of symptoms can vary greatly depending on the size and location of the deletion or duplication, and the specific genes involved.
+
+---
 # A
 
 ## Activation Functions
@@ -31,6 +48,14 @@ Adenocarcinoma is a type of cancer that starts in glandular (secretory) cells—
 It can occur in organs such as the lungs, colon, breast, prostate, or pancreas.
 
 **Example**: The biopsy revealed that the tumor was an **adenocarcinoma** of the colon. 
+
+## Ammortize
+#finance 
+Gradually write off the initial cost of an asset over a period. In other words, spreading the cost of an (intangible) assert over its useful life.
+
+Intangible assets could include Patents, Copyrights, & IPs.
+
+Example: Imagine your business has purchased a patent for $10,000 which has a useful life of five years and no salvage value. The amortization = $\$10,000 / 5 = \$2,000$. This means the annual amortization expense is $2,000.
 
 ## Anecdote
 #linguistics
@@ -63,6 +88,10 @@ The skeleton of the model — the definition of each layer and each operation th
 
 The extra return the (active) fund manager can generate over the (passive) index.
 
+## Apex
+#biology 
+
+(*Biology*) Tip or bottom point of the heart.
 ## Asset class
 #finance
 
@@ -76,6 +105,13 @@ The extra return the (active) fund manager can generate over the (passive) index
 
 ---
 # B
+
+## Bewildered
+#linguistics 
+
+Perplexed, lost and confused; very puzzled
+
+Example: Bilbo Baggins was bewildered and bewuthered
 
 ## Bilateral ureteral obstruction
 #medical
@@ -127,6 +163,15 @@ Paige.AI received this status in 2019, meaning the FDA saw its AI cancer diagnos
 ---
 # C
 
+## Capillary Refill Time (CRP)
+#biology #science 
+
+A quick, physical test to objectively measure [[Glossary#Perfusion|Perfusion]] (i.e., good blood circulation). It's a brilliant and simple way to check how well the circulatory system is working.
+
+- **How the Test is Done:** The doctor will press firmly on a capillary-rich area, usually the child's fingernail bed or the skin over their sternum (breastbone), for a few seconds. This pressure forces the blood out of the tiny blood vessels (capillaries) in that spot, causing it to turn white.
+- **What is Measured:** The doctor then releases the pressure and counts how long it takes for the normal pink colour to return to the area. This is the "refill time."
+- **What it Means:** A time of **less than 2 seconds (`<2sec`)** is the goal. It shows that the circulatory system is responsive and that blood pressure is strong enough to quickly push blood back into those tiny vessels. It's a sign of a healthy, well-hydrated, and robust cardiovascular system. If the time were longer (e.g., 3, 4, or 5 seconds), it could be a sign of issues like dehydration or more serious circulatory problems.
+
 ## Causal
 #datascience
 
@@ -148,6 +193,19 @@ The relationship between cause and effect.
 ## Capital appreciation
 #finance
 
+## Cardiomyotpathy
+#science #biology 
+
+Cardiomyopathy (kahr-dee-o-my-OP-uh-thee) is _a disease of the heart muscle_. It causes the heart to have a harder time pumping blood to the rest of the body, which can lead to symptoms of heart failure. Cardiomyopathy also can lead to some other serious heart conditions.
+
+There are various types of cardiomyopathy. The main types include dilated, hypertrophic and restrictive cardiomyopathy. Treatment includes medicines and sometimes surgically implanted devices and heart surgery. Some people with severe cardiomyopathy need a heart transplant. Treatment depends on the type of cardiomyopathy and how serious it is.
+
+**Types**
+- Dilated cardiomyopathy
+-  [[Glossary#Hypertrophic cardiomyopathy|Hypertrophic cardiomyopathy]]
+
+Source: https://www.mayoclinic.org/diseases-conditions/cardiomyopathy/symptoms-causes/syc-20370709
+
 ## Central Provident Fund (CPF)
 #finance #singapore
 
@@ -158,6 +216,13 @@ The relationship between cause and effect.
 •	It means the device meets EU safety, health, and environmental protection standards.
 
 A CE mark allows you to legally market a device in Europe.
+
+## Conspiracy
+#linguistics 
+
+A secret plan by a group to do something unlawful or harmful.
+
+Similar words: plot, scheme, plan
 
 ## Coarse
 #linguistics
@@ -200,6 +265,17 @@ Designed to measure the **average price changes** of a **fixed basket** of consu
 
 ---
 # D
+
+## Diastolic
+
+Systolic and diastolic are two fundamental terms that describe the two main phases of a single heartbeat.
+
+Think of the heart as a muscular pump. For every beat, it has to squeeze and then relax.
+
+ **Diastolic (The Relaxing Phase)**
+- **What it is:** Diastole is the part of the heartbeat when the heart muscle **relaxes**.
+- **What it does:** After squeezing, the heart chambers relax and expand to **refill** with blood, getting ready for the next contraction. This relaxation phase is just as important as the contraction because if the heart doesn't fill properly, it can't pump properly. It's also during diastole that the coronary arteries deliver oxygen-rich blood to the heart muscle itself.
+- **In a Blood Pressure Reading:** It represents the pressure in your arteries when the heart is at rest between beats.
 
 ## De Novo Clearance (by FDA)
 #regulatory #medical
@@ -269,6 +345,11 @@ Prostate cancer cells can:
 •	Distant metastasis corresponds to Stage IV (advanced stage) prostate cancer
 •	In TNM staging, it’s often labeled as M1 (M = metastasis)
 
+## Dragon in a pinch
+#linguistics #idiom
+
+The phrase "as fierce as a dragon in a pinch" is an idiom, meaning ==someone can be surprisingly fierce or capable in a difficult situation, even if they don't usually appear that way==
+
 ---
 # E
 
@@ -296,7 +377,7 @@ Based on, concerned with, or verifiable by observation or experience rather than
 **Opposite words:** theoretical, non-empirical
 
 ## Ephemeral
-#DataScience #linguistics  
+#datascience #linguistics  
 Lasting for a very short time
 
 **Similar words**: transitory, transiet, fleeting, passing, short-lived
@@ -369,6 +450,50 @@ Debt, and Equity
 ## Fixed obligation-to-income ratio (FOIR)
 #finance
 
+## Floating Point
+#softwareengineering #Coding #datascience #machinelearning #LLM #gpu 
+
+A floating-point number is a way to represent real numbers in computers, similar to scientific notation in base 10, but using base 2 (binary). It is composed of three main parts:
+1. **Sign bit (1 bit)**: This single bit specifies the number's sign — 0 means positive, and 1 means negative.
+2. **Exponent bits (e.g., 8 bits in float32)**: These bits represent the exponent, which shifts the position of the binary point (like the decimal point) to scale the number. The exponent is stored with a "bias" (a fixed offset) to allow representation of both positive and negative exponents. This part determines the magnitude or scale of the number.
+3. **Mantissa (or significand) bits (e.g., 23 bits in float32)**: These bits represent the significant digits (precision) of the number. The mantissa encodes the fractional part of the number after normalizing it to have a leading 1 (in normalized form, this leading 1 is implicit and not stored explicitly).    
+
+The value of a floating-point number is calculated as: 
+$\text{Value}=(−1)^{sign}×(1+\text{mantissa fraction})×2^{(\text{exponent}−\text{bias})}$
+
+- The sign bit controls the positive/negative.    
+- The exponent bits, after subtracting the bias, give the power of 2.
+- The mantissa bits represent fractional precision after the binary point.
+
+For example, in the IEEE 754 single precision (float32) format:
+- 1 bit for sign
+- 8 bits for exponent (with a bias of 127)
+- 23 bits for mantissa
+
+This means the exponent value stored is an 8-bit unsigned integer, and the actual exponent is obtained by subtracting 127. The 23 mantissa bits represent the fractional part after the implicit leading 1.
+
+This structure allows a wide dynamic range of numbers, from very tiny to very large, with a controlled precision depending on the mantissa length.
+
+In summary:
+- The **sign bit** decides positive or negative.
+- The **exponent bits** shift the number’s scale by powers of two.
+- The **mantissa bits** encode the detailed digits or precision of the number after scaling.
+
+This floating-point format makes it efficient to represent and compute on real numbers in computers, balancing between range and precision.
+
+For more details, refer [[Data Types]]
+
+## Flustered
+#linguistics 
+
+agitated or confused
+
+Example: Bilbo Baggins had been too flustered to put down on his Engagement Tablet.
+
+## Fright
+#linguistics 
+A sudden intense feeling of fear.
+
 ---
 # G
 ## Genitourinary
@@ -389,8 +514,46 @@ What do they do?
 - Works closely with **urologists** and **oncologists** to guide treatment decisions
 
 ## GPT-Generated Unified Format (GGUF)
-#MachineLearning #DeepLearning #LLM 
-GGUF is a binary format designed for efficient loading and inference of large language models on various hardware, particularly CPUs and consumer GPUs, using tools like llama.cpp and Ollama.
+#machinelearning #deeplearning #LLM 
+
+GGUF is a binary format designed for efficient loading and inference of large language models (LLMs) on various hardware, particularly CPUs and consumer GPUs, using tools like llama.cpp and Ollama. The "Unified" part reflects its goal to provide a standardized, extensible, and efficient format that unifies model weights, metadata, and other necessary components into one fast-loading binary format optimized for inference and deployment.
+
+Key points about GGUF:
+- It succeeded earlier formats like GGML and was developed to overcome limitations around storage efficiency, loading speed, and cross-platform compatibility for LLMs.
+- GGUF is optimized for quick loading and inference, especially on consumer-grade hardware such as local PCs or servers.
+- It supports advanced compression and quantization techniques to reduce model size without sacrificing performance.
+- The format is extensible, allowing new features and metadata to be added without breaking compatibility.
+- GGUF is tightly integrated with projects like llama.cpp and supported by tools in the broader open-source LLM ecosystem, such as Hugging Face Transformers.
+
+## Group Relative Policy Optimization (GRPO)
+#LLM #datascience 
+
+A reinforcement learning algorithm designed to train large language models (LLMs) for complex tasks like solving math problems or writing code. Unlike older methods, GRPO is memory-efficient because it doesn't use a separate "value function" (a model that estimates future rewards). Instead, it generates multiple answers for each question, scores them with a reward model, and uses the average score as a reference to decide which answers are better. This makes it easier to train large models on limited hardware, which is surprising because it still performs well on tough tasks like reasoning.
+
+Resources: https://aiengineering.academy/LLM/TheoryBehindFinetuning/GRPO/
+
+---
+# H
+
+## Hearth
+#linguistics 
+
+Place in a home where a fire is or was traditionally kept for home heating and for cooking.
+Fireplace or floor of the fireplace. 
+
+## Hypertrophic cardiomyopathy
+#biology #science #syndrome #disease
+
+Hypertrophic cardiomyopathy (HCM) is a disease in which the heart muscle becomes thickened, also called hypertrophied. The thickened heart muscle can make it harder for the heart to pump blood.
+
+Many people with hypertrophic cardiomyopathy don't realize they have it. That's because they have few, if any, symptoms. But in a small number of people with HCM, the thickened heart muscle can cause serious symptoms. These include shortness of breath and chest pain. Some people with HCM have changes in the heart's electrical system. These changes can result in life-threatening irregular heartbeats or sudden death.
+
+Sources: https://www.mayoclinic.org/diseases-conditions/hypertrophic-cardiomyopathy/symptoms-causes/syc-20350198
+
+## Hypotonia
+#biology #science #disease 
+
+Hypotonia means **decreased muscle tone**. It can be a condition on its own, called benign congenital hypotonia, or it can be indicative of another problem where there is progressive loss of muscle tone, such as muscular dystrophy or cerebral palsy. It is usually detected during infancy.
 
 ---
 # I
@@ -466,6 +629,19 @@ Time for which we want to invest our money. Also known as "**tenor**"
 ---
 # L
 
+## Left Ventricle (LV)
+#biology #science 
+
+The main pumping chamber of the heart. It sends oxygen-rich blood to the rest of the body.
+
+## Left Ventricle Apex Trabeculation 
+#biology #science 
+
+LV apex trabeculation ==refers to the presence of prominent, finger-like projections (trabeculae) in the apex (tip) of the left ventricle of the heart==. It can be a normal variant, especially in athletes, but excessive trabeculation, particularly when accompanied by a thin compacted myocardial layer, can indicate a condition called [[Glossary#Left Ventricle Non-Compaction (LVNC)|LVNC]].
+
+## Left Ventricle Non-Compaction (LVNC)
+LVNC is a type of cardiomyopathy associated with potential complications like heart failure, arrhythmias, and thromboembolism.
+
 ## Lilliputian
 
 A trivial or very small person or thing.
@@ -500,6 +676,12 @@ SEBI defines:
 - Small-caps are 251 and below.
 
 ---
+## Microcephaly
+#biology #science #disease 
+
+Microcephaly (my-crow-sef-ah-lee) is a birth defect where a baby's head is smaller than expected. Babies with microcephaly often have smaller brains that might that did not develop properly.
+
+Source: https://www.cdc.gov/birth-defects/about/microcephaly.html
 
 ## Mnemonic
 A **mnemonic** is a **memory aid** — a tool, trick, rhyme, acronym, or phrase that helps you **remember information** more easily.
@@ -514,6 +696,13 @@ They are super useful for memorizing complex topics, vocabulary, medical terms, 
 The condition of suffering from a disease or medical condition.
 
 Example: the therapy can substantially reduce respiratory morbidity in infants.
+
+## Morsel
+#linguistics 
+
+A small piece or amount of food; a mouthful.
+
+Example: Bilbo Baggins baked two beautiful round seed-cakes for his after supper morsel.
 
 ## Mutual Fund
 
@@ -599,6 +788,15 @@ Resources:
 - https://huggingface.co/docs/peft/en/index
 - https://github.com/huggingface/peft
 
+## Perfusion
+#science #biology 
+
+This is a clinical term for good blood circulation. **Perfusion** is the process of the cardiovascular system (the heart and blood vessels) delivering oxygen-rich blood to all the tissues and organs of the body.
+
+## Price-earnings ratio (P/E ratio or P/E)
+#finance #Investment #Stocks 
+
+
 ## Prompt Engineering
 
 Engineering a prompt so that LLM does what we want.
@@ -661,6 +859,13 @@ https://arxiv.org/abs/2305.14314
 ---
 # R
 
+## Random Access Memory (RAM)
+#machinelearning #datascience #softwareengineering #LLM #gpu 
+
+General-purpose memory accessed by the CPU. 
+
+In LLM workflows, RAM is used primarily for loading the model from disk and managing tasks outside the GPU, such as operating system functions, data preprocessing, and orchestration by the CPU. While RAM is important for overall system operation and initial model loading, it is much slower than VRAM for neural network computations. Its size often needs to be at least equal to the uncompressed model size, but it doesn't directly speed up the heavy computations.
+
 ## Rectified Linear Unit (ReLU)
 
 A popular activation function that outputs the input directly if it's positive, otherwise it outputs zero.
@@ -704,6 +909,9 @@ For more details, refer to [Google Developers](https://developers.google.com/mac
 ## [[RESTful API]]
 
 A software architectural style that defines a set of constraints for creating web services.
+
+## REINFORCE Leave One-Out (RLOO)
+Resources: https://huggingface.co/blog/putting_rl_back_in_rlhf_with_rloo
 
 ## [[RoBERTa]]
 
@@ -776,6 +984,14 @@ Transformer models that can handle input sequences and generate output sequences
 
 **Examples:** BART, T5
 
+## Shuddered
+#linguistics 
+(of a person) tremble convulsively, typically as a result of fear or revulsion
+
+Similar words: shake, shiver, tremble, quiver, papitate
+
+Example: He shuddered, and very quickly he was plain Mr. Baggins again.
+
 ## Sigmoid
 
 An activation function that maps any real number to a value between 0 and 1, commonly used in binary classification problems.
@@ -822,7 +1038,16 @@ Briefly and clearly expressed.
 
 ## Stock Exchange
 
+
 ## Stock Market Index
+
+
+## Strode
+#linguistics 
+
+walk with long, decisive steps in one direction. 
+
+Example: Gandalf strode away.
 
 ## Systematic Investment Plan (SIP)
 
@@ -836,6 +1061,18 @@ A facility that allows us to space out a big investment over time.
 
 A facility to periodically redeem our units to generate an income. It works like a dividend plan, but in this case the control remains in our hand of how much money we want to take from our fund periodically.
 
+## Systolic
+#science #biology 
+
+Systolic and diastolic are two fundamental terms that describe the two main phases of a single heartbeat.
+
+Systolic (The Squeezing Phase)
+- **What it is:** Systole is the part of the heartbeat when the heart muscle **contracts or squeezes**
+- **What it does:** The powerful lower chambers of the heart (the ventricles) contract forcefully to pump blood **out** of the heart.
+    - The right ventricle pumps blood to the lungs to pick up oxygen.
+    - The left ventricle pumps oxygen-rich blood to the rest of the body.
+- **In a Blood Pressure Reading:** It represents the maximum pressure in your arteries as the heart contracts and pushes blood out.
+
 ---
 # T
 
@@ -848,6 +1085,13 @@ Categorizing text into predefined labels.
 Generating the continuation of a given text.
 
 **Example:** [[GPT-3]] completes text based on context.
+
+## Throng
+#linguistics 
+
+A large densely packed crowd of people or animals.
+
+Example: He pushed his way through the throng.
 
 ## [[Transfer learning]]
 
@@ -896,6 +1140,13 @@ A UKCA mark ensures the product meets UK-specific safety and regulatory requirem
 A problem in training deep neural networks where gradients become exponentially small as they propagate back through the network layers, making it difficult for the network to learn long-range dependencies.
 
 For more details, refer to [Google Developers ML Course](https://developers.google.com/machine-learning/crash-course/neural-networks/backpropagation#vanishing_gradients).
+
+## Video RAM (VRAM)
+#artificialintelligence #machinelearning #LLM #AI #datascience #gpu 
+
+Dedicated memory on GPUs, which are the main processors used to train and run LLMs efficiently. VRAM is much faster and has higher bandwidth than system RAM. It stores **model weights**, **intermediate computations (like gradients during training)**, and **key-value caches (context for inference)** during operation. Having enough VRAM is critical because if the model size or context window exceeds VRAM capacity, performance drops drastically, or the process fails to run.
+
+For example, refer to [[How to Fine-tune LLMs with Unsloth - Complete Guide by Pookie#Which open-source models? Which variants?]] on various model parameters and their correponding VRAM requirements.
 
 ---
 # W

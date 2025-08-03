@@ -1,10 +1,10 @@
 ---
 tags:
-  - MachineLearning
+  - machinelearning
   - LLM
-  - DataScience
+  - datascience
   - GAI
-  - ArtificialIntelligence
+  - artificialintelligence
   - NLP
 ---
 # Definition

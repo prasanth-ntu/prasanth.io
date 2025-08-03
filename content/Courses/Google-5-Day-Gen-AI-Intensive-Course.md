@@ -1,7 +1,7 @@
 ---
 tags:
-  - DataScience
-  - SoftwareEngineering
+  - datascience
+  - softwareengineering
   - Course
   - Google
   - GAI

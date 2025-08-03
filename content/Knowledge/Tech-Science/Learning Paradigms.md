@@ -1,9 +1,9 @@
 ---
 tags:
-  - ArtificialIntelligence
-  - MachineLearning
+  - artificialintelligence
+  - machinelearning
   - LLM
-  - DataScience
+  - datascience
 title: Learning Paradigms in ML/DL and LLMs
 draft: true
 ---

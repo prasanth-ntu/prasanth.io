@@ -1,8 +1,8 @@
 ---
 tags:
   - GAI
-  - MachineLearning
-  - DataScience
+  - machinelearning
+  - datascience
   - LLM
 title: Out of Vocabulary
 ---

@@ -1,9 +1,9 @@
 ---
 tags:
   - LLM
-  - ArtificialIntelligence
-  - MachineLearning
-  - DataScience
+  - artificialintelligence
+  - machinelearning
+  - datascience
   - PromptingTechniques
 ---
 > [!DANGER] Direct prompting on LLMs can return answers quickly and (in terms of output token usage) efficiently, but they can be prone to hallucination. The answer may "look" correct (in terms of language and syntax) but is incorrect in terms of factuality and reasoning.

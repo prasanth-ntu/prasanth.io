@@ -1,7 +1,7 @@
 ---
 tags:
-  - DataScience
-  - ArtificialIntelligence
-  - MachineLearning
+  - datascience
+  - artificialintelligence
+  - machinelearning
 ---
 ![[Data Science Canvas.png]]

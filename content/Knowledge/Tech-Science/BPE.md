@@ -1,10 +1,10 @@
 ---
 tags:
-  - ArtificialIntelligence
-  - MachineLearning
+  - artificialintelligence
+  - machinelearning
   - LLM
   - AGI
-  - DataScience
+  - datascience
   - NLP
 title: Byte Pair Encoding (BPE)
 ---

@@ -2,10 +2,10 @@
 tags:
   - Embeddings
   - AGI
-  - ArtificialIntelligence
-  - MachineLearning
+  - artificialintelligence
+  - machinelearning
   - NLP
-  - DataScience
+  - datascience
   - "#Todo"
 ---
 - **Word2Vec**: One of the most popular and earlier example of word [[Embeddings|embeddings]].

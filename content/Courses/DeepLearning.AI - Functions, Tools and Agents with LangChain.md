@@ -1,8 +1,8 @@
 ---
 tags:
-  - DataScience
-  - SoftwareEngineering
-  - DeepLearningAI
+  - datascience
+  - softwareengineering
+  - deeplearningai
   - Course
 ---
 

@@ -1,9 +1,9 @@
 ---
 tags:
-  - DataScience
+  - datascience
   - LLM
-  - ArtificialIntelligence
-  - MachineLearning
+  - artificialintelligence
+  - machinelearning
 ---
 > *The first training stage of an LLM is also known as **pre-training**, creating an initial pre-trained LLM, often called a **base** or **foundation model**.* 
 

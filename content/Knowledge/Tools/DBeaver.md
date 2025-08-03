@@ -1,10 +1,10 @@
 ---
 tags:
-  - SoftwareEngineering
+  - softwareengineering
   - Database
   - SQL
   - Tool
-  - DataScience
+  - datascience
   - OpenSource
 title: DBeaver - Free cross-platform database tool
 ---

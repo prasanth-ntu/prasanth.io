@@ -1,8 +1,8 @@
 ---
 tags:
-  - DataScience
-  - MachineLearning
-  - SoftwareEngineering
+  - datascience
+  - machinelearning
+  - softwareengineering
   - Programming
 ---
 # Sources

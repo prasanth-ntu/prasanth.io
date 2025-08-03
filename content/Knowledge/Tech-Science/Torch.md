@@ -3,10 +3,10 @@ tags:
   - Python
   - Programming
   - Coding
-  - DataScience
+  - datascience
   - Library
-  - DeepLearning
-  - GPU
+  - deeplearning
+  - gpu
 ---
 # Installation
 Parent Doc: https://pytorch.org/get-started/locally/#linux-installation

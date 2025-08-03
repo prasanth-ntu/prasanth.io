@@ -4,7 +4,7 @@ tags:
   - HealthCare
   - HealthTech
   - GAI
-  - ArtificialIntelligence
+  - artificialintelligence
   - Medicine
   - Talks
 ---

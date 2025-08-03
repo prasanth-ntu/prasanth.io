@@ -1,9 +1,9 @@
 ---
 title: 'Ilya Sutskever: "Sequence to Sequence Learning with Neural Networks: What a Decade"'
 tags:
-  - ArtificialIntelligence
+  - artificialintelligence
   - AGI
-  - DataScience
+  - datascience
   - LLM
   - IlyaSutskever
   - NeurIPS

@@ -1,9 +1,9 @@
 ---
 tags:
-  - MachineLearning
-  - DataScience
+  - machinelearning
+  - datascience
   - LLM
-  - ArtificialIntelligence
+  - artificialintelligence
   - GAI
   - Translation
 ---

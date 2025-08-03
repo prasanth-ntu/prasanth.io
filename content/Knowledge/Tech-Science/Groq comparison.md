@@ -1,11 +1,11 @@
 ---
 tags:
-  - DataScience
-  - ArtificialIntelligence
-  - DeepLearningAI
+  - datascience
+  - artificialintelligence
+  - deeplearningai
   - LLM
-  - GPU
-  - MachineLearning
+  - gpu
+  - machinelearning
   - OpenAI
 ---
 #  Rate limits

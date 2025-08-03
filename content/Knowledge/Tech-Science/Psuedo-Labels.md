@@ -1,10 +1,10 @@
 ---
 tags:
-  - ArtificialIntelligence
+  - artificialintelligence
   - LLM
-  - DataScience
-  - DeepLearningAI
-  - MachineLearning
+  - datascience
+  - deeplearningai
+  - machinelearning
 ---
 > In [[Self-supervised learning]], the core idea is to leverage the structure within the data itself to create tasks that generate **pseudo-labels . These tasks allow the model to learn meaningful representations from the data without requiring manual labelling.
 # What are Pseudo-Labels?

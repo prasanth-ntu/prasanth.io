@@ -1,6 +1,6 @@
 ---
 tags:
-  - MachineLearning
+  - machinelearning
   - OptimizationTechniques
   - Programming
   - Coding

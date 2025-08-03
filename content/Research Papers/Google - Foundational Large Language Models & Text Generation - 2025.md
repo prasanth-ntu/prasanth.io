@@ -1,6 +1,6 @@
 ---
 tags:
-  - DataScience
+  - datascience
   - LLM
   - GAI
   - ResearchPaper

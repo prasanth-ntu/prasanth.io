@@ -1,8 +1,8 @@
 ---
 tags:
   - Statistics
-  - MachineLearning
-  - DataScience
+  - machinelearning
+  - datascience
   - Learning
 ---
 > [!SUMMARY] **Ecological fallacy** refers to a logical error that occurs when conclusions about individual-level behavior or characteristics are drawn based on group-level data or statistics. 

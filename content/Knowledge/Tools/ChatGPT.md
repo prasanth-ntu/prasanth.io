@@ -1,12 +1,12 @@
 ---
 tags:
-  - SoftwareEngineering
+  - softwareengineering
   - Tool
   - LLM
   - GAI
-  - DataScience
-  - ArtificialIntelligence
-  - MachineLearning
+  - datascience
+  - artificialintelligence
+  - machinelearning
 title: ChatGPT - Best GenAI ChatBot
 ---
 https://chatgpt.com/

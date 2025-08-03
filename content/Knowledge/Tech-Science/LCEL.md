@@ -1,6 +1,6 @@
 ---
 tags:
-  - DataScience
+  - datascience
 ---
 LCEL stands for **LangChain Expression Language
 

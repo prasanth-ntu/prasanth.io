@@ -138,7 +138,7 @@ For mode details, refer [QLORA: Efficient Finetuning of Quantized LLMs](https://
 > - Google (Gemma)
 > - Meta
 > - Mistral AI
-> - DeepSeel
+> - DeepSeek
 > - Qwen
 > - ...
 
@@ -165,7 +165,7 @@ For mode details, refer [QLORA: Efficient Finetuning of Quantized LLMs](https://
 
 > [!Question] When to use which variant?
 > **base model:**
-> - you don't need chat / instruction following capabilities (ex. ascii generation)
+> - you don't need chat / instruction following capabilities (e.g., ascii generation)
 > - you have lots of data > 2000 samples 
 > - you want to train with your own chat template
 > 
@@ -237,7 +237,7 @@ For mode details, refer [QLORA: Efficient Finetuning of Quantized LLMs](https://
 	2. Merge the base model with adapters by adding the weights together, and turn the merged model into GGUF. ==Makes it easier to share our specific model with others==
 - **Quantize GGUF such that it fits in our VRAM**
 	- e.g., [tools/quantize/quantize.cpp](https://github.com/ggml-org/llama.cpp/blob/master/tools/quantize/quantize.cpp#L22)
-		- Recommended to use `{ "Q4_K_M",   LLAMA_FTYPE_MOSTLY_Q4_K_M,   " 4.58G, +0.1754 ppl @ Llama-3-8B",  },` where
+		- Recommended to use `{ "Q4_K_M", LLAMA_FTYPE_MOSTLY_Q4_K_M, "4.58G, +0.1754 ppl @ Llama-3-8B"},` where
 			- Q4 implies 4-bit quantization
 - **Quantization and turning into GGUF is done with**
 	- [llama.cpp](https://github.com/ggml-org/llama.cpp)
@@ -262,10 +262,12 @@ The notebook ([GitHub](https://github.com/prasanth-ntu/pookie-llm-finetuning-res
 > 	- [`pookie3000/ascii-cats`](https://huggingface.co/datasets/pookie3000/ascii-cats)
 > 5. **Training the Model**
 >    > [!TIP] Interesting stats
->    > - `Num examples = 201 | Num Epochs = 5 | Total steps = 130`
+>    > - `Num examples = 201 | Num Epochs = 5 | Total steps = 130` 
+>    > 	- How Total steps is computed? `(201 x 5 / (2 x 4 x 1) = 125.625)`, but number of steps must be integer, hence rounded up to 130.
 >    >  - `Batch size per device = 2 | Gradient accumulation steps = 4`
 >    >   - `Data Parallel GPUs = 1 | Total batch size (2 x 4 x 1) = 8`
 >    > - `Trainable parameters = 24,313,856 of 3,237,063,680 (0.75% trained)`
+>    > 	- Only <1% of the model params are trained
 > 6. **Inference**
 > 7. **Saving the Model**
 > 	1. **Converting base model in GGUF format**
@@ -285,10 +287,193 @@ The notebook ([GitHub](https://github.com/prasanth-ntu/pookie-llm-finetuning-res
 > 	2. Using jupyter notebook code locally
 > 		- Clone GGUF variants of the [base model](https://huggingface.co/prasanthntu/Llama-3.2-3B-guide-GGUF) and [LoRA adapter]( https://huggingface.co/prasanthntu/Llma-3.2-3B-ascii-cats-lora-F32-GGUF) dynamically , and run it using [inference/llama_cpp_inference_completion_adapter.ipynb](https://github.com/prasanth-ntu/pookie-llm-finetuning-resources/blob/main/inference/llama_cpp_inference_completion_adapter.ipynb)
 
+> [!ERROR] Due to `llama-cpp-python` installation issue, I cannot run this inference completion notebook in mac locally
+> 
+
 Sample output generated during inference: ![[peft-fine-tuning-using-unsloth-for-ascii-generation.png]]
+
+To run the merged GGUF model locally in mac,
+- Install `llama.cpp` using `brew install llama.cpp` 
+- Option 1: Run the model using `llama-cli` command
+	- Run `llama-cli --hf-repo prasanthntu/Llama-3.2-3B-ascii-cats-lora-q4_k_m-GGUF --hf-file unsloth.Q4_K_M.gguf -p ""`
+	- Example
+```output
+...
+generate: n_ctx = 4096, n_batch = 2048, n_predict = -1, n_keep = 1
+
+
+       /)
+       ((
+        ))
+   ,   //,
+  /,\="=/,\
+ //,   Y   ,
+\__ ,_T_ ,__
+  (   '   )
+  `-----'
+ [end of text]
+
+
+llama_perf_sampler_print:    sampling time =       5.18 ms /    46 runs   (    0.11 ms per token,  8882.02 tokens per second)
+llama_perf_context_print:        load time =     604.14 ms
+llama_perf_context_print: prompt eval time =       0.00 ms /     1 tokens (    0.00 ms per token,      inf tokens per second)
+llama_perf_context_print:        eval time =     808.86 ms /    45 runs   (   17.97 ms per token,    55.63 tokens per second)
+llama_perf_context_print:       total time =     821.98 ms /    46 tokens
+llama_perf_context_print:    graphs reused =          0
+ggml_metal_free: deallocating
+...
+```
+- Option 2: Run the model using `llama-server` command so that we can get API interface
+	- Run `llama-server --hf-repo prasanthntu/Llama-3.2-3B-ascii-cats-lora-q4_k_m-GGUF --hf-file unsloth.Q4_K_M.gguf`
+	- API example
+
+```bash
+curl --location 'http://127.0.0.1:8080/v1/completions' --header 'Content-Type: application/json' --data '{"prompt":"","max_tokens":100}'
+```
+
+```output
+{
+    "choices": [
+        {
+            "text": "\n /\\     /\\\n( o o   o )\n==   w   ==\n \\   _  /\n  / x \\__\n /     //\n|     |\n \\_/(\n",
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "created": 1753939267,
+    "model": "gpt-3.5-turbo",
+    "system_fingerprint": "b6030-1e15bfd4",
+    "object": "text_completion",
+    "usage": {
+        "completion_tokens": 36,
+        "prompt_tokens": 1,
+        "total_tokens": 37
+    },
+    "id": "chatcmpl-0Df2Dbkng2a4gAi8W5bdhB0GEzgz5eyY",
+    "timings": {
+        "prompt_n": 1,
+        "prompt_ms": 41.834,
+        "prompt_per_token_ms": 41.834,
+        "prompt_per_second": 23.904001529856096,
+        "predicted_n": 36,
+        "predicted_ms": 716.109,
+        "predicted_per_token_ms": 19.891916666666667,
+        "predicted_per_second": 50.27167651851883
+    }
+}
+```
 
 ---
 ## 2. Paul Graham - Conversation model fine-tuning
+To run the merged GGUF model locally in mac,
+- Run the model using `llama-server` command
+	- Command: `llama-server --hf-repo pookie3000/Meta-Llama-3.1-8B-q4_k_m-paul-graham-guide-GGUF --hf-file unsloth.Q4_K_M.gguf
+	- API Example:
+```bash
+curl --location 'http://127.0.0.1:8080/v1/chat/completions' --header 'Content-Type: application/json' --data '{
+    "model": "any-model", 
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello, who are you?"
+      },
+      
+    ],
+    "max_tokens": 100
+  }'
+```
+
+```json
+{
+    "choices": [
+        {
+            "finish_reason": "length",
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Nice to meet you! I'm Paul Graham, nice and simple. Born and raised in Weymouth, Dorset, England. I'm an entrepreneur, venture capitalist, and essayist, which means I spend most of my time thinking about how to make startups successful and writing about my ideas. When I'm not doing that, I enjoy spending time in my adopted home of England, where I've lived for most of my life. I'm also a bit of a tech enthusiast, having co"
+            }
+        }
+    ],
+    "created": 1754012271,
+    "model": "any-model",
+    "system_fingerprint": "b6030-1e15bfd4",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 100,
+        "prompt_tokens": 16,
+        "total_tokens": 116
+    },
+    "id": "chatcmpl-wjtEEmV0vMIrVJMyvOL3C6yrJkGIrDI7",
+    "timings": {
+        "prompt_n": 1,
+        "prompt_ms": 145.798,
+        "prompt_per_token_ms": 145.798,
+        "prompt_per_second": 6.858804647526029,
+        "predicted_n": 100,
+        "predicted_ms": 3591.79,
+        "predicted_per_token_ms": 35.9179,
+        "predicted_per_second": 27.841271343814643
+    }
+}
+```
+
+```bash
+curl --location 'http://127.0.0.1:8080/v1/chat/completions' --header 'Content-Type: application/json' --data '{
+    "model": "any-model", 
+    "messages": [
+        {
+            "role": "user",
+            "content": "Hello, who are you?"
+        },
+        {
+            "role": "assistant",
+            "content": "Nice to meet you! I'\''m Paul Graham, nice and simple. Born and raised in Weymouth, Dorset, England. I'\''m an entrepreneur, venture capitalist, and essayist, which means I spend most of my time thinking about how to make startups successful and writing about my ideas. When I'\''m not doing that, I enjoy spending time in my adopted home of England, where I'\''ve lived for most of my life. I'\''m also a bit of a tech enthusiast, having co"
+        },
+        {
+            "role": "user",
+            "content": "Can you provide me some guidance/advise on where to start? I am data scientist, and I am planning to do a healthtech startup. Where should I start? Problem, Market, Sub-domain, Pain-points, Talk to poeple ? Bit lost and overwhlemen on where and now to start efficiently to set myself for success."
+        }
+    ],
+    "max_tokens": 500
+}'
+```
+
+```json
+{
+    "choices": [
+        {
+            "finish_reason": "length",
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "You're feeling a bit lost, huh? Well, let me tell you, my friend, that's completely normal. Starting a startup is like navigating a maze blindfolded while being attacked by a swarm of bees. But don't worry, I'm here to help you find your way out of this mess.\n\nFirst of all, congratulations on deciding to start a healthtech startup! That's a fantastic idea. Now, let's break down the process into manageable chunks, shall we?\n\n**Start by identifying a problem you're passionate about solving**. As a data scientist, you're likely familiar with the importance of solving real-world problems. So, think about the healthtech space and what specific problem you'd love to tackle. What bugs you? What do you wish someone would do about it?\n\n**Next, research the market**. Who's already working on this problem? What are they doing? What's their approach? Are there any gaps in the market that you can fill? Be honest with yourself, and don't be afraid to learn from others.\n\n**Now, drill down to a sub-domain**. Instead of looking at the entire healthtech space, zoom in on a smaller area that you're interested in. This could be, for example, personalized medicine, telemedicine, or medical imaging analysis. Focus on a specific aspect that you're passionate about.\n\n**Pain-points, you say? Ah, yes!** Talk to people in the industry, potential customers, and domain experts. Ask them about their pain-points, what they struggle with, and what they wish someone would solve for them. This will help you validate your idea and ensure you're building something people actually need.\n\n**And don't forget to talk to users!** As a data scientist, you're likely comfortable with data, but don't underestimate the importance of human interaction. Talk to people, listen to their problems, and use that feedback to shape your product.\n\nHere's a rough outline to get you started:\n\n1. Identify a problem you're passionate about solving\n2. Research the market and existing solutions\n3. Drill down to a specific sub-domain\n4. Talk to people in the industry and potential customers\n5. Validate your idea and iterate based on feedback\n\nRemember, my friend, starting a startup is a journey, not a destination. It's okay to take your time, experiment, and learn as you go. Don't be afraid to pivot or change direction when needed."
+            }
+        }
+    ],
+    "created": 1754012687,
+    "model": "any-model",
+    "system_fingerprint": "b6030-1e15bfd4",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 500,
+        "prompt_tokens": 196,
+        "total_tokens": 696
+    },
+    "id": "chatcmpl-r1KuRQGInLhRNiTAfbqzZHTOfhDJNVaj",
+    "timings": {
+        "prompt_n": 1,
+        "prompt_ms": 138.387,
+        "prompt_per_token_ms": 138.387,
+        "prompt_per_second": 7.226112279332596,
+        "predicted_n": 500,
+        "predicted_ms": 18842.146,
+        "predicted_per_token_ms": 37.684292,
+        "predicted_per_second": 26.536255477481173
+    }
+}
+```
 
 ---
 # Appendix
@@ -309,4 +494,5 @@ except Exception as e:
 
 ---
 # To clarify
-- [ ] ...
+- [ ] "Curate datasets with question and answers" for post-training reasoning model vs. "Curate conversational data in a pre-defined templat" for post-training chat model - How are these two approaches different?
+- [ ] Understand more on how the dataset is created for both the projects (ascii-cat and pg-chat)

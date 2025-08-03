@@ -1,9 +1,9 @@
 ---
 tags:
-  - DataScience
+  - datascience
   - LLM
-  - MachineLearning
-  - ArtificialIntelligence
+  - machinelearning
+  - artificialintelligence
 ---
 > *Fine-tuning is the training done **after** a model has been [[Pre-training|Pre-trained]]. To perform fine-tuning, you first acquire a pretrained language model, then perform additional training with a **labelled dataset specific to your task**.* 
 

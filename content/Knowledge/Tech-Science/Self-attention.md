@@ -1,6 +1,6 @@
 ---
 tags:
-  - DataScience
+  - datascience
 ---
 **Self-Attention** is the **specific form of [[Attention layers|attention]]** used in [[Transformer Model|transformers]]. **Each word in the sequence attends to all other words in the sequence, *including itself***. In other words, it **highlights relationships between each word and every other word, enhancing context comprehension.**
 

@@ -1,6 +1,6 @@
 ---
 tags:
-  - DataScience
+  - datascience
 ---
 In CLM, **the model learns to predict the next word in a sequence based on the preceding context**, training the model to generate coherent sequences. This method is auto-regressive, meaning the model generates each token based on all tokens to its left in the sequence.
 

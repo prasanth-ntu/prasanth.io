@@ -1,6 +1,6 @@
 ---
 tags:
-  - DataScience
+  - datascience
 ---
 - [Sample code](#Sample%20code)
 - [Example use cases](#Example%20use%20cases)

@@ -1,7 +1,7 @@
 ---
 tags:
-  - MachineLearning
-  - DataScience
+  - machinelearning
+  - datascience
   - Numpy
   - Pandas
   - PyTorch

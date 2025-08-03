@@ -1,6 +1,6 @@
 ---
 tags:
-  - ArtificialIntelligence
+  - artificialintelligence
   - AGI
   - SiliconValley
   - Podcast

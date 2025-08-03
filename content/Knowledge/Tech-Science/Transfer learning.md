@@ -1,6 +1,6 @@
 ---
 tags:
-  - DataScience
+  - datascience
 ---
 
 ### Key Differences between Transfer Learning and [[Fine-tuning|Fine-Tuning]]

@@ -1,6 +1,6 @@
 ---
 tags:
-  - DataScience
+  - datascience
 ---
 
 | Model               | Parameters (in billions) | Architecture    | Type          | Max Context Size (tokens) | Feature Vector Dimensionally | Training data                                                        | Released on | Owner        | Functionality                                | Input Modality            | Output Modality           | Benchmarks / Performance                                                                            |                                                                               |

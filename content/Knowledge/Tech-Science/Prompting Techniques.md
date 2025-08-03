@@ -1,8 +1,8 @@
 ---
 tags:
-  - ArtificialIntelligence
-  - DataScience
-  - MachineLearning
+  - artificialintelligence
+  - datascience
+  - machinelearning
   - LLM
   - PromptingTechniques
   - GAI

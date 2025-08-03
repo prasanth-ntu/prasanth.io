@@ -1,8 +1,8 @@
 ---
 tags:
-  - SoftwareEngineering
-  - MachineLearning
-  - DataScience
+  - softwareengineering
+  - machinelearning
+  - datascience
   - AGI
   - Google
   - LLM

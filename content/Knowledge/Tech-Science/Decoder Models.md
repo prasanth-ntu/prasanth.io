@@ -1,6 +1,6 @@
 ---
 tags:
-  - DataScience
+  - datascience
 ---
 > Where the **decoder differs from the [[Encoder Models|encoder]] is principally with its [[Self-attention|self-attention]] mechanism**. It's using **"[[Masked Self-Attention|masked self-attention]]"**.
 # What is a decoder model?

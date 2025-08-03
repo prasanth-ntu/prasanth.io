@@ -1,0 +1,37 @@
+{
+	"nodes":[
+		{"id":"b821e3b379d62521","type":"group","x":-440,"y":-160,"width":860,"height":540,"label":"Dwaves"},
+		{"id":"ff5fdbda24ddddbc","type":"group","x":-440,"y":-610,"width":785,"height":350,"color":"#964b00","label":"Hobbits"},
+		{"id":"30c6e9bde0831101","x":-460,"y":-980,"width":375,"height":90,"color":"3","type":"group","label":"Goblins"},
+		{"id":"246905379f231f87","type":"text","text":"Balin","x":-420,"y":87,"width":160,"height":50},
+		{"id":"6e3392ed15a5a6d7","type":"text","text":"Fili","x":-140,"y":87,"width":160,"height":50},
+		{"id":"cb4970c6b340e60e","type":"text","text":"Dori","x":-420,"y":174,"width":160,"height":50},
+		{"id":"1b120933fad0ef7a","type":"text","text":"Nori","x":-140,"y":174,"width":160,"height":50},
+		{"id":"ca79fc6e96c180c4","type":"text","text":"Ori","x":-420,"y":260,"width":160,"height":50},
+		{"id":"98d5f550299675e6","type":"text","text":"Oin","x":-140,"y":260,"width":160,"height":50},
+		{"id":"907142ece34c174a","type":"text","text":"Dwalin","x":-420,"y":0,"width":160,"height":50},
+		{"id":"6ab7f42042f994d6","type":"text","text":"Kili","x":-140,"y":0,"width":160,"height":50},
+		{"id":"703c633b2c0724f0","type":"text","text":"Gloin","x":140,"y":0,"width":160,"height":50},
+		{"id":"85fcc850a21a6e38","type":"text","text":"Bifur","x":140,"y":87,"width":160,"height":50},
+		{"id":"c3ba21cba9d7c674","type":"text","text":"Bofur","x":140,"y":174,"width":160,"height":50},
+		{"id":"162f066aa8cc1f15","type":"text","text":"Bombur","x":140,"y":260,"width":160,"height":50},
+		{"id":"cd75569f484ff1b2","type":"text","text":"Thorin Oakenshield","x":-170,"y":-100,"width":220,"height":50},
+		{"id":"993ba173d8b007d5","type":"text","text":"Belladonna Took","x":65,"y":-470,"width":180,"height":50,"color":"#964b00"},
+		{"id":"761d0dd9df721e00","type":"text","text":"Old Took","x":95,"y":-600,"width":120,"height":50,"color":"#964b00"},
+		{"id":"fe3caf9a1616d881","type":"text","text":"Bilbo Baggins","x":-115,"y":-340,"width":160,"height":60,"color":"#964b00"},
+		{"id":"979f83806c9f178a","type":"text","text":"Bungo Baggins","x":-340,"y":-470,"width":205,"height":50,"color":"#964b00"},
+		{"id":"701c3c0897c153b0","type":"text","text":"Bullroader Took","x":-340,"y":-600,"width":175,"height":50,"color":"#964b00"},
+		{"id":"1d8c1f64df4dbb76","type":"text","text":"Gandalf","x":440,"y":-820,"width":120,"height":60,"color":"#ffffff"},
+		{"id":"5715c502faeae506","type":"text","text":"Golfimbul","x":-440,"y":-960,"width":150,"height":50,"color":"3"},
+		{"id":"e3046ce4433c055d","type":"text","text":"...","x":-255,"y":-960,"width":150,"height":50,"color":"3"}
+	],
+	"edges":[
+		{"id":"025065d9b4d40238","fromNode":"979f83806c9f178a","fromSide":"bottom","toNode":"fe3caf9a1616d881","toSide":"top","label":"son"},
+		{"id":"e9a96ae92a6cf723","fromNode":"993ba173d8b007d5","fromSide":"bottom","toNode":"fe3caf9a1616d881","toSide":"top","label":"son"},
+		{"id":"ef4103c0dc3bbb5c","fromNode":"761d0dd9df721e00","fromSide":"bottom","toNode":"993ba173d8b007d5","toSide":"top","label":"daughter"},
+		{"id":"74dd8f270957fa19","fromNode":"979f83806c9f178a","fromSide":"right","toNode":"993ba173d8b007d5","toSide":"left","label":"wife"},
+		{"id":"54b9e7120a6cf56c","fromNode":"761d0dd9df721e00","fromSide":"left","toNode":"701c3c0897c153b0","toSide":"right","label":"great-grand-uncle"},
+		{"id":"20c76dd9e6fa7b53","fromNode":"1d8c1f64df4dbb76","fromSide":"left","toNode":"761d0dd9df721e00","toSide":"right","label":"friend"},
+		{"id":"8a2d570987c70fb7","fromNode":"701c3c0897c153b0","fromSide":"top","toNode":"5715c502faeae506","toSide":"bottom","label":"killed"}
+	]
+}

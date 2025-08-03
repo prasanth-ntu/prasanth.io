@@ -4,7 +4,7 @@ tags:
   - Coding
   - Programming
   - Documentation
-  - MachineLearning
+  - machinelearning
 ---
 # `sklearn.datasets`
 Datasets that I have worked/used so far are from

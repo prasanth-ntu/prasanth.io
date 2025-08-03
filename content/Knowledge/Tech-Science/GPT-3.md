@@ -1,9 +1,9 @@
 ---
 tags:
-  - DataScience
+  - datascience
   - LLM
-  - MachineLearning
-  - ArtificialIntelligence
+  - machinelearning
+  - artificialintelligence
 ---
 # GPT-3 dataset details†
 ![[pretraining-dataset-of-popular-gpt-3-llm.png]]

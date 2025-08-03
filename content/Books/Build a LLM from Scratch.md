@@ -2,11 +2,11 @@
 title: Build a Large Language Model From Scratch
 tags:
   - Book
-  - ArtificialIntelligence
-  - MachineLearning
+  - artificialintelligence
+  - machinelearning
   - LLM
   - GAI
-  - DataScience
+  - datascience
   - Reading
 author: Sebastian Raschka
 ---

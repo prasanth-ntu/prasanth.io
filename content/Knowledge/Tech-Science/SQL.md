@@ -1,7 +1,7 @@
 ---
 tags:
   - Programming
-  - SoftwareEngineering
+  - softwareengineering
   - Coding
   - Database
   - SQL

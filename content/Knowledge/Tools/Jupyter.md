@@ -1,10 +1,10 @@
 ---
 tags:
-  - MachineLearning
-  - DataScience
+  - machinelearning
+  - datascience
   - DataAnalytics
   - IDE
-  - SoftwareEngineering
+  - softwareengineering
   - Programming
   - Coding
   - Tool

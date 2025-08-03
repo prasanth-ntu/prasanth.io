@@ -1,8 +1,8 @@
 ---
 tags:
   - LLM
-  - ArtificialIntelligence
-  - MachineLearning
-  - DataScience
+  - artificialintelligence
+  - machinelearning
+  - datascience
   - PromptingTechniques
 ---
