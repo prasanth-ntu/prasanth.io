@@ -25,7 +25,11 @@
 
 > [!TIP] Happiness is a choice - we can choose to be or not to be.
 
+> [!Quote] I felt so proud of my team, of my life, and overall, my desire to show the world that having a body with limitations or a disability isn’t something that impedes us from doing great things. But with the right attitude, willpower, and motivation you can achieve great things.
+> *Àlex Roca Campillo* [](https://www.guinnessworldrecords.com/news/2023/5/athlete-with-cerebral-palsy-told-hed-live-in-vegetative-state-defies-odds-at-marathon)
+
 [[How to be Successful]] by [[Sam Altman]]
 
 # Reflections
 - [[2025-02-01 Reflections on Meeting with Magesh]]
+

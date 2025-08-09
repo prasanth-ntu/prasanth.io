@@ -1,4 +1,4 @@
-- Source: [YouTube](https://www.youtube.com/watch?v=Lt7KrFMcCis), [LinkedIn](https://www.linkedin.com/posts/,danielhanchen_heres-a-complete-guide-to-fine-tuning-llms-activity-7351251048226836480-Qa-z/?utm_source=share&utm_medium=member_android&rcm=ACoAAAcOLFMBUn1o8NEoEvAqJrA0ZzVgH3csPQ0), GitHub, [Presentation (SVG)](Pookie-official-guide-to-finetuning-LLMs.svg)
+- Source: [YouTube](https://www.youtube.com/watch?v=Lt7KrFMcCis), [LinkedIn](https://www.linkedin.com/posts/danielhanchen_heres-a-complete-guide-to-fine-tuning-llms-activity-7351251048226836480-Qa-z/?utm_source=share&utm_medium=member_android&rcm=ACoAAAcOLFMBUn1o8NEoEvAqJrA0ZzVgH3csPQ0), GitHub, [Presentation (SVG)](Pookie-official-guide-to-finetuning-LLMs.svg)
 - Speaker: Wout Voseen ([LinkedIn](https://www.linkedin.com/in/wout-vossen/))
 - My forked/modified code: [GitHub](https://github.com/prasanth-ntu/pookie-llm-finetuning-resources)
 
@@ -249,7 +249,12 @@ For mode details, refer [QLORA: Efficient Finetuning of Quantized LLMs](https://
 	- [open-webui](https://github.com/open-webui/open-webui)
 ---
 # Hands-on
+
+```
+```
+
 ## 1. Ascii Art -  Completion fine-tuning
+### Notebook explained
 
 The notebook ([GitHub](https://github.com/prasanth-ntu/pookie-llm-finetuning-resources/tree/main/finetuning/unsloth)) walks through the steps of using the Unsloth library for parameter-efficient finetuning (specifically using LoRA) of a large language model (LLM) on a custom dataset. The goal is to train the model to generate ASCII art.
 
@@ -259,7 +264,7 @@ The notebook ([GitHub](https://github.com/prasanth-ntu/pookie-llm-finetuning-res
 > 	- `meta-llama/Llama-3.2-3B`
 > 3. **Adding LoRA Adapter and Patching with Unsloth**
 > 4. **Dataset Preparation & Visualization**
-> 	- [`pookie3000/ascii-cats`](https://huggingface.co/datasets/pookie3000/ascii-cats)
+> 	- [`pookie3000/ascii-cats`](https://huggingface.co/datasets/pookie3000/ascii-cats) prepared using [`create_completion_dataset.py`](https://github.com/prasanth-ntu/pookie-llm-finetuning-resources/blob/main/dataset-preparation/completion-tuning/create_completion_dataset.py)
 > 5. **Training the Model**
 >    > [!TIP] Interesting stats
 >    > - `Num examples = 201 | Num Epochs = 5 | Total steps = 130` 
@@ -292,8 +297,11 @@ The notebook ([GitHub](https://github.com/prasanth-ntu/pookie-llm-finetuning-res
 
 Sample output generated during inference: ![[peft-fine-tuning-using-unsloth-for-ascii-generation.png]]
 
+### Running the models locally in Mac
 To run the merged GGUF model locally in mac,
 - Install `llama.cpp` using `brew install llama.cpp` 
+
+#### `llama-cli`
 - Option 1: Run the model using `llama-cli` command
 	- Run `llama-cli --hf-repo prasanthntu/Llama-3.2-3B-ascii-cats-lora-q4_k_m-GGUF --hf-file unsloth.Q4_K_M.gguf -p ""`
 	- Example
@@ -323,6 +331,7 @@ llama_perf_context_print:    graphs reused =          0
 ggml_metal_free: deallocating
 ...
 ```
+#### llama-server
 - Option 2: Run the model using `llama-server` command so that we can get API interface
 	- Run `llama-server --hf-repo prasanthntu/Llama-3.2-3B-ascii-cats-lora-q4_k_m-GGUF --hf-file unsloth.Q4_K_M.gguf`
 	- API example
@@ -363,12 +372,93 @@ curl --location 'http://127.0.0.1:8080/v1/completions' --header 'Content-Type: a
     }
 }
 ```
+### HF models explained
+- [prasanthntu/Llama-3.2-3B-guide-GGUF](https://huggingface.co/prasanthntu/Llama-3.2-3B-guide-GGUF) - Base Llama 3.2 3B model converted to GGUF format
+- [prasanthntu/Llama-3.2-3B-ascii-cats-lora](https://huggingface.co/prasanthntu/Llama-3.2-3B-ascii-cats-lora) - PEFT LoRA adapter
+- [prasanthntu/Llama-3.2-3B-ascii-cats-lora-F32-GGUF](https://huggingface.co/prasanthntu/Llama-3.2-3B-ascii-cats-lora-F32-GGUF) - PEFT LoRA adapter in GGUF format
+- [prasanthntu/Llama-3.2-3B-ascii-cats-lora-q4_k_m-GGUF](https://huggingface.co/prasanthntu/Llama-3.2-3B-ascii-cats-lora-q4_k_m-GGUF) - Merged base model with LoRA adapter, and saved in GGUF format
 
 ---
 ## 2. Paul Graham - Conversation model fine-tuning
+
+### Notebook explained
+The notebook ([GitHub](https://github.com/prasanth-ntu/pookie-llm-finetuning-resources/tree/main/finetuning/unsloth)) walks through the steps of using the Unsloth library for parameter-efficient finetuning (specifically using LoRA) of a large language model (LLM) on a custom dataset. The goal is to finetune the instruction/ chat model to behave like [Paul Graham](https://www.paulgraham.com/).
+
+> [!SUMMARY] Key contents of the notebook
+> 1. **Installation of Libraries**
+> 2. **Loading the Base Model**
+> 	- `meta-llama/Llama-3.2-8B-Instruct-bnb-4bit` (or)
+> 	- `meta-llama/Llama-3.2-8B-Instruct`m and mention 4-bit quantization
+> 3. **Adding LoRA Adapter to Base Model and Patching with Unsloth**
+> 4. **Dataset Preparation & Visualization**
+> 	- [`pookie3000/pg_chat`](https://huggingface.co/datasets/pookie3000/pg_chat) using [`generate_chat_dataset.py`](https://github.com/prasanth-ntu/pookie-llm-finetuning-resources/blob/main/dataset-preparation/conversation-tuning/generate_chat_dataset.py)
+> 5. **Training the Model**
+>    > [!TIP] Interesting stats
+>    > - `Num examples = 484 | Num Epochs = 5 | Total steps = 305` 
+>    > 	- How Total steps is computed? `(484 x 5 / (2 x 4 x 1) = 302.5)`, but number of steps must be integer, hence rounded up to 305.
+>    >  - `Batch size per device = 2 | Gradient accumulation steps = 4`
+>    >   - `Data Parallel GPUs = 1 | Total batch size (2 x 4 x 1) = 8`
+>    > - `Trainable parameters = 41,943,040 of 8,072,204,288 (0.52% trained)`
+>    > 	- Only ~0.5% of the model params are trained
+>    > - Took ~45 mins in Google Colab T4 GPU instance
+> 6. **Inference**
+> 7. **Saving the Model**
+> 	1. **Saving LoRA adapter (in PeFT LoRA)**
+> 		1. From google colab directly
+> 			- [`prasanthntu/Meta-Llama-3.1-8B-Instruct-Paul-Graham-LORA`](https://huggingface.co/prasanthntu/Meta-Llama-3.1-8B-Instruct-Paul-Graham-LORA)
+> 	2. **Merge model with LoRA weights and save to GGUF**
+> 		1.  From google colab directly
+> 			- [`prasanthntu/Meta-Llama-3.1-8B-q4_k_m-paul-graham-guide-GGUF`](https://huggingface.co/prasanthntu/Meta-Llama-3.1-8B-q4_k_m-paul-graham-guide-GGUF) 
+> 8. **Loading Saved Model (for continued finetuning or inference)**
+> 	1. From google colab directly
+
+> [!ERROR] Due to `llama-cpp-python` installation issue, I cannot run this inference completion notebook in mac locally
+> 
+
+Sample output generated during inference: 
+![[peft-lora-finetuned-pg-model-sample.png]]
+### Running the models locally in Mac
 To run the merged GGUF model locally in mac,
+#### `ollama` in terminal
+- Get the latest [llama3.1](https://ollama.com/library/llama3.1:latest) [template](https://ollama.com/library/llama3.1:latest/blobs/948af2743fc7) from ollama 
+- `git clone https://huggingface.co/prasanthntu/Meta-Llama-3.1-8B-q4_k_m-paul-graham-guide-GGUF`
+- Update the `ModelfileLlama31` (code) with the downloaded model path
+- Run: `ollama create pg-guide-prasanthntu -f ModelfileLlama31`
+```bash
+$ ollama list 
+NAME                           ID              SIZE      MODIFIED      
+pg-guide-prasanthntu:latest    196e0303707e    4.9 GB    7 seconds ago    
+pg-guide-model:latest          76bea6ae06ac    4.9 GB    6 days ago  
+```
+- Run the model in terminal
+```
+(.venv) ➜  pookie-llm-finetuning-resources git:(main) ✗ ollama run pg-guide-model:latest 
+>>> hi, who are you?
+Nice to meet you! My name is Paul Graham, and I'm a venture capitalist, essayist, and entrepreneur. I co-founded Y Combinator, one of the most successful startup 
+accelerators in the world, back in 2005. When I'm not busy investing in and mentoring startups, I love to write about technology, entrepreneurship, and various other 
+topics that interest me.
+
+As you might have guessed, I'm a bit of a nerd at heart, and I've always been passionate about understanding how the world works and how we can make it a better 
+place. In my free time, I enjoy reading, writing, and exploring new ideas – often in the beautiful countryside of England, where I reside.
+
+What about you? What brings you here today?
+
+>>> Send a message (/? for help)
+```
+
+#### ollama with built in UI
+![[ollama-og-pg-guide-example.png]]
+#### `ollama with open-webui`
+- Install `open-webui`: https://github.com/open-webui/open-webui
+- Run `open-webui serve`
+- Open http://localhost:8080/ 
+- Usage example
+![[open-webui-pg-guide-model-example.png]]
+![[open-webui-pg-guide-example-2.png]]
+
+#### `llama-server`
 - Run the model using `llama-server` command
-	- Command: `llama-server --hf-repo pookie3000/Meta-Llama-3.1-8B-q4_k_m-paul-graham-guide-GGUF --hf-file unsloth.Q4_K_M.gguf
+	- Command: `lama-server --hf-repo prasanthntu/Meta-Llama-3.1-8B-q4_k_m-paul-graham-guide-GGUF --hf-file unsloth.Q4_K_M.gguf`
 	- API Example:
 ```bash
 curl --location 'http://127.0.0.1:8080/v1/chat/completions' --header 'Content-Type: application/json' --data '{
@@ -377,8 +467,7 @@ curl --location 'http://127.0.0.1:8080/v1/chat/completions' --header 'Content-Ty
       {
         "role": "user",
         "content": "Hello, who are you?"
-      },
-      
+      }
     ],
     "max_tokens": 100
   }'
@@ -474,6 +563,10 @@ curl --location 'http://127.0.0.1:8080/v1/chat/completions' --header 'Content-Ty
     }
 }
 ```
+### HF models explained
+- [prasanthntu/Meta-Llama-3.1-8B-Instruct-Paul-Graham-LORA](https://huggingface.co/prasanthntu/Meta-Llama-3.1-8B-Instruct-Paul-Graham-LORA) - PEFT LoRA adapter
+- [prasanthntu/Meta-Llama-3.1-8B-q4_k_m-paul-graham-guide-GGUF](https://huggingface.co/prasanthntu/Meta-Llama-3.1-8B-q4_k_m-paul-graham-guide-GGUF) - Merged base model with LoRA adapter, and saved in GGUF format
+
 
 ---
 # Appendix
@@ -491,6 +584,12 @@ except Exception as e:
     print(f"❌ Error generating requirements.txt: {e}")
 ```
 
+## GRPO vs. SFT
+> [!TIP]
+> - **SFT = Learn from examples.**
+> - **GRPO = Learn from rewards based on desired outcomes/behaviors.**
+
+For a reasoning model, where the process is as important as the final answer and where you want the model to potentially generalize reasoning steps, GRPO offers a more direct way to optimize for those specific reasoning behaviors through a reward signal.
 
 ---
 # To clarify
