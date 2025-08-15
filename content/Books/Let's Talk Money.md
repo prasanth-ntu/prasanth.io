@@ -15,6 +15,8 @@ author: Monika Halan
 | Status          | #Completed                                                                                 |
 
 *I have summarised & highlighted the important points covered/that I liked in the book for speed reading.*
+
+[[Let's Talk Money Canvas - Mermaid]]
 # Preface to the Revised Edition
 
 -  <span style="color:red">We worry about investment the way we worry about weight. Instead of dieting or investing being a habit, we only think of them as remedial measures when our weight or our bank balance goes too high or too low</span>.

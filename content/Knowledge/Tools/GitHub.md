@@ -23,7 +23,7 @@ git checkout master
 git pull origin master
 
 # Merge or rebase master changes into current branch
-git checkout custom-branch
+git checkout <custom-branch>
 ```
 
 Now let's merge the master changes into our current branch. You have two options:
@@ -35,7 +35,7 @@ Now let's merge the master changes into our current branch. You have two option
 git merge master
 
 # Let me check if there might be any potential conflicts first by looking at what files have changed:
-git log --oneline custom-branch ^master
+git log --oneline <custom-branch> ^master
 
 # It looks like your feature branch doesn't have any commits that aren't in master, which means it was created from an older version of master. Let me check the current status and try a different approach:
 git status
@@ -49,7 +49,7 @@ git merge master
 git stash pop
 
 # We have merge conflicts in two files! This is expected since both your stashed changes and the master branch have modifications to the same files. Let me check the conflicts and help you resolve them:
-git add file_1 file_2 ... file_N
+git add <file_1> <file_2> ... <file_N>
 
 git status
 ```

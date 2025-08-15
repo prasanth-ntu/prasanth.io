@@ -39,7 +39,7 @@ graph TD
         node_607772ba["Bolg"]
     end
 
-    subgraph MenofLaketownDale ["Men of Lake-town & Dale"]
+    subgraph MenofLaketownDale ["Men of Lake • town & Dale"]
         node_ee646d1e["Bard"]
         node_c661c23e["Bain"]
     end
@@ -79,7 +79,7 @@ graph TD
     node_993ba173 -->|son| node_fe3caf9a
     node_761d0dd9 -->|daughter| node_993ba173
     node_979f8380 -->|wife| node_993ba173
-    node_761d0dd9 -->|great-grand-uncle| node_701c3c08
+    node_761d0dd9 -->|great • grand • uncle| node_701c3c08
     node_1d8c1f64 -->|friend| node_761d0dd9
     node_701c3c08 -->|killed| node_5715c502
     group_b821e3b3["All 13 Dwarves"]
@@ -118,6 +118,8 @@ graph TD
     classDef men fill:#DEB887,stroke:#333,stroke-width:2px
     classDef creature fill:#DDA0DD,stroke:#333,stroke-width:2px
     classDef group fill:#FFE4B5,stroke:#8B4513,stroke-width:3px,stroke-dasharray: 5 5
+    classDef file fill:#E6F3FF,stroke:#4A90E2,stroke-width:2px
+    classDef link fill:#FFF2E6,stroke:#FF8C00,stroke-width:2px,stroke-dasharray: 3 3
     classDef default fill:#e1f5fe,stroke:#333,stroke-width:2px
     class node_1d8c1f64 wizard
     class node_04b067d0 dwarf

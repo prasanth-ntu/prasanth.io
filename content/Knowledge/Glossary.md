@@ -382,6 +382,11 @@ Lasting for a very short time
 
 **Similar words**: transitory, transiet, fleeting, passing, short-lived
 
+## Epigastric 
+#biology #science #disease 
+
+**Epigastric** pain or burning: ...
+
 ## Equated monthly instalments (EMI)
 #finance
 
@@ -494,6 +499,10 @@ Example: Bilbo Baggins had been too flustered to put down on his Engagement Tabl
 #linguistics 
 A sudden intense feeling of fear.
 
+## Functional Gastrointestinal Disorders (FGIDs)
+#science #medical #disease 
+
+
 ---
 # G
 ## Genitourinary
@@ -531,6 +540,9 @@ Key points about GGUF:
 A reinforcement learning algorithm designed to train large language models (LLMs) for complex tasks like solving math problems or writing code. Unlike older methods, GRPO is memory-efficient because it doesn't use a separate "value function" (a model that estimates future rewards). Instead, it generates multiple answers for each question, scores them with a reward model, and uses the average score as a reference to decide which answers are better. This makes it easier to train large models on limited hardware, which is surprising because it still performs well on tough tasks like reasoning.
 
 Resources: https://aiengineering.academy/LLM/TheoryBehindFinetuning/GRPO/
+
+## Gut-brain axis dysregulation
+#biology #science #disease 
 
 ---
 # H
@@ -793,6 +805,11 @@ Resources:
 
 This is a clinical term for good blood circulation. **Perfusion** is the process of the cardiovascular system (the heart and blood vessels) delivering oxygen-rich blood to all the tissues and organs of the body.
 
+## Post-prandial 
+#biology #science #disease 
+
+**Post-prandial fullness**: 
+
 ## Price-earnings ratio (P/E ratio or P/E)
 #finance #Investment #Stocks 
 
@@ -927,8 +944,19 @@ From the book [[Let's Talk Money#5. What if we die? | Let's Talk Money]]
 ## Role Playing Games (RPG)
 RPG involve players taking on the roles of fictional characters within a narrative, making choices and decisions that influence the story and character development. They can be played in various formats, including tabletop, video games, and live-action setting
 
+## [[Rome Process and Rome Criteria]]
+#science #biology #disease 
+
+The Rome criteria, established and periodically updated by the international Rome Foundation, provide the global standard for symptom-based diagnosis of FGIDs. This standardization is paramount for ensuring diagnostic consistency and upholding the scientific rigor of clinical research worldwide. The latest iteration, Rome IV, published in 2016, continues this tradition of refinement.
+
+For more details, refer [[Rome Process and Rome Criteria]].
+
 ---
 # S
+## Satiation
+#science #biology #disease 
+
+**Early satiation**: ...
 
 ## [[Self-attention]]
 
@@ -1148,8 +1176,14 @@ Dedicated memory on GPUs, which are the main processors used to train and run LL
 
 For example, refer to [[How to Fine-tune LLMs with Unsloth - Complete Guide by Pookie#Which open-source models? Which variants?]] on various model parameters and their correponding VRAM requirements.
 
+## Visceral Hypersensitivity
+#biology #science #disease 
+
 ---
 # W
+
+## Willingness to Pay (WTP)
+#Startup 
 
 ## Wintering
 

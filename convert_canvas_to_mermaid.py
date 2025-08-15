@@ -33,6 +33,18 @@ class CanvasToMermaidConverter:
         # Remove newlines and extra spaces
         text = re.sub(r'\s+', ' ', text.strip())
         
+        # Clean up markdown list markers and numbering
+        text = re.sub(r'^\d+\.\s*', '', text)  # Remove numbered list markers (1. 2. 3.)
+        text = re.sub(r'^[-*+]\s*', '', text)  # Remove bullet point markers (- * +)
+        text = re.sub(r'\s*[-*+]\s*', ' • ', text)  # Convert mid-text bullets to bullet symbol
+        
+        # Remove parenthetical content that might be confusing
+        text = re.sub(r'\s*\([^)]*account\)', '', text, flags=re.IGNORECASE)  # Remove "(account)" references
+        text = re.sub(r'\s*\([^)]*\)', '', text)  # Remove other parenthetical content
+        
+        # Clean up extra spaces again
+        text = re.sub(r'\s+', ' ', text.strip())
+        
         # Escape special characters for Mermaid
         text = text.replace('"', '&quot;')
         text = text.replace("'", '&apos;')
@@ -40,8 +52,8 @@ class CanvasToMermaidConverter:
         text = text.replace('>', '&gt;')
         
         # Limit length for readability
-        if len(text) > 30:
-            text = text[:27] + "..."
+        if len(text) > 40:
+            text = text[:37] + "..."
             
         return text
     
@@ -51,24 +63,71 @@ class CanvasToMermaidConverter:
         clean_id = re.sub(r'[^a-zA-Z0-9]', '', original_id[:8])
         return f"node_{clean_id}" if clean_id else f"node_{hash(original_id) % 10000}"
     
+    def get_node_content(self, node: Dict[str, Any]) -> str:
+        """Extract content from different node types"""
+        node_type = node.get('type', 'text')
+        
+        if node_type == 'text':
+            return node.get('text', 'Unknown')
+        elif node_type == 'file':
+            file_path = node.get('file', '')
+            if file_path:
+                # Extract filename from path
+                filename = file_path.split('/')[-1]
+                # Remove .md extension for cleaner display
+                if filename.endswith('.md'):
+                    filename = filename[:-3]
+                return filename
+            return 'File'
+        elif node_type == 'link':
+            url = node.get('url', '')
+            if url:
+                # Try to extract a meaningful name from URL
+                if 'github.com' in url:
+                    parts = url.split('/')
+                    if len(parts) >= 5:
+                        return f"{parts[-2]} (GitHub)"
+                elif 'huggingface' in url:
+                    return "HuggingFace Course"
+                else:
+                    # Use domain name
+                    try:
+                        from urllib.parse import urlparse
+                        domain = urlparse(url).netloc
+                        return f"Link ({domain})"
+                    except:
+                        return "External Link"
+            return 'Link'
+        elif node_type == 'group':
+            return node.get('label', 'Group')
+        else:
+            return f'{node_type.title()}'
+
     def get_node_style(self, node: Dict[str, Any]) -> str:
         """Determine Mermaid node style based on canvas node properties"""
         node_type = node.get('type', 'text')
         color = node.get('color', '')
+        content = self.get_node_content(node)
         
         # Handle group nodes
         if node_type == 'group':
-            return f'["{self.clean_text(node.get("label", "Group"))}"]'
+            return f'["{self.clean_text(content)}"]'
         
-        # Handle different colors/categories
+        # Handle different node types with appropriate shapes
+        if node_type == 'file':
+            return f'[("{self.clean_text(content)}")]'  # Stadium shape for files
+        elif node_type == 'link':
+            return f'["{self.clean_text(content)}"]'  # Rectangle with dashed border for links
+        
+        # Handle different colors/categories for text nodes
         if color == '#964b00':  # Brown - Hobbits in your example
-            return f'("{self.clean_text(node.get("text", ""))}")'
+            return f'("{self.clean_text(content)}")'
         elif color == '#ffffff':  # White - Gandalf
-            return f'["{self.clean_text(node.get("text", ""))}"]'
+            return f'["{self.clean_text(content)}"]'
         elif color == '3':  # Goblins/Orcs
-            return f'{{"{self.clean_text(node.get("text", ""))}"}}' 
+            return f'{{"{self.clean_text(content)}"}}' 
         else:
-            return f'["{self.clean_text(node.get("text", ""))}"]'
+            return f'["{self.clean_text(content)}"]'
     
     def is_node_in_group(self, node: Dict[str, Any], group: Dict[str, Any]) -> bool:
         """Check if a node is inside a group based on coordinates"""
@@ -150,8 +209,8 @@ class CanvasToMermaidConverter:
         edges = canvas_data.get('edges', [])
         
         # Process nodes
-        node_mapping = {}  # Only for text nodes
-        text_nodes = []
+        node_mapping = {}  # For all non-group nodes
+        content_nodes = []  # All non-group nodes (text, file, link, etc.)
         group_nodes = []
         
         for node in nodes:
@@ -161,8 +220,8 @@ class CanvasToMermaidConverter:
                 group_nodes.append((node_id, node))
                 # Don't add groups to node_mapping - they need special handling
             else:
-                node_mapping[node['id']] = node_id  # Only add text nodes
-                text_nodes.append((node_id, node))
+                node_mapping[node['id']] = node_id  # Add all non-group nodes
+                content_nodes.append((node_id, node))
         
         # Build group hierarchy
         group_hierarchy = self.build_group_hierarchy(group_nodes)
@@ -195,7 +254,7 @@ class CanvasToMermaidConverter:
             
             return assigned
         
-        for node_id, node in text_nodes:
+        for node_id, node in content_nodes:
             if not assign_node_to_group(node_id, node, group_hierarchy):
                 ungrouped_nodes.append((node_id, node))
         
@@ -283,14 +342,14 @@ class CanvasToMermaidConverter:
                     return result
                 
                 # Fallback to coordinate-based search
-                for node_id, node in text_nodes:
+                for node_id, node in content_nodes:
                     if self.is_node_in_group(node, group_node):
-                        node_text = node.get('text', '').lower()
-                        if any(title in node_text for title in ['thorin', 'leader', 'chief', 'king']):
+                        node_content = self.get_node_content(node).lower()
+                        if any(title in node_content for title in ['thorin', 'leader', 'chief', 'king']):
                             return node_id
                 
                 # Last resort: first node in group
-                for node_id, node in text_nodes:
+                for node_id, node in content_nodes:
                     if self.is_node_in_group(node, group_node):
                         return node_id
                         
@@ -340,6 +399,8 @@ class CanvasToMermaidConverter:
             "    classDef men fill:#DEB887,stroke:#333,stroke-width:2px",
             "    classDef creature fill:#DDA0DD,stroke:#333,stroke-width:2px",
             "    classDef group fill:#FFE4B5,stroke:#8B4513,stroke-width:3px,stroke-dasharray: 5 5",
+            "    classDef file fill:#E6F3FF,stroke:#4A90E2,stroke-width:2px",
+            "    classDef link fill:#FFF2E6,stroke:#FF8C00,stroke-width:2px,stroke-dasharray: 3 3",
             "    classDef default fill:#e1f5fe,stroke:#333,stroke-width:2px"
         ])
         
@@ -371,15 +432,22 @@ class CanvasToMermaidConverter:
             return None
         
         for node_id, node in all_nodes:
+            node_type = node.get('type', 'text')
             color = node.get('color', '')
-            if color == '#964b00':
+            
+            # Apply node type styles first
+            if node_type == 'file':
+                mermaid_lines.append(f"    class {node_id} file")
+            elif node_type == 'link':
+                mermaid_lines.append(f"    class {node_id} link")
+            elif color == '#964b00':
                 mermaid_lines.append(f"    class {node_id} hobbit")
             elif color == '#ffffff':
                 mermaid_lines.append(f"    class {node_id} wizard")
             elif color == '3':
                 mermaid_lines.append(f"    class {node_id} orc")
             else:
-                # Classify based on group membership
+                # Classify based on group membership for text nodes
                 group_path = find_node_group_path(node_id, node, group_hierarchy)
                 if group_path:
                     if 'Dwarf' in group_path or 'Dwarves' in group_path:
@@ -434,7 +502,11 @@ def main():
             print(mermaid_content)
             print("```")
         else:
-            output_file = Path(args.output) if args.output else input_file.with_suffix('.md')
+            if args.output:
+                output_file = Path(args.output)
+            else:
+                # Create output filename: "filename.canvas" -> "filename - Mermaid.md"
+                output_file = input_file.with_name(f"{input_file.stem} - Mermaid.md")
             converter.process_file(input_file, output_file)
             
     except Exception as e:
