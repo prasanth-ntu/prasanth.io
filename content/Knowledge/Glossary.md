@@ -106,6 +106,21 @@ The extra return the (active) fund manager can generate over the (passive) index
 ---
 # B
 
+## Basic Healthcare Sum (BHS)
+#singapore #retirement 
+> [!QUOTE] "The Basic Healthcare Sum (BHS) is the estimated savings you need in your MediSave Account for your basic subsidised healthcare needs in old age. It is the maximum amount you can have in your MediSave Account (MA)"
+
+For those who turn 65 in 2025, the BHS is fixed at S$75,500 for the rest of our lives – even though the actual BHS will continue to increase for subsequent cohorts.
+
+The BHS of S$75,500 in 2025 is 5.6% higher than the BHS of S$71,500 set in 2024. In turn, the 2024 BHS of S$71,500 was 4.4% higher than the $68,500 BHS level set in 2023.
+
+The Basic Healthcare Sum (BHS) has generally increased by around 5% each year – slightly higher than the 4% per annum interest we receive on our MediSave balances.
+
+Assuming the BHS increases 5% yearly, in 35 years (at 2060), it would become $75500*(1.05)^{35} = 416459$.
+
+Sources
+- https://www.cpf.gov.sg/service/article/what-is-the-basic-healthcare-sum
+- https://dollarsandsense.sg/cpf-medisave-heres-basic-healthcare-sum-might-look-like-youre-55/#:~:text=What%20Happens%20If%20I'm,are%20credited%20for%20the%20year.&text=N.A.
 ## Bewildered
 #linguistics 
 
@@ -345,6 +360,22 @@ Prostate cancer cells can:
 •	Distant metastasis corresponds to Stage IV (advanced stage) prostate cancer
 •	In TNM staging, it’s often labeled as M1 (M = metastasis)
 
+## Distribution Cost 
+#insurance 
+
+*In the context of Insurance,*
+- Distribution cost = basically **sakes commissions + expenses** the insurer pays to the financial adviser/distribution channel.
+ - They are **front-loaded** in the first few years.
+- This is why if you surrender/cancel early, you usually get **no refund** — because most of what you paid went to distribution costs, not benefits.
+
+For example
+- **Year 1: 109%** → The first year, distribution cost is **more than your first year’s premium** (insurer absorbs the excess, but it means almost all of what you pay goes to cover commissions/admin).
+- **Year 2: 55%** → Over half of your second year’s premium is still distribution cost.    
+- **Year 3: 30%**, 
+- Year 4: 25%, 
+- Year 5: 15%, 
+- Year 6: 15% → Gradually declines.
+- Year 7: 0% → No more commissions.
 ## Dragon in a pinch
 #linguistics #idiom
 
@@ -666,6 +697,14 @@ A trivial or very small person or thing.
 ---
 # M
 
+## Median Absolute Deviation (MAD)
+#Statistics #Math #datascience #machinelearning 
+
+The Median Absolute Deviation (MAD) is ==a robust measure of statistical dispersion, indicating how spread out a dataset is==. It's calculated by first finding the median of the dataset, then determining the absolute difference between each data point and the median, and finally finding the median of those absolute differences. MAD is particularly useful when dealing with datasets that may contain outliers or have non-normal distributions, as it is less sensitive to extreme values than measures like [standard deviation](https://www.google.com/search?sca_esv=fd4a6f8cbbc02fb2&rlz=1C5GCCM_en&cs=1&q=standard+deviation&sa=X&ved=2ahUKEwjHuPeM7pWPAxUKa2wGHQiMFSAQxccNegQIKBAB&mstk=AUtExfBpafNhTptr5E28aps95bvxiOV_5x_D6awkC4FNHd6Hb_chqukcSDUVtC2A7kYg1hJ9H5EO1FJb152OxyYf1P1yAi1jFZZoNINA2n2OalJQ2_cK2Zg72coYXJOwGZxMrUHPXm05bKZH-Fr2eEBAy3x-kBgR7ifcXRy75UHfIAW7dWj9RCN8zp0HnLCXkoVNC2bE&csui=3).
+
+Sources
+- https://en.wikipedia.org/wiki/Median_absolute_deviation
+- 
 ## Metastasis/ Metastasise
 
 To **metastasise** means for **cancer cells *to spread*** from the original (primary) site to **other parts of the body** through the blood or lymphatic system.

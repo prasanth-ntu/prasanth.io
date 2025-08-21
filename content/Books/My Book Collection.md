@@ -71,7 +71,7 @@ Here are the books I've read, currently reading, or plan to read:
     <div class="book-title">Trends - Artificial Intelligence</div>
     <div class="book-author">by Mary Meeker / Jay Simons / Daegwon Chae / Alexander Krey <br>Company: Bond</div>
     <div class="book-summary">Compiles foundational trends with insightful charts/visuals related to AI.</div>
-    <div class="book-status status-in-progress">#InProgress</div>
+    <div class="book-status status-completed">#Completed</div>
   </div>
 </a>
 
@@ -91,6 +91,16 @@ Here are the books I've read, currently reading, or plan to read:
     <div class="book-title">Let's Talk Mutual Funds</div>
     <div class="book-author">by Monika Halan</div>
     <div class="book-summary">A systematic, smart way to make them work for you.</div>
+    <div class="book-status status-in-progress">#InProgress</div>
+</div>
+</a>
+
+<a href="TBA: The Great Mental Models" class="book-card">
+	<div class="book-image"><img src="../Books/attachments/images/the-great-mental-models-vol1-cover.jpg" alt="The Great Mental Models - General Thinking Concepts"></div>
+	<div class="book-content">
+    <div class="book-title">The Great Mental Models: General Thinking Concepts</div>
+    <div class="book-author">by Shane Parrish</div>
+    <div class="book-summary">A simple tool that explains the world.</div>
     <div class="book-status status-in-progress">#InProgress</div>
 </div>
 </a>
