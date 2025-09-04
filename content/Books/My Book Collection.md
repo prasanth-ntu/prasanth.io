@@ -35,6 +35,16 @@ Here are the books I've read, currently reading, or plan to read:
     </div>
   </a>
 
+ <a href="" class="book-card">
+    <div class="book-image"><img src="../Books/attachments/images/mans-search-for-meaning-coverpage.jpg" alt="Man's Search for Meaning cover"></div>
+    <div class="book-content">
+      <div class="book-title">Man's Search for Meaning</div>
+      <div class="book-author">by Viktor Frankl</div>
+      <div class="book-summary">A book for finding purpose and strength in times of great despair.</div>
+      <div class="book-status status-completed">#Completed</div>
+    </div>
+  </a>
+
   <a href="Let's Talk Money.md" class="book-card">
 	  <div class="book-image"><img src="../Books/attachments/images/let's-talk-money-cover.webp" alt="Let's talk money cover"></div>
      <div class="book-content">
@@ -153,6 +163,18 @@ Here are the books I've read, currently reading, or plan to read:
     <div class="book-title">If You Live To 100, You Might As Well Be Happy: Lessons for a Long and Joyful Life: The Korean Bestseller</div>
     <div class="book-author">by Rhee Kun Ho </div>
     <div class="book-summary"><i>Note: Recommended by my book reading club peers.</i></div>
+    <div class="book-status status-to-read">#ToRead</div>
+  </div>
+</a>
+
+<a href="TBA:   
+Dare to Lead: Brave Work, Tough Conversations, Whole Hearts" class="book-card">
+  <div class="book-image"><img src="../Books/attachments/images/dare-to-lead-cover.jpg" alt="  
+Dare to Lead: Brave Work, Tough Conversations, Whole Hearts"></div>
+  <div class="book-content">
+    <div class="book-title">Dare to Lead: Brave Work, Tough Conversations, Whole Heartsr</div>
+    <div class="book-author">by Brene Brown </div>
+    <div class="book-summary"><i>Note: Recommended by senior leader at work.</i></div>
     <div class="book-status status-to-read">#ToRead</div>
   </div>
 </a>

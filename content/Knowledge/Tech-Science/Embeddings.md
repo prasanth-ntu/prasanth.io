@@ -10,8 +10,40 @@ tags:
 # Definition
 > [!SUMMARY] Embedding - The concept of converting text (or other data) into a numerical vector representations, a format that NNs can understand and process.
 
-Refer [[GPT comparison]] for embedding size of different GPT models.
-- For e.g., GPT-1 and GPT-2 Small (both 117M parameters) use an embedding size of 768 dimensions, where as GPT-3 Davinci (175B parameters) use an embedding size of 12,288 dimensions (16x of the former).
+> [!TIP] An "embedding" is a low-dimensional vector representation of a higher-dimensional object (like a geohash, a specific time slot, english words, or the learned behavior from a complex model). The idea is that similar objects will have similar embeddings.
+ 
+# Why should we represent text using vectors?
+> [!IMPORTANT] For a computer to understand human-readable text, we need to convert our text into a machine-readable (i.e., numerical) format.
+
+Language is inherently full of information, so we need a reasonably large amount of data to represent even small amounts of text. [Vectors](https://www.pinecone.io/learn/vector-embeddings/) are naturally good candidates for this format.
+
+We also have two options for vector representation; _sparse_ vectors or _dense_ vectors.
+# Sparse vs. Dense embeddings
+We also have two options for vector representation; _sparse_ vectors or _dense_ vectors.
+
+==Sparse vectors are high-dimensional and primarily composed of zeros==, with each non-zero dimension often representing a specific, explicit feature like a word's presence, while ==dense vectors are lower-dimensional (when compared to sparse vectors) and have mostly non-zero values==, capturing contextual and semantic meaning through learned, abstract relationships between features. Typically, we are taking words and encoding them into very dense, high-dimensional vectors. The abstract meaning and relationship of words are numerically encoded. [^1]
+
+> [!HINT] _Sparse vectors are called sparse because vectors are sparsely populated with information. Typically we would be looking at thousands of zeros to find a few ones (our relevant information). Consequently, these vectors can contain many dimensions, often in the tens of thousands._
+
+> [!HINT] _Dense vectors are still highly dimensional (784-dimensions are common, but it can be more or less). However, each dimension contains relevant information, determined by a neural net — compressing these vectors is more complex, so they typically use more memory._
+
+> [!HINT] Syntax vs. Semantics
+> - **Sparse vectors**: *numerical representations of text syntax*
+> - **Dense vectors**: *numerical representations of text semantic meaning*
+
+![[sparse vs dense vector embeddings for ML.png]][^1]
+
+# Why (Benefits of Embeddings)?
+- **Capturing Semantic Relationships:** Embeddings ==learn a dense vector representation for each category== (e.g., taxi type IDs, geohashes, time contexts). In this vector space, categories with similar meanings or properties will be closer to each other. This allows the model to understand and leverage the underlying relationships between different categories, even if these relationships are not explicitly defined in the raw input. For example, "Premium" and "Standard" taxi types might have closer embeddings than "Premium" and "Bike" if they share more operational characteristics or user behavior patterns.
+- **Efficiency for Large Category Spaces:** When dealing with categorical features that have many unique values (e.g., thousands of geohashes or many different taxi type IDs), one-hot encoding creates a very wide and sparse input vector. This can lead to:
+    - **High Dimensionality:** A large number of input features, increasing model complexity and training time.
+    - **Sparsity:** Most values in the one-hot encoded vector are zero, which can make it harder for models to learn meaningful patterns and require more data.
+    - **Lack of Generalization:** One-hot encoding treats each category as completely independent, so the model cannot generalize well to unseen categories or leverage similarities between existing ones.
+# How (Embeddings achieve these benefits)?
+- **Learning Representations:** Embeddings are typically learned during the model training process (e.g., as part of a neural network). An embedding layer maps each categorical ID to a dense vector of a predefined size (e.g., 8, 16, 32 dimensions). These vectors are initialized randomly and then adjusted via backpropagation as the model learns to minimize its loss function.
+- **Dimensionality Reduction:** Instead of a sparse vector with potentially thousands of dimensions (for one-hot encoding), an embedding reduces the representation to a much smaller, dense vector. This makes the input more compact and efficient for the neural network to process.
+- **Semantic Closeness:** ==The learning process encourages categories that frequently co-occur or have similar impacts on the prediction task to have similar embedding vectors. This effectively "encodes" the semantic relationships into the numerical space==.
+- **Example in Uber context:** For "taxi type ids", embeddings for different taxi types would allow the model to understand which types are similar (e.g., premium variants) and which are distinct (e.g., 2-wheelers vs. 4-wheelers), even if the model hasn't seen every single permutation of these types in specific scenarios. Similarly, for "GH & Time embeddings", embeddings can capture that certain geohashes have similar supply-demand patterns or user behaviors during specific time slots.
 # Different type of embeddings
 
 | Type of Embedding                     | Definition                                                      | Purpose                                                                                   | Example                                               |
@@ -63,6 +95,10 @@ The key difference between **word embeddings** (like Word2Vec or GloVe) and **co
 | **Efficiency**      | Lightweight and computationally efficient        | Computationally expensive due to the deep [[Transformer Model\|transformer]] architecture |
 | **Inference Speed** | Faster as embeddings are precomputed and static. | Slower as embeddings are generated dynamically for each input                             |
 
+# Embeddings Size
+Refer [[GPT comparison]] for embedding size of different GPT models.
+- For e.g., GPT-1 and GPT-2 Small (both 117M parameters) use an embedding size of 768 dimensions, where as GPT-3 Davinci (175B parameters) use an embedding size of 12,288 dimensions (16x of the former).  
+
 # Embedding vectors using `models/text-embedding-004` from Google `gemini`
 Source: [[Google-5-Day-Gen-AI-Intensive-Course#[Day 2 - Embeddings and similarity scores [TP (https //www.kaggle.com/code/prasanth07/day-2-embeddings-and-similarity-scores-tp)|Google5-Day-Gen-AI-Intensive-Course > Embeddings]]
 
@@ -77,3 +113,5 @@ Here's a breakdown:
 > [!NOTE] However, in the context of semantic similarity with this type of embedding, the scores typically range from 0.0 (completely dissimilar) to 1.0 (completely similar) as mentioned in the heatmap description.
 4. **Matrix Self-Multiplication (`df @ df.T`):** If our embedding vectors are stored in a matrix or DataFrame `df`, where each row is an embedding vector for a piece of text, the operation `df @ df.T` performs matrix multiplication of the DataFrame by its transpose. This creates a similarity matrix showing the pairwise similarity between all texts in our list.
 5. **Heatmap Visualization:** The resulting similarity matrix can be visualized as a heatmap. As the text describes, a range from 0.0 (completely dissimilar) to 1.0 (completely similar) is depicted from light (0.0) to dark (1.0). This allows you to quickly see which texts in your list are most similar to each other based on their embedding vectors.
+
+[^1]: https://www.pinecone.io/learn/series/nlp/dense-vector-embeddings-nlp/

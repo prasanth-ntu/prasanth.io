@@ -1,3 +1,8 @@
+---
+draft: true
+---
+
+
 - [Obsidian Site Inspirations](#Obsidian%20Site%20Inspirations)
 - [Books to read](#Books%20to%20read)
 - [Blogs & Papers to read](#Blogs%20&%20Papers%20to%20read)
@@ -85,6 +90,7 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 - [ ] Crew AI use case
 	- [ ] https://www.analyticsvidhya.com/blog/2024/10/email-sorting-using-crewai/
 	- [ ] https://www.toolify.ai/ai-news/automate-email-responses-with-ai-agents-integrate-crewai-langgraph-2343138
+- [ ] https://developers.googleblog.com/en/introducing-langextract-a-gemini-powered-information-extraction-library/
 
 # News
 - [ ] ['We are not for sale,' ChatGPT boss says after Musk bid](https://www.bbc.com/news/articles/cpdx75zgg88o.amp)
@@ -115,6 +121,8 @@ Source: https://www.gapingvoid.com/semiotic-management-systems/
 - [ ] [Introduction to NotebookLM](https://notebooklm.google.com/) by Google
 
 # Techniques/Topics/Terms to learn
+- [ ] Vibe coding: [How To Get The Most Out Of Vibe Coding | Startup School](https://www.youtube.com/@ycombinator)
+- [ ] 
 - [ ] `await`, `async`, `asyncio` - #InProgress 
 - [ ] [[Decorators]] - #InProgress
 - [ ] MMLU (Massive Multitask Language Understanding)

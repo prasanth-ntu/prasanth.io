@@ -37,9 +37,10 @@ The region 1q43-44 on chromosome 1 is associated with a syndrome characterized b
 
 Functions that enable neural networks to learn non-linear relationships between features and the label.
 
-Popular activation functions include **ReLU** and **Sigmoid**.
+Popular activation functions include **[[Activation Functions#Rectified Linear Unit (ReLU)|ReLU]]** and **Sigmoid**.
 
 For more details, refer to [Google Developers ML Course](https://developers.google.com/machine-learning/crash-course/neural-networks/activation-functions) and [Keras Activations](https://keras.io/api/layers/activations/).
+Alternatively, refer to my notes on [[Activation Functions]].
 
 ## Adenocarcinoma
 #medical
@@ -224,6 +225,18 @@ Source: https://www.mayoclinic.org/diseases-conditions/cardiomyopathy/symptoms-c
 ## Central Provident Fund (CPF)
 #finance #singapore
 
+## Civil Aviation Authority of Singapore (CAAS)
+#singapore #aviation
+
+
+## Concave
+
+**Concave function**
+- A concave function is one where the line segment connecting any two points on the graph of the function lies below or on the graph.
+
+Sources
+- [concave-convex.ipynb](https://colab.research.google.com/gist/prasanth-ntu/be0e982cce3f4f255f86d10c5924d9e4/concave-convex.ipynb) | [[Functions#Convex and concave function|convex and concave function]]
+
 ## Conformité Européenne (CE Mark)
 #regulatory
 
@@ -239,6 +252,13 @@ A secret plan by a group to do something unlawful or harmful.
 
 Similar words: plot, scheme, plan
 
+## Convex 
+
+**Convex function**
+- A convex function is one where the line segment connecting any two points on the graph of the function lies above or on the graph.
+
+Sources
+- [concave-convex.ipynb](https://colab.research.google.com/gist/prasanth-ntu/be0e982cce3f4f255f86d10c5924d9e4/concave-convex.ipynb) | [[Functions#Convex and concave function|convex and concave function]]
 ## Coarse
 #linguistics
 
@@ -552,6 +572,9 @@ What do they do?
 - Diagnoses **cancers** (e.g., prostate cancer, kidney cancer, bladder cancer)
 - Identifies **non-cancerous conditions** (like infections, inflammation, or benign tumors)
 - Works closely with **urologists** and **oncologists** to guide treatment decisions
+
+## Government Technology Agency (GovTech)
+#singapore #techology 
 
 ## GPT-Generated Unified Format (GGUF)
 #machinelearning #deeplearning #LLM 
@@ -932,11 +955,16 @@ Gold and Real estate
 
 ## Recession
 
+
 ## Recurrent Neural Network ([[RNN]])
 
 A type of neural network designed for sequential data processing, where connections between nodes form a directed graph along a temporal sequence.
 
 ## Recurring Deposit (RD)
+#finance 
+
+## REINFORCE Leave One-Out (RLOO)
+Resources: https://huggingface.co/blog/putting_rl_back_in_rlhf_with_rloo
 
 ## Regularization and Regularization Rate (λ)
 
@@ -962,12 +990,11 @@ A regularization rate (lambda) controls the strength of regularization, with hig
 
 For more details, refer to [Google Developers](https://developers.google.com/machine-learning/crash-course/overfitting/model-complexity).
 
+## Request for Comments (RFC)
+
 ## [[RESTful API]]
 
 A software architectural style that defines a set of constraints for creating web services.
-
-## REINFORCE Leave One-Out (RLOO)
-Resources: https://huggingface.co/blog/putting_rl_back_in_rlhf_with_rloo
 
 ## [[RoBERTa]]
 

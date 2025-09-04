@@ -30,6 +30,9 @@
 
 [[How to be Successful]] by [[Sam Altman]]
 
+> [!QUOTE] You don't need to see the whole staircase, just take the first step.
+> *Martin Luther King Jr.*
+ 
 # Reflections
 - [[2025-02-01 Reflections on Meeting with Magesh]]
 

@@ -7,7 +7,7 @@
 		- [[Obsidian]]
 	- [[Knowledge/Startups-BigTechs/Index|Startups]]
 		- Yet to be added
-	- [[Knowledge/Finance/Index|Finance]]
+	- [[Miscellaneous/Finance/Index|Finance]]
 		- Yet to be added
 - [[Courses/Index|Recent Courses]]
 	- [[DeepLearning.AI - Functions, Tools and Agents with LangChain]]
