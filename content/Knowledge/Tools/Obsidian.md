@@ -228,6 +228,7 @@ Example: Without custom css
 - <picture class="animated-emoji"><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f613/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f613/512.gif" alt="✅" width="25" height="25"></picture>
 ---
 # Updating the Site
+Quartz requires at least [Node](https://nodejs.org/)  and `npm` to function correct. For more details, refer [Get Started](https://quartz.jzhao.xyz/)
 ## Key commands
 - **Building the quartz**
 	- This will start a local web server to run our Quartz on our computer. We can view it at `http://localhost:8080/`
