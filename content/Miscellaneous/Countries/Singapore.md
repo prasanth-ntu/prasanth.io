@@ -7,6 +7,11 @@ Decoupling is not longer a property hack to avoid Additional Buyers Stamp Duty (
 # GovTech
 > GovTech Singapore joins the Global Signal Exchange, a network sharing scam intelligence to combat scams globally. [^6]
 
+# Data centers
+> The report cited a 2023 study commissioned by Amazon Web Services which found that data centres add more than $2 billion annually to Singapore’s economy – nearly half the size of the total retail sector and larger than the entire hospitality sector.[^7]
+> Looking ahead, data centres in Singapore are projected to drive a 2.8-fold increase in jobs and an 8.9-fold growth in economic contribution by 2030 compared to 2022 levels, said the APDCA report.[^7] 
+> On a per hectare basis, data centres deliver $59.9 million in economic value, which is almost double the national average.[^7]
+
 # Scam
 
 > Scam victims in Singapore lost S$456m in first half of 2025 with almost 20,000 cases reported.[^2]
@@ -40,3 +45,5 @@ A 4 km (2.5 mi) long, twin-track [rapid transit](https://en.wikipedia.org/wik
 [^5]: 
 
 [^6]: https://www.straitstimes.com/singapore/courts-crime/spores-govtech-becomes-first-govt-agency-worldwide-to-join-global-scam-intelligence-network?utm_medium=social&utm_source=whatsapp&utm_campaign=stwa
+
+[^7]: https://www.straitstimes.com/business/companies-markets/data-centres-to-drive-near-threefold-jump-in-singapore-jobs-wages-higher-than-national-average

@@ -227,21 +227,6 @@ Example: Without custom css
 **Example: With custom css class in quartz styles**
 - <picture class="animated-emoji"><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f613/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f613/512.gif" alt="✅" width="25" height="25"></picture>
 ---
-
-# Env setup
-Quartz requires at least [Node](https://nodejs.org/)  and `npm` to function correct. For more details, refer [Get Started](https://quartz.jzhao.xyz/)
-# Github repo setup
-```bash
-# Clone the repo locally
-git clone https://github.com/prasanth-ntu/prasanth.io
-
-# list all the repositories that are tracked
-git remote -v
-
-# if you don't have upstream as a remote, add it so updates work
-git remote add upstream https://github.com/jackyzha0/quartz.git
-```
-
 # Updating the Site
 ## Key commands
 - **Building the quartz**

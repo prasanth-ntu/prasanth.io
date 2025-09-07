@@ -1169,6 +1169,9 @@ Systolic (The Squeezing Phase)
 
 ---
 # T
+## Taxonomy
+#NLP #datascience 
+A hierarchical and semantic classification system that organizes entities for structured understanding and retrieval, consists of the category tree and attribute trees.
 
 ## [[Text Classification]]
 
