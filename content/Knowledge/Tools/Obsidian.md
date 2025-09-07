@@ -57,6 +57,26 @@ Block comments can span multiple lines.
 %%
 ```
 
+### Rendering images
+**Custom image size with caption and background color**
+
+```html
+<div style="text-align: center;">
+
+<img src="Llama-pre-training-data-details.png" alt="Llama pre-training data details" style="max-width: 400px; height: auto; background-color: white; display: block; margin: 0 auto;">
+
+<p style="font-size: 0.9em; color: #666; margin: 4px 0 0 0; font-style: italic;">Figure: Llama pre-training data details showing the composition and sources of training data used in the model</p>
+
+</div>
+```
+<div style="text-align: center;">
+
+<img src="Llama-pre-training-data-details.png" alt="Llama pre-training data details" style="max-width: 400px; height: auto; background-color: white; display: block; margin: 0 auto;">
+
+<p style="font-size: 0.9em; color: #666; margin: 4px 0 0 0; font-style: italic;">Figure: Llama pre-training data details showing the composition and sources of training data used in the model</p>
+
+</div>
+
 ## Obsidian Flavored Markdown
 
 | Syntax          | Description                                                                                                               | Example                                                                                                                    |
