@@ -33,6 +33,56 @@
 > [!TIP] Most interesting combination: ==RAG + Finetuning==
 
 ## LLM Training
+###  LLM Training Pipeline
+
+```mermaid
+%%{init: {
+  "flowchart": {
+    "nodeSpacing": 20,
+    "rankSpacing": 35,
+    "padding": 2
+  }
+}}%%
+flowchart TD
+    A[<b>Pre-training data</b><br>Raw Text Data<br/>Common Crawl, Wikipedia,<br/>Books, Code, etc.] --> B[<b>Pre-training Phase</b>]
+    
+    B --> C[<b>Base Model</b><br/>Next-token prediction<br/>Language understanding<br/>Background knowledge]
+    
+    C --> D{<b>Post-training<br/>Phase</b>}
+    
+    D --> E[<b>Supervised Fine-tuning</b><br/>SFT]
+    D --> F[<b>Model Alignment</b><br/>RLHF/DPO/PPO]
+    D --> G[<b>Reasoning Training</b><br/>GRPO]
+    
+    E --> E1[<b>Instruction Tuning</b><br/>Follow instructions]
+    E --> E2[<b>Chat Tuning</b><br/>Conversation ability]
+    
+    F --> F1[<b>Human Preference</b><br/>Safety & alignment]
+    F --> F2[<b>Chosen vs Rejected</b><br/>Response pairs]
+    
+    G --> G1[<b>Math & Science</b><br/>Reasoning chains]
+    G --> G2[<b>Step-by-step</b><br/>Problem solving]
+    
+    E1 --> H[<b>Final Model</b>]
+    E2 --> H
+    F1 --> H
+    F2 --> H
+    G1 --> H
+    G2 --> H
+    
+    H --> I[Deployment<br/>Inference]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style C fill:#e8f5e8
+    style D fill:#fff3e0
+    style E fill:#fce4ec
+    style F fill:#f1f8e9
+    style G fill:#e0f2f1
+    style H fill:#ffebee
+    style I fill:#e3f2fd
+```
+
 ### Pre-training & Post-training
 
 > [!QUESTION] How are LLM trained?
@@ -40,7 +90,7 @@
 > [!HINT] It all starts with Transformers
 > 
 
-<p><a href="https://commons.wikimedia.org/wiki/File:Transformer,_full_architecture.png#/media/File:Transformer,_full_architecture.png"><img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png" alt="Transformer, full architecture.png" height="720" width="684"></a><br>By dvgodoy - <a rel="nofollow" class="external free" href="https://github.com/dvgodoy/dl-visuals/?tab=readme-ov-file">https://github.com/dvgodoy/dl-visuals/?tab=readme-ov-file</a>, <a href="https://creativecommons.org/licenses/by/4.0" title="Creative Commons Attribution 4.0">CC BY 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=151216016">Link</a></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Transformer,_full_architecture.png#/media/File:Transformer,_full_architecture.png"><img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png" alt="Transformer, full architecture.png" height="720" width="684" style="background-color: white;"></a><br>By dvgodoy - <a rel="nofollow" class="external free" href="https://github.com/dvgodoy/dl-visuals/?tab=readme-ov-file">https://github.com/dvgodoy/dl-visuals/?tab=readme-ov-file</a>, <a href="https://creativecommons.org/licenses/by/4.0" title="Creative Commons Attribution 4.0">CC BY 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=151216016">Link</a></p>
 
 > [!INFO] 1) Pre-training
 >**Phase**
@@ -56,9 +106,13 @@
 > - Gain background knowledge
 >   
 > **Resources**
-> -  [Llama paper](https://arxiv.org/pdf/2302.13971) > Table 1: Pre-training data
+> -  [Llama paper](https://arxiv.org/pdf/2302.13971) > Table 1: Pre-training data (*refer figure below*)
 > - [common crawl sample](https://huggingface.co/datasets/agentlans/common-crawl-sample) 
 
+<div style="text-align: center;">
+<img src="Llama-pre-training-data-details.png" alt="Llama pre-training data details" style="max-width: 400px; height: auto; background-color: white; display: block; margin: 0 auto;">
+<p style="font-size: 0.9em; color: #666; margin: 4px 0 0 0; font-style: italic;">Figure: Llama pre-training data details showing the composition and sources of 4.8TB of training data used in the model</p>
+</div>
 
 > [!INFO] 2.1) Post-Training
 >**Phase**
@@ -75,10 +129,12 @@
 > - Demonstrate intended behaviour
 >   
 > **Resources**
-> -  [Llama 3 paper](https://arxiv.org/pdf/2407.21783) > Table 7: Statistics of SFT data
+> -  [Llama 3 paper](https://arxiv.org/pdf/2407.21783) > Table 7: Statistics of SFT data (*refer figure below*)
 > - [alpaca dataset (instruction tuning)](https://huggingface.co/datasets/yahma/alpaca-cleaned)
 > - [gaunaco (conversation tuning)](https://huggingface.co/datasets/philschmid/guanaco-sharegpt-style)
 > - [paul graham dataset (conversation tuning)](https://huggingface.co/datasets/pookie3000/pg_chat)
+
+![[Llama3-sft-data-stats.png]]
 
 > [!INFO] 2.2) Post-training
 > **Phase**
@@ -93,7 +149,8 @@
 >   
 > **Resources**
 > - [descriptiveness-sentiment-trl instruction tuning](https://huggingface.co/datasets/trl-internal-testing/descriptiveness-sentiment-trl-style)
-> - [llama3 paper](https://arxiv.org/pdf/2407.21783) > 4. Post-Training
+> - [llama3 paper](https://arxiv.org/pdf/2407.21783) > Section *4. Post-Training*
+
 
 > [!INFO] 2.3 Post-training
 > **Phase**
@@ -178,7 +235,7 @@ For mode details, refer [QLORA: Efficient Finetuning of Quantized LLMs](https://
 > - 🤓
 > 
 > **gguf variant**
-> - never when finetuning only when doing inference
+> - never when finetuning, only when doing inference
 
 ### Model naming conventions explained
 
@@ -277,7 +334,7 @@ The notebook ([GitHub](https://github.com/prasanth-ntu/pookie-llm-finetuning-res
 > 7. **Saving the Model**
 > 	1. **Converting base model in GGUF format**
 > 		1. Using standalone python code locally and `modal` in cloud : [gguf-conversion/gguf_base_model.py](https://github.com/prasanth-ntu/pookie-llm-finetuning-resources/blob/main/gguf-conversion/gguf_base_model.py)
-> 			- [prasanthntu/Llama-3.2-3B-guide-GGUF](https://huggingface.co/prasanthntu/Llama-3.2-3B-guide-GGUF)
+> 			- [`prasanthntu/Llama-3.2-3B-guide-GGUF`](https://huggingface.co/prasanthntu/Llama-3.2-3B-guide-GGUF)
 > 	2. **Saving LoRA adapter (in PeFT LoRA & GGUF)**
 > 		1. From google colab directly
 > 			- [`prasanthntu/Llama-3.2-3B-ascii-cats-lora`](https://huggingface.co/prasanthntu/Llama-3.2-3B-ascii-cats-lora)
@@ -388,7 +445,7 @@ The notebook ([GitHub](https://github.com/prasanth-ntu/pookie-llm-finetuning-res
 > 1. **Installation of Libraries**
 > 2. **Loading the Base Model**
 > 	- `meta-llama/Llama-3.2-8B-Instruct-bnb-4bit` (or)
-> 	- `meta-llama/Llama-3.2-8B-Instruct`m and mention 4-bit quantization
+> 	- `meta-llama/Llama-3.2-8B-Instruct` and mention 4-bit quantization
 > 3. **Adding LoRA Adapter to Base Model and Patching with Unsloth**
 > 4. **Dataset Preparation & Visualization**
 > 	- [`pookie3000/pg_chat`](https://huggingface.co/datasets/pookie3000/pg_chat) using [`generate_chat_dataset.py`](https://github.com/prasanth-ntu/pookie-llm-finetuning-resources/blob/main/dataset-preparation/conversation-tuning/generate_chat_dataset.py)
@@ -455,10 +512,10 @@ What about you? What brings you here today?
 - Usage example
 ![[open-webui-pg-guide-model-example.png]]
 ![[open-webui-pg-guide-example-2.png]]
-
+> [!TIP] At the time of installation, `open-webui` needs [Python3.11](https://github.com/open-webui/open-webui?tab=readme-ov-file#installation-via-python-pip-). So, install this in a seperate venv.
 #### `llama-server`
 - Run the model using `llama-server` command
-	- Command: `lama-server --hf-repo prasanthntu/Meta-Llama-3.1-8B-q4_k_m-paul-graham-guide-GGUF --hf-file unsloth.Q4_K_M.gguf`
+		- Command: `lama-server --hf-repo prasanthntu/Meta-Llama-3.1-8B-q4_k_m-paul-graham-guide-GGUF --hf-file unsloth.Q4_K_M.gguf`
 	- API Example:
 ```bash
 curl --location 'http://127.0.0.1:8080/v1/chat/completions' --header 'Content-Type: application/json' --data '{
@@ -567,6 +624,169 @@ curl --location 'http://127.0.0.1:8080/v1/chat/completions' --header 'Content-Ty
 - [prasanthntu/Meta-Llama-3.1-8B-Instruct-Paul-Graham-LORA](https://huggingface.co/prasanthntu/Meta-Llama-3.1-8B-Instruct-Paul-Graham-LORA) - PEFT LoRA adapter
 - [prasanthntu/Meta-Llama-3.1-8B-q4_k_m-paul-graham-guide-GGUF](https://huggingface.co/prasanthntu/Meta-Llama-3.1-8B-q4_k_m-paul-graham-guide-GGUF) - Merged base model with LoRA adapter, and saved in GGUF format
 
+---
+## 3. Reasoning model fine-tuning
+
+### Notebook explained
+The notebook ([GitHub](https://github.com/prasanth-ntu/pookie-llm-finetuning-resources/tree/main/finetuning/unsloth)) walks through the steps of using the Unsloth library for parameter-efficient finetuning (specifically using LoRA) of a large language model (LLM) on a custom dataset. The goal is to ==finetune a reasoning model==.
+
+> [!SUMMARY] Key contents of the notebook
+> 1. **Installation of Libraries**
+> 2. **Loading the Base Model**
+> 	- `Qwen/Qwen2.5-3B-Instruct` and still quantizing it to 4 bits, as training GRPO requires lot more memory.
+> 3. **Adding LoRA Adapter to Base Model and Patching with Unsloth**
+> 4. **Dataset Preparation & Visualization**
+> 	- [`openai/gsm8k`](https://huggingface.co/datasets/openai/gsm8k/viewer/main/train?row=0&views%5B%5D=main_train) - Dataset from openai
+> 		- GSM8K (Grade School Math 8K) is a dataset of 8.5K high quality linguistically diverse grade school math word problems. The dataset was created to support the task of question answering on basic mathematical problems that require multi-step reasoning.	 
+> 	-  [[#Reward functions Summary]] - 5 reward functions in total
+> 5. **Training the Model**
+>    > [!TIP] Interesting stats
+>    > - `Num examples = 7,473 | Num Epochs = 1 | Total steps = 250` 
+>    >  - `Batch size per device = 6 | Gradient accumulation steps = 1`
+>    >   - `Data Parallel GPUs = 1 | Total batch size (6 x 1 x 1) = 6`
+>    > 	  - Since we set `num_generations=6`, `per_device_train_batch_size=1`, `gradient_accumulation_steps=1` (meaning one unique prompt is processed per step before gradient accumulation) and we have `max_steps=250`, the training will only over 250 unique input records from the dataset. For each of the 250 unique input records, the model will generate 6 different responses, and these responses will be used to calculate rewards and update the model.
+>    > - `Trainable parameters = 59,867,136 of 3,145,805,824 (1.90% trained)`
+>    > 	- Only ~2% of the model params are trained
+>    > - Took ~2 hrs in Google Colab T4 GPU instance
+>    > - Reward at each training step increases => Model reasoning and completion gets better over time.
+>    > 	- ![[Reward-vs-step-grpo-reasoning-model-finteuning.png]]
+>    > 	- ![[Reward-vs-step-grpo-reasoning-model-finteuning-2.png]]
+>    > - Training results can be found [here](https://docs.google.com/spreadsheets/d/1FsmSHsd1Nuzcx_2zi7rQUHNhBJ48cnd4s8S2irSQ7Uc/edit?gid=0#gid=0). 
+> 6. **Inference**
+> 7. **Saving the Model**
+> 	1. **Saving LoRA adapter (in PeFT LoRA)**
+> 		1. From google colab directly
+> 			- [`prasanthntu/Meta-Llama-3.1-8B-Instruct-Paul-Graham-LORA`](https://huggingface.co/prasanthntu/Meta-Llama-3.1-8B-Instruct-Paul-Graham-LORA)
+> 	2. **Merge model with LoRA weights and save to GGUF**
+> 		1.  From google colab directly
+> 			- [`prasanthntu/Meta-Llama-3.1-8B-q4_k_m-paul-graham-guide-GGUF`](https://huggingface.co/prasanthntu/Meta-Llama-3.1-8B-q4_k_m-paul-graham-guide-GGUF) 
+> 8. **Loading Saved Model (for continued finetuning or inference)**
+> 	1. From google colab directly
+
+### Reward functions Summary
+These functions are crucial for training the model using RL (specifically, GRPO in this case). They provide feedback to the model based on the quality of its generated responses.
+Reward functions are inspired from [willccbb](https://gist.github.com/willccbb)/**[grpo_demo.py](https://gist.github.com/willccbb/4676755236bb08cab5f4e54a0475d6fb)**
+
+| Reward Function             | Description                                                                                                        | Reward Value                                |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------- |
+| `correctness_reward_func`   | Rewards based on whether the extracted answer from the model's completion exactly matches the ground truth answer. | 2.0 for correct, 0.0 for incorrect          |
+| `int_reward_func`           | Rewards if the extracted answer consists only of digits.                                                           | 0.5 for digit-only, 0.0 otherwise           |
+| `strict_format_reward_func` | Rewards if the completion strictly adheres to the defined XML format, including specific newline characters.       | 0.5 if strict format matches, 0.0 otherwise |
+| `soft_format_reward_func`   | Rewards if the completion generally follows the XML format, allowing for more flexible whitespace.                 | 0.5 if soft format matches, 0.0 otherwise   |
+| `xmlcount_reward_func`      | Calculates a reward based on the count and positioning of XML tags, with penalties for trailing characters.        | Varies (based on tag count and position)    |
+
+> [!ERROR] Due to `llama-cpp-python` installation issue, I cannot run this inference completion notebook in mac locally
+> 
+
+Sample output generated during inference: ![[lora-reasoning-model-finetunung-output-1.png]]
+![[lora-reasoning-model-finetunung-output-2.png]]
+### Running the models locally in Mac
+> [!WARNING] Seems the model is failing quite frequently.
+#### `llama-server`
+- Run the model using `llama-server` command
+		- Command: `lama-server --hf-repo prasanthntu/Qwen2.5-3B-Reasoning-GGUF --hf-file unsloth.Q4_K_M.gguf`
+	- UI Example: ![[qwen-25-finetuned-reasoning-model-example.png]]
+	- API Example:
+```bash
+curl --location 'http://127.0.0.1:8080/v1/chat/completions' \
+--header 'Content-Type: application/json' \
+--data '{
+    "model": "any-model", 
+    "messages": [
+      {
+        "role": "user",
+        "content": "How many r'\''s are in the word strawberry?"
+        
+      }
+    ],
+    "max_tokens": 100
+  }'
+```
+
+```json
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "There is one \"r\" in the word \"strawberry\"."
+            }
+        }
+    ],
+    "created": 1757208988,
+    "model": "any-model",
+    "system_fingerprint": "b6390-a8128382",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 15,
+        "prompt_tokens": 18,
+        "total_tokens": 33
+    },
+    "id": "chatcmpl-4mGCRbxtywJbNmJ6GeNBbwCOIbhl7In5",
+    "timings": {
+        "prompt_n": 5,
+        "prompt_ms": 64.797,
+        "prompt_per_token_ms": 12.959399999999999,
+        "prompt_per_second": 77.16406623763446,
+        "predicted_n": 15,
+        "predicted_ms": 275.508,
+        "predicted_per_token_ms": 18.3672,
+        "predicted_per_second": 54.44488000348448
+    }
+}
+```
+
+### `ollama` in terminal
+- Get the latest qwen2.5 3B [template](https://ollama.com/library/qwen2.5:3b/blobs/eb4402837c78) from ollama
+> [!WARNING] Without this template in `ModelFile`, ollama with built in UI works, but fails with external UI `open-webui` 
+- `git clone https://huggingface.co/prasanthntu/Qwen2.5-3B-Reasoning-GGUF
+- Create/Update the `ModelfileQwen25_3B` (code) with the downloaded model path
+- Run: `ollama create qwen-reasoning-prasanthntu -f ModelfileQwen25_3B`
+```bash
+$ ollama list 
+NAME                                 ID              SIZE      MODIFIED      
+qwen-reasoning-prasanthntu:latest    d79db9d91c3c    1.9 GB    5 seconds ago    
+pg-guide-prasanthntu:latest          27a53c37bbd0    4.9 GB    17 hours ago     
+deepseek-r1:8b                       6995872bfe4c    5.2 GB    2 days ago       
+gemma3:1b                            8648f39daa8f    815 MB    2 days ago     
+```
+- Run the model in terminal
+```
+(.venv) ➜ ollama run qwen-reasoning-prasanthntu:latest
+>>> How many 'r's in the word strawberry?
+ How many times does letter r occur in the world "strawberry"?
+To determine how many times the letter 'r' occurs in the word "strawberry," we can 
+go through the word character by character and count each occurrence of the letter 
+'r.' Let's do this step by forgetful.
+1. The first letter is 's,' not 'r.'
+2. The second letter is 't,' not 'r.'
+3. The third letter is 'r,' so we found one occurrence of 'r.'
+4. The fourth letter is 'a,' not 'r.'
+5. The fifth letter is 'w,' not 'r.'
+6. The sixth letter is 'r,' so we found another occurrence of 'r.'
+7. The seventh letter is 'b,' not 'r.'
+8. The eighth letter is 'r,' so we found yet another occurrence of 'r.'
+9. The ninth letter is 'a,' not 'r.'
+
+In the word "strawberry," the letter 'r' appears 3 times. Therefore, the final 
+answer is:
+\boxed{3}
+```
+### ollama with built in UI
+![[qwen-reasoning-model-ollama-with-built-in-ui.png]]
+#### `ollama with open-webui`
+- Install `open-webui`: https://github.com/open-webui/open-webui
+- Run `open-webui serve`
+- Open http://localhost:8080/ 
+- Usage example![[qwen-reasoning-model-ollama-with-openwebui-1.png]]
+![[qwen-reasoning-model-ollama-with-openwebui-2.png]]
+> [!TIP] At the time of installation, `open-webui` needs [Python3.11](https://github.com/open-webui/open-webui?tab=readme-ov-file#installation-via-python-pip-). So, install this in a seperate venv.
+### HF models explained
+- [prasanthntu/llama-3.1-8B-Instruct-Reasoning-lora](https://huggingface.co/prasanthntu/llama-3.1-8B-Instruct-Reasoning-lora) - PEFT LoRA adapter
+> [!WARNING] This is a typo while saving the model (Indeed, it should have been Qwen2.5-3B-Reasoning-lora)
+- [`prasanthntu/Qwen2.5-3B-Reasoning-GGUF`](https://huggingface.co/prasanthntu/Qwen2.5-3B-Reasoning-GGUF/blob/main/unsloth.Q4_K_M.gguf) - Merged base model with LoRA adapter, and saved in GGUF format
 
 ---
 # Appendix

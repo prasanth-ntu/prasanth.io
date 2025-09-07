@@ -93,6 +93,13 @@ The extra return the (active) fund manager can generate over the (passive) index
 #biology 
 
 (*Biology*) Tip or bottom point of the heart.
+
+## Arxiv
+#techology #science #ResearchPaper #research
+
+**Extract from [Wikipedia](https://en.wikipedia.org/wiki/ArXiv)**
+**arXiv** (pronounced as "[archive](https://en.wikipedia.org/wiki/Archive "Archive")"—the X represents the [Greek letter chi](https://en.wikipedia.org/wiki/Chi_\(letter\) "Chi (letter)") ⟨χ⟩) is an [open-access repository](https://en.wikipedia.org/wiki/Open-access_repository "Open-access repository") of electronic [preprints](https://en.wikipedia.org/wiki/Preprint "Preprint") and [postprints](https://en.wikipedia.org/wiki/Postprints "Postprints") (known as [e-prints](https://en.wikipedia.org/wiki/E-prints "E-prints")) approved for posting after moderation, but not [peer reviewed](https://en.wikipedia.org/wiki/Scholarly_peer_review "Scholarly peer review"). It consists of [scientific papers](https://en.wikipedia.org/wiki/Scientific_papers "Scientific papers") in the fields of [mathematics](https://en.wikipedia.org/wiki/Mathematics "Mathematics"), [physics](https://en.wikipedia.org/wiki/Physics "Physics"), [astronomy](https://en.wikipedia.org/wiki/Astronomy "Astronomy"), [electrical engineering](https://en.wikipedia.org/wiki/Electrical_engineering "Electrical engineering"), [computer science](https://en.wikipedia.org/wiki/Computer_science "Computer science"), [quantitative biology](https://en.wikipedia.org/wiki/Quantitative_biology "Quantitative biology"), [statistics](https://en.wikipedia.org/wiki/Statistics "Statistics"), [mathematical finance](https://en.wikipedia.org/wiki/Mathematical_finance "Mathematical finance"), and [economics](https://en.wikipedia.org/wiki/Economics "Economics"), which can be accessed online.
+
 ## Asset class
 #finance
 
@@ -355,6 +362,12 @@ Indicate the exact position of (a border or boundary)
 
 **Simiilar words**: describe, depict
 
+## Direct Preference Optimization (DPO)
+#datascience #artificialintelligence #LLM #AGI 
+
+Direct preference optimization (DPO) is a new method that helps large, unsupervised language models better match human preferences using a simple classification approach.[^1]
+
+
 ## Distant metastasis
 #medical
 
@@ -589,7 +602,7 @@ Key points about GGUF:
 - GGUF is tightly integrated with projects like llama.cpp and supported by tools in the broader open-source LLM ecosystem, such as Hugging Face Transformers.
 
 ## Group Relative Policy Optimization (GRPO)
-#LLM #datascience 
+#LLM #datascience #AGI #artificialintelligence 
 
 A reinforcement learning algorithm designed to train large language models (LLMs) for complex tasks like solving math problems or writing code. Unlike older methods, GRPO is memory-efficient because it doesn't use a separate "value function" (a model that estimates future rewards). Instead, it generates multiple answers for each question, scores them with a reward model, and uses the average score as a reference to decide which answers are better. This makes it easier to train large models on limited hardware, which is surprising because it still performs well on tough tasks like reasoning.
 
@@ -714,8 +727,10 @@ A trivial or very small person or thing.
 
 **Example:** Lilliput is the name of a fictional island whose people, the Lilliputians, stand only about six inches high.
 
-## Low-Rank Adaptation of Large Language Models (LoRA)
-
+## Low-Rank Adaptation (LoRA)
+- Instead of finetuning the weights of the actual model, we fine-tune the low rank matrices (a.k.a. adapters which consists of low-rank matrices)
+- During the inference time, these adapters are put on top of the actual weights of the base model, and they are summed together. This way, we don't have to optimise the base model itself.
+For more details, refer [[How to Fine-tune LLMs with Unsloth - Complete Guide by Pookie#LoRA vs. QLoRA]]
 
 ---
 # M
@@ -900,6 +915,10 @@ It’s a part of the **male reproductive system** and is often discussed in rela
 
 In context of #India
 
+## Proximal Proxy Optimization (PPO)
+#artificialintelligence #datascience #LLM #AGI 
+
+_Proximal policy optimization (PPO_) is a reinforcement learning (RL) algorithm for training an intelligent agent.[^2]
 ## [[Psuedo-Labels]]
 
 Automatically generated labels from the data itself. These labels are not manually annotated but are inferred based on the inherent structure or attributes of the data.
@@ -930,10 +949,21 @@ Pylance is a powerful and popular extension for Visual Studio Code that provides
 
 At its core, Pylance is powered by Microsoft's open-source static type checking tool, Pyright. This foundation allows Pylance to deliver a superior IntelliSense experience, offering intelligent autocompletions, detailed function signature help, and rapid code navigation. By leveraging type information, Pylance can provide more accurate and context-aware suggestions, helping developers write cleaner and more error-free code
 
+## Python Package Index (pyPI)
+#Python  #Programming #softwareengineering #OpenSource 
+
+A repository of software for the Python programming language.
+PyPI help you find and install software developed and shared by the python community.
+
 ---
 # Q
 # Quantized Low-Rank Adaptation of Large Language Models (QLoRA)
-https://arxiv.org/abs/2305.14314
+ 
+ QLoRA is where the base model is also quantised (e.g, weights reduced from 16-bit to 4-bit.
+ 
+ For more details, refer
+ - [[How to Fine-tune LLMs with Unsloth - Complete Guide by Pookie#LoRA vs. QLoRA]] 
+- https://arxiv.org/abs/2305.14314
 
 ---
 # R
@@ -962,6 +992,10 @@ A type of neural network designed for sequential data processing, where connecti
 
 ## Recurring Deposit (RD)
 #finance 
+
+## Reinforcement Learning from Human Feedback (RLHF)
+#artificialintelligence #datascience #LLM #AGI 
+A machine learning technique that aligns artificial intelligence (AI) models, especially Large Language Models (LLMs), with human preferences and values.[^3]
 
 ## REINFORCE Leave One-Out (RLOO)
 Resources: https://huggingface.co/blog/putting_rl_back_in_rlhf_with_rloo
@@ -1220,11 +1254,17 @@ Of little value or importance.
 
 ## UK Conformity Assessed (UKCA Mark)
 - This is the UK’s version of the CE mark that's required for medical devices (including software), created after Brexit.
-•	It applies to products sold in England, Scotland, and Wales.
+- It applies to products sold in England, Scotland, and Wales.
 
 A UKCA mark ensures the product meets UK-specific safety and regulatory requirements.
 
 ## Unit linked insurance plans (ULIP)
+
+## Upending
+#linguistics 
+set or turn (something) on its end or upside down.
+
+Example:  The security inspector *upended* my bag and dumped everything out.
 
 ---
 # V
@@ -1268,4 +1308,9 @@ For example, refer to [[How to Fine-tune LLMs with Unsloth - Complete Guide by P
 - [Google Machine Learning Glossary](https://developers.google.com/machine-learning/glossary)
 - [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) 
 
- 
+## References
+[^1]: https://www.superannotate.com/blog/direct-preference-optimization-dpo
+
+[^2]: https://en.wikipedia.org/wiki/Proximal_policy_optimization
+
+[^3]: https://aws.amazon.com/what-is/reinforcement-learning-from-human-feedback

@@ -9,3 +9,16 @@ tags:
 - **Primary Goal:** To select which version of Python your computer or a specific project folder should use (e.g., `python --version` could return `3.9.7` in one folder and `3.10.4` in another).
 - **What it Manages:** The Python interpreters installed on your system.
 - **Use Case:** You need to work on an old project that requires Python 3.7, but your new project needs Python 3.11. `pyenv` makes switching between them easy.
+
+We can set the Python version:
+1. **Globally**: For your entire user account.
+2. **Per-shell**: For your current terminal session.
+3. **Per-Project (most common)**: By placing a `.python-version` file in our project directory
+
+```bash
+# install Python 3.11 if it does not exist
+pyenv install 3.11
+
+# set Python 3.11 for the current project/directory
+pyenv local 3.11
+```
