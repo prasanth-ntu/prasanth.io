@@ -4,19 +4,12 @@ tags:
   - Programming
   - Coding
   - Library
-title: Regex (re)
 ---
-# Online Platforms
-
-To try out, visit 
-- https://regex101.com/ 
-- https://regexr.com/
-
 # Example
 
-## [[email#Load email data from sklearn and extract relevant information from it using `email` and `re`.]]
+[[email#Load email data from sklearn and extract relevant information from it using `email` and `re`.]]
 ![[regex-email-example.png]]
-
+To try out, visit https://regex101.com/, and paste
 - REGULAR EXPRESSION
 ```
 [\w\.-]+@[\w\.-]+
@@ -38,17 +31,4 @@ a jap bike and call myself Axis Motors!
 "Tuba" (Irwin)      "I honk therefore I am"     CompuTrac-Richardson,Tx
 irwin@cmptrc.lonestar.org    DoD #0826          (R75/6)
 -----------------------------------------------------------------------
-```
-
-## Date validation
-
-Regex to validate 8 digit number (e.g., DDMMYYYY)
-
-- REGULAR EXPRESSION
-```
-^\d{8}$
-```
-- TEST STRING
-```
-12345678
 ```

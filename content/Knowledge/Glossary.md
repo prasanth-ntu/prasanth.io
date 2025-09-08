@@ -708,6 +708,12 @@ Time for which we want to invest our money. Also known as "**tenor**"
 ---
 # L
 
+## Large Language Models  Meta AI (Llama)
+#artificialintelligence #LLM #OpenSource #AGI 
+As per [wiki](https://en.wikipedia.org/wiki/Llama_(language_model))
+**Llama** (**Large Language Model Meta AI**) is a family of [large language models](https://en.wikipedia.org/wiki/Large_language_model "Large language model") (LLMs) released by [Meta AI](https://en.wikipedia.org/wiki/Meta_AI "Meta AI") starting in February 2023. The latest version is Llama 4, released in April 2025.
+
+For more details, refer https://github.com/meta-llama/llama-models?tab=readme-ov-file#llama-models-1
 ## Left Ventricle (LV)
 #biology #science 
 
@@ -997,6 +1003,9 @@ A type of neural network designed for sequential data processing, where connecti
 #artificialintelligence #datascience #LLM #AGI 
 A machine learning technique that aligns artificial intelligence (AI) models, especially Large Language Models (LLMs), with human preferences and values.[^3]
 
+## Reinforcement Learning with Verifiable Rewards (RLVR)
+#artificialintelligence #datascience #LLM #AGI 
+
 ## REINFORCE Leave One-Out (RLOO)
 Resources: https://huggingface.co/blog/putting_rl_back_in_rlhf_with_rloo
 
@@ -1203,9 +1212,6 @@ Systolic (The Squeezing Phase)
 
 ---
 # T
-## Taxonomy
-#NLP #datascience 
-A hierarchical and semantic classification system that organizes entities for structured understanding and retrieval, consists of the category tree and attribute trees.
 
 ## [[Text Classification]]
 
@@ -1285,6 +1291,14 @@ Dedicated memory on GPUs, which are the main processors used to train and run LL
 
 For example, refer to [[How to Fine-tune LLMs with Unsloth - Complete Guide by Pookie#Which open-source models? Which variants?]] on various model parameters and their correponding VRAM requirements.
 
+## Virtual Large Language Model (vLLM)
+#machinelearning #datascience #LLM #OpenSource 
+
+vLLM is a fast and easy-to-use library for open-source LLM inference and serving.
+
+For more details, refer
+- https://github.com/vllm-project/vllm
+- https://docs.vllm.ai/en/latest/
 ## Visceral Hypersensitivity
 #biology #science #disease 
 

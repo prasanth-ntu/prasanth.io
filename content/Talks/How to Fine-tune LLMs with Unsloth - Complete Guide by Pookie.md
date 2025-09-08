@@ -246,6 +246,7 @@ For mode details, refer [QLORA: Efficient Finetuning of Quantized LLMs](https://
 | [unsloth/gemma-3-12b-it-GGUF](https://huggingface.co/unsloth/gemma-3-12b-it-GGUF)                     | 12b        | instruct   | multi-model <br>(support vision input) | GGUF                                 |
 | [meta-llama/Llama-3.3-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct)         | 70b        | instruct   | text-only                              |                                      |
 | [unsloth/Llama-3.1-8B-unsloth-bnb-4bit](https://huggingface.co/unsloth/Llama-3.1-8B-unsloth-bnb-4bit) | 8b         | pretrained | text only                              | 4 bit quantized using Bits and Bytes |
+|                                                                                                       |            |            |                                        |                                      |
 
 ---
 ### Collecting and Structuring Data
