@@ -172,9 +172,20 @@ Dare to Lead: Brave Work, Tough Conversations, Whole Hearts" class="book-card">
   <div class="book-image"><img src="../Books/attachments/images/dare-to-lead-cover.jpg" alt="  
 Dare to Lead: Brave Work, Tough Conversations, Whole Hearts"></div>
   <div class="book-content">
-    <div class="book-title">Dare to Lead: Brave Work, Tough Conversations, Whole Heartsr</div>
+    <div class="book-title">Dare to Lead: Brave Work, Tough Conversations, Whole Hearts</div>
     <div class="book-author">by Brene Brown </div>
     <div class="book-summary"><i>Note: Recommended by senior leader at work.</i></div>
+    <div class="book-status status-to-read">#ToRead</div>
+  </div>
+</a>
+
+<a href="TBA: The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution">
+  <div class="book-image"><img src="../Books/attachments/images/the-man-who-solved-the-market.jpg" alt="  
+The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution"></div>
+  <div class="book-content">
+    <div class="book-title">The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution</div>
+    <div class="book-author">by Gregory Zuckerman</div>
+    <div class="book-summary"><i>Note: Recommended by a Podcast.</i></div>
     <div class="book-status status-to-read">#ToRead</div>
   </div>
 </a>

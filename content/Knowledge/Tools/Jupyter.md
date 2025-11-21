@@ -26,11 +26,13 @@ It's often used when the output is very long and might clutter the notebook, or 
 ## `%load_ext sql`
 This line prepares your Jupyter Notebook environment to understand and execute SQL commands by loading the `sql` extension.
 
-## ## `%%sql`
+## `%%sql`
 Run SQL query in the current code cell.
 
 ## `%sql sqlite:///sample.db`
 Create and connect to SQLite database in the same directory as our jupyter notebook.
 
+# Keyboard Shortcuts
+- `Cmd + L` - Toggle line numbers in cell
 
 

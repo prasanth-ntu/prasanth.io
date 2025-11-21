@@ -19,6 +19,16 @@ We can set the Python version:
 # install Python 3.11 if it does not exist
 pyenv install 3.11
 
-# set Python 3.11 for the current project/directory
+# switch versions globally
+pyenv global 3.11
+
+# set Python 3.11 locally for the current project/directory
 pyenv local 3.11
+
+# use shell specific versions
+ pyenv shell 3.11
 ```
+
+To check what Python versions are currently installed with pyenv 
+``
+

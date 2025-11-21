@@ -741,6 +741,7 @@ For more details, refer [[How to Fine-tune LLMs with Unsloth - Complete Guide by
 ---
 # M
 
+
 ## Median Absolute Deviation (MAD)
 #Statistics #Math #datascience #machinelearning 
 
@@ -800,6 +801,18 @@ A small piece or amount of food; a mouthful.
 Example: Bilbo Baggins baked two beautiful round seed-cakes for his after supper morsel.
 
 ## Mutual Fund
+#finance 
+
+## Mutually Exclusive Collectively Exhaustive (MECE)
+Mutually exclusive means that each category is distinct and has no overlap, while collectively exhaustive means that all possible options or items are included in the categories. The MECE framework, which stands for Mutually Exclusive, Collectively Exhaustive, is a problem-solving and information-structuring tool, used especially in management consulting, to ensure that data is broken down logically and completely without gaps or overlaps.
+
+MECE in Practice
+- **Issue Trees:** 
+    Consultants use MECE to break down complex problems into smaller, manageable parts, ensuring that every branch is distinct and that the entire tree covers all relevant aspects of the problem.
+- **Case Interviews:** 
+    Candidates for consulting roles are expected to use the MECE framework to structure their solutions logically and comprehensively. 
+- **Presentations and Reports:** 
+    The MECE principle helps professionals organize their ideas in a way that is easy for clients to understand, guiding them toward informed decisions.
 
 ---
 # N
@@ -887,6 +900,20 @@ Resources:
 #science #biology 
 
 This is a clinical term for good blood circulation. **Perfusion** is the process of the cardiovascular system (the heart and blood vessels) delivering oxygen-rich blood to all the tissues and organs of the body.
+
+## Populism
+**POPULISM IN POLITICS**
+
+While "every politician hopes to be popular", Mr Ong said, populism is different. Populists often use an "us versus them" narrative, presenting themselves as champions of the people against elites, institutions, or outsiders, and offering simplistic solutions to complex problems.
+"When people are disillusioned and disgruntled, they hope for a silver bullet and may give these simplistic solutions a chance," he added. 
+
+He cited Argentina's history of left-wing populism – where businesses eventually left due to excessive taxation, leading to job losses and economic crises. "In the end, the workers and ordinary people are the ones who suffer," he said.
+
+Far-right populism, often linked to immigration concerns, is more widespread now, Mr Ong said, referencing countries like the US, UK, Australia and Japan. 
+
+"Populism takes societies on the road to ruin – creating irreconcilable rifts between communities, and fuelling xenophobia and racism," he said. "Eventually, either their fiscal system goes broke or the society breaks apart."
+
+https://www.channelnewsasia.com/singapore/ong-ye-kung-workers-party-ge2025-racial-politics-5363956
 
 ## Post-prandial 
 #biology #science #disease 

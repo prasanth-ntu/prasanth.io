@@ -53,3 +53,39 @@ git add <file_1> <file_2> ... <file_N>
 
 git status
 ```
+
+## Summary of Git Commands for Viewing Files in Commits:
+To view the files generated or modified in a specific git commit locally, you can use several git commands. Here are the most useful ones:
+
+Here are the most useful commands to view files in a specific git commit:
+### **Basic Commands:**
+1. **`git show --name-only <commit-hash>`** - Lists only the file names that were changed
+2. **`git show --name-status <commit-hash>`** - Shows file names with status (M=Modified, A=Added, D=Deleted)
+3. **`git show --stat <commit-hash>`** - Shows file names with change statistics (lines added/removed)
+4. **`git show <commit-hash>`** - Shows the full diff with all changes
+
+### **Alternative Commands:**
+5. **`git diff --name-only <commit-hash>~1 <commit-hash>`** - Compare with previous commit
+6. **`git log --name-only -1 <commit-hash>`** - Show commit info with file names
+7. **`git diff-tree --no-commit-id --name-only -r <commit-hash>`** - List files in commit
+
+### **For Multiple Commits:**
+8. **`git log --name-only --oneline <commit-range>`** - Show files across multiple commits
+9. **`git log --stat <commit-range>`** - Show statistics across multiple commits
+
+### **Examples:**
+```bash
+# View files in the latest commit
+git show --name-only HEAD
+
+# View files in a specific commit
+git show --name-only 22105542
+
+# View files with changes between two commits
+git diff --name-only commit1..commit2
+
+# View files in the last 3 commits
+git log --name-only --oneline -3
+```
+
+The most commonly used commands are `--name-only` for a simple list, `--name-status` to see what type of changes were made, and `--stat` to see the scope of changes.

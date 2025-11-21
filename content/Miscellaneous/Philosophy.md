@@ -32,7 +32,9 @@
 
 > [!QUOTE] You don't need to see the whole staircase, just take the first step.
 > *Martin Luther King Jr.*
- 
+
+> [!QUOTE] Wealth was a means to a happy and meaningful life while making a positive impact on others.
+> *Singapore tycoon Goh Cheng Liang*
 # Reflections
 - [[2025-02-01 Reflections on Meeting with Magesh]]
 

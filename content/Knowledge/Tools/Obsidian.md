@@ -270,7 +270,7 @@ git remote add upstream https://github.com/jackyzha0/quartz.git
 npx quartz build --serve
 ```
 - **Sync the change to Github & Deploy**
-	- Run tis command every time we want to push updates to our repository.
+	- Run this command every time we want to push updates to our repository.
 ```bash
 npx quartz sync
 ```

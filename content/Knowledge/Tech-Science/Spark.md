@@ -203,3 +203,14 @@ df_with_geohash = df.withColumn("geohash6", to_geohash6(df["latitude"], df["long
 df_with_geohash.show()
 
 ```
+
+## Creating the Temporary View
+  
+```sql
+sdf.createOrReplaceTempView("sdf_table")
+```
+
+This line takes a PySpark DataFrame (`sdf`) and registers it as a temporary SQL table named "sdf_table" in the Spark SQL catalog. This allows you to:
+- Reference this DataFrame in subsequent SQL queries using the name `sdf_table`
+- Use SQL JOIN operations instead of DataFrame API joins
+- The view exists only for the duration of the Spark session
