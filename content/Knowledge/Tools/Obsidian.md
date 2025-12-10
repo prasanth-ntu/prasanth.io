@@ -130,6 +130,7 @@ Block comments can span multiple lines.
 ```
 ---
 # Plugins
+- [ ] https://www.youtube.com/watch?v=7Rvl9Sl29Jk - Obsidian Smart Connections - Need to revisit this
 - [ ] https://quartz.jzhao.xyz/plugins/ObsidianFlavoredMarkdown - Need to revisit this, and explore deeper for [Block references](https://help.obsidian.md/Linking+notes+and+files/Internal+links#Link%20to%20a%20block%20in%20a%20note)
 - [ ] [LongForm](obsidian://show-plugin?id=longform) - Helps to create long projects. Need to revisit this to understand its features properly
 - [ ] [canvas2document](obsidian://show-plugin?id=canvas2document) - [Github](https://github.com/slnsys/obsidian-canvas2document)

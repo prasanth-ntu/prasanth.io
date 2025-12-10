@@ -111,6 +111,10 @@ The extra return the (active) fund manager can generate over the (passive) index
 ## Asset Management Company (AMC)
 #finance
 
+## Assets Under Management (AUC)
+#finance 
+
+
 ---
 # B
 
@@ -472,6 +476,12 @@ Tracks an index like the Sensex, but also lists its units on a stock exchange, u
 
 The fees that a mutual fund charges investors for its costs and the profit it makes.
 
+## E gratia
+
+(of a payment) given as a favor or from a sense of moral obligation rather than because of any legal requirement.
+
+**Similar words**: out of grace, by favor, out of good will, out of kindness.
+
 ---
 # F
 
@@ -741,6 +751,16 @@ For more details, refer [[How to Fine-tune LLMs with Unsloth - Complete Guide by
 ---
 # M
 
+## Marginal Utility 
+#theory #economics #law
+The additional satisfaction or a benefit customer gets from consuming one more unit of a good or service.
+
+**Diminishing Marginal Utility**
+The tendency for the satisfaction from each additional unit to decrease as consumption increases. 
+
+**Example** 
+- **Pizza**: The first slice of pizza at a party may be very interesting and bring immense enjoyment. The second slide is still good, but less satisfying than the first, whereas the fifth or sixth slice is not nearly as enjoyable.
+- **Money**: The first $100 a person receives may bring great happiness, whereas for someone already wealth, the addition $100 add much less utility to their overall happiness
 
 ## Median Absolute Deviation (MAD)
 #Statistics #Math #datascience #machinelearning 
@@ -749,7 +769,6 @@ The Median Absolute Deviation (MAD) is ==a robust measure of statistical disper
 
 Sources
 - https://en.wikipedia.org/wiki/Median_absolute_deviation
-- 
 ## Metastasis/ Metastasise
 
 To **metastasise** means for **cancer cells *to spread*** from the original (primary) site to **other parts of the body** through the blood or lymphatic system.
@@ -873,6 +892,20 @@ A sentence containing every letter of the alphabet.
 
 **Example:** "The quick brown fox jumps over the lazy dog." is a ***pangram***.
 
+## Parameter-Efficient Fine-Tuning (PEFT)
+Resources:
+- https://huggingface.co/docs/peft/en/index
+- https://github.com/huggingface/peft
+## Pareto
+Commonly refers to the **Pareto principle**, also known as 80/20 rule, which stats that roughly 80% of the effects come from 20% of causes.
+
+Pareto principle states that small percentage of inputs often cause a disproportionately large percentage of outputs
+
+Example
+- 80% of company's sales come from 20% of its customers.
+- 80% of software crashes are caused by 20% of it bugs.
+- In personal productivity, 20% of your tasks may contribute to 80% of your results.
+
 ## Pathology
 **Pathology** is the **study of diseases**—their causes, effects, and development. It can also refer to the **conditions caused by a disease**.
 
@@ -890,11 +923,6 @@ A doctor who studies disease by analyzing samples such as:
 	•	Biopsies
 	•	Surgical specimens
 	•	Cytology (cells from urine, for example)
-
-## Parameter-Efficient Fine-Tuning (PEFT)
-Resources:
-- https://huggingface.co/docs/peft/en/index
-- https://github.com/huggingface/peft
 
 ## Perfusion
 #science #biology 
@@ -990,7 +1018,7 @@ PyPI help you find and install software developed and shared by the python commu
 
 ---
 # Q
-# Quantized Low-Rank Adaptation of Large Language Models (QLoRA)
+## Quantized Low-Rank Adaptation of Large Language Models (QLoRA)
  
  QLoRA is where the base model is also quantised (e.g, weights reduced from 16-bit to 4-bit.
  
@@ -1249,6 +1277,9 @@ Categorizing text into predefined labels.
 Generating the continuation of a given text.
 
 **Example:** [[GPT-3]] completes text based on context.
+
+## Theology
+Related to the study of the nature of God and religious belief.
 
 ## Throng
 #linguistics 

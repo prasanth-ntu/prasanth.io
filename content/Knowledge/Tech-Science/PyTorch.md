@@ -78,14 +78,14 @@ The `.mar` file is created by **bundling** all the individual files together. So
 
 ### 📊 Comparison
 
-| Aspect | `.pt` file | `.mar` file |
-|--------|-----------|-------------|
-| **Purpose** | Model weights for inference | Deployment package |
-| **Used in** | Jupyter notebooks, Python scripts | TorchServe production |
-| **Contains** | Only weights | Weights + code + configs |
-| **Size** | Smaller | Larger (has duplicates) |
-| **Loading** | `torch.load()` | TorchServe API |
-| **Need for testing?** | ✅ YES | ❌ NO |
+| Aspect                | `.pt` file                        | `.mar` file              |
+| --------------------- | --------------------------------- | ------------------------ |
+| **Purpose**           | Model weights for inference       | Deployment package       |
+| **Used in**           | Jupyter notebooks, Python scripts | TorchServe production    |
+| **Contains**          | Only weights                      | Weights + code + configs |
+| **Size**              | Smaller                           | Larger (has duplicates)  |
+| **Loading**           | `torch.load()`                    | TorchServe API           |
+| **Need for testing?** | ✅ YES                             | ❌ NO                     |
 
 ### 💡 In a Jupyter Notebook
 We're usually doing **model testing/evaluation**, not deployment, so we:

@@ -18,6 +18,11 @@ export const Static: QuartzEmitterPlugin = () => ({
       await fs.promises.copyFile(src, dest)
       yield dest
     }
+    
+    // Create .nojekyll file to prevent GitHub Pages from processing files through Jekyll
+    const nojekyllPath = joinSegments(argv.output, ".nojekyll") as FilePath
+    await fs.promises.writeFile(nojekyllPath, "")
+    yield nojekyllPath
   },
   async *partialEmit() {},
 })
