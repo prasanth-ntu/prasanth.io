@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Architecture - A Visual Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none !important;
+                animation: none !important;
+                scroll-behavior: auto !important;
+            }
+            .card:hover {
+                transform: none !important;
+            }
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            border: 1px solid #e2e8f0; /* slate-200 */
+            transition: all 0.3s ease-in-out;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .component-title {
+            font-weight: 600;
+            color: #1e293b; /* slate-800 */
+            border-bottom: 1px solid #e2e8f0; /* slate-200 */
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .config-item {
+            font-size: 0.75rem;
+            background-color: #f1f5f9; /* slate-100 */
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.375rem;
+            display: inline-block;
+            margin-top: 0.25rem;
+            font-family: monospace;
+            color: #334155;
+        }
+        .example-text {
+            font-size: 0.8rem;
+            color: #475569;
+            border-left: 2px solid #cbd5e1;
+            padding-left: 0.75rem;
+            margin-top: 0.75rem;
+            font-style: italic;
+        }
+        .label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #64748b; /* slate-500 */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.5rem;
+        }
+        .layer-stack {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 2px;
+            border: 2px dashed #cbd5e1;
+            padding: 4px;
+            border-radius: 6px;
+            background: #f8fafc;
+        }
+        .layer {
+            background: #e2e8f0;
+            text-align: center;
+            padding: 4px;
+            font-size: 0.7rem;
+            border-radius: 2px;
+            color: #475569;
+        }
+        .layer.rw {
+            background: #bfdbfe; /* blue-200 */
+            color: #1e40af; /* blue-800 */
+            border: 1px solid #60a5fa;
+            font-weight: 600;
+        }
+
+        /* Small UX polish */
+        .mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+        .mini-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 0.75rem;
+            box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+        }
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 9999px;
+            border: 1px solid #e2e8f0;
+            background: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #334155; /* slate-700 */
+            white-space: nowrap;
+        }
+        .pill.subtle {
+            background: #f8fafc; /* slate-50 */
+        }
+        .arrow {
+            color: #94a3b8; /* slate-400 */
+            font-size: 1.25rem;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-7xl mx-auto text-slate-700">
+        <h1 class="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-4 flex items-center justify-center gap-3">
+            <svg aria-hidden="true" class="w-9 h-9 md:w-10 md:h-10 text-blue-600 shrink-0" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Simple “Docker-ish” mark: container blocks + whale silhouette -->
+                <rect x="12" y="26" width="8" height="8" rx="2" fill="currentColor" opacity="0.95"/>
+                <rect x="22" y="26" width="8" height="8" rx="2" fill="currentColor" opacity="0.95"/>
+                <rect x="32" y="26" width="8" height="8" rx="2" fill="currentColor" opacity="0.95"/>
+                <rect x="42" y="26" width="8" height="8" rx="2" fill="currentColor" opacity="0.95"/>
+                <rect x="22" y="16" width="8" height="8" rx="2" fill="currentColor" opacity="0.9"/>
+                <rect x="32" y="16" width="8" height="8" rx="2" fill="currentColor" opacity="0.9"/>
+                <path d="M10 38h44c0 10-8 18-18 18H26c-9.94 0-18-8.06-18-18z" fill="currentColor" opacity="0.18"/>
+                <path d="M10 38h44c0 9.5-7.7 17.2-17.2 17.2H27.2C17.7 55.2 10 47.5 10 38z" stroke="currentColor" opacity="0.35"/>
+                <path d="M48 36c3.2 0 6-2.4 6-5.6 0-1.1-.3-2.1-.8-2.9-1.2 1.6-3.1 2.6-5.2 2.6H45v5.9h3z" fill="currentColor" opacity="0.22"/>
+            </svg>
+            <span>Docker Architecture: End-to-End</span>
+        </h1>
+        <p class="text-center text-slate-600 mb-12 max-w-3xl mx-auto">Visualizing how Docker builds, ships, and runs applications using the Client-Server architecture.</p>
+
+        <!-- Main Layout: Responsive (single source of truth) -->
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto_2fr_auto_1fr] gap-6 items-stretch">
+            <!-- 1. Client -->
+            <div class="card p-6 border-indigo-200 min-w-0">
+                <div class="component-title text-indigo-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg>
+                    <span>1. Docker Client (CLI)</span>
+                </div>
+                <p class="text-sm text-slate-600 mb-4">Where you issue commands. The client talks to the Docker Daemon via a REST API.</p>
+
+                <div class="bg-slate-900 rounded-md p-3 text-xs text-green-400 mono mb-3 overflow-x-auto">
+                    <span class="whitespace-nowrap">$ docker build -t myapp .</span><br>
+                    <span class="whitespace-nowrap">$ docker run -d -p 80:80 myapp</span><br>
+                    <span class="whitespace-nowrap">$ docker push myapp:1.0</span>
+                </div>
+
+                <p class="label">Role</p>
+                <p class="text-xs">Sends instructions to the Docker Host.</p>
+            </div>
+
+            <!-- Connector: Client -> Host -->
+            <div class="flex flex-col items-center justify-center text-slate-400">
+                <div class="text-xs font-semibold text-slate-500 mb-2">API Request</div>
+                <div class="text-3xl leading-none">
+                    <span class="lg:hidden">▼</span>
+                    <span class="hidden lg:inline">▶</span>
+                </div>
+            </div>
+
+            <!-- 2. Host -->
+            <div class="card p-6 border-2 border-blue-400 bg-slate-50 relative min-w-0">
+                <div class="component-title justify-center text-blue-700 text-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                    <span>2. Docker Host (The Engine)</span>
+                </div>
+                <p class="text-center text-sm text-slate-600 mb-6">The machine running the Docker Daemon.</p>
+
+                <div class="bg-white border border-blue-200 rounded-lg p-4 mb-6 shadow-sm mx-auto w-full lg:w-11/12 text-center">
+                    <span class="font-bold text-blue-800 text-sm">Docker Daemon (dockerd)</span>
+                    <p class="text-xs text-slate-500 mt-1">Listens for API requests and manages Images, Containers, Networks, and Volumes.</p>
+                </div>
+
+                <!-- Docker Objects (quick mental map) -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+                    <div class="mini-card">
+                        <div class="text-xs font-semibold text-slate-700 mb-1">Images</div>
+                        <div class="text-[11px] text-slate-500">Immutable layers</div>
+                    </div>
+                    <div class="mini-card">
+                        <div class="text-xs font-semibold text-slate-700 mb-1">Containers</div>
+                        <div class="text-[11px] text-slate-500">Running instances</div>
+                    </div>
+                    <div class="mini-card">
+                        <div class="text-xs font-semibold text-slate-700 mb-1">Networks</div>
+                        <div class="text-[11px] text-slate-500">Connectivity</div>
+                    </div>
+                    <div class="mini-card">
+                        <div class="text-xs font-semibold text-slate-700 mb-1">Volumes</div>
+                        <div class="text-[11px] text-slate-500">Persistent data</div>
+                    </div>
+                </div>
+
+                <!-- How they work together (minimal interaction diagram) -->
+                <div class="bg-white border border-slate-200 rounded-lg p-4 mb-6">
+                    <div class="text-xs font-semibold text-slate-600 uppercase tracking-wider mb-3">How they fit together</div>
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-2 sm:gap-3 flex-wrap">
+                        <span class="pill">
+                            <span class="text-amber-700">Image</span>
+                            <span class="text-slate-400 font-normal">(build)</span>
+                        </span>
+                        <span class="arrow self-center inline-block rotate-90 sm:rotate-0">→</span>
+                        <span class="pill">
+                            <span class="text-green-700">Container</span>
+                            <span class="text-slate-400 font-normal">(run)</span>
+                        </span>
+                        <span class="arrow self-center inline-block rotate-90 sm:rotate-0">→</span>
+                        <span class="pill subtle">
+                            <span class="text-slate-700">Network</span>
+                            <span class="text-slate-400 font-normal">(talk)</span>
+                        </span>
+                    </div>
+                    <div class="mt-5 flex flex-col sm:flex-row sm:items-center sm:justify-center gap-2 text-[12px] text-slate-500">
+                        <span class="pill subtle">
+                            <span class="text-slate-700">Volume</span>
+                            <span class="text-slate-400 font-normal">(persist)</span>
+                        </span>
+                        <span class="flex flex-col sm:flex-row items-center justify-center text-slate-400 leading-none px-1 gap-1 sm:gap-2">
+                            <span class="text-xl inline-block rotate-90 sm:rotate-0">→</span>
+                            <span class="text-[11px]">mounts into</span>
+                        </span>
+                        <span class="pill subtle">
+                            <span class="text-green-700">Container</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="card p-4 border-l-4 border-l-amber-400">
+                        <div class="component-title text-amber-700 text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                            <span>Images (Blueprints)</span>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-3">Read-only templates used to create containers.</p>
+
+                        <div class="layer-stack">
+                            <div class="layer">App Code</div>
+                            <div class="layer">Libraries</div>
+                            <div class="layer">Base OS (Alpine)</div>
+                        </div>
+                        <p class="text-[10px] text-center text-slate-400 mt-1">Built from Dockerfile</p>
+                    </div>
+
+                    <div class="card p-4 border-l-4 border-l-green-500">
+                        <div class="component-title text-green-700 text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                            <span>Containers (Running)</span>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-3">Runnable instances of an image.</p>
+
+                        <div class="layer-stack">
+                            <div class="layer rw">R/W Layer</div>
+                            <div class="layer">App Code</div>
+                            <div class="layer">Libraries</div>
+                            <div class="layer">Base OS (Alpine)</div>
+                        </div>
+                        <p class="text-[10px] text-center text-slate-400 mt-1">Image + Writeable Layer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Connector: Host <-> Registry -->
+            <div class="flex flex-col items-center justify-center text-slate-400">
+                <div class="text-xs font-semibold text-slate-500 mb-2">Pull / Push</div>
+                <div class="text-3xl leading-none">
+                    <span class="lg:hidden">▼</span>
+                    <span class="hidden lg:inline">↔</span>
+                </div>
+            </div>
+
+            <!-- 3. Registry -->
+            <div class="card p-6 border-purple-200 min-w-0">
+                <div class="component-title text-purple-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <span>3. Registry</span>
+                </div>
+                <p class="text-sm text-slate-600 mb-4">Stores and distributes Docker images (public or private).</p>
+                <p class="example-text mb-4">e.g., Docker Hub, AWS ECR, Google Artifact Registry.</p>
+
+                <div class="flex flex-col gap-2">
+                    <div class="flex items-center gap-2 text-xs bg-slate-50 p-2 rounded border border-slate-200">
+                        <span class="font-bold text-slate-600">nginx</span>
+                        <span class="bg-slate-200 px-1 rounded text-[10px]">1.23</span>
+                        <span class="bg-slate-200 px-1 rounded text-[10px]">latest</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs bg-slate-50 p-2 rounded border border-slate-200">
+                        <span class="font-bold text-slate-600">myapp</span>
+                        <span class="bg-slate-200 px-1 rounded text-[10px]">v1.0</span>
+                    </div>
+                </div>
+
+                <p class="label mt-4">Actions</p>
+                <div class="flex justify-between text-xs mono">
+                    <span class="text-blue-600">PULL</span>
+                    <span class="text-pink-600">PUSH</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: VM vs Container -->
+        <div class="mt-16">
+            <h2 class="text-2xl font-bold text-center text-slate-800 mb-8">Virtual Machines vs. Containers</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="card p-6 border-slate-200 bg-white">
+                    <!-- Column headers (keep side-by-side even on mobile) -->
+                    <div class="overflow-x-auto -mx-2 px-2">
+                        <div class="min-w-[420px]">
+                            <div class="grid grid-cols-2 gap-3 mb-4">
+                                <div class="text-center">
+                                    <div class="font-bold text-slate-700">Virtual Machine</div>
+                                    <div class="text-[11px] sm:text-xs text-slate-500 mt-1">More isolation, more overhead</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="font-bold text-blue-700">Container</div>
+                                    <div class="text-[11px] sm:text-xs text-slate-500 mt-1">Lightweight, fast startup</div>
+                                </div>
+                            </div>
+
+                            <!-- Row-by-row comparison -->
+                            <div class="space-y-2">
+                                <!-- App -->
+                                <div class="grid grid-cols-2 gap-3 items-stretch">
+                                    <div class="bg-green-100 border border-green-300 p-2 text-center text-[11px] sm:text-xs rounded text-green-800 font-semibold">App</div>
+                                    <div class="bg-green-100 border border-green-300 p-2 text-center text-[11px] sm:text-xs rounded text-green-800 font-semibold">App</div>
+                                </div>
+                                <!-- Bins/Libs -->
+                                <div class="grid grid-cols-2 gap-3 items-stretch">
+                                    <div class="bg-green-100 border border-green-300 p-2 text-center text-[11px] sm:text-xs rounded text-green-800 font-semibold">Bins / Libs</div>
+                                    <div class="bg-green-100 border border-green-300 p-2 text-center text-[11px] sm:text-xs rounded text-green-800 font-semibold">Bins / Libs</div>
+                                </div>
+                                <!-- Guest OS vs (none) -->
+                                <div class="grid grid-cols-2 gap-3 items-stretch">
+                                    <div class="bg-orange-100 border border-orange-300 p-2 sm:p-3 text-center text-[12px] sm:text-sm rounded text-orange-800 font-bold">
+                                        Guest OS
+                                        <div class="text-[11px] font-normal text-orange-700/80 mt-1">per VM</div>
+                                    </div>
+                                    <div class="bg-slate-50 border border-slate-200 p-2 sm:p-3 text-center text-[12px] sm:text-sm rounded text-slate-500">
+                                        No Guest OS
+                                        <div class="text-[11px] font-normal text-slate-400 mt-1">uses host kernel</div>
+                                    </div>
+                                </div>
+                                <!-- Hypervisor vs Docker Engine -->
+                                <div class="grid grid-cols-2 gap-3 items-stretch">
+                                    <div class="bg-purple-100 border border-purple-300 p-2 text-center text-[11px] sm:text-xs rounded text-purple-800">
+                                        Hypervisor
+                                        <div class="text-[11px] text-purple-700/80 mt-1">shared across VMs</div>
+                                    </div>
+                                    <div class="bg-blue-600 p-2 sm:p-3 text-center text-[12px] sm:text-sm rounded text-white font-bold">
+                                        Docker Engine
+                                        <div class="text-[11px] font-normal text-white/80 mt-1">shared across containers</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shared foundation -->
+                    <div class="mt-5 bg-slate-200/80 border border-slate-300 rounded-lg p-3 text-center text-xs text-slate-700">
+                        <span class="font-semibold">Shared foundation:</span> Host OS kernel + hardware
+                    </div>
+
+                    <p class="text-xs text-center mt-4 text-slate-500">VMs duplicate the OS per workload; containers share the host kernel and isolate at the process/filesystem level.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Port Publishing -->
+        <div class="mt-16">
+            <h2 class="text-2xl font-bold text-center text-slate-800 mb-4">Port Publishing (Why you need <span class="mono">-p host:container</span>)</h2>
+            <p class="text-center text-slate-600 mb-8 max-w-3xl mx-auto">Containers live behind Docker’s networking boundary. Publishing a port creates a controlled route from your host into the container.</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr_auto_1fr] gap-6 items-stretch max-w-6xl mx-auto">
+                <div class="card p-6 border-slate-200">
+                    <div class="component-title text-slate-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        <span>Browser / App</span>
+                    </div>
+                    <p class="text-sm text-slate-600">You hit a host port.</p>
+                    <div class="config-item mt-2">localhost:9000</div>
+                </div>
+
+                <!-- Connector 1 -->
+                <div class="flex flex-col items-center justify-center text-slate-400">
+                    <div class="text-3xl leading-none">
+                        <span class="lg:hidden">▼</span>
+                        <span class="hidden lg:inline">▶</span>
+                    </div>
+                </div>
+
+                <div class="card p-6 border-blue-200 bg-blue-50/30">
+                    <div class="component-title text-blue-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 20 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                        <span>Docker Engine</span>
+                    </div>
+                    <p class="text-sm text-slate-600">Publishes a host port to a container port.</p>
+                    <div class="config-item mt-2">-p 9000:80</div>
+                </div>
+
+                <!-- Connector 2 -->
+                <div class="flex flex-col items-center justify-center text-slate-400">
+                    <div class="text-3xl leading-none">
+                        <span class="lg:hidden">▼</span>
+                        <span class="hidden lg:inline">▶</span>
+                    </div>
+                </div>
+
+                <div class="card p-6 border-green-200 bg-green-50/30">
+                    <div class="component-title text-green-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.5v11L12 22 3 17.5v-11L12 2z"></path></svg>
+                        <span>Container</span>
+                    </div>
+                    <p class="text-sm text-slate-600">Your app listens on its internal port.</p>
+                    <div class="config-item mt-2">nginx:80</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+

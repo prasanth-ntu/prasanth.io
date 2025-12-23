@@ -95,10 +95,12 @@ The extra return the (active) fund manager can generate over the (passive) index
 (*Biology*) Tip or bottom point of the heart.
 
 ## Arxiv
-#techology #science #ResearchPaper #research
+#techology #science #ResearchPaper #research #openaccess
 
-**Extract from [Wikipedia](https://en.wikipedia.org/wiki/ArXiv)**
-**arXiv** (pronounced as "[archive](https://en.wikipedia.org/wiki/Archive "Archive")"—the X represents the [Greek letter chi](https://en.wikipedia.org/wiki/Chi_\(letter\) "Chi (letter)") ⟨χ⟩) is an [open-access repository](https://en.wikipedia.org/wiki/Open-access_repository "Open-access repository") of electronic [preprints](https://en.wikipedia.org/wiki/Preprint "Preprint") and [postprints](https://en.wikipedia.org/wiki/Postprints "Postprints") (known as [e-prints](https://en.wikipedia.org/wiki/E-prints "E-prints")) approved for posting after moderation, but not [peer reviewed](https://en.wikipedia.org/wiki/Scholarly_peer_review "Scholarly peer review"). It consists of [scientific papers](https://en.wikipedia.org/wiki/Scientific_papers "Scientific papers") in the fields of [mathematics](https://en.wikipedia.org/wiki/Mathematics "Mathematics"), [physics](https://en.wikipedia.org/wiki/Physics "Physics"), [astronomy](https://en.wikipedia.org/wiki/Astronomy "Astronomy"), [electrical engineering](https://en.wikipedia.org/wiki/Electrical_engineering "Electrical engineering"), [computer science](https://en.wikipedia.org/wiki/Computer_science "Computer science"), [quantitative biology](https://en.wikipedia.org/wiki/Quantitative_biology "Quantitative biology"), [statistics](https://en.wikipedia.org/wiki/Statistics "Statistics"), [mathematical finance](https://en.wikipedia.org/wiki/Mathematical_finance "Mathematical finance"), and [economics](https://en.wikipedia.org/wiki/Economics "Economics"), which can be accessed online.
+arXiv is **a curated research-sharing platform open to anyone**. It is s a pioneer in digital open access.
+
+***Extract from [Wikipedia](https://en.wikipedia.org/wiki/ArXiv)***
+arXiv (pronounced as "[archive](https://en.wikipedia.org/wiki/Archive "Archive")"—the X represents the [Greek letter chi](https://en.wikipedia.org/wiki/Chi_\(letter\) "Chi (letter)") ⟨χ⟩) is an [open-access repository](https://en.wikipedia.org/wiki/Open-access_repository "Open-access repository") of electronic [preprints](https://en.wikipedia.org/wiki/Preprint "Preprint") and [postprints](https://en.wikipedia.org/wiki/Postprints "Postprints") (known as [e-prints](https://en.wikipedia.org/wiki/E-prints "E-prints")) approved for posting after moderation, but not [peer reviewed](https://en.wikipedia.org/wiki/Scholarly_peer_review "Scholarly peer review"). It consists of [scientific papers](https://en.wikipedia.org/wiki/Scientific_papers "Scientific papers") in the fields of [mathematics](https://en.wikipedia.org/wiki/Mathematics "Mathematics"), [physics](https://en.wikipedia.org/wiki/Physics "Physics"), [astronomy](https://en.wikipedia.org/wiki/Astronomy "Astronomy"), [electrical engineering](https://en.wikipedia.org/wiki/Electrical_engineering "Electrical engineering"), [computer science](https://en.wikipedia.org/wiki/Computer_science "Computer science"), [quantitative biology](https://en.wikipedia.org/wiki/Quantitative_biology "Quantitative biology"), [statistics](https://en.wikipedia.org/wiki/Statistics "Statistics"), [mathematical finance](https://en.wikipedia.org/wiki/Mathematical_finance "Mathematical finance"), and [economics](https://en.wikipedia.org/wiki/Economics "Economics"), which can be accessed online.
 
 ## Asset class
 #finance
@@ -114,9 +116,21 @@ The extra return the (active) fund manager can generate over the (passive) index
 ## Assets Under Management (AUC)
 #finance 
 
+## Attention-Deficit/Hyperactivity Disorder
+#medical #biology 
+
+ ==ADHD (Attention-Deficit/Hyperactivity Disorder) is considered a form of neurodivergence==, falling under the neurodiversity umbrella alongside conditions like autism, dyslexia, and dyspraxia, as it involves natural variations in brain function and information processing that differ from the "neurotypical" norm.
 
 ---
 # B
+
+## Bagging
+#machinelearning 
+
+Short form: Bagging
+Long form: Bootstrap Aggregation, where
+- Bootstrap = sampling with replacement to create diverse training sets
+- Aggregation = combining model predictions by averaging (regression) or majority voting (classification)
 
 ## Basic Healthcare Sum (BHS)
 #singapore #retirement 
@@ -186,6 +200,10 @@ It gives:
 > [!INFO] In March 2019, Paige.AI was granted the breakthrough device designation by the US Food and Drug Administration (FDA) for its AI system in cancer diagnosis.
 Paige.AI received this status in 2019, meaning the FDA saw its AI cancer diagnostic system as high-potential and innovative.
 
+## Bootstrap
+#machinelearning 
+
+In ML context, it means creating multiple training sets by resampling with replacement from original dataset.
 
 ---
 # C
@@ -263,6 +281,11 @@ A secret plan by a group to do something unlawful or harmful.
 
 Similar words: plot, scheme, plan
 
+## Container
+#techology #DevOps 
+
+For more details, refer [[Docker]].
+
 ## Convex 
 
 **Convex function**
@@ -312,16 +335,13 @@ Designed to measure the **average price changes** of a **fixed basket** of consu
 ---
 # D
 
-## Diastolic
+## Docker
 
-Systolic and diastolic are two fundamental terms that describe the two main phases of a single heartbeat.
+A system that packages applications and their dependencies into **containers** for consistent execution across various machines.
 
-Think of the heart as a muscular pump. For every beat, it has to squeeze and then relax.
+Docker benefits like in consistency, portability, and isolation.
 
- **Diastolic (The Relaxing Phase)**
-- **What it is:** Diastole is the part of the heartbeat when the heart muscle **relaxes**.
-- **What it does:** After squeezing, the heart chambers relax and expand to **refill** with blood, getting ready for the next contraction. This relaxation phase is just as important as the contraction because if the heart doesn't fill properly, it can't pump properly. It's also during diastole that the coronary arteries deliver oxygen-rich blood to the heart muscle itself.
-- **In a Blood Pressure Reading:** It represents the pressure in your arteries when the heart is at rest between beats.
+For more details, refer [[Docker]].
 
 ## De Novo Clearance (by FDA)
 #regulatory #medical
@@ -338,6 +358,14 @@ Once granted:
 > [!INFO] Paige Prostate Detect (PPD) has received de novo clearance (DEN200080) from the FDA in September 2021
 It became the first FDA-cleared AI software for detecting prostate cancer in digital slides.
 
+## Domain Name System (DNS)
+#techology #network
+DNS is the internet's phonebook, translating human-friendly website names (like `google.com`) into numerical IP addresses (like `142.250.186.46`) that computers use to find and connect to each other online. It allows users to type memorable domain names instead of long strings of numbers, making the internet navigable by mapping text to the correct server locations.
+
+**Key Functions**
+- **Translation (Resolution):** When you type a URL, DNS servers look up the domain name and return its corresponding IP address, directing your browser to the right server.
+- **Directory:** It manages the vast database of domain names and their associated IP addresses, ensuring every site has a unique numerical identifier.
+- **Hierarchical & Distributed:** Instead of one giant phonebook, DNS uses a network of servers worldwide, making lookups fast and efficient.
 ## Debt
 #finance
 
@@ -371,6 +399,16 @@ Indicate the exact position of (a border or boundary)
 
 Direct preference optimization (DPO) is a new method that helps large, unsupervised language models better match human preferences using a simple classification approach.[^1]
 
+## Diastolic
+
+Systolic and diastolic are two fundamental terms that describe the two main phases of a single heartbeat.
+
+Think of the heart as a muscular pump. For every beat, it has to squeeze and then relax.
+
+ **Diastolic (The Relaxing Phase)**
+- **What it is:** Diastole is the part of the heartbeat when the heart muscle **relaxes**.
+- **What it does:** After squeezing, the heart chambers relax and expand to **refill** with blood, getting ready for the next contraction. This relaxation phase is just as important as the contraction because if the heart doesn't fill properly, it can't pump properly. It's also during diastole that the coronary arteries deliver oxygen-rich blood to the heart muscle itself.
+- **In a Blood Pressure Reading:** It represents the pressure in your arteries when the heart is at rest between beats.
 
 ## Distant metastasis
 #medical
@@ -844,6 +882,10 @@ In context of #India
 
 The price of one unit of a scheme (mutual fund).
 
+## Neurodivergent
+#medical 
+differing in mental or [neurological](https://www.google.com/search?sca_esv=ee636c63b9ed21ff&sxsrf=AE3TifMlIrCvbl5fGtyQa5hZo4R8BBxbbA:1765595193264&q=neurological&si=AMgyJEvfjzRzn-1LlmPs29qkb8mqtPWkOftLbO-4lsn80T0TiUw0PWg6l_7316Tt8QwQhGkAg2a3b3ZTQGYhUezPuLuLXXDo2TuoHP5Y0HD2GDxpqZ8M_iE%3D&expnd=1&sa=X&ved=2ahUKEwiS6r7SyrmRAxVrwjgGHaIVA4sQyecJegQILxAO) function from what is considered typical or normal (frequently used with reference to [autistic](https://www.google.com/search?sca_esv=ee636c63b9ed21ff&sxsrf=AE3TifMlIrCvbl5fGtyQa5hZo4R8BBxbbA:1765595193264&q=autistic&si=AMgyJEtf_wwxVVftS7Kej8ZWRY4Pr-wrmLjjRWOILusTwcCd3axmyAY0Y7gOUVBkUEYMOiJsRjVSKF5WhkUznIcht33SVq74OaB3SXx-c1fSWYXou8Jzp5w%3D&expnd=1&sa=X&ved=2ahUKEwiS6r7SyrmRAxVrwjgGHaIVA4sQyecJegQILxAP) spectrum disorders); not [neurotypical](https://www.google.com/search?sca_esv=ee636c63b9ed21ff&sxsrf=AE3TifMlIrCvbl5fGtyQa5hZo4R8BBxbbA:1765595193264&q=neurotypical&si=AMgyJEvfjzRzn-1LlmPs29qkb8mqM-dyeiM6InLYCm8HMRoFpKsa6NWFd0fnfw48vmlu9KIRzLAlOLCXEfaOdnBWvjAjeS_3TR6Unh4OerlnJbo3Ls4cm7U%3D&expnd=1&sa=X&ved=2ahUKEwiS6r7SyrmRAxVrwjgGHaIVA4sQyecJegQILxAQ).
+
 ## Nexus
 "Nexus" generally means ==a connection, link, or central point of connection between things==. It can refer to a relationship, a link, or a core or center of something. It can also describe a connected group or series. 
 
@@ -1227,6 +1269,10 @@ Briefly and clearly expressed.
 **Similar words:** concise, short, brief, compact
 
 **Pronunciation:** suhk·singkt
+
+## Stochastic
+#Statistics #datascience #machinelearning #AI 
+
 
 ## Stock Exchange
 

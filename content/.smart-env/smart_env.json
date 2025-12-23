@@ -1389,7 +1389,10 @@
     "use_tool_calls": true
   },
   "smart_notices": {
-    "muted": {}
+    "muted": {
+      "done_import": true,
+      "embedding_complete": true
+    }
   },
   "version": "",
   "smart_contexts": {

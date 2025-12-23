@@ -26,5 +26,10 @@ For more details, refer [How to Format Jupyter notebook in VSCode](https://stack
 Adds Mermaid diagram and flowchart support to VS Code's builtin markdown preview
 
 For more details, refer [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items/?itemName=bierner.markdown-mermaid)
+
+# YAML
+YAML Language Support by Red Hat, with built-in Kubernetes syntax support.
+For more details, refer [VS code Marketplace](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml#:~:text=The%20vscode%2Dyaml%20extension%20collects,redhat%2Ddeveloper/vscode%2Dyaml)
+
 # Resources
 - [ ] https://oliverfalvai.com/resources/entities/vscode

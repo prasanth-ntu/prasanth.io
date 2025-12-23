@@ -1,6 +1,39 @@
 # HDB
+
+In Singapore, the Urban Redevelopment Authority (URA) divides the country into three main “market segments”. These are known as the 
+1. Core Central Region (CCR)
+	- The CCR comprises postal districts 9, 10, and 11, including Orchard/River Valley, Tanglin/Holland, and Newton/Novena. It also includes the Downtown Core Planning Area, comprising the CBD, Marina Bay, Bugis, Nicoll Highway, and, of course, the CCR also includes Sentosa
+2. the Rest of Central Region (RCR)
+	- The RCR stretches west from Queenstown and Bukit Timah to Bishan, Braddell, and Toa Payoh in the north, and then east to MacPherson, Eunos, and Marine Parade
+3. the Outside Central Region (OCR).
+	- The OCR then comprises the four planning regions – East, North East, North, and West.
 ## Stats
-Top 5 Biggest Winners and Losers [^4]
+**Top 5 Biggest Winners and Losers** [^4]
+
+---
+According to Dollars and Sense article: Which MRT Station In Singapore Is The Most Valuable To Live Near To [^7]
+
+**Region Matters, But Not As Much**: Property in the CCR has the highest HDB resale prices in the country.
+
+| **Closest MRT Station** | **Region** | **HDB Resale Price Range** |
+| ----------------------- | ---------- | -------------------------- |
+| Outram Park             | CCR        | $530,000 to $1,590,000     |
+| Queenstown              | RCR        | $828,000 to $1,510,000     |
+| Woodleigh               | RCR        | $750,000 to $1,320,000     |
+| Clementi                | OCR        | $428,000 to $1,400,000     |
+
+**Which MRT Line Matters:**
+
+| **Closest MRT Station**|**MRT Lines**|**HDB Resale Price Range** |
+| --- | --- | --- |
+| Jurong East|North South Line  <br>East West Line|$382,888 – $820,000 |
+| Bishan|North South Line  <br>Circle Line|$528,000 – $1,070,000 |
+| Serangoon|North East Line  <br>Circle Line|$373,000 – $1,099,000 |
+| Paya Lebar|East West Line  <br>Circle Line|$496,888 – $1,150,000 |
+| MacPherson|Circle Line  <br>Downtown Line|$330,000 – $1,088,000 |
+| Tampines|East West Line  <br>Downtown Line|$475,000 – $1,045,000 |
+
+---
 ## ABSD
 Decoupling is not longer a property hack to avoid Additional Buyers Stamp Duty (ABSD).[^4] 
 
@@ -40,3 +73,5 @@ A 4 km (2.5 mi) long, twin-track [rapid transit](https://en.wikipedia.org/wik
 [^5]: 
 
 [^6]: https://www.straitstimes.com/singapore/courts-crime/spores-govtech-becomes-first-govt-agency-worldwide-to-join-global-scam-intelligence-network?utm_medium=social&utm_source=whatsapp&utm_campaign=stwa
+
+[^7]: https://dollarsandsense.sg/which-mrt-station-in-singapore-is-the-most-valuable-to-live-near-to/

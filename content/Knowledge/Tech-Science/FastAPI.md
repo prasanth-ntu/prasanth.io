@@ -1,6 +1,8 @@
 ---
 tags:
   - softwareengineering
+  - Coding
+  - Programming
 draft: true
 ---
 
