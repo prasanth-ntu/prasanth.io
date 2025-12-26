@@ -5,14 +5,38 @@ tags:
   - DevOps
   - machinelearning
 ---
+> [!TIP] **Mental model:** Docker packages the *environment (config and dependencies)* with the code, so “run” becomes a predictable, repeatable operation irrespective of the device and OS.
+
+## Mini command cheat sheet (the 20% you’ll use 80% of the time)
+- [Official CLI Cheat Sheet](https://docs.docker.com/get-started/docker_cheatsheet.pdf) 
+
+```bash
+# Images
+docker images
+docker pull nginx:1.23
+
+# Containers
+docker ps
+docker ps -a
+docker run -d --name mynginx -p 9000:80 nginx:1.23
+docker logs mynginx
+docker stop mynginx
+docker start mynginx
+
+# Build your own image
+docker build -t myapp:1.0 .
+docker run -d -p 3000:3000 myapp:1.0
+```
+
 ## Docker (First Principles + Hands-on)
 
-This note is a cohesive “why → how → do it” walkthrough, based on the crash course I watched ([YouTube video](https://www.youtube.com/watch?v=pg19Z8LL06w)) and my hands-on custom docker image project ([`prasanth-ntu/docker-demo`](https://github.com/prasanth-ntu/docker-demo)).
-
-> [!TIP] **Mental model:** Docker packages the *environment (config and dependencies)* with the code, so “run” becomes a predictable, repeatable operation irrespective of the device and OS.
+This note is a cohesive “why → how → do it” walkthrough, based on the crash course I watched ([YouTube video](https://www.youtube.com/watch?v=pg19Z8LL06w)), and the hands-on custom docker image project ([`prasanth-ntu/docker-demo`](https://github.com/prasanth-ntu/docker-demo)).
 
 ## Key concepts at a glance (diagrams)
 
+### Big picture view of Docker in Software Development Cycle
+
+![[Docker in Software Development Lifecycle.png]]
 ### Image → Container (build → run)
 
 ```mermaid
@@ -47,7 +71,7 @@ flowchart LR
 
 # Docker Architecture: End-to-End
 <iframe src="https://prasanth.io/static/pages/Docker%20Architecture.html" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
-<a href="https://prasanth.io/static/pages/Spark%20Architecture.html" target="_blank" rel="noopener noreferrer"><b>Open in new tab</b></a> (*Note: Best viewed in desktop or landscape view)*
+<a href="https://prasanth.io/static/pages/Docker%20Architecture.html" target="_blank" rel="noopener noreferrer"><b>Open in new tab</b></a> (*Note: Best viewed in desktop or landscape view*)
 
 ## Why Docker exists (What problem does it solve)?
 
@@ -57,6 +81,19 @@ Software doesn’t “run” from source code alone. It runs from **code + runti
 Docker’s core move is simple:
 
 > [!TIP] Instead of shipping *code + instructions*, ship *code + environment*.
+
+## Deployment process before and after Docker containers
+
+**Deployment process before Containers**
+> [!WARNING] Textual guide of deployment (Dev → Ops)
+> - ❌ Human errors can happen
+> - ❌ Back and forth communication
+
+**Deployment process after Containers**
+> [!SUMMARY] Instead of textual, everything is packaged inside the Docker artifact (app source code + dependencies + configuration)
+>- ✅ No configurations needed on the server
+>- ✅ Install the Docker runtime on the server (one-time effort)
+>- ✅ Run Docker command to fetch and run the docker artifacts
 
 ## What Docker really virtualizes (VMs vs containers)
 
@@ -76,6 +113,9 @@ Docker vs VMs differs mainly in **what gets virtualized**: the whole OS, or just
 - Lighter (MBs), faster start (often seconds or less)
 
 > [!NOTE] On macOS/Windows, Docker Desktop runs a lightweight Linux VM under the hood so Linux containers can still run — that’s why it “just works” locally.
+
+![[docker-vs-vm-virtualization-comparison.png]]
+![[docker-vs-vm-virtualization-comparison-2.png]]
 
 ## The 4 core nouns: Image, Container, Registry, Repository
 
@@ -162,7 +202,8 @@ docker ps
 ```
 
 Now open: `http://localhost:9000`
-Why this works: `localhost` is your host machine. The container’s port `80` is private unless you publish/bind it to a host port.
+Why this works? 
+- `localhost` is your host machine. The container’s port `80` is private unless you publish/bind it to a host port.
 
 ### Step 5 — Logs, stop/start, and the “where did my container go?” moment
 
@@ -349,26 +390,6 @@ Example mental model:
 - **Don’t store secrets in images**: inject via env/secret managers.
 - **Clean up**: stopped containers and unused images accumulate.
 
-## Mini command cheat sheet (the 20% you’ll use 80% of the time)
-
-```bash
-# Images
-docker images
-docker pull nginx:1.23
-
-# Containers
-docker ps
-docker ps -a
-docker run -d --name mynginx -p 9000:80 nginx:1.23
-docker logs mynginx
-docker stop mynginx
-docker start mynginx
-
-# Build your own image
-docker build -t myapp:1.0 .
-docker run -d -p 3000:3000 myapp:1.0
-```
-
 ## Mental Model Cheat Sheet
 
 - **The Difference:** `venv` organizes the **Bookshelf** (Python libraries), but Docker builds the **Entire Apartment** (OS tools, system libraries, and settings).
@@ -379,7 +400,11 @@ docker run -d -p 3000:3000 myapp:1.0
 	- **Container:** The Hot Meal (Running Instance)
 - **The Manager:** `docker-compose` is the **Waiter/Tray** coordinating multiple dishes (services), ports, and volumes.
 
-## Appendix: Self-check Q&A (Socratic prompts)
+# Next Steps
+[[Docker Compose]]
+[[Kubernetes (K8s)]]
+
+## Appendix: Self-check Q&A (Socratic questioning)
 
 - **What does it mean for software to “run”?**  
 	- Code + runtime + OS libs + config + dependent services.

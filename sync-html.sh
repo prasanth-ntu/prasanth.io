@@ -3,6 +3,7 @@ TARGET_DIR="quartz/static/pages/"
 SOURCE_FILES=(
   "content/Knowledge/Tech-Science/Spark Architecture.html"
   "content/Knowledge/Tech-Science/Docker Architecture.html"
+  "content/Knowledge/Tech-Science/Docker Compose Architecture.html"
 )
 
 mkdir -p "$TARGET_DIR"

@@ -332,8 +332,22 @@ Designed to measure the **average price changes** of a **fixed basket** of consu
 
 #International CPI increased 5.7% in 2023. For more details, refer [IMF report](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?name_desc=false)
 
+## curl
+#Programming #softwareengineering 
+
+**Command line tool and library** to make HTTP requests and fetch content (i.e., transfer data) from URLs.
+
+For more details, refer the [official documentation](https://curl.se/docs/manpage.html).
+
 ---
 # D
+
+## Daemon (computing)
+#Programming #softwareengineering 
+
+In [computing](https://en.wikipedia.org/wiki/Computing "Computing"), a **daemon** is a [program](https://en.wikipedia.org/wiki/Computer_program "Computer program") that runs as a [background computer process](https://en.wikipedia.org/wiki/Background_process "Background process"), rather than being under the direct control of an interactive user.
+
+In the context of computing, the word is generally pronounced either as [/ˈdiːmən/](https://en.wikipedia.org/wiki/Help:IPA/English "Help:IPA/English") [_DEE-mən_](https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key "Help:Pronunciation respelling key") or [/ˈdeɪmən/](https://en.wikipedia.org/wiki/Help:IPA/English "Help:IPA/English") [_DAY-mən_](https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key "Help:Pronunciation respelling key").
 
 ## Docker
 
