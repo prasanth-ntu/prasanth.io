@@ -75,6 +75,46 @@ Here are the books I've read, currently reading, or plan to read:
   </div>
 </a>
 
+<a href="The Fellowship of the Ring.md" class="book-card">
+  <div class="book-image"><img src="../Books/attachments/images/lotr-1-book-coverpage.jpg" alt="LOTR 1 cover"></div>
+  <div class="book-content">
+    <div class="book-title">The Fellowship of the Ring</div>
+    <div class="book-author">by J.R.R. Tolkien</div>
+    <div class="book-summary">Amazing to see how an innocent, pure‑hearted Hobbit—seemingly of no importance to anyone—steps up to carry an impossible burden, and in doing so becomes the key to the greatest challenge in Middle‑earth.</div>
+    <div class="book-status status-completed">#Completed</div>
+  </div>
+</a>
+
+<a href="The Two Towers.md" class="book-card">
+  <div class="book-image"><img src="../Books/attachments/images/lotr-2-book-coverpage.jpg" alt="LOTR 2 cover"></div>
+  <div class="book-content">
+    <div class="book-title">The Two Towers</div>
+    <div class="book-author">by J.R.R. Tolkien</div>
+    <div class="book-summary">Painful to watch Saruman—the White Wizard, once defined by knowledge, power, and wisdom—give in to darkness, starting with “noble” intentions and ending in catastrophic destruction. I also loved Boromir’s arc: tempted by the Ring, yet ultimately choosing courage and redemption.</div>
+    <div class="book-status status-completed">#Completed</div>
+  </div>
+</a>
+
+<a href="The Return of the King.md" class="book-card">
+  <div class="book-image"><img src="../Books/attachments/images/lotr-3-book-coverpage.jpg" alt="LOTR 3 cover"></div>
+  <div class="book-content">
+    <div class="book-title">The Return of the King</div>
+    <div class="book-author">by J.R.R. Tolkien</div>
+    <div class="book-summary">A seemingly impossible mission—destroy the One Ring—means walking straight into the heart of Mordor, where Sauron and his armies rule, with the fate of Middle‑earth hanging on it. What stayed with me most was the friendship between Frodo and Sam, and Frodo’s compassion toward Sméagol/Gollum despite everything—knowing all along this was a one‑way journey. And of course: good over evil, not giving up, and the sacrifices of so many—Gandalf, Aragorn, Legolas, Gimli, Boromir, Théoden, Éowyn, Galadriel, Elrond, and the Hobbits—each seemingly “small” on their own, but together making all the difference.</div>
+    <div class="book-status status-completed">#Completed</div>
+  </div>
+</a>
+
+<a href="Oru Manithan Oru Veedu Oru Ulagam.md" class="book-card">
+  <div class="book-image"><img src="../Books/attachments/images/oru-manithan-oru-veedu-oru-ulagam-book-coverpage.jpg" alt="Hobbit cover"></div>
+  <div class="book-content">
+    <div class="book-title">Oru manitann, oru veedu, oru ulagam (ஒரு மனிதன் ஒரு வீடு ஒரு உலகம்)</div>
+    <div class="book-author">by Jayakanthan</div>
+    <div class="book-summary">I’ve rarely read a book this wholesome and soulful. The father and son—and their perspectives on life, people, hate, anger, love, compassion, sacrifice, money, and judgment—left me speechless. I also loved how the other characters, some of whom seem flawed at first, gradually reveal something more genuine and humane—still imperfect, but real. It had a profound impact on how I think, and how I see (and judge) people.</div>
+    <div class="book-status status-completed">#Completed</div>
+  </div>
+</a>
+
 <a href="Trends - Artificial Intelligence - 2025.md" class="book-card">
   <div class="book-image"><img src="../Books/attachments/images/trends-artificial-intelligence-cover.webp" alt="Trends - Artificial Intelligence cover"></div>
   <div class="book-content">
@@ -103,6 +143,16 @@ Here are the books I've read, currently reading, or plan to read:
     <div class="book-summary">A systematic, smart way to make them work for you.</div>
     <div class="book-status status-in-progress">#InProgress</div>
 </div>
+</a>
+
+<a href="Will.md" class="book-card">
+  <div class="book-image"><img src="../Books/attachments/images/will-book-cover.jpg" alt="Will cover"></div>
+  <div class="book-content">
+    <div class="book-title">Will</div>
+    <div class="book-author">by Will Smith (with Mark Manson)</div>
+    <div class="book-summary">TBA: add 1–2 line summary.</div>
+    <div class="book-status status-in-progress">#InProgress</div>
+  </div>
 </a>
 
 <a href="TBA: The Great Mental Models" class="book-card">
@@ -167,10 +217,9 @@ Here are the books I've read, currently reading, or plan to read:
   </div>
 </a>
 
-<a href="TBA:   
-Dare to Lead: Brave Work, Tough Conversations, Whole Hearts" class="book-card">
-  <div class="book-image"><img src="../Books/attachments/images/dare-to-lead-cover.jpg" alt="  
-Dare to Lead: Brave Work, Tough Conversations, Whole Hearts"></div>
+
+<a href="TBA: Dare to Lead: Brave Work, Tough Conversations, Whole Hearts" class="book-card">
+  <div class="book-image"><img src="../Books/attachments/images/dare-to-lead-cover.jpg" alt="Dare to Lead: Brave Work, Tough Conversations, Whole Hearts"></div>
   <div class="book-content">
     <div class="book-title">Dare to Lead: Brave Work, Tough Conversations, Whole Hearts</div>
     <div class="book-author">by Brene Brown </div>
@@ -179,9 +228,8 @@ Dare to Lead: Brave Work, Tough Conversations, Whole Hearts"></div>
   </div>
 </a>
 
-<a href="TBA: The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution">
-  <div class="book-image"><img src="../Books/attachments/images/the-man-who-solved-the-market.jpg" alt="  
-The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution"></div>
+<a href="TBA: The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution" class="book-card">
+  <div class="book-image"><img src="../Books/attachments/images/the-man-who-solved-the-market.jpg" alt="The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution"></div>
   <div class="book-content">
     <div class="book-title">The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution</div>
     <div class="book-author">by Gregory Zuckerman</div>
@@ -189,6 +237,7 @@ The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution"></d
     <div class="book-status status-to-read">#ToRead</div>
   </div>
 </a>
+
   
 <!--
   <a href="Let's Talk Money.md" class="book-card">
