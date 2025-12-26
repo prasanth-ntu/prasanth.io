@@ -4,6 +4,7 @@ SOURCE_FILES=(
   "content/Knowledge/Tech-Science/Spark Architecture.html"
   "content/Knowledge/Tech-Science/Docker Architecture.html"
   "content/Knowledge/Tech-Science/Docker Compose Architecture.html"
+  "content/Knowledge/Tech-Science/Kubernetes Architecture.html"
 )
 
 mkdir -p "$TARGET_DIR"

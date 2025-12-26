@@ -11,6 +11,7 @@ tags:
 > - Easy to run and clean up our entire app
 
 Prerequisite: [[Docker]]
+Postrequisite: [[Kubernetes (K8s)]]
 
 This note is a cohesive walkthrough based on the crash course I watched ([YouTube video](https://www.youtube.com/watch?v=SXwC9fSwct8)),  the hands-on custom docker compose project ([`prasanth-ntu/docker-compose-crash-course/`](https://github.com/prasanth-ntu/docker-compose-crash-course/tree/main)), and the corresponding custom image for JS application pushed to the Docker Hub ([`## prasanthntu/my-app`](https://hub.docker.com/r/prasanthntu/my-app)).
 
@@ -162,7 +163,7 @@ Visit http://localhost:8081/ and enter the login creds retrieved from the logs
 - username: `admin`
 - password: `pass`
 
-![[Screenshot 2025-12-25 at 6.28.14 PM.png]]
+![[mongo-express-localhost.png]]
 
 > [!SUCCESS] 🥳 We are able to connect to the MongoDB using Mongo Express
 
@@ -243,7 +244,7 @@ Visit http://localhost:8081/ and enter the login creds retrieved from the logs
 - username: `admin`
 - password: `pass`
 
-![[Screenshot 2025-12-25 at 6.28.14 PM.png]]
+![[mongo-express-localhost.png]]
 
 Create a new db and table
 - Create `my-db` DB
@@ -283,7 +284,7 @@ $ docker compose -f docker-compose.yaml start
 ### Step 3 - Add own custom web application
 Git repo: https://gitlab.com/twn-youtube/docker-compose-crash-course
 
-![[Screenshot 2025-12-25 at 8.30.57 PM.png]]
+![[3-services-in-docker-compose.png]]
 
 Add "New Document" in the `my-collection` with below details:
 ```json
@@ -294,11 +295,11 @@ Add "New Document" in the `my-collection` with below details:
 }
 ```
 After adding, it would look something like this
-![[Screenshot 2025-12-25 at 9.09.55 PM.png]]
+![[mongo-express-my-collection-new-doc.png]]
 
 #### **What we will do now**
 
-![[Screenshot 2025-12-25 at 9.12.02 PM.png]]
+![[docker-compose-what-we-will-do.png]]
 
 1. Let's create a custom JS application that
 	- Connects to the mongo db
@@ -374,7 +375,7 @@ $ docker compose -f docker-compose-v1.yaml up -d
 ```
 
 Visit http://localhost:3000/ and we will observe this 
-![[Screenshot 2025-12-25 at 9.07.25 PM.png]]
+![[viewe-data-from-front-end-no-dynamic-data.png]]
 
 ```bash
 $ docker ps                                     
@@ -429,10 +430,10 @@ From the above output, we can observe that old instances of `docker-compose-demo
 So, if we refresh, we will still have `my-db` and `my-collection`, and the data inside in it.
 
 Visit http://localhost:3000/ and we will observe this (both static and dynamic data)
-![[Screenshot 2025-12-25 at 9.08.03 PM.png]]
+![[view-data-from-front-end-with-dynamic-data.png]]
 
 Here's the `Network` results, esp. the `fetch-data` results
-![[Screenshot 2025-12-25 at 9.08.44 PM.png]]
+![[network-results-for-fetch-data-dynamical-from-mongodb.png]]
 ```bash
 $ curl -s http://localhost:3000/fetch-data 
 {"_id":"694d85017720d490d5f09da1","myid":1,"data":"some dynamic data loaded from mongodb"}%

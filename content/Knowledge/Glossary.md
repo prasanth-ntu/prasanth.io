@@ -132,6 +132,10 @@ Long form: Bootstrap Aggregation, where
 - Bootstrap = sampling with replacement to create diverse training sets
 - Aggregation = combining model predictions by averaging (regression) or majority voting (classification)
 
+## base64
+#Programming #softwareengineering 
+
+
 ## Basic Healthcare Sum (BHS)
 #singapore #retirement 
 > [!QUOTE] "The Basic Healthcare Sum (BHS) is the estimated savings you need in your MediSave Account for your basic subsidised healthcare needs in old age. It is the maximum amount you can have in your MediSave Account (MA)"

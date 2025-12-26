@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubernetes Architecture - A Visual Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        @media (prefers-reduced-motion: reduce) {
+            * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+            .card:hover { transform: none !important; }
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            border: 1px solid #e2e8f0; /* slate-200 */
+            transition: all 0.3s ease-in-out;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .component-title {
+            font-weight: 600;
+            color: #1e293b; /* slate-800 */
+            border-bottom: 1px solid #e2e8f0; /* slate-200 */
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+        .label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #64748b; /* slate-500 */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.5rem;
+        }
+        .mini-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 0.75rem;
+            box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+            height: 100%;
+        }
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.5rem;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            font-size: 0.75rem;
+            color: #334155;
+            white-space: nowrap;
+        }
+        .connector {
+            color: #94a3b8; /* slate-400 */
+            font-size: 1.75rem;
+            line-height: 1;
+        }
+        .example-text {
+            font-size: 0.8rem;
+            color: #475569;
+            border-left: 2px solid #cbd5e1;
+            padding-left: 0.75rem;
+            margin-top: 0.75rem;
+            font-style: italic;
+        }
+        .kblue {
+            color: #326CE5; /* Kubernetes blue */
+        }
+        .kbox {
+            background: #eff6ff; /* blue-50 */
+            border: 1px solid #bfdbfe; /* blue-200 */
+            border-radius: 0.75rem;
+        }
+        .amberbox {
+            background: #fffbeb; /* amber-50 */
+            border: 1px solid #fde68a; /* amber-200 */
+            border-radius: 0.75rem;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-7xl mx-auto text-slate-700">
+        <h1 class="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-4 flex items-center justify-center gap-3">
+            <!-- Simple Kubernetes-ish mark (helm wheel) -->
+            <svg aria-hidden="true" class="w-9 h-9 md:w-10 md:h-10 shrink-0" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="28" stroke="#326CE5" stroke-width="4"/>
+                <circle cx="32" cy="32" r="6" fill="#326CE5"/>
+                <path d="M32 10v10" stroke="#326CE5" stroke-width="4" stroke-linecap="round"/>
+                <path d="M32 44v10" stroke="#326CE5" stroke-width="4" stroke-linecap="round"/>
+                <path d="M10 32h10" stroke="#326CE5" stroke-width="4" stroke-linecap="round"/>
+                <path d="M44 32h10" stroke="#326CE5" stroke-width="4" stroke-linecap="round"/>
+                <path d="M18 18l7 7" stroke="#326CE5" stroke-width="4" stroke-linecap="round"/>
+                <path d="M39 39l7 7" stroke="#326CE5" stroke-width="4" stroke-linecap="round"/>
+                <path d="M46 18l-7 7" stroke="#326CE5" stroke-width="4" stroke-linecap="round"/>
+                <path d="M25 39l-7 7" stroke="#326CE5" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <span>Kubernetes: End-to-End</span>
+        </h1>
+        <p class="text-center text-slate-600 mb-12 max-w-3xl mx-auto">A visual mental model for how Kubernetes takes <span class="mono">desired state (YAML)</span> and turns it into running Pods, networking, and self-healing workloads across nodes.</p>
+
+        <!-- 1) Desired State -> Control Plane -> Nodes -->
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr_auto_1fr] gap-6 items-stretch mb-12">
+            <div class="card p-6 border-blue-200 min-w-0">
+                <div class="component-title kblue">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg>
+                    <span>1. You: YAML + kubectl</span>
+                </div>
+                <p class="text-sm text-slate-600 mb-3">You describe the cluster’s desired state. Kubernetes continuously reconciles it.</p>
+                <div class="kbox p-3 overflow-x-auto">
+                    <pre class="mono text-xs text-slate-700 whitespace-pre"><code># Typical demo apply order
+kubectl apply -f mongo-config.yaml
+kubectl apply -f mongo-secret.yaml
+kubectl apply -f mongo.yaml
+kubectl apply -f webapp.yml</code></pre>
+                </div>
+                <p class="label">Key idea</p>
+                <p class="text-xs">K8s is <b>declarative</b>: you say <span class="mono">is</span>, it works to keep it <span class="mono">should</span>.</p>
+            </div>
+
+            <div class="flex items-center justify-center text-slate-400">
+                <div class="connector">
+                    <span class="lg:hidden">▼</span>
+                    <span class="hidden lg:inline">▶</span>
+                </div>
+            </div>
+
+            <div class="card p-6 border-2 border-blue-400 bg-slate-50 min-w-0">
+                <div class="component-title justify-center text-blue-700 text-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V7l-8-3-8 3v5c0 6 8 10 8 10z"/></svg>
+                    <span>2. Control Plane</span>
+                </div>
+                <p class="text-center text-sm text-slate-600 mb-5">The “brain” that stores state, decides placements, and drives reconciliation.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="mini-card border border-blue-200">
+                        <div class="font-semibold text-slate-700 mb-1">API Server</div>
+                        <div class="text-xs text-slate-600">Entry point for <span class="mono">kubectl</span>, UI, automation.</div>
+                        <div class="mt-2"><span class="chip mono">/apis</span> <span class="chip mono">authz</span></div>
+                    </div>
+                    <div class="mini-card border border-blue-200">
+                        <div class="font-semibold text-slate-700 mb-1">etcd</div>
+                        <div class="text-xs text-slate-600">Source of truth for cluster state.</div>
+                        <div class="mt-2"><span class="chip mono">snapshots</span> <span class="chip mono">state</span></div>
+                    </div>
+                    <div class="mini-card border border-blue-200">
+                        <div class="font-semibold text-slate-700 mb-1">Scheduler</div>
+                        <div class="text-xs text-slate-600">Selects a Node for each new Pod.</div>
+                        <div class="mt-2"><span class="chip mono">resources</span> <span class="chip mono">constraints</span></div>
+                    </div>
+                    <div class="mini-card border border-blue-200">
+                        <div class="font-semibold text-slate-700 mb-1">Controller Manager</div>
+                        <div class="text-xs text-slate-600">Reconciles <span class="mono">desired</span> vs <span class="mono">actual</span>.</div>
+                        <div class="mt-2"><span class="chip mono">deployments</span> <span class="chip mono">nodes</span></div>
+                    </div>
+                </div>
+                <p class="label">Mental model</p>
+                <p class="text-xs">API Server is the front door. etcd is memory. Controllers + scheduler are the decision engines.</p>
+            </div>
+
+            <div class="flex items-center justify-center text-slate-400">
+                <div class="connector">
+                    <span class="lg:hidden">▼</span>
+                    <span class="hidden lg:inline">▶</span>
+                </div>
+            </div>
+
+            <div class="card p-6 border-emerald-200 min-w-0">
+                <div class="component-title text-emerald-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M7 21h10"/><path d="M12 17v4"/></svg>
+                    <span>3. Worker Nodes</span>
+                </div>
+                <p class="text-sm text-slate-600 mb-3">Where workloads actually run.</p>
+                <div class="grid grid-cols-1 gap-2 text-xs">
+                    <div class="mini-card">kubelet (node agent) talks to API server</div>
+                    <div class="mini-card">Container runtime runs containers (via Pods)</div>
+                    <div class="mini-card">CNI networking gives Pods IPs + routing</div>
+                </div>
+                <p class="label">Key idea</p>
+                <p class="text-xs">Kubernetes makes many machines feel like <b>one cluster computer</b>.</p>
+            </div>
+        </div>
+
+        <!-- 2) Networking + identity (Pod IP vs Service IP) -->
+        <div class="card p-6 border-slate-200 mb-12">
+            <div class="component-title justify-center text-slate-800 text-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 0 8"/><path d="M8 8a6 6 0 0 0 0 8"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M2 12h2"/><path d="M20 12h2"/></svg>
+                <span>Networking: Pod IPs vs Service IPs</span>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <div class="mini-card border border-slate-200">
+                    <div class="font-semibold text-slate-700 mb-2">Pod</div>
+                    <div class="chip mono">ephemeral IP</div>
+                    <p class="text-xs text-slate-600 mt-2">Pods can be recreated; their IPs change.</p>
+                    <p class="example-text">Treat Pods as cattle, not pets.</p>
+                </div>
+                <div class="mini-card border border-slate-200">
+                    <div class="font-semibold text-slate-700 mb-2">Service</div>
+                    <div class="chip mono">stable virtual IP</div>
+                    <p class="text-xs text-slate-600 mt-2">A stable endpoint + load balancer to a set of Pods.</p>
+                    <p class="example-text">Traffic: <span class="mono">service</span> → matching Pods (labels).</p>
+                </div>
+                <div class="mini-card border border-slate-200">
+                    <div class="font-semibold text-slate-700 mb-2">Ingress</div>
+                    <div class="chip mono">HTTP routing</div>
+                    <p class="text-xs text-slate-600 mt-2">Routes external HTTP(S) to Services (often via an Ingress Controller).</p>
+                    <p class="example-text">Browser → Ingress → Service → Pods</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3) Core objects (what you create most often) -->
+        <div class="card p-6 border-slate-200 mb-12">
+            <div class="component-title justify-center text-slate-800 text-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V7l-8-3-8 3v5c0 6 8 10 8 10z"/></svg>
+                <span>Core objects you’ll use daily</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+                <div class="mini-card">
+                    <div class="font-semibold text-slate-700 mb-1">Deployment</div>
+                    <div class="text-slate-600">Desired replicas + rolling updates (stateless apps).</div>
+                    <div class="mt-2"><span class="chip mono">replicas</span> <span class="chip mono">rollout</span></div>
+                </div>
+                <div class="mini-card">
+                    <div class="font-semibold text-slate-700 mb-1">ReplicaSet</div>
+                    <div class="text-slate-600">Ensures the right number of Pods exist.</div>
+                    <div class="mt-2"><span class="chip mono">created by Deployment</span></div>
+                </div>
+                <div class="mini-card">
+                    <div class="font-semibold text-slate-700 mb-1">Pod</div>
+                    <div class="text-slate-600">Smallest unit: one or more containers sharing network/storage.</div>
+                    <div class="mt-2"><span class="chip mono">ip per pod</span></div>
+                </div>
+                <div class="mini-card">
+                    <div class="font-semibold text-slate-700 mb-1">ConfigMap</div>
+                    <div class="text-slate-600">Non-secret configuration (env vars / files).</div>
+                    <div class="mt-2"><span class="chip mono">DB_URL</span></div>
+                </div>
+                <div class="mini-card">
+                    <div class="font-semibold text-slate-700 mb-1">Secret</div>
+                    <div class="text-slate-600">Sensitive config (base64 in manifests; real secrecy is RBAC + storage).</div>
+                    <div class="mt-2"><span class="chip mono">USER</span> <span class="chip mono">PWD</span></div>
+                </div>
+                <div class="mini-card">
+                    <div class="font-semibold text-slate-700 mb-1">Volume</div>
+                    <div class="text-slate-600">Data persistence is external to Pods.</div>
+                    <div class="mt-2"><span class="chip mono">PV/PVC</span> <span class="chip mono">mount</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4) Demo stack (Mongo + Webapp) -->
+        <div class="card p-6 border-2 border-blue-300 bg-white mb-12">
+            <div class="component-title justify-center text-blue-700 text-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.5v11L12 22 3 17.5v-11L12 2z"/></svg>
+                <span>Example stack (from your notes)</span>
+            </div>
+            <p class="text-center text-sm text-slate-600 mb-6">MongoDB + WebApp, configured via ConfigMap/Secret and exposed externally for local testing.</p>
+
+            <!-- Demo manifests + apply order (from the hands-on repo) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+                <div class="mini-card border border-slate-200 bg-slate-50">
+                    <div class="font-semibold text-slate-700 mb-2">Manifests</div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="chip mono">mongo-config.yaml</span>
+                        <span class="chip mono">mongo-secret.yaml</span>
+                        <span class="chip mono">mongo.yaml</span>
+                        <span class="chip mono">webapp.yml</span>
+                    </div>
+                    <p class="text-xs text-slate-600 mt-3">This is the exact “MongoDB + webapp” Minikube demo layout.</p>
+                </div>
+                <div class="mini-card border border-amber-200 bg-amber-50/40">
+                    <div class="font-semibold text-amber-800 mb-2">Apply order (important)</div>
+                    <div class="kbox p-3 overflow-x-auto">
+                        <pre class="mono text-xs text-slate-700 whitespace-pre"><code>kubectl apply -f mongo-config.yaml
+kubectl apply -f mongo-secret.yaml
+kubectl apply -f mongo.yaml
+kubectl apply -f webapp.yml</code></pre>
+                    </div>
+                    <p class="text-[11px] text-slate-600 mt-2"><b>Reason:</b> Deployments reference ConfigMap/Secret; they must exist first.</p>
+                </div>
+            </div>
+
+            <!-- Traffic path (end-to-end wiring) -->
+            <div class="mini-card border border-slate-200 mb-6">
+                <div class="font-semibold text-slate-800 mb-2 text-center">End-to-end traffic path (demo)</div>
+                <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr_auto_1fr] gap-3 items-stretch">
+                    <div class="mini-card bg-slate-50 border border-slate-200">
+                        <div class="font-semibold text-slate-700 mb-1">Browser</div>
+                        <div class="chip mono">User</div>
+                        <div class="text-[11px] text-slate-500 mt-2">External request</div>
+                    </div>
+                    <div class="flex items-center justify-center text-slate-400">
+                        <div class="connector"><span class="lg:hidden">▼</span><span class="hidden lg:inline">▶</span></div>
+                    </div>
+                    <div class="mini-card bg-orange-50/40 border border-orange-200">
+                        <div class="font-semibold text-orange-800 mb-1">NodePort Service</div>
+                        <div class="chip mono">webapp-service:30100</div>
+                        <div class="text-[11px] text-slate-500 mt-2">Exposes webapp externally (dev/demo)</div>
+                    </div>
+                    <div class="flex items-center justify-center text-slate-400">
+                        <div class="connector"><span class="lg:hidden">▼</span><span class="hidden lg:inline">▶</span></div>
+                    </div>
+                    <div class="mini-card bg-emerald-50/40 border border-emerald-200">
+                        <div class="font-semibold text-emerald-800 mb-1">WebApp Pod</div>
+                        <div class="chip mono">nanajanashia/k8s-demo-app</div>
+                        <div class="text-[11px] text-slate-500 mt-2">Reads env from ConfigMap/Secret</div>
+                    </div>
+                    <div class="flex items-center justify-center text-slate-400">
+                        <div class="connector"><span class="lg:hidden">▼</span><span class="hidden lg:inline">▶</span></div>
+                    </div>
+                    <div class="mini-card bg-teal-50/40 border border-teal-200">
+                        <div class="font-semibold text-teal-800 mb-1">ClusterIP Service</div>
+                        <div class="chip mono">mongo-service:27017</div>
+                        <div class="text-[11px] text-slate-500 mt-2">Stable internal DB endpoint</div>
+                    </div>
+                    <div class="flex items-center justify-center text-slate-400">
+                        <div class="connector"><span class="lg:hidden">▼</span><span class="hidden lg:inline">▶</span></div>
+                    </div>
+                    <div class="mini-card bg-purple-50/40 border border-purple-200">
+                        <div class="font-semibold text-purple-800 mb-1">MongoDB Pod</div>
+                        <div class="chip mono">mongo:5.0</div>
+                        <div class="text-[11px] text-slate-500 mt-2">Auth via Secret env vars</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Make dependencies explicit (more intuitive than “applied before / used by”) -->
+            <div class="mini-card border border-slate-200 bg-slate-50">
+                <div class="font-semibold text-slate-800 mb-3 text-center">Config &amp; credentials flow (2 steps)</div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="mini-card border border-amber-200 bg-amber-50/40">
+                        <div class="text-xs font-semibold text-amber-800 uppercase tracking-wider mb-2">1) Create first</div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="chip mono">ConfigMap</span>
+                            <span class="chip mono">Secret</span>
+                        </div>
+                        <p class="text-xs text-slate-600 mt-3">These must exist before Pods start, because Deployments reference them.</p>
+                        <div class="mt-3">
+                            <div class="chip mono">kubectl apply -f mongo-config.yaml</div>
+                            <div class="chip mono mt-2">kubectl apply -f mongo-secret.yaml</div>
+                        </div>
+                    </div>
+                    <div class="mini-card border border-emerald-200 bg-emerald-50/30">
+                        <div class="text-xs font-semibold text-emerald-800 uppercase tracking-wider mb-2">2) Inject into workloads</div>
+                        <div class="text-xs text-slate-700 space-y-2">
+                            <div><span class="chip mono">ConfigMap</span> <span class="mono">DB_URL</span> → <span class="chip mono">WebApp</span></div>
+                            <div><span class="chip mono">Secret</span> <span class="mono">USER_NAME/USER_PWD</span> → <span class="chip mono">WebApp</span></div>
+                            <div><span class="chip mono">Secret</span> <span class="mono">MONGO_INITDB_ROOT_*</span> → <span class="chip mono">MongoDB</span></div>
+                        </div>
+                        <p class="text-[11px] text-slate-500 mt-3">Most commonly injected as environment variables via <span class="mono">valueFrom</span>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 amberbox p-4">
+                <div class="text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Local access (Minikube on macOS Docker driver)</div>
+                <div class="text-[11px] text-slate-600 mb-3">
+                    <b>Note:</b> <span class="mono">minikube ip</span> + <span class="mono">NodePort</span> (e.g., <span class="mono">http://&lt;ip&gt;:30100</span>) often won’t work on macOS with the Docker driver — use one of the options below.
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-700">
+                    <div class="mini-card">
+                        <div class="font-semibold text-slate-700 mb-1">Option A: Minikube URL</div>
+                        <div class="chip mono">minikube service webapp-service --url</div>
+                        <div class="text-[11px] text-slate-500 mt-2">Gives a reachable <span class="mono">127.0.0.1:&lt;port&gt;</span> tunnel.</div>
+                    </div>
+                    <div class="mini-card">
+                        <div class="font-semibold text-slate-700 mb-1">Option B: Port-forward</div>
+                        <div class="chip mono">kubectl port-forward svc/webapp-service 3000:3000</div>
+                        <div class="text-[11px] text-slate-500 mt-2">Stable local port; great for debugging.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5) Daily kubectl loop -->
+        <div class="card p-6 border-slate-200 mb-12">
+            <div class="component-title justify-center text-slate-800 text-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v7h-7"/></svg>
+                <span>The daily loop (observe → change → observe)</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="mini-card">
+                    <div class="font-semibold text-slate-700 mb-2">Apply</div>
+                    <div class="chip mono">kubectl apply -f ...</div>
+                    <p class="text-xs text-slate-600 mt-2">Create/update desired state.</p>
+                </div>
+                <div class="mini-card">
+                    <div class="font-semibold text-slate-700 mb-2">Inspect</div>
+                    <div class="chip mono">kubectl get all</div>
+                    <div class="chip mono mt-2">kubectl describe ...</div>
+                    <p class="text-xs text-slate-600 mt-2">See what exists and why.</p>
+                </div>
+                <div class="mini-card">
+                    <div class="font-semibold text-slate-700 mb-2">Logs</div>
+                    <div class="chip mono">kubectl logs -f pod/...</div>
+                    <p class="text-xs text-slate-600 mt-2">Debug runtime behavior.</p>
+                </div>
+                <div class="mini-card">
+                    <div class="font-semibold text-slate-700 mb-2">Access</div>
+                    <div class="chip mono">port-forward</div>
+                    <div class="chip mono mt-2">minikube service</div>
+                    <p class="text-xs text-slate-600 mt-2">Reach your Service from your laptop.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 pt-6 border-t border-slate-200 text-sm text-slate-600">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div class="mono text-xs text-slate-500">Kubernetes Visual Guide</div>
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+                    <a class="text-blue-600 hover:text-blue-700 font-semibold" href="https://prasanth.io/Knowledge/Tech-Science/Kubernetes-(K8s)" rel="noopener noreferrer">← Back to notes</a>
+                    <a class="text-slate-600 hover:text-slate-800" href="https://prasanth.io/static/pages/Kubernetes%20Architecture.html" target="_blank" rel="noopener noreferrer">Open this visual in new tab</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+

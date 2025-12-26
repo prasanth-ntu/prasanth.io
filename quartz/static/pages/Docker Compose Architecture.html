@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Compose Architecture - A Visual Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        @media (prefers-reduced-motion: reduce) {
+            * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+            .card:hover { transform: none !important; }
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            border: 1px solid #e2e8f0; /* slate-200 */
+            transition: all 0.3s ease-in-out;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .component-title {
+            font-weight: 600;
+            color: #1e293b; /* slate-800 */
+            border-bottom: 1px solid #e2e8f0; /* slate-200 */
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+        .label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #64748b; /* slate-500 */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.5rem;
+        }
+        .example-text {
+            font-size: 0.8rem;
+            color: #475569;
+            border-left: 2px solid #cbd5e1;
+            padding-left: 0.75rem;
+            margin-top: 0.75rem;
+            font-style: italic;
+        }
+        .mini-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 0.75rem;
+            box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+            height: 100%;
+        }
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.5rem;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            font-size: 0.75rem;
+            color: #334155;
+        }
+        .connector {
+            color: #94a3b8; /* slate-400 */
+            font-size: 1.75rem;
+            line-height: 1;
+        }
+        .ybox {
+            background: #fff7ed; /* orange-50 */
+            border: 1px solid #fed7aa; /* orange-200 */
+            border-radius: 0.75rem;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-7xl mx-auto text-slate-700">
+        <h1 class="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-4 flex items-center justify-center gap-3">
+            <!-- Docker-brand-aligned “compose” mark: docker-ish whale + small compose tiles -->
+            <svg aria-hidden="true" class="w-9 h-9 md:w-10 md:h-10 shrink-0" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Use Docker brand blue (Moby Blue) -->
+                <g fill="#1D63ED">
+                    <!-- Container blocks -->
+                    <rect x="12" y="22" width="8" height="8" rx="2" opacity="0.95"/>
+                    <rect x="22" y="22" width="8" height="8" rx="2" opacity="0.95"/>
+                    <rect x="32" y="22" width="8" height="8" rx="2" opacity="0.95"/>
+                    <rect x="42" y="22" width="8" height="8" rx="2" opacity="0.95"/>
+                    <rect x="22" y="12" width="8" height="8" rx="2" opacity="0.9"/>
+                    <rect x="32" y="12" width="8" height="8" rx="2" opacity="0.9"/>
+
+                    <!-- Whale-ish base silhouette (abstract) -->
+                    <path d="M10 34h44c0 10-8 18-18 18H26c-9.94 0-18-8.06-18-18z" opacity="0.18"/>
+                    <path d="M10 34h44c0 9.5-7.7 17.2-17.2 17.2H27.2C17.7 51.2 10 43.5 10 34z" opacity="0.32"/>
+                </g>
+
+                <!-- Compose hint: two tiles linked (light blue) -->
+                <g>
+                    <rect x="42.5" y="41" width="8.5" height="8.5" rx="2.2" fill="#E5F2FC" stroke="#1D63ED" stroke-width="1.6"/>
+                    <rect x="52.5" y="41" width="8.5" height="8.5" rx="2.2" fill="#E5F2FC" stroke="#1D63ED" stroke-width="1.6"/>
+                    <path d="M51 45.25h2.1" stroke="#1D63ED" stroke-width="2" stroke-linecap="round"/>
+                </g>
+            </svg>
+            <span>Docker Compose: End-to-End</span>
+        </h1>
+        <p class="text-center text-slate-600 mb-12 max-w-3xl mx-auto">A visual breakdown of how <span class="mono">docker compose</span> defines, networks, and runs multiple services as one application.</p>
+
+        <!-- 1) Inputs -> Outputs -->
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-6 items-stretch mb-12">
+            <div class="card p-6 border-emerald-200">
+                <div class="component-title text-emerald-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9"/><path d="M7 10h10"/><path d="M7 14h10"/><path d="M5 20h14a2 2 0 0 0 2-2v-3H3v3a2 2 0 0 0 2 2z"/></svg>
+                    <span>1. Compose File</span>
+                </div>
+                <p class="text-sm text-slate-600 mb-3">Your declarative definition of the app.</p>
+                <div class="ybox p-3 overflow-x-auto">
+                    <pre class="mono text-xs text-slate-700 whitespace-pre"><code>services:
+  mongodb:
+    image: mongo
+  mongo-express:
+    image: mongo-express
+    depends_on: [mongodb]</code></pre>
+                </div>
+                <p class="label">Key idea</p>
+                <p class="text-xs">Compose turns a set of containers into a single “application unit”.</p>
+            </div>
+
+            <div class="flex items-center justify-center text-slate-400">
+                <div class="connector">
+                    <span class="lg:hidden">▼</span>
+                    <span class="hidden lg:inline">▶</span>
+                </div>
+            </div>
+
+            <div class="card p-6 border-blue-200 bg-slate-50">
+                <div class="component-title text-blue-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg>
+                    <span>2. Docker Compose CLI</span>
+                </div>
+                <p class="text-sm text-slate-600 mb-3">You apply the desired state with one command.</p>
+                <div class="bg-slate-900 rounded-md p-3 text-xs text-green-400 mono mb-3 overflow-x-auto">
+                    <span class="whitespace-nowrap">$ docker compose up -d</span><br>
+                    <span class="whitespace-nowrap">$ docker compose logs -f</span><br>
+                    <span class="whitespace-nowrap">$ docker compose down</span>
+                </div>
+                <p class="label">What Compose does</p>
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <div class="mini-card">Creates a project network</div>
+                    <div class="mini-card">Creates containers</div>
+                    <div class="mini-card">Wires DNS by service name</div>
+                    <div class="mini-card">Optionally builds images</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2) What Compose creates -->
+        <div class="card p-6 border-slate-200 mb-12">
+            <div class="component-title justify-center text-slate-800 text-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V7l-8-3-8 3v5c0 6 8 10 8 10z"/></svg>
+                <span>What Compose Creates (per project)</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <div class="mini-card border border-slate-200">
+                    <div class="font-semibold text-slate-700 mb-2">Network</div>
+                    <div class="chip mono">project_default</div>
+                    <p class="text-xs text-slate-600 mt-2">All services join this network by default.</p>
+                    <p class="example-text">Service names become DNS names (e.g., <span class="mono">mongodb</span>).</p>
+                </div>
+                <div class="mini-card border border-slate-200">
+                    <div class="font-semibold text-slate-700 mb-2">Containers</div>
+                    <div class="chip mono">&lt;project&gt;-mongodb-1</div><br>
+                    <div class="chip mono">&lt;project&gt;-mongo-express-1</div>
+                    <p class="text-xs text-slate-600 mt-2">Containers are namespaced by the project name.</p>
+                </div>
+                <div class="mini-card border border-slate-200">
+                    <div class="font-semibold text-slate-700 mb-2">(Optional) Volumes</div>
+                    <div class="chip mono">db_data</div>
+                    <p class="text-xs text-slate-600 mt-2">Use volumes to keep DB data across restarts.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3) Reference demo: MongoDB + Mongo Express + App -->
+        <div class="card p-6 border-2 border-emerald-300 bg-white mb-12">
+            <div class="component-title justify-center text-emerald-700 text-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.5v11L12 22 3 17.5v-11L12 2z"></path></svg>
+                <span>Example Stack (from your notes)</span>
+            </div>
+            <p class="text-center text-sm text-slate-600 mb-6">All services share one Compose network. Both <span class="mono">mongo-express</span> and <span class="mono">my-app</span> connect directly to <span class="mono">mongodb</span>.</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-6 items-stretch">
+                <!-- Left: services -->
+                <div class="flex flex-col gap-4">
+                    <div class="mini-card bg-slate-50 border border-slate-200">
+                        <div class="font-semibold text-slate-700 mb-2">mongo-express</div>
+                        <div class="chip mono">ports: 8081:8081</div>
+                        <div class="chip mono">depends_on: mongodb</div>
+                        <p class="text-xs text-slate-600 mt-2">Web UI container.</p>
+                        <div class="mt-3 flex items-center gap-2 text-xs text-slate-500">
+                            <span class="mono">connects to</span>
+                            <span class="chip mono">mongodb:27017</span>
+                        </div>
+                    </div>
+
+                    <div class="mini-card bg-emerald-50/40 border border-emerald-200">
+                        <div class="font-semibold text-emerald-800 mb-2">my-app</div>
+                        <div class="chip mono">ports: 3000:3000</div>
+                        <div class="chip mono">env: MONGO_URL=mongodb</div>
+                        <p class="text-xs text-slate-600 mt-2">Application container.</p>
+                        <div class="mt-3 flex items-center gap-2 text-xs text-slate-500">
+                            <span class="mono">connects to</span>
+                            <span class="chip mono">mongodb:27017</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle: connectors (desktop only) -->
+                <div class="hidden lg:flex flex-col items-center justify-between py-10 text-slate-400">
+                    <div class="flex flex-col items-center">
+                        <div class="connector">▶</div>
+                        <div class="text-[11px] text-slate-500 mt-2">TCP</div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="connector">▶</div>
+                        <div class="text-[11px] text-slate-500 mt-2">TCP</div>
+                    </div>
+                </div>
+
+                <!-- Right: DB -->
+                <div class="mini-card bg-purple-50/40 border border-purple-200 flex flex-col justify-center">
+                    <div class="font-semibold text-purple-800 mb-2">mongodb</div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="chip mono">port: 27017</span>
+                        <span class="chip mono">volume: db_data</span>
+                    </div>
+                    <p class="text-xs text-slate-600 mt-2">Database container with optional persistence.</p>
+                    <p class="example-text mt-3">From your laptop, you typically hit <span class="mono">localhost:8081</span> (mongo-express) and <span class="mono">localhost:3000</span> (my-app).</p>
+                </div>
+            </div>
+
+            <div class="mt-6 bg-slate-50 border border-slate-200 rounded-lg p-4">
+                <div class="text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">What to remember</div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs text-slate-700">
+                    <div class="mini-card">Compose gives you <b>one network</b> and <b>DNS by service name</b>.</div>
+                    <div class="mini-card"><b>depends_on</b> controls start order (not readiness).</div>
+                    <div class="mini-card"><b>down</b> removes containers + network; add volumes for persistence.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4) Lifecycle commands -->
+        <div class="card p-6 border-slate-200 mb-12">
+            <div class="component-title justify-center text-slate-800 text-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v7h-7"/></svg>
+                <span>Lifecycle (most used commands)</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="mini-card">
+                    <div class="font-semibold text-slate-700 mb-2">Start / create</div>
+                    <div class="chip mono">docker compose up -d</div>
+                    <p class="text-xs text-slate-600 mt-2">Create network + containers and start them.</p>
+                </div>
+                <div class="mini-card">
+                    <div class="font-semibold text-slate-700 mb-2">Logs</div>
+                    <div class="chip mono">docker compose logs -f</div>
+                    <p class="text-xs text-slate-600 mt-2">Aggregated logs from all services.</p>
+                </div>
+                <div class="mini-card">
+                    <div class="font-semibold text-slate-700 mb-2">Stop / start</div>
+                    <div class="chip mono">docker compose stop</div><br>
+                    <div class="chip mono">docker compose start</div>
+                    <p class="text-xs text-slate-600 mt-2">Keep containers; stop the processes.</p>
+                </div>
+                <div class="mini-card">
+                    <div class="font-semibold text-slate-700 mb-2">Remove</div>
+                    <div class="chip mono">docker compose down</div>
+                    <p class="text-xs text-slate-600 mt-2">Remove containers + network (and optionally volumes).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5) Limits -->
+        <div class="card p-6 border-amber-300 bg-amber-50/40">
+            <div class="component-title justify-center text-amber-700 text-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <span>Where Compose Fits (and where it doesn’t)</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="mini-card">
+                    <div class="font-semibold text-slate-700 mb-2">Great for</div>
+                    <ul class="text-xs text-slate-600 list-disc pl-5 space-y-1">
+                        <li>Local dev stacks (app + DB + cache)</li>
+                        <li>Small single-host deployments</li>
+                        <li>Reproducible demos</li>
+                    </ul>
+                </div>
+                <div class="mini-card">
+                    <div class="font-semibold text-slate-700 mb-2">Not great for</div>
+                    <ul class="text-xs text-slate-600 list-disc pl-5 space-y-1">
+                        <li>Large-scale multi-node orchestration</li>
+                        <li>Auto-scaling, self-healing across a cluster</li>
+                        <li>Production-grade scheduling (use Kubernetes)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 pt-6 border-t border-slate-200 text-sm text-slate-600">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div class="mono text-xs text-slate-500">Docker Compose Visual Guide</div>
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+                    <a class="text-blue-600 hover:text-blue-700 font-semibold" href="https://prasanth.io/Knowledge/Tech-Science/Docker-Compose" rel="noopener noreferrer">← Back to notes</a>
+                    <a class="text-slate-600 hover:text-slate-800" href="https://prasanth.io/static/pages/Docker%20Compose%20Architecture.html" target="_blank" rel="noopener noreferrer">Open this visual in new tab</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+
