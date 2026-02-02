@@ -32,7 +32,21 @@ Run SQL query in the current code cell.
 ## `%sql sqlite:///sample.db`
 Create and connect to SQLite database in the same directory as our jupyter notebook.
 
+## `% writefile folder/file.py`
+The magic function will will save the content of the current cell to `file.py` in the directory: `folder`.
+
 # Keyboard Shortcuts
 - `Cmd + L` - Toggle line numbers in cell
 
 
+# nbconvert
+
+ > [!SUMMARY] Convert Notebooks to other formats
+
+Source: https://nbconvert.readthedocs.io/en/latest/
+
+## Commands
+Export jupyter notebook as a a markdown file
+```bash
+jupyter nbconvert --to markdown your_notebook_name.ipynb
+```

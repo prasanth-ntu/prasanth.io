@@ -4,12 +4,18 @@ tags:
   - softwareengineering
   - DevOps
   - machinelearning
+  - OpenSource
 ---
 > [!TIP] [Kubernetes](https://kubernetes.io/docs/concepts/overview/), also known as K8s, is an open source system for automating deployment, scaling, and management of containerized applications.
 
-Prerequisite: [[Docker]] | [[Docker Compose]]
-
-This note is a cohesive walkthrough based on the crash course I watched ([YouTube video](https://www.youtube.com/watch?v=s_o8dwzRlu4)),  the hands-on custom project ([`prasanth-ntu/k8s-crash-course`](https://github.com/prasanth-ntu/k8s-crash-course)), and the corresponding docker image for webapp ([`nanajanashia/k8s-demo-app:v1.0`](https://hub.docker.com/r/nanajanashia/k8s-demo-app) from Docker Hub.
+> [!EXAMPLE] Resources
+> - Prerequisite: 
+> 	- [[Docker]] | [[Docker Compose]]
+> - My Demo/Tutorial in Github Repo
+> 	- [`prasanth-ntu/k8s-crash-course`](https://github.com/prasanth-ntu/k8s-crash-course)
+> - Additional Resources
+> 	- [Cheat Sheet - Coursera](https://www.coursera.org/collections/kubernetes-cheat-sheet)
+> 	- [Official Documentation](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create)
 
 # Kubernetes Architecture: End-to-End
 <iframe src="https://prasanth.io/static/pages/Kubernetes%20Architecture.html" width="100%" height="750" frameborder="0" allowfullscreen></iframe>
@@ -64,7 +70,7 @@ K8s architecture is made up of
 
 # Part 2: Main Kubernetes Components
 
-![[Screenshot 2025-12-26 at 11.37.58 AM.png]]
+![[k8s main components.png]]
 ## Node
 
 > [!TIP] **Node** = Virtual or Physical Machine
@@ -170,7 +176,7 @@ In other words, Pod is like a layer over the Docker Container, so that we don't 
 		- From `etcd`
 Besides that, we also have API version and service kind.
 
-![[Screenshot 2025-12-26 at 1.16.43 PM.png]]
+![[k8s master processes.png]]
 
 # Part 3:  Local Setup: Minikube and kubectl
 
@@ -178,7 +184,7 @@ Besides that, we also have API version and service kind.
 **Production Cluster Setup**
 - Multiple Master Nodes and Worker Nodes
 - Separate virtual or physical machines each representing a Node
-![[Screenshot 2025-12-26 at 1.19.22 PM.png]]
+![[k8s production cluster setup.png]]
 
 🤔 **Test on Local Machine?**
 - We may not have enough resources locally to test this entire cluster
@@ -188,7 +194,7 @@ Besides that, we also have API version and service kind.
 - Comes Docker Container runtime pre-installed, where we can run the pods with containers in the (virtual) Node.
 - Minikube has kubectl as dependency
 
-![[Screenshot 2025-12-26 at 1.20.31 PM.png]]
+![[k8s Local cluster setup.png]]
 ## What is kubectl?
 - CLI for K8s cluster
 	- Helps to interact with various K8s clusters (like Minikube cluster, Cloud cluster, etc.)
@@ -196,7 +202,7 @@ Besides that, we also have API version and service kind.
 	- We can talk to the API server via 3 different clients (CLI, UI, API) where
 		- 💪 `kubectl` is the most powerful of 3 clients
 	
-![[Screenshot 2025-12-26 at 1.24.35 PM.png]]
+![[what is kubectl.png]]
 
 ## Set-up Minikube cluster
 
@@ -239,7 +245,7 @@ Now, we have actual K8s cluster running locally in our machine. We can start dep
 
 ## Demo Project Overview
 
-![[Screenshot 2025-12-26 at 2.49.37 PM.png]]
+![[k8s demo project overview.png]]
 
 We will deploy a mongoDB and web application. The web application will connect to mongoDB via external configuration data (ConfigMap and Secret) Finally, we will make web application accessible externally from browser.
 
@@ -250,7 +256,7 @@ Key resources
 ## K8s Components Overview
 
 Let's create all 4 K8s configuration files needed for deploying our application setup.
-![[Screenshot 2025-12-26 at 2.53.04 PM.png]]
+![[k8s components overview.png]]
 
 ### 1. `mongo-config.yaml`
 Copy the template from official doc > [configmap](https://kubernetes.io/docs/concepts/configuration/configmap/#configmaps-and-pods), and update it.

@@ -32,6 +32,10 @@ The region 1q43-44 on chromosome 1 is associated with a syndrome characterized b
 ---
 # A
 
+## Accuracy
+#machinelearning #datascience #DataAnalytics #metrics
+% of observations that are correctly predicted.
+
 ## Activation Functions
 #machinelearning #artificialintelligence
 
@@ -50,6 +54,27 @@ It can occur in organs such as the lungs, colon, breast, prostate, or pancreas.
 
 **Example**: The biopsy revealed that the tumor was an **adenocarcinoma** of the colon. 
 
+## American Standard Code for Information Interchange (ASCII)
+#Programming #softwareengineering #standards #datascience #machinelearning 
+
+ASCII (American Standard Code for Information Interchange) is ==a 7-bit character encoding standard developed in the 1960s to represent 128 English characters, including control characters, digits, uppercase/lowercase letters, and punctuation==. It maps binary numbers (0–127) to specific symbols, with 95 printable characters, forming the basis for modern character sets like UTF-8. 
+
+**Key Aspects of ASCII:**
+- **Characters Included:** The 128 characters consist of 33 non-printing control characters (e.g., newline, tab) and 95 printable characters (digits, English letters, and symbols).
+- **Common Values:** 'A' is 65, 'a' is 97, '0' is 48, and a space is 32.
+- **Binary Representation:** ASCII uses 7 bits per character, though often stored in 8-bit bytes (0–127).
+- **Structure:** It is organized into blocks: Control Characters (0–31), Special Characters and Numbers (32–64), Uppercase Letters (65–90), and Lowercase Letters (97–122).
+- **Legacy:** While heavily influential and still used, ASCII has largely been succeeded by [[Glossary#Unicode Tranformation Format (UTF)|UTF]] (specifically UTF-8), which includes the first 128 ASCII characters while supporting far more characters. 
+
+**Common ASCII Examples:**
+- **`0`–`9`**: 48–57
+- **`A`–`Z`**: 65–90
+- **`a`–`z`**: 97–122
+- **Space**: 32
+- **Control Characters**: 0–31 (e.g., NUL, BEL, LF, CR) 
+
+ASCII remains fundamental to computing,, especially for programming and communication protocols, even if its limitations necessitated the shift to more extensive encoding system
+
 ## Ammortize
 #finance 
 Gradually write off the initial cost of an asset over a period. In other words, spreading the cost of an (intangible) assert over its useful life.
@@ -57,6 +82,21 @@ Gradually write off the initial cost of an asset over a period. In other words, 
 Intangible assets could include Patents, Copyrights, & IPs.
 
 Example: Imagine your business has purchased a patent for $10,000 which has a useful life of five years and no salvage value. The amortization = $\$10,000 / 5 = \$2,000$. This means the annual amortization expense is $2,000.
+
+## Anagram
+#Programming #Coding 
+
+An anagram is a word or phrase made by rearranging the letters of another word or phrase, using all the original letters exactly once to form a new, meaningful word or phrase, like "listen" becoming "silent," or "a gentleman" becoming "elegant man". It's a popular form of wordplay, used in puzzles, literature, and humor to create hidden meanings or witty connections. 
+
+**Key characteristics**
+- **Rearrangement**: The core of an anagram is changing the order of letters.
+- **All letters used**: Every letter from the original must be used in the new word/phrase.
+- **Meaningful result**: The new arrangement must form a real word or phrase, not just gibberish. 
+
+**Examples**
+- **Word to Word**: "Triangle" and "Integral".
+- **Phrase to Phrase**: "The eyes" and "They see".
+- **Famous Example**: "William Shakespeare" becomes "I'll make a wise phrase". 
 
 ## Anecdote
 #linguistics
@@ -120,6 +160,9 @@ arXiv (pronounced as "[archive](https://en.wikipedia.org/wiki/Archive "Archive"
 #medical #biology 
 
  ==ADHD (Attention-Deficit/Hyperactivity Disorder) is considered a form of neurodivergence==, falling under the neurodiversity umbrella alongside conditions like autism, dyslexia, and dyspraxia, as it involves natural variations in brain function and information processing that differ from the "neurotypical" norm.
+
+## Augment
+#datascience #machinelearning #LLM 
 
 ---
 # B
@@ -186,6 +229,11 @@ The prostate is located just below the bladder, and when prostate cancer:
 - Nephrostomy tubes (drains urine directly from kidneys through the back)
 - Treating the underlying cancer (e.g. hormone therapy, radiation)
 
+## BLEU
+#machinelearning #artificialintelligence #LLM #metrics 
+
+Measures the quality of text translated, similar to [[Glossary#Precision|Precision]].
+
 ## Bombay Stock Exchange (BSE)
 #finance #india
 
@@ -212,6 +260,11 @@ In ML context, it means creating multiple training sets by resampling with repla
 ---
 # C
 
+## Canonical
+#softwareengineering #Coding 
+
+Conforming to a rule, standard, or accepted principle, often referring to official, authoritative or standard form in literature, religion, science, or computing. 
+
 ## Capillary Refill Time (CRP)
 #biology #science 
 
@@ -220,6 +273,22 @@ A quick, physical test to objectively measure [[Glossary#Perfusion|Perfusion]] (
 - **How the Test is Done:** The doctor will press firmly on a capillary-rich area, usually the child's fingernail bed or the skin over their sternum (breastbone), for a few seconds. This pressure forces the blood out of the tiny blood vessels (capillaries) in that spot, causing it to turn white.
 - **What is Measured:** The doctor then releases the pressure and counts how long it takes for the normal pink colour to return to the area. This is the "refill time."
 - **What it Means:** A time of **less than 2 seconds (`<2sec`)** is the goal. It shows that the circulatory system is responsive and that blood pressure is strong enough to quickly push blood back into those tiny vessels. It's a sign of a healthy, well-hydrated, and robust cardiovascular system. If the time were longer (e.g., 3, 4, or 5 seconds), it could be a sign of issues like dehydration or more serious circulatory problems.
+
+## Capital appreciation
+#finance
+
+## Cardiomyotpathy
+#science #biology 
+
+Cardiomyopathy (kahr-dee-o-my-OP-uh-thee) is _a disease of the heart muscle_. It causes the heart to have a harder time pumping blood to the rest of the body, which can lead to symptoms of heart failure. Cardiomyopathy also can lead to some other serious heart conditions.
+
+There are various types of cardiomyopathy. The main types include dilated, hypertrophic and restrictive cardiomyopathy. Treatment includes medicines and sometimes surgically implanted devices and heart surgery. Some people with severe cardiomyopathy need a heart transplant. Treatment depends on the type of cardiomyopathy and how serious it is.
+
+**Types**
+- Dilated cardiomyopathy
+-  [[Glossary#Hypertrophic cardiomyopathy|Hypertrophic cardiomyopathy]]
+
+Source: https://www.mayoclinic.org/diseases-conditions/cardiomyopathy/symptoms-causes/syc-20370709
 
 ## Causal
 #datascience
@@ -238,29 +307,16 @@ The relationship between cause and effect.
 **Example:** [[Causality]], [[Causal Effect]]
 
 **Pronunciation:** kaw·za·luh·tee
-
-## Capital appreciation
-#finance
-
-## Cardiomyotpathy
-#science #biology 
-
-Cardiomyopathy (kahr-dee-o-my-OP-uh-thee) is _a disease of the heart muscle_. It causes the heart to have a harder time pumping blood to the rest of the body, which can lead to symptoms of heart failure. Cardiomyopathy also can lead to some other serious heart conditions.
-
-There are various types of cardiomyopathy. The main types include dilated, hypertrophic and restrictive cardiomyopathy. Treatment includes medicines and sometimes surgically implanted devices and heart surgery. Some people with severe cardiomyopathy need a heart transplant. Treatment depends on the type of cardiomyopathy and how serious it is.
-
-**Types**
-- Dilated cardiomyopathy
--  [[Glossary#Hypertrophic cardiomyopathy|Hypertrophic cardiomyopathy]]
-
-Source: https://www.mayoclinic.org/diseases-conditions/cardiomyopathy/symptoms-causes/syc-20370709
-
 ## Central Provident Fund (CPF)
 #finance #singapore
 
 ## Civil Aviation Authority of Singapore (CAAS)
 #singapore #aviation
 
+## Comprehensive
+
+- Including or dealing with all or nearly all elements or aspects of something.
+- of large scope; covering or involving much; inclusive
 
 ## Concave
 
@@ -335,6 +391,12 @@ Designed to measure the **average price changes** of a **fixed basket** of consu
 #Singapore CPI increased 2.4% in 2024. For more details, refer [SINGAPORE CONSUMER PRICE INDEX](https://www.singstat.gov.sg/modules/infographics/consumer-price-index) by Department of Statistics.
 
 #International CPI increased 5.7% in 2023. For more details, refer [IMF report](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?name_desc=false)
+
+
+## Crony Capitalism
+#finance #economics 
+
+Crony capitalism is a corrupt economic system where businesses gain success through close relationships with political leaders, not merit, securing unfair advantages like subsidies, tax breaks, and favorable contracts, distorting markets and increasing inequality. It's characterized by collusion between the business and political classes, leading to bailouts, regulatory favoritism, and corruption, ultimately stifling innovation, harming public trust, and favoring special interests over fair competition.
 
 ## curl
 #Programming #softwareengineering 
@@ -491,6 +553,13 @@ A punctuation mark consisting of a series of three dots. An ellipsis can be used
 
 **Example:** A set of dots (…) indicating an ellipsis.
 
+
+## Emanate
+
+(of a feeling, quality, or sensation) issue or spread out from (a source).
+
+Similar words: emergy, come out, originate, arise, start
+
 ## Empirical
 #datascience
 
@@ -502,7 +571,8 @@ Based on, concerned with, or verifiable by observation or experience rather than
 
 ## Ephemeral
 #datascience #linguistics  
-Lasting for a very short time
+
+Lasting for a very short time.
 
 **Similar words**: transitory, transiet, fleeting, passing, short-lived
 
@@ -522,6 +592,11 @@ Lasting for a very short time
 
 An equity fund that gets the tax benefit.
 
+## Espionage
+#techology #GAI #LLM #machinelearning #datascience 
+
+The practice of spying or of using spies, typically by governments to obtain political and military information
+
 ## Exchange-traded fund (ETF)
 #finance
 
@@ -532,7 +607,7 @@ Tracks an index like the Sensex, but also lists its units on a stock exchange, u
 
 The fees that a mutual fund charges investors for its costs and the profit it makes.
 
-## E gratia
+## Exgratia
 
 (of a payment) given as a favor or from a sense of moral obligation rather than because of any legal requirement.
 
@@ -618,6 +693,12 @@ This floating-point format makes it efficient to represent and compute on real n
 
 For more details, refer [[Data Types]]
 
+## Floating Point Operations Per Second (FLOPS)
+#softwareengineering #Coding #datascience #LLM #gpu 
+
+Unit of compute.
+
+For more details, visit [[FLOPS]]
 ## Flustered
 #linguistics 
 
@@ -632,6 +713,12 @@ A sudden intense feeling of fear.
 ## Functional Gastrointestinal Disorders (FGIDs)
 #science #medical #disease 
 
+## F1 score
+#machinelearning #datascience #metrics 
+
+Score that is a function (harmonic mean) of precision and recall. 
+
+F1 score = `2 * TP / (2 * TP + FP + FN) = 2 * PPV * TPR / (PPV + TPR)`
 
 ---
 # G
@@ -685,6 +772,10 @@ Resources: https://aiengineering.academy/LLM/TheoryBehindFinetuning/GRPO/
 
 Place in a home where a fire is or was traditionally kept for home heating and for cooking.
 Fireplace or floor of the fireplace. 
+
+## High Bandwidth Memory (HBM)
+#gpu #LLM #machinelearning #artificialintelligence 
+
 
 ## Hypertrophic cardiomyopathy
 #biology #science #syndrome #disease
@@ -746,6 +837,11 @@ To absorb (information) or take (food, drink, or another substance) into the bod
 
 **Similar words:** absorb, consume, eat
 
+## Interquartile Range (IQR)
+#Math #Statistics #DataAnalytics #datascience #machinelearning 
+
+In statistics, the Interquartile Range (IQR) ==measures the spread of the middle 50% of your data, calculated as the difference between the third quartile (Q3, 75th percentile) and the first quartile (Q1, 25th percentile)==: IQR = Q3 - Q1. It indicates the variability of the central part of a dataset, ignoring extreme outliers, and is visualized by the box in a box plot.
+
 ## Inter-reader vs. Intra-reader variability
 | Term                         | Definition                                                                                                                                                                                       |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -799,6 +895,9 @@ A trivial or very small person or thing.
 
 **Example:** Lilliput is the name of a fictional island whose people, the Lilliputians, stand only about six inches high.
 
+## Loofah or Luffa
+A natural, fibrous sponge from gourd in the cucumber family, used for exfoliating and cleaning.
+
 ## Low-Rank Adaptation (LoRA)
 - Instead of finetuning the weights of the actual model, we fine-tune the low rank matrices (a.k.a. adapters which consists of low-rank matrices)
 - During the inference time, these adapters are put on top of the actual weights of the base model, and they are summed together. This way, we don't have to optimise the base model itself.
@@ -817,6 +916,18 @@ The tendency for the satisfaction from each additional unit to decrease as consu
 **Example** 
 - **Pizza**: The first slice of pizza at a party may be very interesting and bring immense enjoyment. The second slide is still good, but less satisfying than the first, whereas the fifth or sixth slice is not nearly as enjoyable.
 - **Money**: The first $100 a person receives may bring great happiness, whereas for someone already wealth, the addition $100 add much less utility to their overall happiness
+
+
+## Minimum Detectable Effect (MDE)
+#Statistics #datascience #DataAnalytics 
+
+In [[AB Testing & Experimentation]] and statistical analysis, the **Minimum Detectable Effect (MDE)** and the **p-value** are ==distinct but related concepts used to determine if a change is meaningful and statistically significant==.
+
+**Key Differences and Relationships**
+- **Definition of MDE:** The smallest change in a metric (e.g., conversion rate) that you want your test to reliably detect. It acts as a "sensitivity dial" for your experiment, set before the test runs.
+- **Definition of P-Value:** The probability of observing a difference as large as (or larger than) what you saw, assuming there is no actual difference (null hypothesis).
+- **The Goal:** You want to run a test where the **p-value is below your significance threshold** (usually 0.05) and the **observed effect is at least as large as your MD**
+
 
 ## Median Absolute Deviation (MAD)
 #Statistics #Math #datascience #machinelearning 
@@ -863,6 +974,15 @@ They are super useful for memorizing complex topics, vocabulary, medical terms, 
 - Even though it starts with an “m”, it’s silent—just like memory hides the m in “mnemonic!”
   Think: Mnemonic = Memory aid!
 
+## Money Laundering
+#finance #banking 
+
+## Money Mules
+#finance #banking #scam
+
+A person who transfers illegally obtained money for criminals, often recruited through fake job offers or romance scams, by receiving illicit funds in their bank account and forwarding them elsewhere for a fee/commission, thus laundering the money and hiding the criminal's identity, with severe legal consequences for the mule, including jail time and criminal records, even if they claim ignorance.
+
+For more details, visit https://www.sc.com/sg/fraud-scam/money-mule/
 ## Morbidity
 The condition of suffering from a disease or medical condition.
 
@@ -930,6 +1050,13 @@ Non-player characters (NPCs) refers to any character that is not directly contro
 
 AI-powered NPCs (non-player characters) are ==characters in video games that are controlled by artificial intelligence rather than by human players==. These AI-driven characters can interact with players in more dynamic and realistic ways than traditional NPCs, leading to more immersive and engaging gameplay experiences.
 
+## Normalized Discounted Cumulative Gain (NDCG or nDCG)
+#informationretrieval #rag #llm 
+
+Resources
+- https://en.wikipedia.org/wiki/Discounted_cumulative_gain
+- https://cme295.stanford.edu/slides/fall25-cme295-lecture7.pdf > Page 71
+
 ---
 # O
 
@@ -942,6 +1069,11 @@ Doctors who specialize in the field of oncology are called oncologists. A doctor
 
 **Example**: She decided to specialize in oncology to help patients fighting cancer.
 
+## One-Hot Encoding (OHE)
+#artificialintelligence #machinelearning #datascience #LLM #NLP 
+
+## Out of Vocabulary (OOV)
+#artificialintelligence #machinelearning #datascience #LLM #NLP 
 
 ---
 # P
@@ -989,6 +1121,11 @@ A doctor who studies disease by analyzing samples such as:
 
 This is a clinical term for good blood circulation. **Perfusion** is the process of the cardiovascular system (the heart and blood vessels) delivering oxygen-rich blood to all the tissues and organs of the body.
 
+## Perplexity
+#artificialintelligence #machinelearning #LLM #metrics 
+
+Quantifies how 'surprised' the model is to see some words together.
+
 ## Populism
 **POPULISM IN POLITICS**
 
@@ -1007,6 +1144,23 @@ https://www.channelnewsasia.com/singapore/ong-ye-kung-workers-party-ge2025-racia
 #biology #science #disease 
 
 **Post-prandial fullness**: 
+
+## Preamble
+
+A preliminary or preparatory statement; an introduction.
+
+## Precision 
+#machinelearning #datascience #metrics 
+
+Also known as Positive Predictive Value (PPV)
+
+% of predicted positive that were correct
+
+Precision = TP/(TP+FP) = 1 - FDR
+
+## Portmanteau
+
+A word blending the sounds and combining the meanings of two others, for example **motel** (*mo*tor ho*tel*) or **brunch** (*br*eakfast + l*unch*).
 
 ## Price-earnings ratio (P/E ratio or P/E)
 #finance #Investment #Stocks 
@@ -1031,10 +1185,7 @@ It’s a part of the **male reproductive system** and is often discussed in rela
 •	Prostatitis (inflammation of the prostate)
 
 ## Provident Fund (PF)
-
-## Public Provident Fund (PPF)
-
-In context of #India
+#finance 
 
 ## Proximal Proxy Optimization (PPO)
 #artificialintelligence #datascience #LLM #AGI 
@@ -1055,6 +1206,9 @@ In other words, the model automatically generates the labelled data.
 In NLP, when training a model like BERT, random words in a sentence are masked. The model is trained to predict these masked words using the context ([[MLM]]).
 - Input: "The cat is ___ the table."
 - Pseudo-label: "on."
+## Public Provident Fund (PPF)
+
+In context of #India 
 
 ## Pydantic
 
@@ -1101,11 +1255,31 @@ In LLM workflows, RAM is used primarily for loading the model from disk and mana
 A popular activation function that outputs the input directly if it's positive, otherwise it outputs zero.
 
 ## Real Assets
-
+#finance #Investment 
 Gold and Real estate
 
-## Recession
+## Recall
 
+% of actually positive that were correct. [^4]
+Recall = Sensitivity = True Positive Rate (TPR) = TP / P = TP / (TP + FN) = 1 - FNR
+
+## Recession
+#finance 
+
+
+## Reconciliation
+#finance #banking 
+
+An accounting process in which company's records are reconciled with its bank statements to make sure that the balances match. It involves reviewing transactions, spotting mismatches, and adjusting balances until both figures align, typically done monthly. 
+
+**Why It's Important**
+- **Accuracy**: Ensures your financial statements reflect your true cash position.
+- **Error Detection**: Catches human mistakes in recording transactions.
+- **Fraud Prevention**: Helps spot unauthorized withdrawals or fraudulent activity.
+- **Cash Flow Management:** Provides a clear picture of available funds.
+- **Compliance**: Essential for audits and tax filing
+
+For more details, refer this blog post: https://www.highradius.com/resources/Blog/bank-reconciliation-definition/
 
 ## Recurrent Neural Network ([[RNN]])
 
@@ -1148,6 +1322,14 @@ A regularization rate (lambda) controls the strength of regularization, with hig
 
 For more details, refer to [Google Developers](https://developers.google.com/machine-learning/crash-course/overfitting/model-complexity).
 
+
+## Repatriation
+#banking #finance 
+
+Sending of money back to one's own country.
+
+Example: The repatriation of profits by foreign investors
+
 ## Request for Comments (RFC)
 
 ## [[RESTful API]]
@@ -1157,6 +1339,11 @@ A software architectural style that defines a set of constraints for creating we
 ## [[RoBERTa]]
 
 RoBERTa (Robustly Optimized BERT Pretraining Approach) is an optimized version of BERT that removes the Next Sentence Prediction task and uses different training configurations.
+
+## ROUGE
+#metrics #machinelearning #artificialintelligence #LLM #metrics 
+
+Measures the quality of text generated, similar to [[Glossary#Recall|Recall]].
 
 ## Rule of 72
 
@@ -1248,6 +1435,16 @@ Example: He shuddered, and very quickly he was plain Mr. Baggins again.
 
 An activation function that maps any real number to a value between 0 and 1, commonly used in binary classification problems.
 
+## Smurf
+#finance #banking 
+
+
+
+## Softmax
+#machinelearning #datascience #Statistics 
+
+Normalises the quantities so that (each row in the matrix) sum up to 1.
+
 ## Special Purpose LLMs
 
 Large Language Models highly trained to focus on a single or small set of tasks. This is in contrast to General Purpose LLMs.
@@ -1288,6 +1485,16 @@ Briefly and clearly expressed.
 
 **Pronunciation:** suhk·singkt
 
+
+## Standard Deviation
+#Math #DataAnalytics #Statistics 
+
+Standard Deviation ($\sigma$) is just the square root of [[Glossary#Variance]]
+
+For more details, refer 
+- https://www.mathsisfun.com/data/standard-deviation.html
+- [[Standard Deviation]]
+
 ## Stochastic
 #Statistics #datascience #machinelearning #AI 
 
@@ -1304,6 +1511,15 @@ Briefly and clearly expressed.
 walk with long, decisive steps in one direction. 
 
 Example: Gandalf strode away.
+
+## Sundae
+A popular American ice cream with scoops of ice cream topped with sweet sauce or syrup (like fudge or caramel), whipped cream, nuts, sprinkles, and a cherry
+
+## Swagger
+#Programming #softwareengineering 
+API documentation. Aids in testing and debugging.
+
+Swagger is ==a popular set of open-source tools and a specification for designing, building, documenting, and consuming RESTful APIs==, allowing developers to describe APIs in a machine-readable format (JSON/YAML) for interactive docs, code generation, and testing, making API management much smoother and collaborative. Think of it as a blueprint for your API, enabling tools to automatically create beautiful documentation ([Swagger UI](https://www.google.com/search?q=Swagger+UI&oq=what+is+swa&gs_lcrp=EgZjaHJvbWUqBwgCEAAYgAQyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDIyNzZqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8&ved=2ahUKEwiP3siFutuRAxWoT2wGHaxaBj8QgK4QegYIAQgAEAY)), client libraries, and tests.
 
 ## Systematic Investment Plan (SIP)
 
@@ -1332,6 +1548,12 @@ Systolic (The Squeezing Phase)
 ---
 # T
 
+## Taxonomy
+
+Taxonomy is a practice and science concerned with classification or categorization. Typically, there are two parts to it: the development of an underlying scheme of classes (a taxonomy) and the allocation of things to the classes (classification).
+
+Originally, taxonomy referred only to the classification of organisms on the basis of shared characteristics. Today it also has a more general sense. It may refer to the classification of things or concepts, as well as to the principles underlying such work. Thus a taxonomy can be used to organize species, documents, videos or anything else
+
 ## [[Text Classification]]
 
 Categorizing text into predefined labels.
@@ -1351,6 +1573,10 @@ Related to the study of the nature of God and religious belief.
 A large densely packed crowd of people or animals.
 
 Example: He pushed his way through the throng.
+
+## Trade Monitoring (TM)
+#finance #banking
+
 
 ## [[Transfer learning]]
 
@@ -1376,6 +1602,14 @@ Of little value or importance.
 
 **Opposite words:** non-trivial
 
+## Typology
+#banking #finance 
+
+A typology is a system of classification used to organize things according to similar or dissimilar characteristics. Groups of things within a typology are known as "types".
+
+Typologies are distinct from taxonomies in that they primarily address things not categorizable based on empirical and objective characteristics, such as abstract and conceptual ideas or subjective criteria, though the two terms are sometimes used interchangeably.
+
+
 ---
 # U
 
@@ -1389,6 +1623,32 @@ Of little value or importance.
 
 A UKCA mark ensures the product meets UK-specific safety and regulatory requirements.
 
+
+## Unicode
+#Programming #softwareengineering #machinelearning #datascience 
+
+An international character encoding standard for use with different languages and scripts, by which each letter, digit, or symbol is assigned a unique numeric value (e.g., `U+0041` for 'A') that applies across different platforms and programs. It enables consistent text representation, storage, and exchange across different platforms, operating systems, and applications. It serves as a superior alternative to older, limited standards like ASCII.
+
+## Unicode Tranformation Format (UTF)
+#Programming #softwareengineering #machinelearning #datascience 
+
+UTF (Unicode Transformation Format) is a character encoding standard that allows computers to represent text in any language across platforms using Unicode code points. UTF-8 is the dominant standard for the internet (99.9% of web pages), using 1 to 4 bytes for encoding, and is fully backward compatible with ASCII. 
+
+**Key Aspects of UTF-8:**
+
+- **Variable-Length Encoding:** UTF-8 uses 1 byte for standard ASCII characters (0-127), and up to 4 bytes for other characters, emojis, and symbols.
+- **Universal Compatibility:** It represents all Unicode characters, making it ideal for internationalization.
+- **Web Standard:**It is the standard for HTML5, emails, JSON, and modern APIs
+- **Efficiency:** For English text, UTF-8 is very compact, while still supporting all characters.
+- **Alternative Encodings:** Besides UTF-8, other formats include UTF-16 (used in Windows/internal, usually 2-4 bytes) and UTF-32 (fixed-length 4 bytes). 
+
+**Common UTF Variants:**
+- **UTF-8:** Most common, 1-4 bytes, ASCII compatible.
+- **UTF-16:** 2 or 4 bytes, common in Windows/Java/JavaScripts internal storage.
+- **UTF-32:** 4 bytes, rarely used for storage due to size, but used in some scenarios for fixed-length needs. 
+
+UTF-8 ensures that text is encoded into bytes in a consistent way that can be reversed, ensuring "lossless" transport across different systems.
+
 ## Unit linked insurance plans (ULIP)
 
 ## Upending
@@ -1400,11 +1660,32 @@ Example:  The security inspector *upended* my bag and dumped everything out.
 ---
 # V
 
+## Vanilla
+
+Often means standard, plain, ordinary, straight forward, conventional or no-frills approach. Used in contrast to something exotic or complex
+
 ## Vanishing gradient
 
 A problem in training deep neural networks where gradients become exponentially small as they propagate back through the network layers, making it difficult for the network to learn long-range dependencies.
 
 For more details, refer to [Google Developers ML Course](https://developers.google.com/machine-learning/crash-course/neural-networks/backpropagation#vanishing_gradients).
+
+## Variance
+#Math #datascience #DataAnalytics #Statistics 
+
+Variance ($\sigma^2$) is computed as the average of the squared differences from the Mean.
+
+To calculate the variance follow these steps:
+- Calculate the Mean (the simple average of the numbers)
+- Then for each number: subtract the Mean and square the result (the squared difference).
+- Then calculate the average of those squared differences. 
+
+And the Standard Deviation ($\sigma$) is just the square root of Variance
+
+For more details, refer 
+- https://www.mathsisfun.com/data/standard-deviation.html
+- [[Standard Deviation]]
+
 
 ## Video RAM (VRAM)
 #artificialintelligence #machinelearning #LLM #AI #datascience #gpu 
@@ -1453,3 +1734,5 @@ For more details, refer
 [^2]: https://en.wikipedia.org/wiki/Proximal_policy_optimization
 
 [^3]: https://aws.amazon.com/what-is/reinforcement-learning-from-human-feedback
+
+[^4]: https://en.wikipedia.org/wiki/Confusion_matrix

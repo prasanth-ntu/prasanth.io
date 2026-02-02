@@ -7,9 +7,11 @@ tags:
 dv.view('toc')
 ```
 
-> Note: FLOPs and FLOPS are different, though there are some overlaps
+> [!WARNING] FLOPs and FLOPS are different, though there are some overlaps
 
 # FLOP vs. FLOPS
+
+![[FLOPs vs FLOPS.png]]
 ## FLOP (Floating Point Operation)
 - Refers to **single operation** involving floating-point arithmetic.
 	- These are calculations involving real numbers (decimals), which are more complex than integer operations.

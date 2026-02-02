@@ -42,7 +42,6 @@ sequenceDiagram
 6.	The relying party verifies the identity token and grants access.
 7.	The client app then allows the user to interact with the application.
 
-
 ## Example: 
 ### OIDC as a Hotel Check-In Process 🏨
 1.	**User (You, the Guest):**

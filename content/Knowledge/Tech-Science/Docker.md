@@ -4,6 +4,7 @@ tags:
   - softwareengineering
   - DevOps
   - machinelearning
+  - OpenSource
 ---
 > [!TIP] **Mental model:** Docker packages the *environment (config and dependencies)* with the code, so “run” becomes a predictable, repeatable operation irrespective of the device and OS.
 

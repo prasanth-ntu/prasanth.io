@@ -29,7 +29,6 @@ Hello!
 After function call
 ```
 
-
 ## Example 2:  Timing decorator with arguments
 
 ### Two Decorators

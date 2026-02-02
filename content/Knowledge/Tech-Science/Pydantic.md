@@ -2,6 +2,9 @@
 tags:
   - datascience
   - softwareengineering
+  - Python
+  - Coding
+  - Library
 ---
 
 ![[Pydantic-Introduction.png]]

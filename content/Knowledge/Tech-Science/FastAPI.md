@@ -6,7 +6,15 @@ tags:
 draft: true
 ---
 
-FastAPI is a modern Python web framework designed for building APIs quickly and efficiently.
+> [!SUMMARY] FastAPI is a modern Python web framework designed for building APIs quickly and efficiently.
+
+> [!example] Resources
+> - Pre-requisite: 
+> 	- [[RESTful API]] | [[Pydantic]]
+> - My Demo/Tutorial in Github repo: [`prasanth-ntu/fastapi-tutorial-1`](https://github.com/prasanth-ntu/fastapi-tutorial-1) branches .
+> 	1. CRUD Basics
+> 	2. CRUD + SQLite
+> 	3. CRUD + PostgreSQL
 
 ## Core FastAPI Structure
 - `FastAPI()` creates the main application instance
@@ -35,6 +43,9 @@ A handler function is the Python function that processes incoming HTTP requests 
 > [!TIP] "handler function" = the function that handles requests to that specific route/endpoint.
 
 ## Dependency injection
+
+Official doc: https://fastapi.tiangolo.com/tutorial/dependencies/
+
 Dependency Injection means FastAPI automatically provides (injects) values into your handler function parameters based on the HTTP request.
 
 **Example: Without dependency injection**, you'd manually do:

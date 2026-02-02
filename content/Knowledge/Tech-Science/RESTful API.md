@@ -1,8 +1,22 @@
 ---
 tags:
   - softwareengineering
+  - Programming
 ---
+> [!SUMMARY] RESTful APIs travel and use HTTP request methods.
+
+Post-requisite: [[FastAPI]]
+
 A REST API (Representational State Transfer Application Programming Interface) is an architectural style that defines a set of rules and constraints for creating web services. Think of it as a translator that allows different software applications to communicate with each other over the internet, typically using the HTTP protocol. It's a common way for client applications (like a mobile app or a website) to request and manipulate data from a server.
+
+**Popular HTTP Request Methods:**
+
+| Request Method | Description             |
+| -------------- | ----------------------- |
+| GET            | Read Resource           |
+| POST           | Create Resource         |
+| PUT            | Update/Replace Resource |
+| DELETE         | Delete Resource         |
 
 # HTTP Methods
 ## GET

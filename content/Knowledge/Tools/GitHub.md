@@ -89,3 +89,23 @@ git log --name-only --oneline -3
 ```
 
 The most commonly used commands are `--name-only` for a simple list, `--name-status` to see what type of changes were made, and `--stat` to see the scope of changes.
+
+## Tags
+To see the list of tags
+```bash
+$ git tag
+```
+
+Checking out a tag directly puts you in a detached HEAD state, meaning you are not on any branch. If you plan to make changes, it is recommended to create a new branch from the tag .
+
+Assuming there's a tag named `week3.0`
+
+**Option 1: Checkout the tag directly (Detached HEAD)**
+```bash
+git checkout week3.0
+```
+
+**Option 2: Create a branch from the tag (Recommended for work)**
+```bash
+git checkout -b <my-branch-name> week3.0
+```

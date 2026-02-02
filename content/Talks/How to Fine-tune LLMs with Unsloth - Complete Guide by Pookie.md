@@ -1,3 +1,11 @@
+---
+tags:
+  - Learning
+  - LLM
+  - artificialintelligence
+  - datascience
+  - Programming
+---
 - Source: [YouTube](https://www.youtube.com/watch?v=Lt7KrFMcCis), [LinkedIn](https://www.linkedin.com/posts/danielhanchen_heres-a-complete-guide-to-fine-tuning-llms-activity-7351251048226836480-Qa-z/?utm_source=share&utm_medium=member_android&rcm=ACoAAAcOLFMBUn1o8NEoEvAqJrA0ZzVgH3csPQ0), GitHub, [Presentation (SVG)](Pookie-official-guide-to-finetuning-LLMs.svg)
 - Speaker: Wout Voseen ([LinkedIn](https://www.linkedin.com/in/wout-vossen/))
 - My forked/modified code: [GitHub](https://github.com/prasanth-ntu/pookie-llm-finetuning-resources)
@@ -24,12 +32,13 @@
 
 > [!Question] Why not just prompt?
 - Sometimes hard/impossible to write an instruction/prompt
- - LLMs have limited context size & performance drops when context gets larger
- - Prompted behaviour might not meet performance requirements 
+- LLMs have limited context size & performance drops when context gets larger
+- Prompted behaviour might not meet performance requirements 
 
 > [!Question] How about RAG?
 - RAG is easier If we want to answer questions about knowledge base that changes frequently
 - Quality of RAG is very dependent on retrieval process
+  
 > [!TIP] Most interesting combination: ==RAG + Finetuning==
 
 ## LLM Training
@@ -246,7 +255,6 @@ For mode details, refer [QLORA: Efficient Finetuning of Quantized LLMs](https://
 | [unsloth/gemma-3-12b-it-GGUF](https://huggingface.co/unsloth/gemma-3-12b-it-GGUF)                     | 12b        | instruct   | multi-model <br>(support vision input) | GGUF                                 |
 | [meta-llama/Llama-3.3-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct)         | 70b        | instruct   | text-only                              |                                      |
 | [unsloth/Llama-3.1-8B-unsloth-bnb-4bit](https://huggingface.co/unsloth/Llama-3.1-8B-unsloth-bnb-4bit) | 8b         | pretrained | text only                              | 4 bit quantized using Bits and Bytes |
-|                                                                                                       |            |            |                                        |                                      |
 
 ---
 ### Collecting and Structuring Data
@@ -307,9 +315,6 @@ For mode details, refer [QLORA: Efficient Finetuning of Quantized LLMs](https://
 	- [open-webui](https://github.com/open-webui/open-webui)
 ---
 # Hands-on
-
-```
-```
 
 ## 1. Ascii Art -  Completion fine-tuning
 ### Notebook explained
