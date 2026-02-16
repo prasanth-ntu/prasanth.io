@@ -42,20 +42,18 @@ Here’s a breakdown of how it works and why it's important:
 
 ```mermaid
 flowchart TB
-    %% Set up each word and label the connections with attention scores
-    subgraph "Sentence (The cat sat on mat)"
-        The["The"]
+    subgraph Sentence: The cat sat on mat
+        w1["The"]
         cat["Cat"]
         sat["Sat"]
         on["On"]
         mat["Mat"]
     end
 
-    %% Links representing attention weights (higher score for more relevant words)
-    cat -.->|"Low Attention (0.2)"| The
-    cat -->|"High Attention (1.0)"| sat
-    cat -->|"Moderate Attention (0.5)"| mat
-    cat -.->|"Low Attention (0.1)"| on
+    cat -.->|Low Attention: 0.2| w1
+    cat -->|High Attention: 1.0| sat
+    cat -->|Moderate Attention: 0.5| mat
+    cat -.->|Low Attention: 0.1| on
 ```
 ### 3. **Self-Attention (Scaled Dot-Product Attention)**
 ![[Self-attention]]
