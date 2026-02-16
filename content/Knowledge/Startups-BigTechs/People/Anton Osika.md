@@ -2,7 +2,7 @@
 	- [[Lovable]] co-founder
 
 # Interesting Posts
-## Lovable raised $200M at a $1.8B valuation led by Accel
+## Lovable raised \$200M at a \$1.8B valuation led by Accel
 Source: [LinkedIn](https://www.linkedin.com/posts/antonosika_today-lovable-raised-200m-at-a-18b-valuation-activity-7351665204838985728-LJs6/?)
 
 > [!QUOTE] 

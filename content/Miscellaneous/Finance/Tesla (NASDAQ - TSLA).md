@@ -9,11 +9,11 @@ tags:
 ## 🚀 Future Growth Bets
 
 ### 🤖 Tesla Optimus
-- Humanoid robotics could become a $5T–$24T market by 2050 (Morgan Stanley, Citigroup, ARK).
-- Elon Musk aims for 1M units/year by 2030 at <$20K per unit.
+- Humanoid robotics could become a \$5T–\$24T market by 2050 (Morgan Stanley, Citigroup, ARK).
+- Elon Musk aims for 1M units/year by 2030 at <\$20K per unit.
 - Potential internal usage by end of 2025, major revenue upside.
 - Risks: Management turnover, production delays, strong Chinese competition.
-- Quote: “Tesla could eventually generate more than $10 trillion in revenue.” — Elon Musk
+- Quote: "Tesla could eventually generate more than \$10 trillion in revenue." — Elon Musk
 
 ### 🚕 Tesla Robotaxi
 - ARK: Could be 90% of Tesla’s enterprise value by 2029.
@@ -32,22 +32,22 @@ https://seekingalpha.com/article/4799562-teslas-austin-fsd-rollout-autonomy-bet-
 - Tesla stock remains ~34% below its all-time high — creating a potentially attractive entry point for long-term investors.
 
 **🚕 Robotaxi Hype – Caution Advised**
-- **Ark Invest** projects a **$4T market by 2030**, positioning Tesla as the dominant player.
-- However, **mainstream estimates** (e.g., Fortune Business Insights) suggest a much smaller market (~$120B–$125B by 2030–2034).
+- **Ark Invest** projects a **\$4T market by 2030**, positioning Tesla as the dominant player.
+- However, **mainstream estimates** (e.g., Fortune Business Insights) suggest a much smaller market (~\$120B–\$125B by 2030–2034).
 > [!WARNING] Robotaxi thesis is still highly speculative and varies wildly by source.
 
 **🤖 Bigger Opportunity: Humanoid Robots (Tesla Optimus)**
 - **Market size by 2050:**
-    - Morgan Stanley: **$5T**
-    - Citigroup: **$7T**
-    - Ark Invest: **$24T**
+    - Morgan Stanley: **\$5T**
+    - Citigroup: **\$7T**
+    - Ark Invest: **\$24T**
 - Use cases: domestic labor, elderly care, repetitive factory tasks
 - **Tesla Optimus** seen as a front-runner.
 
 **📦 Tesla’s Ambition with Optimus**
-- Elon Musk targets **1M Optimus units/year by 2030**, priced under **$20K**.
+- Elon Musk targets **1M Optimus units/year by 2030**, priced under **\$20K**.
 - Thousands of Optimus expected to work in Tesla factories by **end of 2025**.
-- Musk hinted at potential for **>$10T in revenue** from Optimus over time.
+- Musk hinted at potential for **>\$10T in revenue** from Optimus over time.
 
 **⚠️ Risks and Caveats**
 - Internal challenges (management changes, delays) with the Optimus program.

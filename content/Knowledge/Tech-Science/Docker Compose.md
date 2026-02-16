@@ -21,8 +21,8 @@ This note is a cohesive walkthrough based on the crash course I watched ([YouTub
 Cheatsheets: [devopscycle.com/](https://devopscycle.com/images/the-ultimate-docker-compose-cheat-sheet.png) | [devhints.io](https://devhints.io/docker-compose)
 
 # Docker Compose Architecture: End-to-End
-<iframe src="https://prasanth.io/static/pages/Docker%20Compose%20Architecture.html" width="100%" height="650" frameborder="0" allowfullscreen></iframe>
-<a href="https://prasanth.io/static/pages/Docker%20Compose%20Architecture.html" target="_blank" rel="noopener noreferrer"><b>Open in new tab</b></a> (<i>Note: Best viewed in desktop or landscape view</i>)
+<iframe src="/static/pages/Docker%20Compose%20Architecture.html" width="100%" height="650" frameborder="0" allowfullscreen></iframe>
+<a href="/static/pages/Docker%20Compose%20Architecture.html" target="_blank" rel="noopener noreferrer"><b>Open in new tab</b></a> (<i>Note: Best viewed in desktop or landscape view</i>)
 
 # `docker compose.yaml` configuration
 

@@ -18,8 +18,8 @@ tags:
 > 	- [Official Documentation](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create)
 
 # Kubernetes Architecture: End-to-End
-<iframe src="https://prasanth.io/static/pages/Kubernetes%20Architecture.html" width="100%" height="750" frameborder="0" allowfullscreen></iframe>
-<a href="https://prasanth.io/static/pages/Kubernetes%20Architecture.html" target="_blank" rel="noopener noreferrer"><b>Open in new tab</b></a> (<i>Note: Best viewed in desktop or landscape view</i>)
+<iframe src="/static/pages/Kubernetes%20Architecture.html" width="100%" height="750" frameborder="0" allowfullscreen></iframe>
+<a href="/static/pages/Kubernetes%20Architecture.html" target="_blank" rel="noopener noreferrer"><b>Open in new tab</b></a> (<i>Note: Best viewed in desktop or landscape view</i>)
 
 
 # Part 1: Introduction to Kubernetes

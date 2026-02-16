@@ -19,9 +19,9 @@
     "test": "tsx --test",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "prebuild": "bash sync-slideshow.sh && bash sync-html.sh",
-    "build": "npm run prebuild && npx quartz build",
-    "serve": "npm run prebuild && npx quartz build --serve",
-    "sync": "npm run prebuild && npx quartz sync",
+    "build": "npx quartz build",
+    "serve": "npx quartz build --serve",
+    "sync": "npx quartz sync",
     "slideshow": "bash sync-slideshow.sh",
     "html": "bash sync-html.sh",
     "dev": "npm run serve"

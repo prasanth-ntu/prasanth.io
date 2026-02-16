@@ -45,7 +45,7 @@ A company wants to optimize its online advertising campaigns to maximize convers
 - **Step 2: Delta Conversion Model**
   - **Objective**: Predict the change in conversion rate due to different levels of ad spend, placement, and targeting criteria.
   - **Features**: Changes in ad spend, placement, and targeting criteria.
-  - **Outcome**: The model shows that increasing ad spend on Platform A by $100 increases the conversion rate by 0.3%, while increasing ad spend on Platform B by $100 increases the conversion rate by 0.7%.
+  - **Outcome**: The model shows that increasing ad spend on Platform A by \$100 increases the conversion rate by 0.3%, while increasing ad spend on Platform B by \$100 increases the conversion rate by 0.7%.
 
 ## Conclusion
 By ensuring the ad campaign effectiveness model is causally correct, the company can make more reliable and effective decisions, optimizing ad spend, placement, and targeting to achieve the desired objectives of maximizing conversions and minimizing costs. The use of a two-step model allows for both high predictive accuracy and causal validity, providing a robust framework for ad campaign optimization.

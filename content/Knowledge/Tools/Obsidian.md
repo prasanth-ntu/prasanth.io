@@ -270,11 +270,101 @@ git remote add upstream https://github.com/jackyzha0/quartz.git
 ```bash
 npx quartz build --serve
 ```
+
+### What actually happens during `npx quartz build --serve`
+
+1. **Prebuild** runs first (`sync-slideshow.sh` + `sync-html.sh`) — copies slideshow and HTML files into `quartz/static/`
+2. **esbuild transpiles** the Quartz config, plugins, and components into a single cached JS file (`quartz/.quartz-cache/transpiled-build.mjs`)
+3. **`buildQuartz()`** runs — parses all markdown from `content/`, filters out drafts, then **emits** output files to `public/` using these emitter plugins:
+
+| Emitter | What it produces |
+|---------|-----------------|
+| `AliasRedirects` | Redirect pages for aliases defined in frontmatter |
+| `ComponentResources` | JS/CSS bundles for interactive components |
+| `ContentPage` | The actual HTML page for each markdown file |
+| `FolderPage` | Index pages for folders |
+| `TagPage` | Pages for each tag |
+| `ContentIndex` | RSS feed + sitemap |
+| `Assets` | Processed SCSS → CSS |
+| `Static` | Copies `quartz/static/` to `public/static/` |
+| `NotFoundPage` | The 404 page |
+| `CustomOgImages` | Open Graph preview images (`.webp`) for every page — the thumbnail shown when sharing links on social media, Slack, Discord, etc. This is the slowest emitter as it renders text onto images using satori + sharp for each page |
+4. Since `--serve` is passed, it also:
+   - Sets `--watch` to `true` — auto-rebuilds when source files change
+   - Starts an **HTTP server** on `localhost:8080` serving files from `public/`
+   - Starts a **WebSocket server** for live reload (browser refreshes automatically on rebuild)
+   - Handles URL routing (e.g. `/foo/` → `/foo/index.html`, `/foo` → `/foo.html`)
+
+> [!tip] With vs without `--serve`
+> - **`npx quartz build`**: Builds the site to `public/` and exits. This is what GitHub Actions uses.
+> - **`npx quartz build --serve`**: Builds, starts a local server with live reload, and watches for changes. This is for local development.
+
 - **Sync the change to Github & Deploy**
 	- Run this command every time we want to push updates to our repository.
 ```bash
 npx quartz sync
 ```
+
+### What actually happens during `npx quartz sync`
+
+The sync command is **not a build** — it's a git orchestration tool. The actual build happens on GitHub Actions after the push.
+
+#### Local: `npm run sync`
+
+The `sync` script in `package.json` is just `npx quartz sync`. npm automatically runs the `prebuild` script (`bash sync-slideshow.sh && bash sync-html.sh`) before any `build`/`sync`/`serve` script since it follows the `pre<script>` naming convention.
+
+**1. Prebuild** (auto-triggered: `bash sync-slideshow.sh && bash sync-html.sh`)
+- Generates Paige AI slideshow HTML files → `quartz/static/paige-slides/`
+- Copies architecture HTML files (Spark, Docker, K8s, etc.) → `quartz/static/pages/`
+
+**2. `npx quartz sync`** (defined in `quartz/cli/handlers.js`)
+1. Backs up `content/` folder to `.quartz-cache/content-cache`
+2. Commits all changes: `git add . && git commit -m "Quartz sync: <timestamp>"`
+3. Pulls from `origin v4` (uses `--autostash -X ours` to keep local changes on conflicts)
+4. Restores content from cache
+5. Pushes to `origin v4`
+
+#### GitHub Actions: Build & Deploy
+
+The push to `v4` triggers `.github/workflows/deploy.yaml`:
+
+1. `npm ci` — clean install dependencies
+2. `npm run build` — npm auto-runs `prebuild` first, then `npx quartz build`:
+   - Prebuild: copies slideshow + HTML files into `quartz/static/`
+   - Parses all `.md` files from `content/`
+   - Filters out drafts
+   - Emits HTML/assets to `public/`
+3. Uploads `public/` as a GitHub Pages artifact
+4. Deploys to GitHub Pages → `https://prasanth.io/`
+
+#### End-to-End Flow
+```
+Local                                GitHub Actions
+─────                                ──────────────
+npm run sync
+  ├─ prebuild (slideshow + html)
+  └─ npx quartz sync
+       ├─ git commit
+       ├─ git pull origin v4
+       └─ git push origin v4 ──────→ deploy.yaml triggered
+                                       ├─ npm ci
+                                       ├─ npm run build
+                                       │    ├─ prebuild (auto-triggered)
+                                       │    └─ npx quartz build
+                                       │         ├─ parse .md files
+                                       │         ├─ filter drafts
+                                       │         └─ emit → public/
+                                       ├─ upload artifact
+                                       └─ deploy to GitHub Pages
+                                            └─ prasanth.io ✅
+```
+
+> [!note] How prebuild works
+> The `prebuild` script in `package.json` uses npm's `pre<script>` convention — npm automatically runs it before `build`, `sync`, or `serve`. This means:
+> - **Locally**: Prebuild runs before `serve`/`sync` so slideshow and HTML pages render correctly during development
+> - **On CI**: Prebuild runs before `build` because the GitHub runner starts from a fresh `git clone` and needs to generate the static files from source
+>
+> Previously, `build`/`serve`/`sync` scripts also had an explicit `npm run prebuild &&` prefix, causing prebuild to run **twice**. This was fixed by removing the redundant explicit calls.
 - Upgrading Quartz
 	- To fetch the latest Quartz updates, simply run
 ```bash

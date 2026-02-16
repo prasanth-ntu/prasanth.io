@@ -67,8 +67,8 @@ For more details, refer [PySpark Overview](https://spark.apache.org/docs/latest/
 - Use PySpark for ease of use and integration with Python ecosystems.
 ---
 # Apache Spark Architecture: End-to-End
-<iframe src="https://prasanth.io/static/pages/Spark%20Architecture.html" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
-<a href="https://prasanth.io/static/pages/Spark%20Architecture.html" target="_blank" rel="noopener noreferrer"><b>Open in new tab</b></a> (*Note: Best viewed in desktop or landscape view*)
+<iframe src="/static/pages/Spark%20Architecture.html" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+<a href="/static/pages/Spark%20Architecture.html" target="_blank" rel="noopener noreferrer"><b>Open in new tab</b></a> (<i>Note: Best viewed in desktop or landscape view</i>)
 
 # Important concepts
 ## Spark configurations Example

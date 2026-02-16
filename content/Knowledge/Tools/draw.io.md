@@ -10,11 +10,11 @@ https://www.drawio.com/
 
 # Resources
 ## Use mathematical typesetting in diagrams[^1]
-Enter your maths equation using LaTeX or [AsciiMath](http://www.intmath.com/help/send-math-email-syntax.php) in a text shape.
+Enter your maths equation using LaTeX or [AsciiMath](http://www.intmath.com/help/send-math-email-syntax.php) in a text shape.
 
-- **AsciiMath** between `` ` ``, for example: `` `a^2+b^2 = c^2` ``
-- **LaTeX** between `$$`, for example: `$$\sqrt{3×-1}+(1+x)^2$$`
-- **Inline LaTeX** between `\(` and `\)`, for example: `\(\sqrt{3×-1}+(1+x)^2\)`
+- **AsciiMath** between `` ` ``, for example: `` `a^2+b^2 = c^2` ``
+- **LaTeX** between `$$`, for example: `$$\sqrt{3×-1}+(1+x)^2$$`
+- **Inline LaTeX** between `\(` and `\)`, for example: `\(\sqrt{3×-1}+(1+x)^2\)`
 
 You can mix inline LaTeX and AsciiMath in the same text, for example:
 `` LaTeX \(\sqrt{3×-1}+(1+x)^2\) and AsciiMath `a^b + b^2 = c^2` ``

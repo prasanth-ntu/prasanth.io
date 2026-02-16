@@ -26,12 +26,12 @@ According to Dollars and Sense article: Which MRT Station In Singapore Is The Mo
 
 | **Closest MRT Station**|**MRT Lines**|**HDB Resale Price Range** |
 | --- | --- | --- |
-| Jurong East|North South Line  <br>East West Line|$382,888 – $820,000 |
-| Bishan|North South Line  <br>Circle Line|$528,000 – $1,070,000 |
-| Serangoon|North East Line  <br>Circle Line|$373,000 – $1,099,000 |
-| Paya Lebar|East West Line  <br>Circle Line|$496,888 – $1,150,000 |
-| MacPherson|Circle Line  <br>Downtown Line|$330,000 – $1,088,000 |
-| Tampines|East West Line  <br>Downtown Line|$475,000 – $1,045,000 |
+| Jurong East|North South Line  <br>East West Line|\$382,888 – \$820,000 |
+| Bishan|North South Line  <br>Circle Line|\$528,000 – \$1,070,000 |
+| Serangoon|North East Line  <br>Circle Line|\$373,000 – \$1,099,000 |
+| Paya Lebar|East West Line  <br>Circle Line|\$496,888 – \$1,150,000 |
+| MacPherson|Circle Line  <br>Downtown Line|\$330,000 – \$1,088,000 |
+| Tampines|East West Line  <br>Downtown Line|\$475,000 – \$1,045,000 |
 
 ---
 ## ABSD

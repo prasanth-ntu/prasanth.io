@@ -25,9 +25,9 @@ This slideshow covers:
 - ...
 ## 🎯 Interactive Slideshow
 
-<iframe src="https://prasanth.io/static/paige-slides/slideshow.html?slide=1" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+<iframe src="/static/paige-slides/slideshow.html?slide=1" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
 
-<a href="https://prasanth.io/static/paige-slides/slideshow.html?slide=1" target="_blank" rel="noopener noreferrer">**Open in new tab**</a>
+<a href="/static/paige-slides/slideshow.html?slide=1" target="_blank" rel="noopener noreferrer">**Open in new tab**</a>
 
 ## 🔗 Related Content
 

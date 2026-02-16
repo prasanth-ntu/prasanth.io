@@ -183,8 +183,8 @@ flowchart LR
 ```
 
 ## Docker Architecture: End-to-End
-<iframe src="https://prasanth.io/static/pages/Docker%20Architecture.html" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
-<a href="https://prasanth.io/static/pages/Docker%20Architecture.html" target="_blank" rel="noopener noreferrer"><b>Open in new tab</b></a> (*Note: Best viewed in desktop or landscape view*)
+<iframe src="/static/pages/Docker%20Architecture.html" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+<a href="/static/pages/Docker%20Architecture.html" target="_blank" rel="noopener noreferrer"><b>Open in new tab</b></a> (*Note: Best viewed in desktop or landscape view*)
 
 ---
 ## Hands-on Lab 1: Run a container (nginx) and *actually* reach it

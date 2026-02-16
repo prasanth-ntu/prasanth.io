@@ -766,7 +766,7 @@ function buildSlideshow() {
   try {
     fs.writeFileSync(outputPath, output);
     console.log(`✅ Slideshow built successfully: ${outputPath}`);
-    console.log(`🎯 Slideshow available at: https://prasanth.io/static/paige-slides/slideshow.html`);
+    console.log(`🎯 Slideshow available at: /static/paige-slides/slideshow.html`);
     console.log(`📱 Features: Keyboard navigation, touch/swipe support, fullscreen mode`);
     console.log(`🔗 URL navigation: Add ?slide=N to go directly to slide N`);
   } catch (error) {

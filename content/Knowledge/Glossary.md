@@ -17,17 +17,17 @@ This glossary defines key terms in Artificial Intelligence, Machine Learning, Da
 ## 1q43-44 chromosome
 #biology #science 
 
-The region 1q43-44 on chromosome 1 is associated with a syndrome characterized by intellectual disability, speech delays, and distinctive facial features. Deletions or duplications in this region can lead to a range of developmental issues, including microcephaly, corpus callosum abnormalities, and seizures.
+The region 1q43-44 on chromosome 1 is associated with a syndrome characterized by intellectual disability, speech delays, and distinctive facial features. Deletions or duplications in this region can lead to a range of developmental issues, including microcephaly, corpus callosum abnormalities, and seizures.
 
 ## 1q43-q44 Deletion/Duplication Syndrome
 #biology #science #syndrome
 
-- **Intellectual Disability:** Moderate to severe intellectual disability is a hallmark of this syndrome. 
-- **Speech Delay:** Limited or absent speech is common. 
-- **Facial Dysmorphism:** Characteristic facial features include a round face, flat nasal bridge, prominent forehead, hypertelorism (widely spaced eyes), epicanthal folds, and low-set ears. 
-- **Corpus Callosum Abnormalities:** Abnormalities of the corpus callosum (a part of the brain connecting the two hemispheres) are frequently observed. 
-- **Other Features:** Hypotonia (low muscle tone), poor growth, seizures, and microcephaly (small head size) can also occur. 
-- **Variability:** The severity of symptoms can vary greatly depending on the size and location of the deletion or duplication, and the specific genes involved.
+- **Intellectual Disability:** Moderate to severe intellectual disability is a hallmark of this syndrome. 
+- **Speech Delay:** Limited or absent speech is common. 
+- **Facial Dysmorphism:** Characteristic facial features include a round face, flat nasal bridge, prominent forehead, hypertelorism (widely spaced eyes), epicanthal folds, and low-set ears. 
+- **Corpus Callosum Abnormalities:** Abnormalities of the corpus callosum (a part of the brain connecting the two hemispheres) are frequently observed. 
+- **Other Features:** Hypotonia (low muscle tone), poor growth, seizures, and microcephaly (small head size) can also occur. 
+- **Variability:** The severity of symptoms can vary greatly depending on the size and location of the deletion or duplication, and the specific genes involved.
 
 ---
 # A
@@ -57,21 +57,21 @@ It can occur in organs such as the lungs, colon, breast, prostate, or pancreas.
 ## American Standard Code for Information Interchange (ASCII)
 #Programming #softwareengineering #standards #datascience #machinelearning 
 
-ASCII (American Standard Code for Information Interchange) is ==a 7-bit character encoding standard developed in the 1960s to represent 128 English characters, including control characters, digits, uppercase/lowercase letters, and punctuation==. It maps binary numbers (0–127) to specific symbols, with 95 printable characters, forming the basis for modern character sets like UTF-8. 
+ASCII (American Standard Code for Information Interchange) is ==a 7-bit character encoding standard developed in the 1960s to represent 128 English characters, including control characters, digits, uppercase/lowercase letters, and punctuation==. It maps binary numbers (0–127) to specific symbols, with 95 printable characters, forming the basis for modern character sets like UTF-8. 
 
 **Key Aspects of ASCII:**
-- **Characters Included:** The 128 characters consist of 33 non-printing control characters (e.g., newline, tab) and 95 printable characters (digits, English letters, and symbols).
-- **Common Values:** 'A' is 65, 'a' is 97, '0' is 48, and a space is 32.
-- **Binary Representation:** ASCII uses 7 bits per character, though often stored in 8-bit bytes (0–127).
-- **Structure:** It is organized into blocks: Control Characters (0–31), Special Characters and Numbers (32–64), Uppercase Letters (65–90), and Lowercase Letters (97–122).
-- **Legacy:** While heavily influential and still used, ASCII has largely been succeeded by [[Glossary#Unicode Tranformation Format (UTF)|UTF]] (specifically UTF-8), which includes the first 128 ASCII characters while supporting far more characters. 
+- **Characters Included:** The 128 characters consist of 33 non-printing control characters (e.g., newline, tab) and 95 printable characters (digits, English letters, and symbols).
+- **Common Values:** 'A' is 65, 'a' is 97, '0' is 48, and a space is 32.
+- **Binary Representation:** ASCII uses 7 bits per character, though often stored in 8-bit bytes (0–127).
+- **Structure:** It is organized into blocks: Control Characters (0–31), Special Characters and Numbers (32–64), Uppercase Letters (65–90), and Lowercase Letters (97–122).
+- **Legacy:** While heavily influential and still used, ASCII has largely been succeeded by [[Glossary#Unicode Tranformation Format (UTF)|UTF]] (specifically UTF-8), which includes the first 128 ASCII characters while supporting far more characters. 
 
 **Common ASCII Examples:**
 - **`0`–`9`**: 48–57
 - **`A`–`Z`**: 65–90
 - **`a`–`z`**: 97–122
 - **Space**: 32
-- **Control Characters**: 0–31 (e.g., NUL, BEL, LF, CR) 
+- **Control Characters**: 0–31 (e.g., NUL, BEL, LF, CR) 
 
 ASCII remains fundamental to computing,, especially for programming and communication protocols, even if its limitations necessitated the shift to more extensive encoding system
 
@@ -137,10 +137,10 @@ The extra return the (active) fund manager can generate over the (passive) index
 ## Arxiv
 #techology #science #ResearchPaper #research #openaccess
 
-arXiv is **a curated research-sharing platform open to anyone**. It is s a pioneer in digital open access.
+arXiv is **a curated research-sharing platform open to anyone**. It is s a pioneer in digital open access.
 
 ***Extract from [Wikipedia](https://en.wikipedia.org/wiki/ArXiv)***
-arXiv (pronounced as "[archive](https://en.wikipedia.org/wiki/Archive "Archive")"—the X represents the [Greek letter chi](https://en.wikipedia.org/wiki/Chi_\(letter\) "Chi (letter)") ⟨χ⟩) is an [open-access repository](https://en.wikipedia.org/wiki/Open-access_repository "Open-access repository") of electronic [preprints](https://en.wikipedia.org/wiki/Preprint "Preprint") and [postprints](https://en.wikipedia.org/wiki/Postprints "Postprints") (known as [e-prints](https://en.wikipedia.org/wiki/E-prints "E-prints")) approved for posting after moderation, but not [peer reviewed](https://en.wikipedia.org/wiki/Scholarly_peer_review "Scholarly peer review"). It consists of [scientific papers](https://en.wikipedia.org/wiki/Scientific_papers "Scientific papers") in the fields of [mathematics](https://en.wikipedia.org/wiki/Mathematics "Mathematics"), [physics](https://en.wikipedia.org/wiki/Physics "Physics"), [astronomy](https://en.wikipedia.org/wiki/Astronomy "Astronomy"), [electrical engineering](https://en.wikipedia.org/wiki/Electrical_engineering "Electrical engineering"), [computer science](https://en.wikipedia.org/wiki/Computer_science "Computer science"), [quantitative biology](https://en.wikipedia.org/wiki/Quantitative_biology "Quantitative biology"), [statistics](https://en.wikipedia.org/wiki/Statistics "Statistics"), [mathematical finance](https://en.wikipedia.org/wiki/Mathematical_finance "Mathematical finance"), and [economics](https://en.wikipedia.org/wiki/Economics "Economics"), which can be accessed online.
+arXiv (pronounced as "[archive](https://en.wikipedia.org/wiki/Archive "Archive")"—the X represents the [Greek letter chi](https://en.wikipedia.org/wiki/Chi_\(letter\) "Chi (letter)") ⟨χ⟩) is an [open-access repository](https://en.wikipedia.org/wiki/Open-access_repository "Open-access repository") of electronic [preprints](https://en.wikipedia.org/wiki/Preprint "Preprint") and [postprints](https://en.wikipedia.org/wiki/Postprints "Postprints") (known as [e-prints](https://en.wikipedia.org/wiki/E-prints "E-prints")) approved for posting after moderation, but not [peer reviewed](https://en.wikipedia.org/wiki/Scholarly_peer_review "Scholarly peer review"). It consists of [scientific papers](https://en.wikipedia.org/wiki/Scientific_papers "Scientific papers") in the fields of [mathematics](https://en.wikipedia.org/wiki/Mathematics "Mathematics"), [physics](https://en.wikipedia.org/wiki/Physics "Physics"), [astronomy](https://en.wikipedia.org/wiki/Astronomy "Astronomy"), [electrical engineering](https://en.wikipedia.org/wiki/Electrical_engineering "Electrical engineering"), [computer science](https://en.wikipedia.org/wiki/Computer_science "Computer science"), [quantitative biology](https://en.wikipedia.org/wiki/Quantitative_biology "Quantitative biology"), [statistics](https://en.wikipedia.org/wiki/Statistics "Statistics"), [mathematical finance](https://en.wikipedia.org/wiki/Mathematical_finance "Mathematical finance"), and [economics](https://en.wikipedia.org/wiki/Economics "Economics"), which can be accessed online.
 
 ## Asset class
 #finance
@@ -159,7 +159,7 @@ arXiv (pronounced as "[archive](https://en.wikipedia.org/wiki/Archive "Archive"
 ## Attention-Deficit/Hyperactivity Disorder
 #medical #biology 
 
- ==ADHD (Attention-Deficit/Hyperactivity Disorder) is considered a form of neurodivergence==, falling under the neurodiversity umbrella alongside conditions like autism, dyslexia, and dyspraxia, as it involves natural variations in brain function and information processing that differ from the "neurotypical" norm.
+ ==ADHD (Attention-Deficit/Hyperactivity Disorder) is considered a form of neurodivergence==, falling under the neurodiversity umbrella alongside conditions like autism, dyslexia, and dyspraxia, as it involves natural variations in brain function and information processing that differ from the "neurotypical" norm.
 
 ## Augment
 #datascience #machinelearning #LLM 
@@ -172,8 +172,8 @@ arXiv (pronounced as "[archive](https://en.wikipedia.org/wiki/Archive "Archive"
 
 Short form: Bagging
 Long form: Bootstrap Aggregation, where
-- Bootstrap = sampling with replacement to create diverse training sets
-- Aggregation = combining model predictions by averaging (regression) or majority voting (classification)
+- Bootstrap = sampling with replacement to create diverse training sets
+- Aggregation = combining model predictions by averaging (regression) or majority voting (classification)
 
 ## base64
 #Programming #softwareengineering 
@@ -183,13 +183,13 @@ Long form: Bootstrap Aggregation, where
 #singapore #retirement 
 > [!QUOTE] "The Basic Healthcare Sum (BHS) is the estimated savings you need in your MediSave Account for your basic subsidised healthcare needs in old age. It is the maximum amount you can have in your MediSave Account (MA)"
 
-For those who turn 65 in 2025, the BHS is fixed at S$75,500 for the rest of our lives – even though the actual BHS will continue to increase for subsequent cohorts.
+For those who turn 65 in 2025, the BHS is fixed at S\$75,500 for the rest of our lives – even though the actual BHS will continue to increase for subsequent cohorts.
 
-The BHS of S$75,500 in 2025 is 5.6% higher than the BHS of S$71,500 set in 2024. In turn, the 2024 BHS of S$71,500 was 4.4% higher than the $68,500 BHS level set in 2023.
+The BHS of S\$75,500 in 2025 is 5.6% higher than the BHS of S\$71,500 set in 2024. In turn, the 2024 BHS of S\$71,500 was 4.4% higher than the \$68,500 BHS level set in 2023.
 
 The Basic Healthcare Sum (BHS) has generally increased by around 5% each year – slightly higher than the 4% per annum interest we receive on our MediSave balances.
 
-Assuming the BHS increases 5% yearly, in 35 years (at 2060), it would become $75500*(1.05)^{35} = 416459$.
+Assuming the BHS increases 5\% yearly, in 35 years (at 2060), it would become $75500 \times (1.05)^{35} = 416459$.
 
 Sources
 - https://www.cpf.gov.sg/service/article/what-is-the-basic-healthcare-sum
@@ -284,7 +284,7 @@ A quick, physical test to objectively measure [[Glossary#Perfusion|Perfusion]] (
 ## Cardiomyotpathy
 #science #biology 
 
-Cardiomyopathy (kahr-dee-o-my-OP-uh-thee) is _a disease of the heart muscle_. It causes the heart to have a harder time pumping blood to the rest of the body, which can lead to symptoms of heart failure. Cardiomyopathy also can lead to some other serious heart conditions.
+Cardiomyopathy (kahr-dee-o-my-OP-uh-thee) is _a disease of the heart muscle_. It causes the heart to have a harder time pumping blood to the rest of the body, which can lead to symptoms of heart failure. Cardiomyopathy also can lead to some other serious heart conditions.
 
 There are various types of cardiomyopathy. The main types include dilated, hypertrophic and restrictive cardiomyopathy. Treatment includes medicines and sometimes surgically implanted devices and heart surgery. Some people with severe cardiomyopathy need a heart transplant. Treatment depends on the type of cardiomyopathy and how serious it is.
 
@@ -410,7 +410,7 @@ Crony capitalism is a corrupt economic system where businesses gain success thro
 ## curl
 #Programming #softwareengineering 
 
-**Command line tool and library** to make HTTP requests and fetch content (i.e., transfer data) from URLs.
+**Command line tool and library** to make HTTP requests and fetch content (i.e., transfer data) from URLs.
 
 For more details, refer the [official documentation](https://curl.se/docs/manpage.html).
 
@@ -420,13 +420,13 @@ For more details, refer the [official documentation](https://curl.se/docs/manpag
 ## Daemon (computing)
 #Programming #softwareengineering 
 
-In [computing](https://en.wikipedia.org/wiki/Computing "Computing"), a **daemon** is a [program](https://en.wikipedia.org/wiki/Computer_program "Computer program") that runs as a [background computer process](https://en.wikipedia.org/wiki/Background_process "Background process"), rather than being under the direct control of an interactive user.
+In [computing](https://en.wikipedia.org/wiki/Computing "Computing"), a **daemon** is a [program](https://en.wikipedia.org/wiki/Computer_program "Computer program") that runs as a [background computer process](https://en.wikipedia.org/wiki/Background_process "Background process"), rather than being under the direct control of an interactive user.
 
-In the context of computing, the word is generally pronounced either as [/ˈdiːmən/](https://en.wikipedia.org/wiki/Help:IPA/English "Help:IPA/English") [_DEE-mən_](https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key "Help:Pronunciation respelling key") or [/ˈdeɪmən/](https://en.wikipedia.org/wiki/Help:IPA/English "Help:IPA/English") [_DAY-mən_](https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key "Help:Pronunciation respelling key").
+In the context of computing, the word is generally pronounced either as [/ˈdiːmən/](https://en.wikipedia.org/wiki/Help:IPA/English "Help:IPA/English") [_DEE-mən_](https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key "Help:Pronunciation respelling key") or [/ˈdeɪmən/](https://en.wikipedia.org/wiki/Help:IPA/English "Help:IPA/English") [_DAY-mən_](https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key "Help:Pronunciation respelling key").
 
 ## Docker
 
-A system that packages applications and their dependencies into **containers** for consistent execution across various machines.
+A system that packages applications and their dependencies into **containers** for consistent execution across various machines.
 
 Docker benefits like in consistency, portability, and isolation.
 
@@ -449,12 +449,12 @@ It became the first FDA-cleared AI software for detecting prostate cancer in dig
 
 ## Domain Name System (DNS)
 #techology #network
-DNS is the internet's phonebook, translating human-friendly website names (like `google.com`) into numerical IP addresses (like `142.250.186.46`) that computers use to find and connect to each other online. It allows users to type memorable domain names instead of long strings of numbers, making the internet navigable by mapping text to the correct server locations.
+DNS is the internet's phonebook, translating human-friendly website names (like `google.com`) into numerical IP addresses (like `142.250.186.46`) that computers use to find and connect to each other online. It allows users to type memorable domain names instead of long strings of numbers, making the internet navigable by mapping text to the correct server locations.
 
 **Key Functions**
-- **Translation (Resolution):** When you type a URL, DNS servers look up the domain name and return its corresponding IP address, directing your browser to the right server.
-- **Directory:** It manages the vast database of domain names and their associated IP addresses, ensuring every site has a unique numerical identifier.
-- **Hierarchical & Distributed:** Instead of one giant phonebook, DNS uses a network of servers worldwide, making lookups fast and efficient.
+- **Translation (Resolution):** When you type a URL, DNS servers look up the domain name and return its corresponding IP address, directing your browser to the right server.
+- **Directory:** It manages the vast database of domain names and their associated IP addresses, ensuring every site has a unique numerical identifier.
+- **Hierarchical & Distributed:** Instead of one giant phonebook, DNS uses a network of servers worldwide, making lookups fast and efficient.
 ## Debt
 #finance
 
@@ -479,7 +479,7 @@ Products that usually give us an assured return. Examples include:
 Describe or portray (something) precisely. 
 Indicate the exact position of (a border or boundary)
 
-**Example**:  He delineated the state of Texas on the map with a red pencil
+**Example**:  He delineated the state of Texas on the map with a red pencil
 
 **Simiilar words**: describe, depict
 
@@ -543,7 +543,7 @@ For example
 ## Dragon in a pinch
 #linguistics #idiom
 
-The phrase "as fierce as a dragon in a pinch" is an idiom, meaning ==someone can be surprisingly fierce or capable in a difficult situation, even if they don't usually appear that way==
+The phrase "as fierce as a dragon in a pinch" is an idiom, meaning ==someone can be surprisingly fierce or capable in a difficult situation, even if they don't usually appear that way==
 
 ---
 # E
@@ -565,7 +565,7 @@ A punctuation mark consisting of a series of three dots. An ellipsis can be used
 
 ## Emanate
 
-(of a feeling, quality, or sensation) issue or spread out from (a source).
+(of a feeling, quality, or sensation) issue or spread out from (a source).
 
 Similar words: emergy, come out, originate, arise, start
 
@@ -683,7 +683,7 @@ A floating-point number is a way to represent real numbers in computers, similar
 3. **Mantissa (or significand) bits (e.g., 23 bits in float32)**: These bits represent the significant digits (precision) of the number. The mantissa encodes the fractional part of the number after normalizing it to have a leading 1 (in normalized form, this leading 1 is implicit and not stored explicitly).    
 
 The value of a floating-point number is calculated as: 
-$\text{Value}=(−1)^{sign}×(1+\text{mantissa fraction})×2^{(\text{exponent}−\text{bias})}$
+$\text{Value}=(−1)^{sign}×(1+\text{mantissa fraction})×2^{(\text{exponent}−\text{bias})}$
 
 - The sign bit controls the positive/negative.    
 - The exponent bits, after subtracting the bias, give the power of 2.
@@ -699,9 +699,9 @@ This means the exponent value stored is an 8-bit unsigned integer, and the actua
 This structure allows a wide dynamic range of numbers, from very tiny to very large, with a controlled precision depending on the mantissa length.
 
 In summary:
-- The **sign bit** decides positive or negative.
-- The **exponent bits** shift the number’s scale by powers of two.
-- The **mantissa bits** encode the detailed digits or precision of the number after scaling.
+- The **sign bit** decides positive or negative.
+- The **exponent bits** shift the number’s scale by powers of two.
+- The **mantissa bits** encode the detailed digits or precision of the number after scaling.
 
 This floating-point format makes it efficient to represent and compute on real numbers in computers, balancing between range and precision.
 
@@ -796,14 +796,14 @@ Fireplace or floor of the fireplace.
 
 Hypertrophic cardiomyopathy (HCM) is a disease in which the heart muscle becomes thickened, also called hypertrophied. The thickened heart muscle can make it harder for the heart to pump blood.
 
-Many people with hypertrophic cardiomyopathy don't realize they have it. That's because they have few, if any, symptoms. But in a small number of people with HCM, the thickened heart muscle can cause serious symptoms. These include shortness of breath and chest pain. Some people with HCM have changes in the heart's electrical system. These changes can result in life-threatening irregular heartbeats or sudden death.
+Many people with hypertrophic cardiomyopathy don't realize they have it. That's because they have few, if any, symptoms. But in a small number of people with HCM, the thickened heart muscle can cause serious symptoms. These include shortness of breath and chest pain. Some people with HCM have changes in the heart's electrical system. These changes can result in life-threatening irregular heartbeats or sudden death.
 
 Sources: https://www.mayoclinic.org/diseases-conditions/hypertrophic-cardiomyopathy/symptoms-causes/syc-20350198
 
 ## Hypotonia
 #biology #science #disease 
 
-Hypotonia means **decreased muscle tone**. It can be a condition on its own, called benign congenital hypotonia, or it can be indicative of another problem where there is progressive loss of muscle tone, such as muscular dystrophy or cerebral palsy. It is usually detected during infancy.
+Hypotonia means **decreased muscle tone**. It can be a condition on its own, called benign congenital hypotonia, or it can be indicative of another problem where there is progressive loss of muscle tone, such as muscular dystrophy or cerebral palsy. It is usually detected during infancy.
 
 ---
 # I
@@ -854,7 +854,7 @@ To absorb (information) or take (food, drink, or another substance) into the bod
 ## Interquartile Range (IQR)
 #Math #Statistics #DataAnalytics #datascience #machinelearning 
 
-In statistics, the Interquartile Range (IQR) ==measures the spread of the middle 50% of your data, calculated as the difference between the third quartile (Q3, 75th percentile) and the first quartile (Q1, 25th percentile)==: IQR = Q3 - Q1. It indicates the variability of the central part of a dataset, ignoring extreme outliers, and is visualized by the box in a box plot.
+In statistics, the Interquartile Range (IQR) ==measures the spread of the middle 50% of your data, calculated as the difference between the third quartile (Q3, 75th percentile) and the first quartile (Q1, 25th percentile)==: IQR = Q3 - Q1. It indicates the variability of the central part of a dataset, ignoring extreme outliers, and is visualized by the box in a box plot.
 
 ## Inter-reader vs. Intra-reader variability
 | Term                         | Definition                                                                                                                                                                                       |
@@ -887,7 +887,7 @@ Time for which we want to invest our money. Also known as "**tenor**"
 ## Large Language Models  Meta AI (Llama)
 #artificialintelligence #LLM #OpenSource #AGI 
 As per [wiki](https://en.wikipedia.org/wiki/Llama_(language_model))
-**Llama** (**Large Language Model Meta AI**) is a family of [large language models](https://en.wikipedia.org/wiki/Large_language_model "Large language model") (LLMs) released by [Meta AI](https://en.wikipedia.org/wiki/Meta_AI "Meta AI") starting in February 2023. The latest version is Llama 4, released in April 2025.
+**Llama** (**Large Language Model Meta AI**) is a family of [large language models](https://en.wikipedia.org/wiki/Large_language_model "Large language model") (LLMs) released by [Meta AI](https://en.wikipedia.org/wiki/Meta_AI "Meta AI") starting in February 2023. The latest version is Llama 4, released in April 2025.
 
 For more details, refer https://github.com/meta-llama/llama-models?tab=readme-ov-file#llama-models-1
 ## Left Ventricle (LV)
@@ -898,7 +898,7 @@ The main pumping chamber of the heart. It sends oxygen-rich blood to the rest of
 ## Left Ventricle Apex Trabeculation 
 #biology #science 
 
-LV apex trabeculation ==refers to the presence of prominent, finger-like projections (trabeculae) in the apex (tip) of the left ventricle of the heart==. It can be a normal variant, especially in athletes, but excessive trabeculation, particularly when accompanied by a thin compacted myocardial layer, can indicate a condition called [[Glossary#Left Ventricle Non-Compaction (LVNC)|LVNC]].
+LV apex trabeculation ==refers to the presence of prominent, finger-like projections (trabeculae) in the apex (tip) of the left ventricle of the heart==. It can be a normal variant, especially in athletes, but excessive trabeculation, particularly when accompanied by a thin compacted myocardial layer, can indicate a condition called [[Glossary#Left Ventricle Non-Compaction (LVNC)|LVNC]].
 
 ## Left Ventricle Non-Compaction (LVNC)
 LVNC is a type of cardiomyopathy associated with potential complications like heart failure, arrhythmias, and thromboembolism.
@@ -935,18 +935,18 @@ The tendency for the satisfaction from each additional unit to decrease as consu
 ## Minimum Detectable Effect (MDE)
 #Statistics #datascience #DataAnalytics 
 
-In [[AB Testing & Experimentation]] and statistical analysis, the **Minimum Detectable Effect (MDE)** and the **p-value** are ==distinct but related concepts used to determine if a change is meaningful and statistically significant==.
+In [[AB Testing & Experimentation]] and statistical analysis, the **Minimum Detectable Effect (MDE)** and the **p-value** are ==distinct but related concepts used to determine if a change is meaningful and statistically significant==.
 
 **Key Differences and Relationships**
-- **Definition of MDE:** The smallest change in a metric (e.g., conversion rate) that you want your test to reliably detect. It acts as a "sensitivity dial" for your experiment, set before the test runs.
-- **Definition of P-Value:** The probability of observing a difference as large as (or larger than) what you saw, assuming there is no actual difference (null hypothesis).
-- **The Goal:** You want to run a test where the **p-value is below your significance threshold** (usually 0.05) and the **observed effect is at least as large as your MD**
+- **Definition of MDE:** The smallest change in a metric (e.g., conversion rate) that you want your test to reliably detect. It acts as a "sensitivity dial" for your experiment, set before the test runs.
+- **Definition of P-Value:** The probability of observing a difference as large as (or larger than) what you saw, assuming there is no actual difference (null hypothesis).
+- **The Goal:** You want to run a test where the **p-value is below your significance threshold** (usually 0.05) and the **observed effect is at least as large as your MD**
 
 
 ## Median Absolute Deviation (MAD)
 #Statistics #Math #datascience #machinelearning 
 
-The Median Absolute Deviation (MAD) is ==a robust measure of statistical dispersion, indicating how spread out a dataset is==. It's calculated by first finding the median of the dataset, then determining the absolute difference between each data point and the median, and finally finding the median of those absolute differences. MAD is particularly useful when dealing with datasets that may contain outliers or have non-normal distributions, as it is less sensitive to extreme values than measures like [standard deviation](https://www.google.com/search?sca_esv=fd4a6f8cbbc02fb2&rlz=1C5GCCM_en&cs=1&q=standard+deviation&sa=X&ved=2ahUKEwjHuPeM7pWPAxUKa2wGHQiMFSAQxccNegQIKBAB&mstk=AUtExfBpafNhTptr5E28aps95bvxiOV_5x_D6awkC4FNHd6Hb_chqukcSDUVtC2A7kYg1hJ9H5EO1FJb152OxyYf1P1yAi1jFZZoNINA2n2OalJQ2_cK2Zg72coYXJOwGZxMrUHPXm05bKZH-Fr2eEBAy3x-kBgR7ifcXRy75UHfIAW7dWj9RCN8zp0HnLCXkoVNC2bE&csui=3).
+The Median Absolute Deviation (MAD) is ==a robust measure of statistical dispersion, indicating how spread out a dataset is==. It's calculated by first finding the median of the dataset, then determining the absolute difference between each data point and the median, and finally finding the median of those absolute differences. MAD is particularly useful when dealing with datasets that may contain outliers or have non-normal distributions, as it is less sensitive to extreme values than measures like [standard deviation](https://www.google.com/search?sca_esv=fd4a6f8cbbc02fb2&rlz=1C5GCCM_en&cs=1&q=standard+deviation&sa=X&ved=2ahUKEwjHuPeM7pWPAxUKa2wGHQiMFSAQxccNegQIKBAB&mstk=AUtExfBpafNhTptr5E28aps95bvxiOV_5x_D6awkC4FNHd6Hb_chqukcSDUVtC2A7kYg1hJ9H5EO1FJb152OxyYf1P1yAi1jFZZoNINA2n2OalJQ2_cK2Zg72coYXJOwGZxMrUHPXm05bKZH-Fr2eEBAy3x-kBgR7ifcXRy75UHfIAW7dWj9RCN8zp0HnLCXkoVNC2bE&csui=3).
 
 Sources
 - https://en.wikipedia.org/wiki/Median_absolute_deviation
@@ -1013,14 +1013,14 @@ Example: Bilbo Baggins baked two beautiful round seed-cakes for his after supper
 #finance 
 
 ## Mutually Exclusive Collectively Exhaustive (MECE)
-Mutually exclusive means that each category is distinct and has no overlap, while collectively exhaustive means that all possible options or items are included in the categories. The MECE framework, which stands for Mutually Exclusive, Collectively Exhaustive, is a problem-solving and information-structuring tool, used especially in management consulting, to ensure that data is broken down logically and completely without gaps or overlaps.
+Mutually exclusive means that each category is distinct and has no overlap, while collectively exhaustive means that all possible options or items are included in the categories. The MECE framework, which stands for Mutually Exclusive, Collectively Exhaustive, is a problem-solving and information-structuring tool, used especially in management consulting, to ensure that data is broken down logically and completely without gaps or overlaps.
 
 MECE in Practice
-- **Issue Trees:** 
+- **Issue Trees:** 
     Consultants use MECE to break down complex problems into smaller, manageable parts, ensuring that every branch is distinct and that the entire tree covers all relevant aspects of the problem.
-- **Case Interviews:** 
-    Candidates for consulting roles are expected to use the MECE framework to structure their solutions logically and comprehensively. 
-- **Presentations and Reports:** 
+- **Case Interviews:** 
+    Candidates for consulting roles are expected to use the MECE framework to structure their solutions logically and comprehensively. 
+- **Presentations and Reports:** 
     The MECE principle helps professionals organize their ideas in a way that is easy for clients to understand, guiding them toward informed decisions.
 
 ---
@@ -1036,20 +1036,20 @@ The price of one unit of a scheme (mutual fund).
 
 ## Neurodivergent
 #medical 
-differing in mental or [neurological](https://www.google.com/search?sca_esv=ee636c63b9ed21ff&sxsrf=AE3TifMlIrCvbl5fGtyQa5hZo4R8BBxbbA:1765595193264&q=neurological&si=AMgyJEvfjzRzn-1LlmPs29qkb8mqtPWkOftLbO-4lsn80T0TiUw0PWg6l_7316Tt8QwQhGkAg2a3b3ZTQGYhUezPuLuLXXDo2TuoHP5Y0HD2GDxpqZ8M_iE%3D&expnd=1&sa=X&ved=2ahUKEwiS6r7SyrmRAxVrwjgGHaIVA4sQyecJegQILxAO) function from what is considered typical or normal (frequently used with reference to [autistic](https://www.google.com/search?sca_esv=ee636c63b9ed21ff&sxsrf=AE3TifMlIrCvbl5fGtyQa5hZo4R8BBxbbA:1765595193264&q=autistic&si=AMgyJEtf_wwxVVftS7Kej8ZWRY4Pr-wrmLjjRWOILusTwcCd3axmyAY0Y7gOUVBkUEYMOiJsRjVSKF5WhkUznIcht33SVq74OaB3SXx-c1fSWYXou8Jzp5w%3D&expnd=1&sa=X&ved=2ahUKEwiS6r7SyrmRAxVrwjgGHaIVA4sQyecJegQILxAP) spectrum disorders); not [neurotypical](https://www.google.com/search?sca_esv=ee636c63b9ed21ff&sxsrf=AE3TifMlIrCvbl5fGtyQa5hZo4R8BBxbbA:1765595193264&q=neurotypical&si=AMgyJEvfjzRzn-1LlmPs29qkb8mqM-dyeiM6InLYCm8HMRoFpKsa6NWFd0fnfw48vmlu9KIRzLAlOLCXEfaOdnBWvjAjeS_3TR6Unh4OerlnJbo3Ls4cm7U%3D&expnd=1&sa=X&ved=2ahUKEwiS6r7SyrmRAxVrwjgGHaIVA4sQyecJegQILxAQ).
+differing in mental or [neurological](https://www.google.com/search?sca_esv=ee636c63b9ed21ff&sxsrf=AE3TifMlIrCvbl5fGtyQa5hZo4R8BBxbbA:1765595193264&q=neurological&si=AMgyJEvfjzRzn-1LlmPs29qkb8mqtPWkOftLbO-4lsn80T0TiUw0PWg6l_7316Tt8QwQhGkAg2a3b3ZTQGYhUezPuLuLXXDo2TuoHP5Y0HD2GDxpqZ8M_iE%3D&expnd=1&sa=X&ved=2ahUKEwiS6r7SyrmRAxVrwjgGHaIVA4sQyecJegQILxAO) function from what is considered typical or normal (frequently used with reference to [autistic](https://www.google.com/search?sca_esv=ee636c63b9ed21ff&sxsrf=AE3TifMlIrCvbl5fGtyQa5hZo4R8BBxbbA:1765595193264&q=autistic&si=AMgyJEtf_wwxVVftS7Kej8ZWRY4Pr-wrmLjjRWOILusTwcCd3axmyAY0Y7gOUVBkUEYMOiJsRjVSKF5WhkUznIcht33SVq74OaB3SXx-c1fSWYXou8Jzp5w%3D&expnd=1&sa=X&ved=2ahUKEwiS6r7SyrmRAxVrwjgGHaIVA4sQyecJegQILxAP) spectrum disorders); not [neurotypical](https://www.google.com/search?sca_esv=ee636c63b9ed21ff&sxsrf=AE3TifMlIrCvbl5fGtyQa5hZo4R8BBxbbA:1765595193264&q=neurotypical&si=AMgyJEvfjzRzn-1LlmPs29qkb8mqM-dyeiM6InLYCm8HMRoFpKsa6NWFd0fnfw48vmlu9KIRzLAlOLCXEfaOdnBWvjAjeS_3TR6Unh4OerlnJbo3Ls4cm7U%3D&expnd=1&sa=X&ved=2ahUKEwiS6r7SyrmRAxVrwjgGHaIVA4sQyecJegQILxAQ).
 
 ## Nexus
-"Nexus" generally means ==a connection, link, or central point of connection between things==. It can refer to a relationship, a link, or a core or center of something. It can also describe a connected group or series. 
+"Nexus" generally means ==a connection, link, or central point of connection between things==. It can refer to a relationship, a link, or a core or center of something. It can also describe a connected group or series. 
 
 Here's a more detailed breakdown:
 - **Connection or Link:**
-    Nexus can describe a relationship or connection between two or more things, like the nexus between teachers and students. It can also refer to a causal link, such as the nexus between poverty and crime. 
+    Nexus can describe a relationship or connection between two or more things, like the nexus between teachers and students. It can also refer to a causal link, such as the nexus between poverty and crime. 
 - **Central Point:**
-    It can also signify a central point, a hub, or a core, such as a bookstore being a nexus for a neighborhood. 
+    It can also signify a central point, a hub, or a core, such as a bookstore being a nexus for a neighborhood. 
 - **Connected Group:**
-    Nexus can also refer to a connected group or series of things, like a nexus of theories or relationships. 
+    Nexus can also refer to a connected group or series of things, like a nexus of theories or relationships. 
 - **Formal Usage:**    
-    It's often used in a formal context, particularly when discussing complex systems or relationships. 
+    It's often used in a formal context, particularly when discussing complex systems or relationships. 
 - In Technology:
 	Generally implies a **hub, bridge, or central integration point**.
 - **Example:**
@@ -1060,9 +1060,9 @@ Here's a more detailed breakdown:
 Stock market index, that's made up of 50 stocks.
 
 ## Non-Player Character (NPC)
-Non-player characters (NPCs) refers to any character that is not directly controlled by a player. Instead, NPCs are typically controlled by the game's AI (in video games) or the game master (in tabletop RPGs). They often interact with players and can be anything from shopkeepers and quest-givers to enemies and background characters.
+Non-player characters (NPCs) refers to any character that is not directly controlled by a player. Instead, NPCs are typically controlled by the game's AI (in video games) or the game master (in tabletop RPGs). They often interact with players and can be anything from shopkeepers and quest-givers to enemies and background characters.
 
-AI-powered NPCs (non-player characters) are ==characters in video games that are controlled by artificial intelligence rather than by human players==. These AI-driven characters can interact with players in more dynamic and realistic ways than traditional NPCs, leading to more immersive and engaging gameplay experiences.
+AI-powered NPCs (non-player characters) are ==characters in video games that are controlled by artificial intelligence rather than by human players==. These AI-driven characters can interact with players in more dynamic and realistic ways than traditional NPCs, leading to more immersive and engaging gameplay experiences.
 
 ## Normalized Discounted Cumulative Gain (NDCG or nDCG)
 #informationretrieval #rag #llm 
@@ -1149,11 +1149,11 @@ Quantifies how 'surprised' the model is to see some words together.
 ## PIP
 #Python #softwareengineering #OpenSource 
 
-In Python, **PIP** is the ==standard **package manager** used to install, manage, and uninstall third-party software packages and libraries that are not part of the Python standard library==. The name is a recursive acronym for "**Pip Installs Packages**".
+In Python, **PIP** is the ==standard **package manager** used to install, manage, and uninstall third-party software packages and libraries that are not part of the Python standard library==. The name is a recursive acronym for "**Pip Installs Packages**".
 
 **Role of PIP**
 
-PIP is an essential tool for any Python developer because it streamlines the process of adding external dependencies to a project. These packages are sourced primarily from the **[Python Package Index (PyPI)](https://pypi.org/)**, a vast online repository of community-contributed software. 
+PIP is an essential tool for any Python developer because it streamlines the process of adding external dependencies to a project. These packages are sourced primarily from the **[Python Package Index (PyPI)](https://pypi.org/)**, a vast online repository of community-contributed software. 
 
 Instead of manually downloading and managing source code files, PIP automates the process with simple command-line interface commands.
 
@@ -1161,13 +1161,13 @@ Instead of manually downloading and managing source code files, PIP automates th
 **POPULISM IN POLITICS**
 
 While "every politician hopes to be popular", Mr Ong said, populism is different. Populists often use an "us versus them" narrative, presenting themselves as champions of the people against elites, institutions, or outsiders, and offering simplistic solutions to complex problems.
-"When people are disillusioned and disgruntled, they hope for a silver bullet and may give these simplistic solutions a chance," he added. 
+"When people are disillusioned and disgruntled, they hope for a silver bullet and may give these simplistic solutions a chance," he added. 
 
 He cited Argentina's history of left-wing populism – where businesses eventually left due to excessive taxation, leading to job losses and economic crises. "In the end, the workers and ordinary people are the ones who suffer," he said.
 
-Far-right populism, often linked to immigration concerns, is more widespread now, Mr Ong said, referencing countries like the US, UK, Australia and Japan. 
+Far-right populism, often linked to immigration concerns, is more widespread now, Mr Ong said, referencing countries like the US, UK, Australia and Japan. 
 
-"Populism takes societies on the road to ruin – creating irreconcilable rifts between communities, and fuelling xenophobia and racism," he said. "Eventually, either their fiscal system goes broke or the society breaks apart."
+"Populism takes societies on the road to ruin – creating irreconcilable rifts between communities, and fuelling xenophobia and racism," he said. "Eventually, either their fiscal system goes broke or the society breaks apart."
 
 https://www.channelnewsasia.com/singapore/ong-ye-kung-workers-party-ge2025-racial-politics-5363956
 
@@ -1191,7 +1191,7 @@ Precision = TP/(TP+FP) = 1 - FDR
 
 ## Portmanteau
 
-A word blending the sounds and combining the meanings of two others, for example **motel** (*mo*tor ho*tel*) or **brunch** (*br*eakfast + l*unch*).
+A word blending the sounds and combining the meanings of two others, for example **motel** (*mo*tor ho*tel*) or **brunch** (*br*eakfast + l*unch*).
 
 ## Price-earnings ratio (P/E ratio or P/E)
 #finance #Investment #Stocks 
@@ -1582,7 +1582,7 @@ A popular American ice cream with scoops of ice cream topped with sweet sauce or
 #Programming #softwareengineering 
 API documentation. Aids in testing and debugging.
 
-Swagger is ==a popular set of open-source tools and a specification for designing, building, documenting, and consuming RESTful APIs==, allowing developers to describe APIs in a machine-readable format (JSON/YAML) for interactive docs, code generation, and testing, making API management much smoother and collaborative. Think of it as a blueprint for your API, enabling tools to automatically create beautiful documentation ([Swagger UI](https://www.google.com/search?q=Swagger+UI&oq=what+is+swa&gs_lcrp=EgZjaHJvbWUqBwgCEAAYgAQyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDIyNzZqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8&ved=2ahUKEwiP3siFutuRAxWoT2wGHaxaBj8QgK4QegYIAQgAEAY)), client libraries, and tests.
+Swagger is ==a popular set of open-source tools and a specification for designing, building, documenting, and consuming RESTful APIs==, allowing developers to describe APIs in a machine-readable format (JSON/YAML) for interactive docs, code generation, and testing, making API management much smoother and collaborative. Think of it as a blueprint for your API, enabling tools to automatically create beautiful documentation ([Swagger UI](https://www.google.com/search?q=Swagger+UI&oq=what+is+swa&gs_lcrp=EgZjaHJvbWUqBwgCEAAYgAQyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDIyNzZqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8&ved=2ahUKEwiP3siFutuRAxWoT2wGHaxaBj8QgK4QegYIAQgAEAY)), client libraries, and tests.
 
 ## Systematic Investment Plan (SIP)
 
@@ -1615,7 +1615,7 @@ Systolic (The Squeezing Phase)
 
 Taxonomy is a practice and science concerned with classification or categorization. Typically, there are two parts to it: the development of an underlying scheme of classes (a taxonomy) and the allocation of things to the classes (classification).
 
-Originally, taxonomy referred only to the classification of organisms on the basis of shared characteristics. Today it also has a more general sense. It may refer to the classification of things or concepts, as well as to the principles underlying such work. Thus a taxonomy can be used to organize species, documents, videos or anything else
+Originally, taxonomy referred only to the classification of organisms on the basis of shared characteristics. Today it also has a more general sense. It may refer to the classification of things or concepts, as well as to the principles underlying such work. Thus a taxonomy can be used to organize species, documents, videos or anything else
 
 ## Terse
 
@@ -1694,7 +1694,7 @@ A UKCA mark ensures the product meets UK-specific safety and regulatory requirem
 ## Unicode
 #Programming #softwareengineering #machinelearning #datascience 
 
-An international character encoding standard for use with different languages and scripts, by which each letter, digit, or symbol is assigned a unique numeric value (e.g., `U+0041` for 'A') that applies across different platforms and programs. It enables consistent text representation, storage, and exchange across different platforms, operating systems, and applications. It serves as a superior alternative to older, limited standards like ASCII.
+An international character encoding standard for use with different languages and scripts, by which each letter, digit, or symbol is assigned a unique numeric value (e.g., `U+0041` for 'A') that applies across different platforms and programs. It enables consistent text representation, storage, and exchange across different platforms, operating systems, and applications. It serves as a superior alternative to older, limited standards like ASCII.
 
 ## Unicode Tranformation Format (UTF)
 #Programming #softwareengineering #machinelearning #datascience 
@@ -1703,16 +1703,16 @@ UTF (Unicode Transformation Format) is a character encoding standard that allows
 
 **Key Aspects of UTF-8:**
 
-- **Variable-Length Encoding:** UTF-8 uses 1 byte for standard ASCII characters (0-127), and up to 4 bytes for other characters, emojis, and symbols.
-- **Universal Compatibility:** It represents all Unicode characters, making it ideal for internationalization.
+- **Variable-Length Encoding:** UTF-8 uses 1 byte for standard ASCII characters (0-127), and up to 4 bytes for other characters, emojis, and symbols.
+- **Universal Compatibility:** It represents all Unicode characters, making it ideal for internationalization.
 - **Web Standard:**It is the standard for HTML5, emails, JSON, and modern APIs
-- **Efficiency:** For English text, UTF-8 is very compact, while still supporting all characters.
-- **Alternative Encodings:** Besides UTF-8, other formats include UTF-16 (used in Windows/internal, usually 2-4 bytes) and UTF-32 (fixed-length 4 bytes). 
+- **Efficiency:** For English text, UTF-8 is very compact, while still supporting all characters.
+- **Alternative Encodings:** Besides UTF-8, other formats include UTF-16 (used in Windows/internal, usually 2-4 bytes) and UTF-32 (fixed-length 4 bytes). 
 
 **Common UTF Variants:**
-- **UTF-8:** Most common, 1-4 bytes, ASCII compatible.
-- **UTF-16:** 2 or 4 bytes, common in Windows/Java/JavaScripts internal storage.
-- **UTF-32:** 4 bytes, rarely used for storage due to size, but used in some scenarios for fixed-length needs. 
+- **UTF-8:** Most common, 1-4 bytes, ASCII compatible.
+- **UTF-16:** 2 or 4 bytes, common in Windows/Java/JavaScripts internal storage.
+- **UTF-32:** 4 bytes, rarely used for storage due to size, but used in some scenarios for fixed-length needs. 
 
 UTF-8 ensures that text is encoded into bytes in a consistent way that can be reversed, ensuring "lossless" transport across different systems.
 
@@ -1722,7 +1722,7 @@ UTF-8 ensures that text is encoded into bytes in a consistent way that can be re
 #linguistics 
 set or turn (something) on its end or upside down.
 
-Example:  The security inspector *upended* my bag and dumped everything out.
+Example:  The security inspector *upended* my bag and dumped everything out.
 
 ---
 # V
