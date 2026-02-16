@@ -18,7 +18,7 @@ Here are the projects I've built, currently working on, or planning to develop:
 
   <a href="Media Converter.md" class="project-card">
     <div class="project-icon">
-      <img src="../Pet Projects/attachments/images/media-converter-thumbnail.webp" alt="Media Converter">
+      <img src="./attachments/images/media-converter-thumbnail.webp" alt="Media Converter">
     </div>
     <div class="project-content">
       <div class="project-title">Media Converter</div>
@@ -50,7 +50,7 @@ Here are the projects I've built, currently working on, or planning to develop:
 
   <a href="Asset Class Comparison.md" class="project-card">
     <div class="project-icon">
-        <img src="../Pet Projects/attachments/images/asset-class-comparison-thumbnail.webp" alt="Asset Class Comparison"></div>
+        <img src="./attachments/images/asset-class-comparison-thumbnail.webp" alt="Asset Class Comparison"></div>
     <div class="project-content">
       <div class="project-title">Asset Class Comparison</div>
       <div class="project-description">Interactive dashboard to compare performance of different asset classes over time. Built with Python and deployed on Hugging Face.</div>
