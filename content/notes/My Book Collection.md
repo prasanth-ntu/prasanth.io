@@ -17,7 +17,7 @@ Here are the books I've read, currently reading, or plan to read:
 <div class="books-grid">
 
   <a href="Atomic Habits.md" class="book-card">
-    <div class="book-image"><img src="./attachments/images/atomic-habits-cover.webp" alt="Atomic Habits cover"></div>
+    <div class="book-image"><img src="notes/attachments/images/atomic-habits-cover.webp" alt="Atomic Habits cover"></div>
     <div class="book-content">
       <div class="book-title">Atomic Habits</div>
       <div class="book-author">by James Clear</div>
@@ -27,7 +27,7 @@ Here are the books I've read, currently reading, or plan to read:
   </a>
 
   <a href="The Psychology of Money.md" class="book-card">
-	<div class="book-image"><img src="./attachments/images/the-psychology-of-money-cover.webp" alt="Atomic Habits cover"></div>
+	<div class="book-image"><img src="notes/attachments/images/the-psychology-of-money-cover.webp" alt="Atomic Habits cover"></div>
     <div class="book-content">
       <div class="book-title">The Psychology of Money</div>
       <div class="book-author">by Morgan Housel</div>
@@ -37,7 +37,7 @@ Here are the books I've read, currently reading, or plan to read:
   </a>
 
  <a href="" class="book-card">
-    <div class="book-image"><img src="./attachments/images/mans-search-for-meaning-coverpage.jpg" alt="Man's Search for Meaning cover"></div>
+    <div class="book-image"><img src="notes/attachments/images/mans-search-for-meaning-coverpage.jpg" alt="Man's Search for Meaning cover"></div>
     <div class="book-content">
       <div class="book-title">Man's Search for Meaning</div>
       <div class="book-author">by Viktor Frankl</div>
@@ -47,7 +47,7 @@ Here are the books I've read, currently reading, or plan to read:
   </a>
 
   <a href="Let's Talk Money.md" class="book-card">
-	  <div class="book-image"><img src="./attachments/images/let's-talk-money-cover.webp" alt="Let's talk money cover"></div>
+	  <div class="book-image"><img src="notes/attachments/images/let's-talk-money-cover.webp" alt="Let's talk money cover"></div>
      <div class="book-content">
       <div class="book-title">Let's Talk Money</div>
       <div class="book-author">by Monika Halan</div>
@@ -57,7 +57,7 @@ Here are the books I've read, currently reading, or plan to read:
   </a>
 
 <a href="Situational Awareness.md" class="book-card">
-  <div class="book-image"><img src="./attachments/images/situational-awareness-cover.webp" alt="Situational awareness cover"></div>
+  <div class="book-image"><img src="notes/attachments/images/situational-awareness-cover.webp" alt="Situational awareness cover"></div>
   <div class="book-content">
     <div class="book-title">Situational Awareness</div>
     <div class="book-author">by Leopold Aschenbrenner</div>
@@ -67,7 +67,7 @@ Here are the books I've read, currently reading, or plan to read:
 </a>
 
 <a href="The Hobbit.md" class="book-card">
-  <div class="book-image"><img src="./attachments/images/the-hobbit-book-coverpage.jpg" alt="Hobbit cover"></div>
+  <div class="book-image"><img src="notes/attachments/images/the-hobbit-book-coverpage.jpg" alt="Hobbit cover"></div>
   <div class="book-content">
     <div class="book-title">The Hobbit: Or There and Back Again</div>
     <div class="book-author">by J.R.R. Tolkein</div>
@@ -77,7 +77,7 @@ Here are the books I've read, currently reading, or plan to read:
 </a>
 
 <a href="The Fellowship of the Ring.md" class="book-card">
-  <div class="book-image"><img src="./attachments/images/lotr-1-book-coverpage.jpg" alt="LOTR 1 cover"></div>
+  <div class="book-image"><img src="notes/attachments/images/lotr-1-book-coverpage.jpg" alt="LOTR 1 cover"></div>
   <div class="book-content">
     <div class="book-title">The Fellowship of the Ring</div>
     <div class="book-author">by J.R.R. Tolkien</div>
@@ -87,7 +87,7 @@ Here are the books I've read, currently reading, or plan to read:
 </a>
 
 <a href="The Two Towers.md" class="book-card">
-  <div class="book-image"><img src="./attachments/images/lotr-2-book-coverpage.jpg" alt="LOTR 2 cover"></div>
+  <div class="book-image"><img src="notes/attachments/images/lotr-2-book-coverpage.jpg" alt="LOTR 2 cover"></div>
   <div class="book-content">
     <div class="book-title">The Two Towers</div>
     <div class="book-author">by J.R.R. Tolkien</div>
@@ -97,7 +97,7 @@ Here are the books I've read, currently reading, or plan to read:
 </a>
 
 <a href="The Return of the King.md" class="book-card">
-  <div class="book-image"><img src="./attachments/images/lotr-3-book-coverpage.jpg" alt="LOTR 3 cover"></div>
+  <div class="book-image"><img src="notes/attachments/images/lotr-3-book-coverpage.jpg" alt="LOTR 3 cover"></div>
   <div class="book-content">
     <div class="book-title">The Return of the King</div>
     <div class="book-author">by J.R.R. Tolkien</div>
@@ -107,7 +107,7 @@ Here are the books I've read, currently reading, or plan to read:
 </a>
 
 <a href="Oru Manithan Oru Veedu Oru Ulagam.md" class="book-card">
-  <div class="book-image"><img src="./attachments/images/oru-manithan-oru-veedu-oru-ulagam-book-coverpage.jpg" alt="Hobbit cover"></div>
+  <div class="book-image"><img src="notes/attachments/images/oru-manithan-oru-veedu-oru-ulagam-book-coverpage.jpg" alt="Hobbit cover"></div>
   <div class="book-content">
     <div class="book-title">Oru manitann, oru veedu, oru ulagam (ஒரு மனிதன் ஒரு வீடு ஒரு உலகம்)</div>
     <div class="book-author">by Jayakanthan</div>
@@ -117,7 +117,7 @@ Here are the books I've read, currently reading, or plan to read:
 </a>
 
 <a href="Trends - Artificial Intelligence - 2025.md" class="book-card">
-  <div class="book-image"><img src="./attachments/images/trends-artificial-intelligence-cover.webp" alt="Trends - Artificial Intelligence cover"></div>
+  <div class="book-image"><img src="notes/attachments/images/trends-artificial-intelligence-cover.webp" alt="Trends - Artificial Intelligence cover"></div>
   <div class="book-content">
     <div class="book-title">Trends - Artificial Intelligence</div>
     <div class="book-author">by Mary Meeker / Jay Simons / Daegwon Chae / Alexander Krey <br>Company: Bond</div>
@@ -127,7 +127,7 @@ Here are the books I've read, currently reading, or plan to read:
 </a>
 
 <a href="Build-a-LLM-from-Scratch.md" class="book-card">
-  <div class="book-image"><img src="./attachments/images/build-a-llm-from-scratch-cover.webp" alt="Atomic habits cover"></div>
+  <div class="book-image"><img src="notes/attachments/images/build-a-llm-from-scratch-cover.webp" alt="Atomic habits cover"></div>
   <div class="book-content">
     <div class="book-title">Build a Large Language Model from Scratch</div>
     <div class="book-author">by Sebastian Raschka</div>
@@ -137,7 +137,7 @@ Here are the books I've read, currently reading, or plan to read:
 </a>
 
 <a href="Let's Talk Mutual Funds.md" class="book-card">
-	<div class="book-image"><img src="./attachments/images/let's-talk-mutual-funds-cover.webp" alt="Let's talk mutual funds cover"></div>
+	<div class="book-image"><img src="notes/attachments/images/let's-talk-mutual-funds-cover.webp" alt="Let's talk mutual funds cover"></div>
 	<div class="book-content">
     <div class="book-title">Let's Talk Mutual Funds</div>
     <div class="book-author">by Monika Halan</div>
@@ -147,7 +147,7 @@ Here are the books I've read, currently reading, or plan to read:
 </a>
 
 <a href="Will.md" class="book-card">
-  <div class="book-image"><img src="./attachments/images/will-book-cover.jpg" alt="Will cover"></div>
+  <div class="book-image"><img src="notes/attachments/images/will-book-cover.jpg" alt="Will cover"></div>
   <div class="book-content">
     <div class="book-title">Will</div>
     <div class="book-author">by Will Smith (with Mark Manson)</div>
@@ -157,7 +157,7 @@ Here are the books I've read, currently reading, or plan to read:
 </a>
 
 <a href="TBA: The Great Mental Models" class="book-card">
-	<div class="book-image"><img src="./attachments/images/the-great-mental-models-vol1-cover.jpg" alt="The Great Mental Models - General Thinking Concepts"></div>
+	<div class="book-image"><img src="notes/attachments/images/the-great-mental-models-vol1-cover.jpg" alt="The Great Mental Models - General Thinking Concepts"></div>
 	<div class="book-content">
     <div class="book-title">The Great Mental Models: General Thinking Concepts</div>
     <div class="book-author">by Shane Parrish</div>
@@ -167,7 +167,7 @@ Here are the books I've read, currently reading, or plan to read:
 </a>
 
 <a href="TBA: Hands-On Large Language Models" class="book-card">
-  <div class="book-image"><img src="./attachments/images/hands-on-large-language-models-cover.webp" alt="Hands on Large Language Models Cover"></div>
+  <div class="book-image"><img src="notes/attachments/images/hands-on-large-language-models-cover.webp" alt="Hands on Large Language Models Cover"></div>
   <div class="book-content">
     <div class="book-title">Hands-On Large Language Models</div>
     <div class="book-author">by Jay Alammar</div>
@@ -177,7 +177,7 @@ Here are the books I've read, currently reading, or plan to read:
 </a>
 
 <a href="TBA: Deep Medicine: How Artificial Intelligence Can Make Healthcare Human Again" class="book-card">
-  <div class="book-image"><img src="./attachments/images/Deep-Medicine-Cover-Page.jpg" alt="Deep Medicine: How Artificial Intelligence Can Make Healthcare Human Again Cover"></div>
+  <div class="book-image"><img src="notes/attachments/images/Deep-Medicine-Cover-Page.jpg" alt="Deep Medicine: How Artificial Intelligence Can Make Healthcare Human Again Cover"></div>
   <div class="book-content">
     <div class="book-title">Deep Medicine: How Artificial Intelligence Can Make Healthcare Human Again</div>
     <div class="book-author">by Eric topol M.D.</div>
@@ -187,7 +187,7 @@ Here are the books I've read, currently reading, or plan to read:
 </a>
 
 <a href="TBA: The AI Revolution in Medicine: GPT-4 and Beyond" class="book-card">
-  <div class="book-image"><img src="./attachments/images/The-AI-Revolutoin-in-Medicine-Cover-Page.jpg" alt=The AI Revolution in Medicine: GPT-4 and Beyond Cover"></div>
+  <div class="book-image"><img src="notes/attachments/images/The-AI-Revolutoin-in-Medicine-Cover-Page.jpg" alt=The AI Revolution in Medicine: GPT-4 and Beyond Cover"></div>
   <div class="book-content">
     <div class="book-title">The AI Revolution in Medicine: GPT-4 and Beyond</div>
     <div class="book-author">by Peter Lee, Carey Goldberg, Isaac Kohane</div>
@@ -197,7 +197,7 @@ Here are the books I've read, currently reading, or plan to read:
 </a>
 
 <a href="TBA: The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you" class="book-card">
-  <div class="book-image"><img src="./attachments/images/mom-test-coverpage.jpg" alt="The AI Revolution in Medicine: GPT-4 and Beyond Cover"></div>
+  <div class="book-image"><img src="notes/attachments/images/mom-test-coverpage.jpg" alt="The AI Revolution in Medicine: GPT-4 and Beyond Cover"></div>
   <div class="book-content">
     <div class="book-title">The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you</div>
     <div class="book-author">by Rob Fitzpatrick </div>
@@ -209,7 +209,7 @@ Here are the books I've read, currently reading, or plan to read:
 
 
 <a href="TBA: If You Live To 100, You Might As Well Be Happy: Lessons for a Long and Joyful Life: The Korean Bestseller" class="book-card">
-  <div class="book-image"><img src="./attachments/images/If-You-Live-To-100-You-Might-As-Well-Be-Happy-coverpage.jpg" alt="If You Live To 100, You Might As Well Be Happy: Lessons for a Long and Joyful Life: The Korean Bestseller"></div>
+  <div class="book-image"><img src="notes/attachments/images/If-You-Live-To-100-You-Might-As-Well-Be-Happy-coverpage.jpg" alt="If You Live To 100, You Might As Well Be Happy: Lessons for a Long and Joyful Life: The Korean Bestseller"></div>
   <div class="book-content">
     <div class="book-title">If You Live To 100, You Might As Well Be Happy: Lessons for a Long and Joyful Life: The Korean Bestseller</div>
     <div class="book-author">by Rhee Kun Ho </div>
@@ -220,7 +220,7 @@ Here are the books I've read, currently reading, or plan to read:
 
 
 <a href="TBA: Dare to Lead: Brave Work, Tough Conversations, Whole Hearts" class="book-card">
-  <div class="book-image"><img src="./attachments/images/dare-to-lead-cover.jpg" alt="Dare to Lead: Brave Work, Tough Conversations, Whole Hearts"></div>
+  <div class="book-image"><img src="notes/attachments/images/dare-to-lead-cover.jpg" alt="Dare to Lead: Brave Work, Tough Conversations, Whole Hearts"></div>
   <div class="book-content">
     <div class="book-title">Dare to Lead: Brave Work, Tough Conversations, Whole Hearts</div>
     <div class="book-author">by Brene Brown </div>
@@ -230,7 +230,7 @@ Here are the books I've read, currently reading, or plan to read:
 </a>
 
 <a href="TBA: The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution" class="book-card">
-  <div class="book-image"><img src="./attachments/images/the-man-who-solved-the-market.jpg" alt="The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution"></div>
+  <div class="book-image"><img src="notes/attachments/images/the-man-who-solved-the-market.jpg" alt="The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution"></div>
   <div class="book-content">
     <div class="book-title">The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution</div>
     <div class="book-author">by Gregory Zuckerman</div>
@@ -240,7 +240,7 @@ Here are the books I've read, currently reading, or plan to read:
 </a>
 
 <a href="TBA: Machine Learning Systems" class="book-card">
-  <div class="book-image"><img src="./attachments/images/introduction-to-machine-learning-systems-cover.png" alt="Machine Learning Systems"></div>
+  <div class="book-image"><img src="notes/attachments/images/introduction-to-machine-learning-systems-cover.png" alt="Machine Learning Systems"></div>
   <div class="book-content">
     <div class="book-title">Machine Learning Systems</div>
     <div class="book-author">by Vijay Janapa Reddi</div>
