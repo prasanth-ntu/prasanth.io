@@ -238,6 +238,16 @@ Here are the books I've read, currently reading, or plan to read:
   </div>
 </a>
 
+<a href="TBA: Machine Learning Systems" class="book-card">
+  <div class="book-image"><img src="../Books/attachments/images/introduction-to-machine-learning-systems-cover.png" alt="Machine Learning Systems"></div>
+  <div class="book-content">
+    <div class="book-title">Machine Learning Systems</div>
+    <div class="book-author">by Vijay Janapa Reddi</div>
+    <div class="book-summary"><i>Note: Recommended by LinkedIn Community.</i></div>
+    <div class="book-status status-to-read">#ToRead</div>
+  </div>
+</a>
+
   
 <!--
   <a href="Let's Talk Money.md" class="book-card">

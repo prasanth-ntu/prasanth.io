@@ -36,6 +36,17 @@
 > [!QUOTE] Wealth was a means to a happy and meaningful life while making a positive impact on others.
 > *Singapore tycoon Goh Cheng Liang*
 
+
+> [!QUOTE] The people who are crazy enough to think they can change the world are the ones who do.
+> *Steve Jobs*
+
+> [!QUOTE] Your time is limited, so don't waste it living someone else' life.
+> *Steve Jobs*
+
+> [!QUOTE] ... Going to bed at night saying **we ha've done something** wonderful, **that's what matters to me**.
+> *Steve Jobs*
+
+
 ## Marvel
 > [!Quote] I can do this all day.
 > *Captain America*

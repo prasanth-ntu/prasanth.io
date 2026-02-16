@@ -128,8 +128,11 @@
                 </div>
                 <p class="text-sm text-slate-600 mb-3">You describe the cluster’s desired state. Kubernetes continuously reconciles it.</p>
                 <div class="kbox p-3 overflow-x-auto">
-                    <pre class="mono text-xs text-slate-700 whitespace-pre"><code>kubectl apply -f webapp.yaml
-kubectl apply -f mongo.yaml</code></pre>
+                    <pre class="mono text-xs text-slate-700 whitespace-pre"><code># Typical demo apply order
+kubectl apply -f mongo-config.yaml
+kubectl apply -f mongo-secret.yaml
+kubectl apply -f mongo.yaml
+kubectl apply -f webapp.yml</code></pre>
                 </div>
                 <p class="label">Key idea</p>
                 <p class="text-xs">K8s is <b>declarative</b>: you say <span class="mono">is</span>, it works to keep it <span class="mono">should</span>.</p>
@@ -269,54 +272,111 @@ kubectl apply -f mongo.yaml</code></pre>
         <div class="card p-6 border-2 border-blue-300 bg-white mb-12">
             <div class="component-title justify-center text-blue-700 text-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.5v11L12 22 3 17.5v-11L12 2z"/></svg>
-                <span>Example stack (from your notes)</span>
+                <span>Example stack (from my Kubernetes notes)</span>
             </div>
             <p class="text-center text-sm text-slate-600 mb-6">MongoDB + WebApp, configured via ConfigMap/Secret and exposed externally for local testing.</p>
 
-            <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-6 items-stretch">
-                <div class="flex flex-col gap-4">
-                    <div class="mini-card bg-slate-50 border border-slate-200">
-                        <div class="font-semibold text-slate-700 mb-2">ConfigMap</div>
-                        <div class="chip mono">DB_URL=mongo-service</div>
-                        <p class="text-xs text-slate-600 mt-2">Non-secret endpoint/config injected into Pods.</p>
+            <!-- Demo manifests + apply order (from the hands-on repo) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+                <div class="mini-card border border-slate-200 bg-slate-50">
+                    <div class="font-semibold text-slate-700 mb-2">Manifests</div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="chip mono">mongo-config.yaml</span>
+                        <span class="chip mono">mongo-secret.yaml</span>
+                        <span class="chip mono">mongo.yaml</span>
+                        <span class="chip mono">webapp.yml</span>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3">This is the exact “MongoDB + webapp” Minikube demo layout.</p>
+                </div>
+                <div class="mini-card border border-amber-200 bg-amber-50/40">
+                    <div class="font-semibold text-amber-800 mb-2">Apply order (important)</div>
+                    <div class="kbox p-3 overflow-x-auto">
+                        <pre class="mono text-xs text-slate-700 whitespace-pre"><code>kubectl apply -f mongo-config.yaml
+kubectl apply -f mongo-secret.yaml
+kubectl apply -f mongo.yaml
+kubectl apply -f webapp.yml</code></pre>
+                    </div>
+                    <p class="text-[11px] text-slate-600 mt-2"><b>Reason:</b> Deployments reference ConfigMap/Secret; they must exist first.</p>
+                </div>
+            </div>
+
+            <!-- Traffic path (end-to-end wiring) -->
+            <div class="mini-card border border-slate-200 mb-6">
+                <div class="font-semibold text-slate-800 mb-2 text-center">End-to-end traffic path (demo)</div>
+                <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr_auto_1fr] gap-3 items-stretch">
                     <div class="mini-card bg-slate-50 border border-slate-200">
-                        <div class="font-semibold text-slate-700 mb-2">Secret</div>
-                        <div class="chip mono">mongo-user</div>
-                        <div class="chip mono">mongo-password</div>
-                        <p class="text-xs text-slate-600 mt-2">Referenced via <span class="mono">valueFrom.secretKeyRef</span>.</p>
+                        <div class="font-semibold text-slate-700 mb-1">Browser</div>
+                        <div class="chip mono">User</div>
+                        <div class="text-[11px] text-slate-500 mt-2">External request</div>
+                    </div>
+                    <div class="flex items-center justify-center text-slate-400">
+                        <div class="connector"><span class="lg:hidden">▼</span><span class="hidden lg:inline">▶</span></div>
+                    </div>
+                    <div class="mini-card bg-orange-50/40 border border-orange-200">
+                        <div class="font-semibold text-orange-800 mb-1">NodePort Service</div>
+                        <div class="chip mono">webapp-service:30100</div>
+                        <div class="text-[11px] text-slate-500 mt-2">Exposes webapp externally (dev/demo)</div>
+                    </div>
+                    <div class="flex items-center justify-center text-slate-400">
+                        <div class="connector"><span class="lg:hidden">▼</span><span class="hidden lg:inline">▶</span></div>
+                    </div>
+                    <div class="mini-card bg-emerald-50/40 border border-emerald-200">
+                        <div class="font-semibold text-emerald-800 mb-1">WebApp Pod</div>
+                        <div class="chip mono">nanajanashia/k8s-demo-app</div>
+                        <div class="text-[11px] text-slate-500 mt-2">Reads env from ConfigMap/Secret</div>
+                    </div>
+                    <div class="flex items-center justify-center text-slate-400">
+                        <div class="connector"><span class="lg:hidden">▼</span><span class="hidden lg:inline">▶</span></div>
+                    </div>
+                    <div class="mini-card bg-teal-50/40 border border-teal-200">
+                        <div class="font-semibold text-teal-800 mb-1">ClusterIP Service</div>
+                        <div class="chip mono">mongo-service:27017</div>
+                        <div class="text-[11px] text-slate-500 mt-2">Stable internal DB endpoint</div>
+                    </div>
+                    <div class="flex items-center justify-center text-slate-400">
+                        <div class="connector"><span class="lg:hidden">▼</span><span class="hidden lg:inline">▶</span></div>
+                    </div>
+                    <div class="mini-card bg-purple-50/40 border border-purple-200">
+                        <div class="font-semibold text-purple-800 mb-1">MongoDB Pod</div>
+                        <div class="chip mono">mongo:5.0</div>
+                        <div class="text-[11px] text-slate-500 mt-2">Auth via Secret env vars</div>
                     </div>
                 </div>
+            </div>
 
-                <div class="hidden lg:flex flex-col items-center justify-center text-slate-400">
-                    <div class="connector">▶</div>
-                    <div class="text-[11px] text-slate-500 mt-2">applied before</div>
-                    <div class="connector mt-6">▶</div>
-                    <div class="text-[11px] text-slate-500 mt-2">used by</div>
-                </div>
-
-                <div class="flex flex-col gap-4">
-                    <div class="mini-card border border-purple-200 bg-purple-50/30">
-                        <div class="font-semibold text-purple-800 mb-2">MongoDB</div>
-                        <div class="chip mono">Deployment + Service</div>
-                        <div class="mt-2 text-xs text-slate-600">
-                            <div><span class="mono">mongo-service:27017</span></div>
-                            <div class="text-[11px] text-slate-500 mt-1">Internal (ClusterIP) Service</div>
+            <!-- Make dependencies explicit (more intuitive than “applied before / used by”) -->
+            <div class="mini-card border border-slate-200 bg-slate-50">
+                <div class="font-semibold text-slate-800 mb-3 text-center">Config &amp; credentials flow (2 steps)</div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="mini-card border border-amber-200 bg-amber-50/40">
+                        <div class="text-xs font-semibold text-amber-800 uppercase tracking-wider mb-2">1) Create first</div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="chip mono">ConfigMap</span>
+                            <span class="chip mono">Secret</span>
+                        </div>
+                        <p class="text-xs text-slate-600 mt-3">These must exist before Pods start, because Deployments reference them.</p>
+                        <div class="mt-3">
+                            <div class="chip mono">kubectl apply -f mongo-config.yaml</div>
+                            <div class="chip mono mt-2">kubectl apply -f mongo-secret.yaml</div>
                         </div>
                     </div>
                     <div class="mini-card border border-emerald-200 bg-emerald-50/30">
-                        <div class="font-semibold text-emerald-800 mb-2">WebApp</div>
-                        <div class="chip mono">Deployment + Service</div>
-                        <div class="mt-2 text-xs text-slate-600">
-                            <div><span class="mono">webapp-service</span></div>
-                            <div class="text-[11px] text-slate-500 mt-1">Often exposed as <span class="mono">NodePort</span> for local demos</div>
+                        <div class="text-xs font-semibold text-emerald-800 uppercase tracking-wider mb-2">2) Inject into workloads</div>
+                        <div class="text-xs text-slate-700 space-y-2">
+                            <div><span class="chip mono">ConfigMap</span> <span class="mono">DB_URL</span> → <span class="chip mono">WebApp</span></div>
+                            <div><span class="chip mono">Secret</span> <span class="mono">USER_NAME/USER_PWD</span> → <span class="chip mono">WebApp</span></div>
+                            <div><span class="chip mono">Secret</span> <span class="mono">MONGO_INITDB_ROOT_*</span> → <span class="chip mono">MongoDB</span></div>
                         </div>
+                        <p class="text-[11px] text-slate-500 mt-3">Most commonly injected as environment variables via <span class="mono">valueFrom</span>.</p>
                     </div>
                 </div>
             </div>
 
             <div class="mt-6 amberbox p-4">
                 <div class="text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Local access (Minikube on macOS Docker driver)</div>
+                <div class="text-[11px] text-slate-600 mb-3">
+                    <b>Note:</b> <span class="mono">minikube ip</span> + <span class="mono">NodePort</span> (e.g., <span class="mono">http://&lt;ip&gt;:30100</span>) often won’t work on macOS with the Docker driver — use one of the options below.
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-700">
                     <div class="mini-card">
                         <div class="font-semibold text-slate-700 mb-1">Option A: Minikube URL</div>

@@ -19,12 +19,14 @@ tags:
 
 # Kubernetes Architecture: End-to-End
 <iframe src="https://prasanth.io/static/pages/Kubernetes%20Architecture.html" width="100%" height="750" frameborder="0" allowfullscreen></iframe>
-<a href="https://prasanth.io/static/pages/Kubernetes%20Architecture.html" target="_blank" rel="noopener noreferrer"><b>Open in new tab</b></a> (*Note: Best viewed in desktop or landscape view*)
+<a href="https://prasanth.io/static/pages/Kubernetes%20Architecture.html" target="_blank" rel="noopener noreferrer"><b>Open in new tab</b></a> (<i>Note: Best viewed in desktop or landscape view</i>)
+
+
 # Part 1: Introduction to Kubernetes
 ## What is Kubernetes?
 - Open source (docker) container **orchestration tool**
 - Developed by Google
-- Helps manage (1000s of) containerized applications in **different deployment environments**
+- Helps manage (1000s of) containarized applications in **different deployment environments**
 
 **What *problems* does K8s solve?**
 - Increasing trend from **Monolithic** to **Microservices** 
@@ -64,7 +66,8 @@ K8s architecture is made up of
 - **==Worker Nodes==** connected to it
 	- Each node has a ==kubelet== process running 
 	- Each worker node has containers of different applications deployed on it 
-		- Depending on the config, different number of docker containers can be running in each node.
+		- A single node can run multiple containers. This is because a node can run multiple **Pods**, and each Pod can contain one or more containers. The scheduler decides how many pods get placed on a given node based on available resources (CPU, memory) and pod scheduling rules (like affinity/anti-affinity).
+		- Best practice is to run **one application container per Pod**. However, a Pod *can* have multiple containers when they are tightly coupled — these are called **sidecar containers** (e.g., logging agents, proxy containers like Envoy/Istio, init containers for config setup). Containers in the same Pod share the same network namespace (localhost) and storage volumes, so they should only be grouped if they truly need that tight coupling.
 	- Worker node is where our applications are running (i.e., actual work is happening) and has the most load. So, they are much bigger and has more resources.
 - **==Virtual Network==** = Creates one unified machine
 
@@ -150,7 +153,7 @@ In other words, Pod is like a layer over the Docker Container, so that we don't 
 - Secrets: External configuration
 - Volume: Data Persistence
 - Deployment: Replication for StateLESS apps
-- StatefulSeet: Replication for StateFul apps or DBs
+- StatefulSet: Replication for StateFul apps or DBs
 ## How to create the resources & configure the K8s cluster?
 - All configs goes through Master Node through process called ==API Server==, which is the main and only entry point to the cluster
 - The request has to be in YAML/JSON format
@@ -213,6 +216,7 @@ Besides that, we also have API version and service kind.
 - We need either a **container runtime** or **VM manager** on our laptop to run minikube
 	- This will be the driver for our minikube
 	- Refer [Official Doc](https://minikube.sigs.k8s.io/docs/drivers/) for Drivers supported.
+
 > [!TIP] Docker is one of the preferred driver for running minikube on all OS
 
 > [!TIP] 2 Layers of Docker
@@ -247,7 +251,7 @@ Now, we have actual K8s cluster running locally in our machine. We can start dep
 
 ![[k8s demo project overview.png]]
 
-We will deploy a mongoDB and web application. The web application will connect to mongoDB via external configuration data (ConfigMap and Secret) Finally, we will make web application accessible externally from browser.
+We will deploy a mongoDB and web application. The web application will connect to mongoDB via external configuration data (ConfigMap and Secret). Finally, we will make web application accessible externally from browser.
 
 Key resources
 - [K8s documentation](https://kubernetes.io/docs/home/)

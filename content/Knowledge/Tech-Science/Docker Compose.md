@@ -4,20 +4,25 @@ tags:
   - softwareengineering
   - DevOps
   - machinelearning
+  - Course
+  - OpenSource
+  - Learning
 ---
-> [!TIP] Docker compose is a (centralised) tool to manage (define and run) multi-containers Docker applications in 1 isolated environment.
+> [!TIP] Docker compose is a (centralised) tool to manage (define and run) multi-container Docker applications in 1 isolated environment.
 > - To define and manage services
 > - So they run together in isolated environment
 > - Easy to run and clean up our entire app
 
 Prerequisite: [[Docker]]
-Postrequisite: [[Kubernetes (K8s)]]
+Post-requisite: [[Kubernetes (K8s)]]
 
 This note is a cohesive walkthrough based on the crash course I watched ([YouTube video](https://www.youtube.com/watch?v=SXwC9fSwct8)),  the hands-on custom docker compose project ([`prasanth-ntu/docker-compose-crash-course/`](https://github.com/prasanth-ntu/docker-compose-crash-course/tree/main)), and the corresponding custom image for JS application pushed to the Docker Hub ([`## prasanthntu/my-app`](https://hub.docker.com/r/prasanthntu/my-app)).
 
+Cheatsheets: [devopscycle.com/](https://devopscycle.com/images/the-ultimate-docker-compose-cheat-sheet.png) | [devhints.io](https://devhints.io/docker-compose)
+
 # Docker Compose Architecture: End-to-End
 <iframe src="https://prasanth.io/static/pages/Docker%20Compose%20Architecture.html" width="100%" height="650" frameborder="0" allowfullscreen></iframe>
-<a href="https://prasanth.io/static/pages/Docker%20Compose%20Architecture.html" target="_blank" rel="noopener noreferrer"><b>Open in new tab</b></a> (*Note: Best viewed in desktop or landscape view*)
+<a href="https://prasanth.io/static/pages/Docker%20Compose%20Architecture.html" target="_blank" rel="noopener noreferrer"><b>Open in new tab</b></a> (<i>Note: Best viewed in desktop or landscape view</i>)
 
 # `docker compose.yaml` configuration
 
@@ -39,7 +44,31 @@ This note is a cohesive walkthrough based on the crash course I watched ([YouTub
 - Some services depend on other services (e.g., mongo-express depending on mongo-db, webapp that needs to connect to db).
 - `depends_on` attribute controls the order of service startup and shutdown.
 
-# Demo 
+## Bind Mounts for Development (hot reload)
+
+Compose is where bind mounts really shine — instead of long `docker run -v ...` commands, you declare them in the YAML:
+
+```yaml
+services:
+  my-app:
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src:/app/src  # bind mount: host's src/ → container's /app/src
+    command: npx nodemon server.js  # override CMD for hot reload
+```
+
+With this setup:
+- Code changes on your host are **instantly reflected** inside the container (no rebuild needed)
+- `nodemon` watches for file changes and restarts the server automatically
+- You only need to rebuild (`docker compose up --build`) when **dependencies change** (e.g., new npm packages)
+
+> [!TIP] Bind mounts in Compose replace the need for `docker run -v $(pwd)/src:/app/src ...`. Everything is declarative and version-controlled in the YAML.
+
+See also: [[Docker#Bind Mounts (development workflow)]]
+
+# Demo
 ## Demo Without Compose
 
 > [!warning] We achieve everything with plain docker commands.
@@ -58,7 +87,7 @@ e5fe30e3c7da   host      host      local
 
 Create a user-defined network using `docker network create [OPTIONS] NETWORK_NAME`.
 ```bash
-$ misc docker network create mongo-network   
+$ docker network create mongo-network   
 fec1b2d064db058e2087e243eb85b90b9a16630bc7b27c0bab09c1a245b5361f
 
 $ docker network ls 
@@ -76,10 +105,10 @@ Containers connected to `mongo-network` can resolve each other by name.
 - Docker Hub > Official Images > [`mongo`](https://hub.docker.com/_/mongo)
 	- [Default MongoDB port](https://hub.docker.com/_/mongo#connect-to-mongodb-from-another-docker-container): `27017`
 	- [Environment variables](https://hub.docker.com/_/mongo#environment-variables): 
-		- `MONGO_INITDB_ROOT_USERNAME` - 
-		- `MONGO_INITDB_ROOT_PASSWORD` - 
+		- `MONGO_INITDB_ROOT_USERNAME` - MongoDB Root username
+		- `MONGO_INITDB_ROOT_PASSWORD` - MongoDB Root password
 
-Fetch/pull the mongoDB docker image and run it in detached mode.
+Fetch/pull the `mongoDB` docker image and run it in detached mode.
 ```bash 
 # start mongodb
 $ docker run -d \
@@ -113,12 +142,25 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS       
 045ac74aff2b   mongo     "docker-entrypoint.s…"   19 seconds ago   Up 18 seconds   0.0.0.0:27017->27017/tcp, [::]:27017->27017/tcp   mongodb
 ```
 
+**Connect to MongoDB shell directly to test**
+```bash
+$ docker exec -it mongodb mongosh -u admin -p password --authenticationDatabase admin
+```
+If it connects successfully, you'll see the MongoDB shell prompt. Try a simple command:
+
+```javascript
+show dbs
+```
+You should see at least the `admin`, `config`, and `local` databases.
+
+Type `exit` to leave the shell.
+
 ### Step 3 - Start Mongo Express Container
 - Docker >Hub  Official Images > [`mongo-express`](https://hub.docker.com/_/mongo-express)
 	- [Default Express port](https://hub.docker.com/_/mongo-express#how-to-use-this-image): `8081`
 	- [Environment variables](https://hub.docker.com/_/mongo-express#configuration): 
-		- `ME_CONFIG_MONGODB_ADMINUSERNAME` - MongoDB admin username
-		- `ME_CONFIG_MONGODB_ADMINPASSWORD` - MongoDB admin password
+		- `ME_CONFIG_MONGODB_ADMINUSERNAME` - (same as) MongoDB admin username
+		- `ME_CONFIG_MONGODB_ADMINPASSWORD` - (same as) MongoDB admin password
 		- `ME_CONFIG_MONGODB_SERVER` - MongoDB container name. Use comma delimited list of host names for replica sets.
 
 Fetch/pull the mongo-express docker image and run it.
@@ -164,6 +206,17 @@ Visit http://localhost:8081/ and enter the login creds retrieved from the logs
 - password: `pass`
 
 ![[mongo-express-localhost.png]]
+
+We can also test with curl. 
+```bash
+curl -I http://localhost:8081
+```
+Should return HTTP 200 or 401 (asking for authentication).
+
+Alternatively, run
+```bash
+curl -u admin:pass http://localhost:8081 | head -20
+```
 
 > [!SUCCESS] 🥳 We are able to connect to the MongoDB using Mongo Express
 
@@ -297,6 +350,24 @@ Add "New Document" in the `my-collection` with below details:
 After adding, it would look something like this
 ![[mongo-express-my-collection-new-doc.png]]
 
+To view the collection from the MongoDB shell prompt,
+```js
+// List all DBs
+test>show dbs
+
+// Switch to our custom DB
+test>use my-db
+
+// List all collections in our custom DB 
+my-db> show collections
+
+// See all documents in our custom collection in our DB
+my-db> db["my-collection"].find()
+
+//  See specific document in our custom collection based on key-value pair
+db["my-collection"].find({"myid":1})
+```
+
 #### **What we will do now**
 
 ![[docker-compose-what-we-will-do.png]]
@@ -329,49 +400,11 @@ Project Tree
 
 > [!NOTE] We don't have to worry about understanding the actual code as our focus is on the configuration and dockerization.
 
-Update the yaml file.
+Update the `docker-compose.yaml` file.
 
 Run docker compose to start all our services.
 ```bash
 $ docker compose -f docker-compose-v1.yaml up -d                               
-[+] Building 14.4s (13/13) FINISHED                                                                                                                                                                               
- => [internal] load local bake definitions                                                                                                                                                                   0.0s
- => => reading from stdin 599B                                                                                                                                                                               0.0s
- => [internal] load build definition from Dockerfile                                                                                                                                                         0.0s
- => => transferring dockerfile: 551B                                                                                                                                                                         0.0s
- => [internal] load metadata for docker.io/library/node:20-alpine                                                                                                                                            4.2s
- => [auth] library/node:pull token for registry-1.docker.io                                                                                                                                                  0.0s
- => [internal] load .dockerignore                                                                                                                                                                            0.0s
- => => transferring context: 2B                                                                                                                                                                              0.0s
- => [1/5] FROM docker.io/library/node:20-alpine@sha256:658d0f63e501824d6c23e06d4bb95c71e7d704537c9d9272f488ac03a370d448                                                                                      5.4s
- => => resolve docker.io/library/node:20-alpine@sha256:658d0f63e501824d6c23e06d4bb95c71e7d704537c9d9272f488ac03a370d448                                                                                      0.0s
- => => sha256:bb9f6f8b202047f37f5d51a1f2e731b60925a601fe4c9c1495e6c000ddd25944 1.26MB / 1.26MB                                                                                                               1.0s
- => => sha256:70268380327fbc2d9c066979d554cdff4c22f752e9be70bde123ec5ccb64c292 443B / 443B                                                                                                                   0.6s
- => => sha256:eb9824d7990580162dd96cf3c8e08c9e966ed8d819adbb6e065c3c5ab73d74b4 43.12MB / 43.12MB                                                                                                             4.8s
- => => extracting sha256:eb9824d7990580162dd96cf3c8e08c9e966ed8d819adbb6e065c3c5ab73d74b4                                                                                                                    0.6s
- => => extracting sha256:bb9f6f8b202047f37f5d51a1f2e731b60925a601fe4c9c1495e6c000ddd25944                                                                                                                    0.0s
- => => extracting sha256:70268380327fbc2d9c066979d554cdff4c22f752e9be70bde123ec5ccb64c292                                                                                                                    0.0s
- => [internal] load build context                                                                                                                                                                            0.0s
- => => transferring context: 79.97kB                                                                                                                                                                         0.0s
- => [2/5] RUN mkdir -p /home/app                                                                                                                                                                             0.3s
- => [3/5] COPY ./app /home/app                                                                                                                                                                               0.0s
- => [4/5] WORKDIR /home/app                                                                                                                                                                                  0.0s
- => [5/5] RUN npm install                                                                                                                                                                                    3.1s
- => exporting to image                                                                                                                                                                                       1.0s 
- => => exporting layers                                                                                                                                                                                      0.6s 
- => => exporting manifest sha256:8309693daec8852b51aab55da903df788f891c9815ca3b7da07bd12d32a53825                                                                                                            0.0s 
- => => exporting config sha256:9c1b48bebea1dd7c80915825f2bb9ca7efb4be17071c688b8a875c99c445b3d9                                                                                                              0.0s
- => => exporting attestation manifest sha256:7d3a9651efd8f15d76d9f8fe2c938a4ccdff1021efa86795055b9a5cc7326270                                                                                                0.0s
- => => exporting manifest list sha256:46ac1d0db873ba307f412e7ef79ad7f10156416c3971fd5b22aae8307aa03fd2                                                                                                       0.0s
- => => naming to docker.io/library/docker-compose-crash-course-my-app:latest                                                                                                                                 0.0s
- => => unpacking to docker.io/library/docker-compose-crash-course-my-app:latest                                                                                                                              0.3s
- => resolving provenance for metadata file                                                                                                                                                                   0.0s
-[+] Running 5/5
- ✔ docker-compose-crash-course-my-app                     Built                                                                                                                                              0.0s 
- ✔ Network docker-compose-crash-course_default            Created                                                                                                                                            0.0s 
- ✔ Container docker-compose-crash-course-my-app-1         Started                                                                                                                                            0.4s 
- ✔ Container docker-compose-crash-course-mongodb-1        Started                                                                                                                                            0.4s 
- ✔ Container docker-compose-crash-course-mongo-express-1  Started 
 ```
 
 Visit http://localhost:3000/ and we will observe this 
@@ -461,7 +494,6 @@ Then, export these environment variables in the shell.
 ```bash
 $ echo $MONGO_ADMIN_USER               
 
-
 $ export MONGO_ADMIN_USER=admin
 
 $ export MONGO_ADMIN_PASS=supersecret          
@@ -524,31 +556,6 @@ Build our image using docker file
 ```bash
 # Build our image using "docker build" command 
 $ docker build -t prasanthntu/my-app:1.0 .
-[+] Building 2.9s (11/11) FINISHED                                                                                                                                                           docker:desktop-linux
- => [internal] load build definition from Dockerfile                                                                                                                                                         0.0s
- => => transferring dockerfile: 551B                                                                                                                                                                         0.0s
- => [internal] load metadata for docker.io/library/node:20-alpine                                                                                                                                            2.7s
- => [auth] library/node:pull token for registry-1.docker.io                                                                                                                                                  0.0s
- => [internal] load .dockerignore                                                                                                                                                                            0.0s
- => => transferring context: 2B                                                                                                                                                                              0.0s
- => [1/5] FROM docker.io/library/node:20-alpine@sha256:658d0f63e501824d6c23e06d4bb95c71e7d704537c9d9272f488ac03a370d448                                                                                      0.0s
- => => resolve docker.io/library/node:20-alpine@sha256:658d0f63e501824d6c23e06d4bb95c71e7d704537c9d9272f488ac03a370d448                                                                                      0.0s
- => [internal] load build context                                                                                                                                                                            0.0s
- => => transferring context: 170B                                                                                                                                                                            0.0s
- => CACHED [2/5] RUN mkdir -p /home/app                                                                                                                                                                      0.0s
- => CACHED [3/5] COPY ./app /home/app                                                                                                                                                                        0.0s
- => CACHED [4/5] WORKDIR /home/app                                                                                                                                                                           0.0s
- => CACHED [5/5] RUN npm install                                                                                                                                                                             0.0s
- => exporting to image                                                                                                                                                                                       0.1s
- => => exporting layers                                                                                                                                                                                      0.0s
- => => exporting manifest sha256:cb7bf027253cf5e6590db1d1c4469f43bc177014ee9a6fd12294abef6aa03323                                                                                                            0.0s
- => => exporting config sha256:a7d8f4f3b0f1523de7d0cb41b83eb16a623e48322d19c5092d5fa461dc76363b                                                                                                              0.0s
- => => exporting attestation manifest sha256:147f5f94745c90d51456656000d3e761ab48b7a3a067cccf7029322f38bae292                                                                                                0.0s
- => => exporting manifest list sha256:7905293d827c3947ee40648377bdb62404bf5cb83c2afc6978210920c5f384d9                                                                                                       0.0s
- => => naming to docker.io/prasanthntu/my-app:1.0                                                                                                                                                            0.0s
- => => unpacking to docker.io/prasanthntu/my-app:1.0                                                                                                                                                         0.0s
-
-View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/mbpw4z5gartqe0ouw85kx5ox1
 ```
 
 Login into the docker in shell
@@ -580,6 +587,7 @@ ea93af6352ec: Pushed
 
  Update the `docker-compose.yaml` file by commenting out `build: .` and add `image: prasanthntu/my-app:1.0` to reference our custom image in our docker repo.
 
+
 Pull the image from repository and run
 ```bash
 $ docker compose --project-name docker-compose-demo -f docker-compose-v3.yaml up -d
@@ -597,13 +605,17 @@ $ docker compose --project-name docker-compose-demo -f docker-compose-v3.yaml up
 ```
 
 # Limitations of docker compose
+
 > [!WARNING] A **lot of  operational effort** to run containers on a large scale.
+
 - Only well-suited for local development and **small-scale deployments** (i.e., if we have smaller set of containers)
 - Designed to run containers on a **single** host system
 - Engineers still need to operate the containers **manually**
 
 # Kubernetes to the Rescue
+
 > [!TIP] With kubernetes, we can merge hundreds of servers into one huge server to deploy all the containers that belong to same app in the environment.
+
 - Can manage **large-scale apps** and containers deployed across **multiple nodes**
 - Auto-Scaling
 - Self-Healing

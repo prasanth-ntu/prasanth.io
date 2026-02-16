@@ -277,6 +277,10 @@ A quick, physical test to objectively measure [[Glossary#Perfusion|Perfusion]] (
 ## Capital appreciation
 #finance
 
+## Capstone
+
+> [!TODO] TBA
+
 ## Cardiomyotpathy
 #science #biology 
 
@@ -312,6 +316,11 @@ The relationship between cause and effect.
 
 ## Civil Aviation Authority of Singapore (CAAS)
 #singapore #aviation
+
+## Common Vulnerabilities and Exposures (CVEs)
+#security #softwareengineering 
+
+A standardized, industry-recognized dictionary of publicly known cybersecurity flaws in software, hardware, and firmware.
 
 ## Comprehensive
 
@@ -615,6 +624,11 @@ The fees that a mutual fund charges investors for its costs and the profit it ma
 
 ---
 # F
+
+## Facebook AI Similarity Search (FAISS)
+#LLM #Embeddings #AI #machinelearning #datascience 
+
+> [!TODO] To be added soon.
 
 ## Fallacy
 #linguistics
@@ -1088,6 +1102,7 @@ A sentence containing every letter of the alphabet.
 Resources:
 - https://huggingface.co/docs/peft/en/index
 - https://github.com/huggingface/peft
+
 ## Pareto
 Commonly refers to the **Pareto principle**, also known as 80/20 rule, which stats that roughly 80% of the effects come from 20% of causes.
 
@@ -1110,6 +1125,10 @@ Synonyms:
 	•	Medical science (when related to disease)
 	•	Morbidity (when referring to the condition itself)
 
+## Parity
+
+the state or condition of being equal, especially as regards status or pay.
+
 ## Pathologist
 A doctor who studies disease by analyzing samples such as:
 	•	Biopsies
@@ -1125,6 +1144,18 @@ This is a clinical term for good blood circulation. **Perfusion** is the process
 #artificialintelligence #machinelearning #LLM #metrics 
 
 Quantifies how 'surprised' the model is to see some words together.
+
+
+## PIP
+#Python #softwareengineering #OpenSource 
+
+In Python, **PIP** is the ==standard **package manager** used to install, manage, and uninstall third-party software packages and libraries that are not part of the Python standard library==. The name is a recursive acronym for "**Pip Installs Packages**".
+
+**Role of PIP**
+
+PIP is an essential tool for any Python developer because it streamlines the process of adding external dependencies to a project. These packages are sourced primarily from the **[Python Package Index (PyPI)](https://pypi.org/)**, a vast online repository of community-contributed software. 
+
+Instead of manually downloading and managing source code files, PIP automates the process with simple command-line interface commands.
 
 ## Populism
 **POPULISM IN POLITICS**
@@ -1249,6 +1280,11 @@ PyPI help you find and install software developed and shared by the python commu
 General-purpose memory accessed by the CPU. 
 
 In LLM workflows, RAM is used primarily for loading the model from disk and managing tasks outside the GPU, such as operating system functions, data preprocessing, and orchestration by the CPU. While RAM is important for overall system operation and initial model loading, it is much slower than VRAM for neural network computations. Its size often needs to be at least equal to the uncompressed model size, but it doesn't directly speed up the heavy computations.
+
+## Remote Code Execution (RCE)
+#security #softwareengineering 
+
+A remote code execution (RCE) attack is one where an attacker can run malicious code on an organization's computers or network. The ability to execute attacker-controlled code can be used for various purposes, including deploying additional malware or stealing sensitive data.
 
 ## Rectified Linear Unit (ReLU)
 
@@ -1386,6 +1422,33 @@ A type of learning in which the objective is automatically computed from the inp
 Often used in natural language processing (NLP) and computer vision to pre-train models on large datasets.
 
 **Example:** Transformer models like GPT, BERT, BART, T5, etc. have been trained as language models on large amounts of raw data in a self-supervised fashion. This type of model develops a statistical understanding of the language it has been trained on, but it's not very useful for specific practical tasks. Because of this, the general pretrained model then goes through a process called [[Transfer learning|transfer learning]].
+
+## Secure Hash Algorithm (SHA)
+#algorithm #security 
+
+It's a cryptographic function that takes any input and produces a fixed-length string of characters (a "hash" or "digest").
+
+Key properties:
+
+- **Deterministic**: same input always produces the same hash
+- **One-way**: you can't reverse the hash to get the original input
+- **Unique**: even a tiny change in input produces a completely different hash
+
+SHA-256 is a specific variant of the SHA that produces a 256-bit (64 hex character) hash.
+```
+Input:  "hello"
+Output: 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
+```
+
+The "256" refers to the output size. Other variants exist:
+
+|Variant|Output size|Example use|
+|---|---|---|
+|SHA-1|160 bits (40 chars)|Git commit hashes (legacy)|
+|SHA-256|256 bits (64 chars)|Docker image digests, Bitcoin|
+|SHA-512|512 bits (128 chars)|Password hashing, TLS|
+
+SHA-256 is widely used because it balances **security** (no known collisions) and **performance** (fast to compute).
 
 ## Securities and Exchange Board (SEBI)
 
@@ -1553,6 +1616,10 @@ Systolic (The Squeezing Phase)
 Taxonomy is a practice and science concerned with classification or categorization. Typically, there are two parts to it: the development of an underlying scheme of classes (a taxonomy) and the allocation of things to the classes (classification).
 
 Originally, taxonomy referred only to the classification of organisms on the basis of shared characteristics. Today it also has a more general sense. It may refer to the classification of things or concepts, as well as to the principles underlying such work. Thus a taxonomy can be used to organize species, documents, videos or anything else
+
+## Terse
+
+> [!TODO] TBA
 
 ## [[Text Classification]]
 
