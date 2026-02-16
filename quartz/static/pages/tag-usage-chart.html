@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top 15 Tags by Usage</title>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<style>
+  body { margin: 0; background: transparent; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  #chart { width: 100%; height: 100vh; min-height: 400px; }
+</style>
+</head>
+<body>
+<div id="chart"></div>
+<script>
+const tags = ["data-science", "software-engineering", "machine-learning", "ai", "llm", "tool", "learning", "python", "open-source", "gen-ai", "finance", "book", "statistics", "startups", "misc"];
+const counts = [135, 84, 73, 48, 42, 41, 28, 28, 25, 19, 19, 19, 18, 18, 17];
+const colors = counts.map((_, i) => {
+  const t = i / (counts.length - 1);
+  const r = Math.round(66 + t * 40);
+  const g = Math.round(133 + t * 60);
+  const b = Math.round(244 - t * 120);
+  return `rgb(${r},${g},${b})`;
+});
+
+Plotly.newPlot('chart', [{
+  x: tags,
+  y: counts,
+  type: 'bar',
+  marker: { color: colors, line: { color: 'rgba(255,255,255,0.3)', width: 1 } },
+  hovertemplate: '<b>%{x}</b><br>Count: %{y}<extra></extra>'
+}], {
+  title: { text: 'Top 15 Tags by Usage', font: { size: 18 } },
+  xaxis: {
+    tickangle: -45,
+    tickfont: { size: 12 },
+    automargin: true
+  },
+  yaxis: {
+    title: 'Count',
+    gridcolor: 'rgba(128,128,128,0.2)'
+  },
+  plot_bgcolor: 'rgba(0,0,0,0)',
+  paper_bgcolor: 'rgba(0,0,0,0)',
+  margin: { t: 50, b: 120, l: 60, r: 20 },
+  hoverlabel: { bgcolor: '#333', font: { color: '#fff' } }
+}, {
+  responsive: true,
+  displayModeBar: false
+});
+</script>
+</body>
+</html>

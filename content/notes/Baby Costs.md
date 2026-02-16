@@ -1,0 +1,17 @@
+---
+tags:
+  - finance
+aliases:
+  - Miscellaneous/Finance/Baby Costs
+---
+To read
+- https://www.reddit.com/r/askSingapore/comments/15athac/baby_costs_after_pregnancy/
+- https://dollarsandsense.sg/coding-lessons-children-school-holidays/
+- https://blog.seedly.sg/cost-raise-child-singapore/
+- https://www.tiq.com.sg/blog/cost-of-raising-a-child-in-singapore/
+- https://www.faangfire.com/p/how-much-we-spend-as-a-family-in
+- https://www.faangfire.com/p/my-investment-rebalancing-process
+- https://www.faangfire.com/p/my-investment-rebalancing-process
+- https://www.faangfire.com/p/enough-to-fire-in-san-francisco
+- https://www.investopedia.com/ask/answers/072815/what-marginal-utility-income.asp
+- 

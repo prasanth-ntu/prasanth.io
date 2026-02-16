@@ -1,10 +1,10 @@
 # Configuration
 TARGET_DIR="quartz/static/pages/"
 SOURCE_FILES=(
-  "content/Knowledge/Tech-Science/Spark Architecture.html"
-  "content/Knowledge/Tech-Science/Docker Architecture.html"
-  "content/Knowledge/Tech-Science/Docker Compose Architecture.html"
-  "content/Knowledge/Tech-Science/Kubernetes Architecture.html"
+  "content/notes/Spark Architecture.html"
+  "content/notes/Docker Architecture.html"
+  "content/notes/Docker Compose Architecture.html"
+  "content/notes/Kubernetes Architecture.html"
 )
 
 mkdir -p "$TARGET_DIR"

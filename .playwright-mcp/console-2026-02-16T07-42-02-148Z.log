@@ -1,0 +1,4 @@
+[     476ms] [WARNING] Ignoring Event: localhost @ https://plausible.io/js/script.manual.js:0
+[     500ms] [WARNING] goatcounter: not counting because of: localhost @ http://gc.zgo.at/count.js:78
+[    6465ms] [WARNING] Ignoring Event: localhost @ https://plausible.io/js/script.manual.js:0
+[    6471ms] [WARNING] goatcounter: not counting because of: localhost @ http://gc.zgo.at/count.js:78

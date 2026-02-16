@@ -3,7 +3,7 @@
 set -e
 
 # Configuration
-SOURCE_DIR="content/Knowledge/Startups-BigTechs/Companies/Paige-AI/paige-ai-report"
+SOURCE_DIR="content/notes/paige-ai-report"
 
 echo "🔨 Pre-build: Generating slideshow in content folder..."
 
