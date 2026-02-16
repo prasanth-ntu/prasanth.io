@@ -18,12 +18,12 @@
     "format": "npx prettier . --write",
     "test": "tsx --test",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
-    "prebuild": "bash sync-slideshow.sh && bash sync-html.sh",
+    "prebuild": "bash scripts/sync-slideshow.sh && bash scripts/sync-html.sh",
     "build": "npx quartz build",
     "serve": "npx quartz build --serve",
     "sync": "npx quartz sync",
-    "slideshow": "bash sync-slideshow.sh",
-    "html": "bash sync-html.sh",
+    "slideshow": "bash scripts/sync-slideshow.sh",
+    "html": "bash scripts/sync-html.sh",
     "dev": "npm run serve"
   },
   "engines": {

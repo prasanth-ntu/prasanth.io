@@ -365,6 +365,31 @@ npm run sync
 > - **On CI**: Prebuild runs before `build` because the GitHub runner starts from a fresh `git clone` and needs to generate the static files from source
 >
 > Previously, `build`/`serve`/`sync` scripts also had an explicit `npm run prebuild &&` prefix, causing prebuild to run **twice**. This was fixed by removing the redundant explicit calls.
+### Custom fix: Skip slugification for `/static/` paths
+
+Quartz's link transformer (`quartz/plugins/transformers/links.ts`) processes all internal `<a href>` and `<iframe src>` URLs through `transformLink()` → `slugifyFilePath()`, which converts spaces to hyphens and strips `.html` extensions. This is correct for content links (e.g. `[[My Note]]` → `My-Note`), but breaks paths pointing to actual static files.
+
+**The problem**: An iframe like `<iframe src="/static/pages/Spark%20Architecture.html">` gets slugified to `/static/pages/Spark-Architecture` (no extension, hyphens instead of spaces), causing 404s since the real file on disk is `Spark Architecture.html`.
+
+**The fix**: Added guards to skip `transformLink()` for any path starting with `/static/`:
+
+```typescript
+// For <a href> tags (line ~102):
+const isInternal = !(
+  isAbsoluteUrl(dest, { httpOnly: false }) ||
+  dest.startsWith("#") ||
+  dest.startsWith("/static/")  // ← added
+)
+
+// For <iframe src>, <img src>, etc. (line ~150):
+if (
+  !isAbsoluteUrl(node.properties.src, { httpOnly: false }) &&
+  !node.properties.src.startsWith("/static/")  // ← added
+) {
+```
+
+**Why this is safe**: `/static/` contains files served as-is (HTML pages, images, fonts) — not Quartz content. Skipping slugification means these paths won't appear in the link graph or get popover previews, which is correct since they're not content pages.
+
 - Upgrading Quartz
 	- To fetch the latest Quartz updates, simply run
 ```bash

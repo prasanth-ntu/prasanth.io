@@ -16,8 +16,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Custom Commands
 
-- **Generate slideshow**: `npm run slideshow` (runs sync-slideshow.sh)
-- **Sync HTML**: `npm run html` (runs sync-html.sh)
+- **Generate slideshow**: `npm run slideshow` (runs `scripts/sync-slideshow.sh`)
+- **Sync HTML**: `npm run html` (runs `scripts/sync-html.sh`)
 
 ## Architecture Overview
 
@@ -50,6 +50,10 @@ Quartz is a static site generator for digital gardens, built with a plugin-based
   - `/util`: Utilities
 
 - `/content`: Where user content lives (Markdown files)
+- `/scripts`: Custom build/utility scripts (not part of upstream Quartz)
+  - `sync-slideshow.sh`: Prebuild script for Paige AI slideshow
+  - `sync-html.sh`: Prebuild script for architecture HTML pages
+  - `convert_all_canvas.py`, `convert_canvas_to_mermaid.py`: Canvas → Mermaid converters
 - `/docs`: Documentation for Quartz itself
 
 ### Key Files
@@ -57,6 +61,7 @@ Quartz is a static site generator for digital gardens, built with a plugin-based
 - `quartz.config.ts`: Main configuration for site settings, plugins, etc.
 - `quartz.layout.ts`: Layout configuration for different page types
 - `package.json`: Project dependencies and scripts
+- `quartz/plugins/transformers/links.ts`: Link transformer (custom fix: skips slugification for `/static/` paths)
 
 ### Build Pipeline
 
