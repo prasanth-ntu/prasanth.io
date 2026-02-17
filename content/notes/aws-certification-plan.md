@@ -42,10 +42,13 @@ The "ML + Architecture" combination is rare and highly valuable — most people 
 - ML solution monitoring and maintenance (Model Monitor, drift detection)
 
 **Study resources:**
-- [ ] AWS Skill Builder — ML Engineer Associate exam prep course
-- [ ] AWS official practice exam
+- [ ] Stephane Maarek & Frank Kane — [ML Engineer Associate: Hands On!](https://www.udemy.com/course/aws-certified-machine-learning-engineer-associate-mla-c01/) (Udemy, 23hrs) [^1]
+- [ ] AWS Skill Builder — [Exam Prep Plan for MLA-C01](https://skillbuilder.aws/exam-prep/machine-learning-engineer-associate) (free) [^2]
+- [ ] Tutorial Dojo — [MLA-C01 Practice Exams](https://portal.tutorialsdojo.com/product/aws-certified-machine-learning-engineer-associate-mla-c01-practice-exams/) (Jon Bonso) [^3]
+- [ ] Tutorial Dojo — [Free MLA-C01 Practice Sampler](https://portal.tutorialsdojo.com/courses/free-aws-certified-machine-learning-engineer-associate-practice-exams-mla-c01-sampler/) (20 free questions) [^4]
+- [ ] AWS Official — [MLA-C01 Exam Guide PDF](https://d1.awsstatic.com/training-and-certification/docs-machine-learning-engineer-associate/AWS-Certified-Machine-Learning-Engineer-Associate_Exam-Guide.pdf) [^5]
 - [ ] Hands-on: SageMaker Studio notebook exercises
-- [ ] Review: SageMaker Pipelines, Model Registry, Endpoints documentation
+- [ ] Review: [SageMaker Model Registry](https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry.html), [Pipelines](https://sagemaker.readthedocs.io/en/stable/workflows/pipelines/sagemaker.workflow.pipelines.html), [Deploy from Registry](https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-deploy.html) [^6]
 
 ### 2. AWS Certified Solutions Architect - Associate (SAA-C03)
 
@@ -65,9 +68,11 @@ The "ML + Architecture" combination is rare and highly valuable — most people 
 - Design cost-optimized architectures (Reserved/Spot instances, S3 tiers)
 
 **Study resources:**
-- [ ] Stephane Maarek's SAA-C03 course (Udemy)
-- [ ] Tutorial Dojo practice exams (Jon Bonso)
-- [ ] AWS Well-Architected Framework whitepaper
+- [ ] Stephane Maarek — [Ultimate AWS Certified Solutions Architect Associate 2026](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/) (Udemy, 4.7 stars, 1.2M+ students) [^7]
+- [ ] Stephane Maarek — [SAA-C03 Practice Exams](https://www.udemy.com/course/practice-exams-aws-certified-solutions-architect-associate/) (Udemy) [^8]
+- [ ] Tutorial Dojo — [SAA-C03 Practice Exams](https://portal.tutorialsdojo.com/product/aws-certified-solutions-architect-associate-practice-exams/) (Jon Bonso, 401 questions) [^9]
+- [ ] Tutorial Dojo — [SAA-C03 Study Path & Cheat Sheets](https://tutorialsdojo.com/aws-certified-solutions-architect-associate-saa-c03/) (free) [^10]
+- [ ] AWS Official — [Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html) ([PDF](https://docs.aws.amazon.com/pdfs/wellarchitected/latest/framework/wellarchitected-framework.pdf)) [^11]
 - [ ] Hands-on: Build a multi-tier VPC with public/private subnets
 
 ### 3. Choose one based on career direction
@@ -80,7 +85,7 @@ The "ML + Architecture" combination is rare and highly valuable — most people 
 | Prep needed | 2-3 months |
 | Target | Q3-Q4 2026 |
 
-Best if: ThoughtWorks consulting path, or any role requiring deep multi-account, hybrid-cloud, migration architecture expertise. One of the hardest cloud certs — validates serious architectural depth.
+Best if: Consulting path, or any role requiring deep multi-account, hybrid-cloud, migration architecture expertise. One of the hardest cloud certs — validates serious architectural depth.
 
 **Option B: Data Engineer Associate (DEA-C01)** — for data/ML pipeline track
 
@@ -90,7 +95,7 @@ Best if: ThoughtWorks consulting path, or any role requiring deep multi-account,
 | Prep needed | 3-4 weeks |
 | Target | Q3-Q4 2026 |
 
-Best if: Standard Chartered AML path, or any role heavy on data pipelines (Glue, Kinesis, Redshift, Athena). Complements ML + Architecture with data engineering depth.
+Best if: Any role heavy on data pipelines (Glue, Kinesis, Redshift, Athena). Complements ML + Architecture with data engineering depth.
 
 ## Cost Breakdown (50% Discount Chain)
 
@@ -105,7 +110,7 @@ Each passed exam gives a 50% discount voucher for the next exam.
 
 ## Why NOT the ML Specialty?
 
-- Last exam date: March 31, 2026 — too tight withquot leave ending March 2 + new baby
+- Last exam date: March 31, 2026 — too tight with leave ending March 2 + new baby
 - Costs $300 vs $150 for the ML Engineer Associate
 - The new ML Engineer Associate is more production-focused (better aligned with actual work)
 - ML Specialty won't be renewable after retirement
@@ -132,3 +137,20 @@ gantt
 - [[Docker]] — Container fundamentals, essential for ML deployment domains
 - [[Kubernetes (K8s)]] — Orchestration knowledge, relevant to SageMaker and EKS
 - [[Spark]] — Distributed data processing, relevant to Data Engineer cert path
+
+## References
+
+[^1]: Stephane Maarek & Frank Kane. "AWS Certified Machine Learning Engineer Associate: Hands On!" Udemy. https://www.udemy.com/course/aws-certified-machine-learning-engineer-associate-mla-c01/
+[^2]: AWS Skill Builder. "Exam Prep Plan: AWS Certified Machine Learning Engineer – Associate (MLA-C01)." https://skillbuilder.aws/exam-prep/machine-learning-engineer-associate
+[^3]: Jon Bonso. "AWS Certified Machine Learning Engineer Associate MLA-C01 Practice Exams." Tutorials Dojo. https://portal.tutorialsdojo.com/product/aws-certified-machine-learning-engineer-associate-mla-c01-practice-exams/
+[^4]: Tutorials Dojo. "FREE AWS Certified Machine Learning Engineer Associate Practice Exams MLA-C01 - Sampler." https://portal.tutorialsdojo.com/courses/free-aws-certified-machine-learning-engineer-associate-practice-exams-mla-c01-sampler/
+[^5]: AWS. "AWS Certified Machine Learning Engineer - Associate (MLA-C01) Exam Guide." https://d1.awsstatic.com/training-and-certification/docs-machine-learning-engineer-associate/AWS-Certified-Machine-Learning-Engineer-Associate_Exam-Guide.pdf
+[^6]: AWS Documentation. "SageMaker Model Registry", "SageMaker Pipelines", "Deploy a Model from the Registry." https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry.html
+[^7]: Stephane Maarek. "Ultimate AWS Certified Solutions Architect Associate 2026 (SAA-C03)." Udemy. https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/
+[^8]: Stephane Maarek. "Practice Exams | AWS Certified Solutions Architect Associate (SAA-C03)." Udemy. https://www.udemy.com/course/practice-exams-aws-certified-solutions-architect-associate/
+[^9]: Jon Bonso. "AWS Certified Solutions Architect Associate SAA-C03 Practice Exams." Tutorials Dojo. https://portal.tutorialsdojo.com/product/aws-certified-solutions-architect-associate-practice-exams/
+[^10]: Tutorials Dojo. "AWS Certified Solutions Architect Associate Exam - SAA-C03 Study Path." https://tutorialsdojo.com/aws-certified-solutions-architect-associate-saa-c03/
+[^11]: AWS. "AWS Well-Architected Framework." https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html
+[^12]: AWS. "AWS Certified Machine Learning Engineer – Associate." Official certification page. https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/
+[^13]: AWS. "AWS Certification - Validate AWS Cloud Skills." https://aws.amazon.com/certification/
+[^14]: Reddit r/aws. "Is AWS Solution Architect - Associate a respected enough cert to begin with?" https://www.reddit.com/r/aws/comments/1g48zmv/is_aws_solution_architect_associate_a_respected/

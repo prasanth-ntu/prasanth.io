@@ -18,7 +18,7 @@ Here are the projects I've built, currently working on, or planning to develop:
 
   <a href="Media Converter.md" class="project-card">
     <div class="project-icon">
-      <img src="./attachments/images/media-converter-thumbnail.webp" alt="Media Converter">
+      <img src="projects/attachments/images/media-converter-thumbnail.webp" alt="Media Converter">
     </div>
     <div class="project-content">
       <div class="project-title">Media Converter</div>
@@ -50,7 +50,7 @@ Here are the projects I've built, currently working on, or planning to develop:
 
   <a href="Asset Class Comparison.md" class="project-card">
     <div class="project-icon">
-        <img src="./attachments/images/asset-class-comparison-thumbnail.webp" alt="Asset Class Comparison"></div>
+        <img src="projects/attachments/images/asset-class-comparison-thumbnail.webp" alt="Asset Class Comparison"></div>
     <div class="project-content">
       <div class="project-title">Asset Class Comparison</div>
       <div class="project-description">Interactive dashboard to compare performance of different asset classes over time. Built with Python and deployed on Hugging Face.</div>
@@ -65,7 +65,9 @@ Here are the projects I've built, currently working on, or planning to develop:
   </a>
 
   <a href="Music Player.md" class="project-card">
-    <div class="project-icon">🎵</div>
+    <div class="project-icon">
+      <img src="projects/attachments/images/music-player-thumbnail.webp" alt="Music Player">
+    </div>
     <div class="project-content">
       <div class="project-title">Music Player</div>
       <div class="project-description">A simple music player application with basic playback controls and playlist management.</div>
@@ -79,7 +81,9 @@ Here are the projects I've built, currently working on, or planning to develop:
   </a>
 
   <a href="YouTube Downloader.md" class="project-card">
-    <div class="project-icon">📺</div>
+    <div class="project-icon">
+      <img src="projects/attachments/images/youtube-downloader-thumbnail.webp" alt="YouTube Downloader">
+    </div>
     <div class="project-content">
       <div class="project-title">YouTube Downloader</div>
       <div class="project-description">A tool to download YouTube videos and audio with various quality options and format support.</div>
@@ -94,7 +98,9 @@ Here are the projects I've built, currently working on, or planning to develop:
   </a>
 
   <a href="My Personal Blog.md" class="project-card">
-    <div class="project-icon">✍️</div>
+    <div class="project-icon">
+      <img src="projects/attachments/images/my-personal-blog-thumbnail.webp" alt="My Personal Blog">
+    </div>
     <div class="project-content">
       <div class="project-title">My Personal Blog</div>
       <div class="project-description">A personal blog built with modern web technologies to share thoughts, projects, and knowledge.</div>
