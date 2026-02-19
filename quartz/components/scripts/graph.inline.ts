@@ -31,6 +31,7 @@ type NodeData = {
   id: SimpleSlug
   text: string
   tags: string[]
+  depth: number
 } & SimulationNodeDatum
 
 type SimpleLinkData = {
@@ -63,6 +64,42 @@ function addToVisited(slug: SimpleSlug) {
   localStorage.setItem(localStorageKey, JSON.stringify([...visited]))
 }
 
+const graphModeKey = "global-graph-mode"
+function getGraphMode(): "global" | "focused" {
+  return (sessionStorage.getItem(graphModeKey) as "global" | "focused") ?? "global"
+}
+
+function setGraphMode(mode: "global" | "focused") {
+  sessionStorage.setItem(graphModeKey, mode)
+}
+
+// Golden angle (137.508°) hue distribution: guarantees maximum visual separation
+// for any number of tags, like sunflower seed spacing. FNV-1a hash for uniform distribution.
+function tagToColor(tag: string): string {
+  // FNV-1a hash
+  let hash = 2166136261
+  for (let i = 0; i < tag.length; i++) {
+    hash ^= tag.charCodeAt(i)
+    hash = Math.imul(hash, 16777619)
+  }
+  hash = hash >>> 0 // unsigned
+
+  // Golden angle distributes hues maximally
+  const hue = (hash * 137.508) % 360
+  // Convert HSL(hue, 65%, 55%) to hex for Pixi.js compatibility
+  const s = 0.65,
+    l = 0.55
+  const a = s * Math.min(l, 1 - l)
+  const f = (n: number) => {
+    const k = (n + hue / 30) % 12
+    const color = l - a * Math.max(-1, Math.min(k - 3, 9 - k, 1))
+    return Math.round(255 * color)
+      .toString(16)
+      .padStart(2, "0")
+  }
+  return `#${f(0)}${f(8)}${f(4)}`
+}
+
 type TweenNode = {
   update: (time: number) => void
   stop: () => void
@@ -87,6 +124,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     showTags,
     focusOnHover,
     enableRadial,
+    tagColors: userTagColors,
   } = JSON.parse(graph.dataset["cfg"]!) as D3Config
 
   const data: Map<SimpleSlug, ContentDetails> = new Map(
@@ -123,16 +161,23 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   }
 
   const neighbourhood = new Set<SimpleSlug>()
+  const nodeDepths = new Map<SimpleSlug, number>()
+  const originalDepth = depth
   const wl: (SimpleSlug | "__SENTINEL")[] = [slug, "__SENTINEL"]
   if (depth >= 0) {
+    let currentDepth = 0
     while (depth >= 0 && wl.length > 0) {
       // compute neighbours
       const cur = wl.shift()!
       if (cur === "__SENTINEL") {
         depth--
+        currentDepth++
         wl.push("__SENTINEL")
       } else {
         neighbourhood.add(cur)
+        if (!nodeDepths.has(cur)) {
+          nodeDepths.set(cur, currentDepth)
+        }
         const outgoing = links.filter((l) => l.source === cur)
         const incoming = links.filter((l) => l.target === cur)
         wl.push(...outgoing.map((l) => l.target), ...incoming.map((l) => l.source))
@@ -149,6 +194,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       id: url,
       text,
       tags: data.get(url)?.tags ?? [],
+      depth: nodeDepths.get(url) ?? -1,
     }
   })
   const graphData: { nodes: NodeData[]; links: LinkData[] } = {
@@ -193,16 +239,42 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     {} as Record<(typeof cssVars)[number], string>,
   )
 
-  // calculate color
-  const color = (d: NodeData) => {
-    const isCurrent = d.id === slug
-    if (isCurrent) {
-      return computedStyleMap["--secondary"]
-    } else if (visited.has(d.id) || d.id.startsWith("tags/")) {
-      return computedStyleMap["--tertiary"]
-    } else {
-      return computedStyleMap["--gray"]
+  // build tag→color map: user overrides take priority, then auto-hash
+  const tagColorMap = new Map<string, string>()
+  if (userTagColors) {
+    for (const [tag, clr] of Object.entries(userTagColors)) {
+      tagColorMap.set(tag, clr)
     }
+  }
+
+  function getTagColor(tag: string): string {
+    if (tagColorMap.has(tag)) return tagColorMap.get(tag)!
+    const c = tagToColor(tag)
+    tagColorMap.set(tag, c)
+    return c
+  }
+
+  // calculate color based on primary tag
+  const color = (d: NodeData) => {
+    if (d.id === slug) {
+      // current page: use its tag color (ring will distinguish it)
+      const primaryTag = d.tags[0]
+      return primaryTag ? getTagColor(primaryTag) : computedStyleMap["--secondary"]
+    }
+
+    if (d.id.startsWith("tags/")) {
+      const tagName = d.id.substring(5)
+      return getTagColor(tagName)
+    }
+
+    // content nodes: color by primary (first) tag
+    const primaryTag = d.tags[0]
+    if (primaryTag) {
+      return getTagColor(primaryTag)
+    }
+
+    // fallback for nodes with no tags
+    return computedStyleMap["--gray"]
   }
 
   function nodeRadius(d: NodeData) {
@@ -254,7 +326,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     const tweenGroup = new TweenGroup()
 
     for (const l of linkRenderData) {
-      let alpha = 1
+      let alpha = l.alpha // use depth-based alpha as baseline
 
       // if we are hovering over a node, we want to highlight the immediate neighbours
       // with full alpha and the rest with default alpha
@@ -321,7 +393,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
 
     const tweenGroup = new TweenGroup()
     for (const n of nodeRenderData) {
-      let alpha = 1
+      let alpha = n.alpha // use depth-based alpha as baseline
 
       // if we are hovering over a node, we want to highlight the immediate neighbours
       if (hoveredNodeId !== null && focusOnHover) {
@@ -399,7 +471,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       cursor: "pointer",
     })
       .circle(0, 0, nodeRadius(n))
-      .fill({ color: isTagNode ? computedStyleMap["--light"] : color(n) })
+      .fill({ color: color(n) })
       .on("pointerover", (e) => {
         updateHoverInfo(e.target.label)
         oldLabelOpacity = label.alpha
@@ -415,19 +487,29 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
         }
       })
 
-    if (isTagNode) {
-      gfx.stroke({ width: 2, color: computedStyleMap["--tertiary"] })
+    if (nodeId === slug) {
+      // current page: bold dark ring to distinguish it
+      gfx.stroke({ width: 2, color: computedStyleMap["--dark"] })
+    } else if (isTagNode) {
+      gfx.stroke({ width: 2, color: color(n) })
+    } else if (visited.has(nodeId)) {
+      gfx.stroke({ width: 1, color: computedStyleMap["--darkgray"] })
     }
 
     nodesContainer.addChild(gfx)
     labelsContainer.addChild(label)
+
+    // apply depth-based opacity for focused (depth-limited) views
+    const depthAlpha =
+      originalDepth >= 0 && n.depth >= 0 ? 1 - (n.depth / (originalDepth + 1)) * 0.75 : 1
+    gfx.alpha = depthAlpha
 
     const nodeRenderDatum: NodeRenderData = {
       simulationData: n,
       gfx,
       label,
       color: color(n),
-      alpha: 1,
+      alpha: depthAlpha,
       active: false,
     }
 
@@ -438,11 +520,18 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     const gfx = new Graphics({ interactive: false, eventMode: "none" })
     linkContainer.addChild(gfx)
 
+    // link opacity matches the farther endpoint
+    const maxLinkDepth = Math.max(l.source.depth, l.target.depth)
+    const linkDepthAlpha =
+      originalDepth >= 0 && maxLinkDepth >= 0
+        ? 1 - (maxLinkDepth / (originalDepth + 1)) * 0.75
+        : 1
+
     const linkRenderDatum: LinkRenderData = {
       simulationData: l,
       gfx,
       color: computedStyleMap["--lightgray"],
-      alpha: 1,
+      alpha: linkDepthAlpha,
       active: false,
     }
 
@@ -598,6 +687,7 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
   const containers = [...document.getElementsByClassName("global-graph-outer")] as HTMLElement[]
   async function renderGlobalGraph() {
     const slug = getFullSlug(window)
+    const mode = getGraphMode()
     for (const container of containers) {
       container.classList.add("active")
       const sidebar = container.closest(".sidebar") as HTMLElement
@@ -606,6 +696,17 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
       }
 
       const graphContainer = container.querySelector(".global-graph-container") as HTMLElement
+      const toggleBtn = container.querySelector(".global-graph-toggle") as HTMLElement
+
+      if (graphContainer) {
+        const cfgKey = mode === "focused" ? "cfgFocused" : "cfgGlobal"
+        graphContainer.dataset["cfg"] = graphContainer.dataset[cfgKey]!
+      }
+
+      if (toggleBtn) {
+        toggleBtn.dataset["mode"] = mode
+      }
+
       registerEscapeHandler(container, hideGlobalGraph)
       if (graphContainer) {
         globalGraphCleanups.push(await renderGraph(graphContainer, slug))
@@ -638,6 +739,32 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
   Array.from(containerIcons).forEach((icon) => {
     icon.addEventListener("click", renderGlobalGraph)
     window.addCleanup(() => icon.removeEventListener("click", renderGlobalGraph))
+  })
+
+  const toggleButtons = document.getElementsByClassName("global-graph-toggle")
+  Array.from(toggleButtons).forEach((toggleBtn) => {
+    const handleToggle = async () => {
+      const btn = toggleBtn as HTMLElement
+      const currentMode = btn.dataset["mode"] as "global" | "focused"
+      const newMode = currentMode === "global" ? "focused" : "global"
+
+      setGraphMode(newMode)
+      btn.dataset["mode"] = newMode
+
+      const container = btn.closest(".global-graph-outer") as HTMLElement
+      const graphContainer = container?.querySelector(".global-graph-container") as HTMLElement
+      if (graphContainer) {
+        const cfgKey = newMode === "focused" ? "cfgFocused" : "cfgGlobal"
+        graphContainer.dataset["cfg"] = graphContainer.dataset[cfgKey]!
+
+        cleanupGlobalGraphs()
+        const slug = getFullSlug(window)
+        globalGraphCleanups.push(await renderGraph(graphContainer, slug))
+      }
+    }
+
+    toggleBtn.addEventListener("click", handleToggle)
+    window.addCleanup(() => toggleBtn.removeEventListener("click", handleToggle))
   })
 
   document.addEventListener("keydown", shortcutHandler)

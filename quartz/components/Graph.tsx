@@ -19,6 +19,7 @@ export interface D3Config {
   showTags: boolean
   focusOnHover?: boolean
   enableRadial?: boolean
+  tagColors?: Record<string, string>
 }
 
 interface GraphOptions {
@@ -41,6 +42,7 @@ const defaultOptions: GraphOptions = {
     removeTags: [],
     focusOnHover: false,
     enableRadial: false,
+    tagColors: {},
   },
   globalGraph: {
     drag: true,
@@ -56,6 +58,7 @@ const defaultOptions: GraphOptions = {
     removeTags: [],
     focusOnHover: true,
     enableRadial: true,
+    tagColors: {},
   },
 }
 
@@ -63,6 +66,7 @@ export default ((opts?: Partial<GraphOptions>) => {
   const Graph: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
     const localGraph = { ...defaultOptions.localGraph, ...opts?.localGraph }
     const globalGraph = { ...defaultOptions.globalGraph, ...opts?.globalGraph }
+    const focusedGraph = { ...globalGraph, depth: 2, centerForce: 0.3, enableRadial: false }
     return (
       <div class={classNames(displayClass, "graph")}>
         <h3>{i18n(cfg.locale).components.graph.title}</h3>
@@ -96,7 +100,18 @@ export default ((opts?: Partial<GraphOptions>) => {
           </button>
         </div>
         <div class="global-graph-outer">
-          <div class="global-graph-container" data-cfg={JSON.stringify(globalGraph)}></div>
+          <div class="global-graph-controls">
+            <button class="global-graph-toggle" data-mode="global" aria-label="Toggle graph focus">
+              <span class="toggle-option" data-value="global">Global</span>
+              <span class="toggle-option" data-value="focused">Focused</span>
+            </button>
+          </div>
+          <div
+            class="global-graph-container"
+            data-cfg={JSON.stringify(globalGraph)}
+            data-cfg-global={JSON.stringify(globalGraph)}
+            data-cfg-focused={JSON.stringify(focusedGraph)}
+          ></div>
         </div>
       </div>
     )

@@ -53,6 +53,42 @@
       display: inline-block;
     }
 
+    & > .global-graph-controls {
+      position: fixed;
+      z-index: 10000;
+      top: calc(10vh + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .global-graph-toggle {
+      display: flex;
+      background: var(--light);
+      border: 1px solid var(--lightgray);
+      border-radius: 6px;
+      padding: 2px;
+      cursor: pointer;
+      gap: 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      .toggle-option {
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        font-family: var(--bodyFont);
+        color: var(--darkgray);
+        transition: all 0.2s ease;
+        user-select: none;
+      }
+
+      &[data-mode="global"] .toggle-option[data-value="global"],
+      &[data-mode="focused"] .toggle-option[data-value="focused"] {
+        background: var(--tertiary);
+        color: var(--light);
+        font-weight: 600;
+      }
+    }
+
     & > .global-graph-container {
       border: 1px solid var(--lightgray);
       background-color: var(--light);

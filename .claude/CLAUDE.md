@@ -77,6 +77,27 @@ Quartz is a static site generator for digital gardens, built with a plugin-based
 4. HTML/assets are generated using emitter plugins
 5. Static files are bundled and optimized
 
+## Custom Graph Component
+
+The graph view (`quartz/components/Graph.tsx` + `quartz/components/scripts/graph.inline.ts` + `quartz/components/styles/graph.scss`) has been customized beyond upstream Quartz:
+
+### Features
+- **Global/Focused toggle**: Full-screen graph modal has a segmented toggle (Global = all nodes, Focused = 2-hop neighbourhood from current page). Mode persists in `sessionStorage`.
+- **Tag-based coloring**: Nodes are colored by their primary (first) frontmatter tag using golden angle hue distribution (137.508°) with FNV-1a hashing for maximum visual separation. Tag nodes also get their tag's color.
+- **Depth-based opacity**: In focused mode (`depth >= 0`), nodes fade based on BFS distance from the current page. Formula: `1 - (nodeDepth / (originalDepth + 1)) * 0.75`.
+- **Visual indicators**: Current page gets a dark ring/border. Visited nodes get a subtle darkgray stroke. Tag nodes get a colored stroke.
+
+### Config (`D3Config` in `Graph.tsx`)
+- `tagColors?: Record<string, string>` — Override auto-generated tag colors, e.g. `{ "book": "#4a90d9" }`
+- `depth: -1` = all nodes (global), `depth: 2` = 2-hop neighbourhood (focused)
+- `showTags` / `removeTags` — Control tag node visibility
+
+### Key implementation details
+- Rendering uses D3.js force simulation + Pixi.js (WebGPU/WebGL canvas)
+- `removeAllChildren(graph)` clears the graph container on re-render; toggle controls are a sibling div to survive this
+- `registerEscapeHandler` (util.ts) checks `e.target !== this`, so child clicks don't close the modal
+- The `color()` function maps `NodeData.tags[0]` → palette color via `tagToColor()` (golden angle + FNV-1a hash → HSL → hex)
+
 ## Development Notes
 
 - Node.js v22+ and npm v10.9.2+ are required

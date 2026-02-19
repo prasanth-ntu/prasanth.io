@@ -16,6 +16,18 @@ aliases:
 This glossary defines key terms in Artificial Intelligence, Machine Learning, Data Science, Software Engineering, Finance and Science.
 
 #  1
+
+## 10-K
+#finance
+
+A 10-K is a comprehensive annual report required by the U.S. Securities and Exchange Commission (SEC) for public companies, providing a detailed summary of financial performance, risks, and operations. Due 60–90 days after the fiscal year-end, it offers more in-depth, audited data than the annual report to shareholders
+
+Key details about 10-K filings include:
+- **Purpose**: It helps investors make informed decisions by providing a deep dive into a company's financial health, business structure, and potential risks.
+- **Contents**: The 10-K includes audited financial statements, a summary of operations, management's discussion and analysis (MD&A), legal proceedings, and executive compensation.
+- **Structure**: It is standardized, generally consisting of four main parts: business operations, financial data/MD&A, management information, and exhibits/schedules.
+- **Access**: 10-K reports are publicly available through the SEC's EDGAR database and on company websites
+
 ## 1q43-44 chromosome
 #biology #science 
 
@@ -33,6 +45,11 @@ The region 1q43-44 on chromosome 1 is associated with a syndrome characterized b
 
 ---
 # A
+
+## Accounting Standards Codification (ASC)
+#finance 
+
+- ASC 606: Revenue from Contracts with Customers [^5]
 
 ## Accuracy
 #machinelearning #datascience #DataAnalytics #metrics
@@ -344,6 +361,30 @@ Sources
 •	It means the device meets EU safety, health, and environmental protection standards.
 
 A CE mark allows you to legally market a device in Europe.
+
+## Confounding Variable
+#datascience #statistics
+
+A confounding variable (also called a lurking variable) is a hidden third factor that influences both the independent variable (the "cause") and the dependent variable (the "effect"), creating a misleading appearance of a direct relationship between them.
+
+For a variable to be a confounder, it must:
+1. Be correlated with the independent variable
+2. Independently influence the dependent variable
+
+**Example:** A study finds that ice cream sales and drowning deaths are correlated. The confounding variable is *temperature*:
+1. **Correlated with the independent variable** (ice cream sales): Hot weather → people buy more ice cream
+2. **Independently influences the dependent variable** (drowning deaths): Hot weather → more people swim → more drownings
+
+Because temperature drives *both* variables upward simultaneously, it creates the illusion that ice cream sales cause drownings — but neither causes the other.
+
+**Why it matters:** Ignoring confounders leads to wrong conclusions. This is the mechanism behind [[Glossary#Simpson's Paradox|Simpson's Paradox]], where group-level trends reverse when data is aggregated, because a confounder is distributed unevenly across groups.
+
+**How to address it:**
+- **Randomisation**: Randomly assign subjects to groups so confounders are evenly distributed (e.g., RCTs)
+- **Stratification**: Analyse data within subgroups where the confounder is held constant
+- **Statistical control**: Use regression or matching to adjust for the confounder
+
+See also: [[Glossary#Causal|Causal]], [[Glossary#Causality|Causality]], [[Causal Effect]], [[Correlation]], [[Glossary#Ecological Fallacy|Ecological Fallacy]]
 
 ## Conspiracy
 #linguistics 
@@ -738,6 +779,10 @@ F1 score = `2 * TP / (2 * TP + FP + FN) = 2 * PPV * TPR / (PPV + TPR)`
 
 ---
 # G
+
+## Generally Accepted Accounting Principles (GAAP)
+#finance 
+
 ## Genitourinary
 #medical
 
@@ -1500,6 +1545,14 @@ Example: He shuddered, and very quickly he was plain Mr. Baggins again.
 
 An activation function that maps any real number to a value between 0 and 1, commonly used in binary classification problems.
 
+
+# Simpson's Paradox
+#finance #statistics 
+
+Simpson's Paradox is a statistical phenomenon where a trend observed in multiple, separate groups of data disappears or reverses when the groups are combined (aggregated). This happens because of a lurking ([[Glossary#Confounding Variable|confounding]]) variable that affects the groups differently, leading to opposite conclusions based on whether data is viewed in isolation or in total.
+
+See also: [[Glossary#Confounding Variable|Confounding Variable]], [[Glossary#Ecological Fallacy|Ecological Fallacy]], [[Correlation]]
+
 ## Smurf
 #finance #banking 
 
@@ -1805,3 +1858,5 @@ For more details, refer
 [^3]: https://aws.amazon.com/what-is/reinforcement-learning-from-human-feedback
 
 [^4]: https://en.wikipedia.org/wiki/Confusion_matrix
+
+[^5]: https://www.sec.gov/Archives/edgar/data/1650664/000155837018004024/R8.htm#:~:text=Under%20ASC%20606%2C%20an%20entity,for%20those%20goods%20or%20services.
