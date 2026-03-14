@@ -665,6 +665,10 @@ The fees that a mutual fund charges investors for its costs and the profit it ma
 
 **Similar words**: out of grace, by favor, out of good will, out of kindness.
 
+## Exogenous
+
+Having an external cause or origin
+
 ---
 # F
 

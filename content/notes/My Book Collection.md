@@ -394,3 +394,7 @@ Here are the books I've read, currently reading, or plan to read:
   
   <!-- Add more books as needed -->
 </div>
+
+
+
+<!-- Additional resources (for my internal reference): https://grandoldbooks.com/ -->

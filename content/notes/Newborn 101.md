@@ -2,6 +2,8 @@
 tags:
   - health
   - science
+  - baby
+  - newborn
 aliases:
   - Knowledge/Tech-Science/Newborn 101
 ---
@@ -239,3 +241,55 @@ If you ever feel overwhelmed:
 - **Consistency > clock time**
 - Pick a time you can repeat without stress
 - Skip bath if baby is overtired or very cranky
+
+# Toys
+
+## Baby Toys 3-6 Months: The Only 7 Toys You Need
+
+Source: [YouTube](https://www.youtube.com/watch?v=6nafVN3g8Zo)
+
+> [!TIP] We don't need more toys, we need the right toys
+
+> [!TIP] Simple toys helps baby focus on the skill, not the distraction
+
+> [!TIP] Babies are obsessed with faces - especially their own
+
+> [!TIP] Best toy in the room is "YOU"!
+
+
+1. **The Play Gym** for reaching
+2. **The "Free" Links Toy** for transferring
+	- Plastic rings that usually come with play gym or other toys
+3. **Oball** for grasping
+	- Lightweight, squishy, full of holes, face saver on drops
+4. **Rattles** for cause-and-effect
+	- Light weight rattle with slam handles and avoid thick handles
+5. **Teether** for mouthing
+	- Lightweight, easy to clean toys
+	- Options: Teether: e.g., Sophie the Giraffe, Round rings, Drool
+6. **Mirrors** for tummy time
+7. **Board Book** for textures
+	- Not for reading, but for exposure. Textures for sensory feedback (e.g., rough and smooth), and Page turning
+
+## 6 Sensory Toys & Activities for Baby Sensory Skills | Occupational Therapist Recommendations
+
+> [!WARNING] Try avoiding electronic toys
+> e.g., bouncing bassinets, electronic swings, etc.
+
+Source: [YouTube](https://www.youtube.com/watch?v=uAxLWrBOTWI)
+
+- **High contrast visual toys/books/cards**
+	- For visual perception skills
+	- Use during tummy time, sitting with lap instead of watching a movie or fast moving motion toys
+- **Vibrating Teether or Oral motor vibrating probe or O ball**
+	- Provides stimulation to desensitise and push gag reflex back
+	- For oral, mouth and tongue exercises
+- **Therapy ball or Yoga ball**
+	- To complete different movement activity
+- **Cause and effect toys**
+- **Building Blocks with variety of textures**
+	- Great for tactile system
+- **Blanket**
+	- Blanket swing
+		- especially for colicky and cranky babies
+	- Vesticular stimulation

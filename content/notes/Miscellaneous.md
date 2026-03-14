@@ -6,6 +6,10 @@ aliases:
 
 
 - [Obsidian Site Inspirations](#Obsidian%20Site%20Inspirations)
+	- Access Obsidian from anywhere using a browser by self-hosting it
+		- https://share.google/aimode/F0n1wRgHA7a0v3jpR
+		- https://www.xda-developers.com/i-self-hosted-obsidian-so-i-can-access-it-in-web-browser-anywhere/#:~:text=Everything%20looks%20and%20works%20the,%2Dproxy%2Dmanager:latest'
+		- https://www.reddit.com/r/selfhosted/comments/1mwccl3/how_is_everyone_securing_self_hosted_obsidian/#:~:text=If%20Obsidian%20is%20installed%20on,punch%20ports%20in%20my%20firewall.
 - [Books to read](#Books%20to%20read)
 - [Blogs & Papers to read](#Blogs%20&%20Papers%20to%20read)
 - [Potential courses](#Potential%20courses)

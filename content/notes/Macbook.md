@@ -23,6 +23,9 @@ brew install ninja
 
 # Bun is an all-in-one toolkit for developing modern JavaScript/TypeScript applications.
 brew install oven-sh/bun/bun
+
+# Handle/Merge images
+brew install imagemagick
 ```
 
 # Other Libraries
