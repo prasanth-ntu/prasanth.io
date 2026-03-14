@@ -21,6 +21,8 @@ My dad was an insurance agent. Let me tell you what that meant in small-town Ind
 
 > [!WARNING] Insurance agents were - and in many places, still are - mistrusted, misunderstood, and disrespected.
 
+Think of Gandalf - a mystical figure, not easily understood or trusted, yet one of the guiding lights for all of Middle-earth, from the powerful to the humble hobbits. Insurance agents occupy a strangely similar space: misunderstood by most, yet indispensable to those who need them most.
+
 For the prior generation, especially lower and middle-class families struggling to make ends meet, insurance was a far-fetched concept. Monthly premiums felt like money thrown into a void. And the agents who came knocking? They were seen as leeches living off commission - scolded at doorsteps, avoided at markets, their calls blocked and ignored.
 
 My dad entered this profession with no background in finance or insurance. His English was limited. He had no network of wealthy clients. Yet he chose to serve the people around him - farmers, daily wage workers, small shopkeepers - folks whose premiums were modest and whose commissions would barely cover his travel costs.
@@ -61,7 +63,7 @@ These stories shaped how I think about insurance. They are real. They happened t
 
 **The breadwinner who didn't come home.** A family in our neighbourhood - two young kids, a homemaker wife, and a father who was the sole earner. He died in a road accident. No warning, no illness, just gone. My dad had sold him a life insurance policy years earlier. In the weeks that followed, while the family was still in shock, my dad handled every piece of paperwork - the death certificate, the claim forms, the bank coordination. The family received roughly ₹10 lakhs (about $12,000 at the time - this was 15 years ago). It wasn't a fortune, but it kept the family afloat while they rebuilt their lives. <span style="color:green">Without that policy, they would have had nothing.</span>
 
-**The man who was turned away.** A well-known working professional in our area wanted term insurance - a product that was virtually unheard of in our region two decades ago. During the mandatory medical examination, an unknown condition was discovered. The application was rejected. He passed away two years later. The family had no cover. Had he started when he was younger and healthier, things could have been very different.
+**The man who was turned away.** A well-known working professional in our area wanted term insurance - a product that was virtually unheard of in our region two decades ago. During the mandatory medical examination, an unknown condition was discovered. The application was rejected. He passed away two years later. The family had no cover.
 
 **The agent who didn't insure himself.** My own dad - the man who spent his career convincing others to protect their families - ironically had no term insurance for himself. He trusted his health, his discipline, his savings. He passed away in his late 50s. But here's the thing: he had his finances so perfectly organized that my family could take over with no hiccups. Every policy, every bank account, every investment, every transaction - documented, accessible, and current. <span style="color:green">He practiced what he preached about financial organization, even if he didn't buy the product he sold.</span>
 
