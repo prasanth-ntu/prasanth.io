@@ -183,3 +183,5 @@ Rules without `paths` frontmatter load unconditionally.
 | `/memory` | Open memory files in editor |
 | `/init` | Bootstrap a CLAUDE.md for your codebase |
 | "remember that..." | Ask Claude to save something to auto memory |
+# Learning Resources
+[[freeCodeCamp.org - Claude Code Essentials]]

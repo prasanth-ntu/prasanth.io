@@ -467,14 +467,6 @@ In [computing](https://en.wikipedia.org/wiki/Computing "Computing"), a **daemon*
 
 In the context of computing, the word is generally pronounced either as [/ˈdiːmən/](https://en.wikipedia.org/wiki/Help:IPA/English "Help:IPA/English") [_DEE-mən_](https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key "Help:Pronunciation respelling key") or [/ˈdeɪmən/](https://en.wikipedia.org/wiki/Help:IPA/English "Help:IPA/English") [_DAY-mən_](https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key "Help:Pronunciation respelling key").
 
-## Docker
-
-A system that packages applications and their dependencies into **containers** for consistent execution across various machines.
-
-Docker benefits like in consistency, portability, and isolation.
-
-For more details, refer [[Docker]].
-
 ## De Novo Clearance (by FDA)
 #regulatory #medical
 
@@ -490,14 +482,6 @@ Once granted:
 > [!INFO] Paige Prostate Detect (PPD) has received de novo clearance (DEN200080) from the FDA in September 2021
 It became the first FDA-cleared AI software for detecting prostate cancer in digital slides.
 
-## Domain Name System (DNS)
-#techology #network
-DNS is the internet's phonebook, translating human-friendly website names (like `google.com`) into numerical IP addresses (like `142.250.186.46`) that computers use to find and connect to each other online. It allows users to type memorable domain names instead of long strings of numbers, making the internet navigable by mapping text to the correct server locations.
-
-**Key Functions**
-- **Translation (Resolution):** When you type a URL, DNS servers look up the domain name and return its corresponding IP address, directing your browser to the right server.
-- **Directory:** It manages the vast database of domain names and their associated IP addresses, ensuring every site has a unique numerical identifier.
-- **Hierarchical & Distributed:** Instead of one giant phonebook, DNS uses a network of servers worldwide, making lookups fast and efficient.
 ## Debt
 #finance
 
@@ -526,11 +510,6 @@ Indicate the exact position of (a border or boundary)
 
 **Simiilar words**: describe, depict
 
-## Direct Preference Optimization (DPO)
-#datascience #artificialintelligence #LLM #AGI 
-
-Direct preference optimization (DPO) is a new method that helps large, unsupervised language models better match human preferences using a simple classification approach.[^1]
-
 ## Diastolic
 
 Systolic and diastolic are two fundamental terms that describe the two main phases of a single heartbeat.
@@ -541,6 +520,11 @@ Think of the heart as a muscular pump. For every beat, it has to squeeze and the
 - **What it is:** Diastole is the part of the heartbeat when the heart muscle **relaxes**.
 - **What it does:** After squeezing, the heart chambers relax and expand to **refill** with blood, getting ready for the next contraction. This relaxation phase is just as important as the contraction because if the heart doesn't fill properly, it can't pump properly. It's also during diastole that the coronary arteries deliver oxygen-rich blood to the heart muscle itself.
 - **In a Blood Pressure Reading:** It represents the pressure in your arteries when the heart is at rest between beats.
+
+## Direct Preference Optimization (DPO)
+#datascience #artificialintelligence #LLM #AGI 
+
+Direct preference optimization (DPO) is a new method that helps large, unsupervised language models better match human preferences using a simple classification approach.[^1]
 
 ## Distant metastasis
 #medical
@@ -583,6 +567,30 @@ For example
 - Year 5: 15%, 
 - Year 6: 15% → Gradually declines.
 - Year 7: 0% → No more commissions.
+
+## Do Not Repeat (DRY)
+#softwareengineering #Coding 
+
+A software engineering principle - avoid duplicating _logic_.
+
+## Docker
+#techology #devops #mlops 
+
+A system that packages applications and their dependencies into **containers** for consistent execution across various machines.
+
+Docker benefits like in consistency, portability, and isolation.
+
+For more details, refer [[Docker]].
+
+## Domain Name System (DNS)
+#techology #network
+DNS is the internet's phonebook, translating human-friendly website names (like `google.com`) into numerical IP addresses (like `142.250.186.46`) that computers use to find and connect to each other online. It allows users to type memorable domain names instead of long strings of numbers, making the internet navigable by mapping text to the correct server locations.
+
+**Key Functions**
+- **Translation (Resolution):** When you type a URL, DNS servers look up the domain name and return its corresponding IP address, directing your browser to the right server.
+- **Directory:** It manages the vast database of domain names and their associated IP addresses, ensuring every site has a unique numerical identifier.
+- **Hierarchical & Distributed:** Instead of one giant phonebook, DNS uses a network of servers worldwide, making lookups fast and efficient.
+
 ## Dragon in a pinch
 #linguistics #idiom
 
@@ -882,6 +890,11 @@ So: Immunohistochemistry = using antibodies in chemistry to study tissues!
 
 For more details, refer https://www.biomol.com/resources/applications/immunohistochemistry/, https://oncodaily.com/oncolibrary/immunohistochemistry
 
+
+## Imperative
+
+Of vital importance or crucial
+
 ---
 ## Incidence
 #medical
@@ -901,6 +914,11 @@ To absorb (information) or take (food, drink, or another substance) into the bod
 **Example:** He spent his days ingesting the contents of the library.
 
 **Similar words:** absorb, consume, eat
+
+## Input/Output Operations Per Second (IOPs)
+#aws #cloud #machinelearning #mlops 
+
+In AWS context, it tells you how many individual read or write operations a storage device can handle every second.
 
 ## Interquartile Range (IQR)
 #Math #Statistics #DataAnalytics #datascience #machinelearning 
@@ -931,6 +949,76 @@ Hard to control or deal with.
 ## Investment horizon
 
 Time for which we want to invest our money. Also known as "**tenor**"
+
+---
+# J
+
+## JavaScript Object Notation (JSON)
+#machinelearning #dataengineering 
+
+A document-based data format that is both human and machine readable. ML models can learn from JSON because it has a flexible data structure. The data is compact, hierarchical, and easy to parse, which makes it suitable for many ML workloads.
+
+JSON is represented in objects and arrays.
+
+An **object** is data defined by key-value pairs and enclosed in braces {}. The data can be a string, number, Boolean, array, object, or null.
+
+An **array** is a collection of values enclosed in square brackets [] and can contain values that are separated by commas.
+
+## JavaScript Object Notation Lines (JSONL)
+#machinelearning #dataengineering 
+
+Also called newline-delimited JSON. It is a format for encoding JSON objects that are separated by new lines instead of being nested. Each JSON object is written on its own line, such as in the following example.
+
+```json
+{“customerID”: “12345678”. “name”: “Rosalez, Alejandro”, “age”: “32”, “email”: “alejandro_rosalez@example.com”, “last_support”: “1/12/22”, “subscription_active”: “false”}  
+{“customerID”: “87654321”. “name”: “Candella, Pat”, “age”: “22”, “email”: “pat_candella@example.com”, “last_support”: “3/26/24“,“subscription_active”: “true”}
+```
+
+JSONL improves efficiency because individual objects can be processed without loading a larger JSON array. This improved efficiency when parsing objects results in better handling of large datasets for ML workloads. Additionally, JSONL structure can map to columnar formats like Parquet, which provides the additional benefits of those file types.
+
+## JSON vs. JSONL
+
+In a standard JSON file, everything is wrapped in a single array or object. If you have 1 million records, you have to open the "envelope" and read the whole thing before you can see the first record.
+
+```json
+[
+  {"id": 1, "user": "Alice", "action": "login"},
+  {"id": 2, "user": "Bob", "action": "upload"},
+  {"id": 3, "user": "Charlie", "action": "logout"}
+]
+```
+
+In a JSONL file, there are no outer brackets or commas between objects. Each line is its own valid JSON object. You can read line #1 and immediately know what Alice did without ever looking at Bob or Charlie.
+
+```json
+{"id": 1, "user": "Alice", "action": "login"}
+{"id": 2, "user": "Bob", "action": "upload"}
+{"id": 3, "user": "Charlie", "action": "logout"}
+```
+
+**Why it matters in practice:**
+
+- Adding Data: To add a 4th user to the JSON example, you have to delete the closing `]`, add a comma, the new object, and a new `]`. With JSONL, you just append a new line to the end of the file.
+- Corruption: If a typo happens on line 2 of the JSON file, the entire file is "invalid" and won't parse. In JSONL, you can just skip the broken line and keep processing the rest.
+
+Yes, JSONL is the standard choice for streaming data because it is designed for incremental processing where each line can be handled independently as it arrives. [1, 2]
+
+In contrast, standard JSON is generally unsuitable for true streaming because it must be fully downloaded and parsed before any of the data can be used. [2, 3]
+
+**Why JSONL is better for streaming:**
+
+- Real-Time Processing: Since each line is a self-contained JSON object, a system can start processing the first record immediately while the rest of the file is still being transmitted or written.
+- Low Memory Footprint: You only need to keep one line in memory at a time. This allows you to stream terabytes of data even on machines with limited RAM.
+- Faster "Time to First Byte" (TTFB): In web applications (like AI chatbots or real-time dashboards), JSONL allows the server to send data as soon as the first piece is ready, significantly improving perceived speed for the user.
+- Fault Tolerance: If a network connection drops or a line becomes corrupted mid-stream, you don't lose the entire dataset; previously received lines remain valid and usable.
+- Simplified Appending: You can continuously pipe new data (like server logs or IoT sensor readings) into a JSONL file without ever needing to re-parse or rewrite the existing structure. [1
+
+**Common Streaming Use Cases**
+
+- Log Ingestion: Tools like [Logstash and Docker](https://streams.dbconvert.com/blog/json-lines-data-stream/) use JSONL to store and stream logs in real-time.
+- Data Pipelines: [Apache Spark and Kafka](https://superjson.ai/blog/2025-09-07-jsonl-vs-json-data-processing/) frequently use JSONL for efficient, distributed data movement.
+- Machine Learning: Large datasets are often streamed line-by-line during model training to avoid memory overflow. 
+
 
 ---
 # L
@@ -1137,6 +1225,17 @@ Doctors who specialize in the field of oncology are called oncologists. A doctor
 ## One-Hot Encoding (OHE)
 #artificialintelligence #machinelearning #datascience #LLM #NLP 
 
+## OpenTelemetry (OTel)
+#softwareengineering #devops #machinelearning 
+
+> [!SUMMARY] An open standard for application tracking. 
+
+An open-source, vendor-neutral standard for collecting observability data from your applications. It's maintained by the Cloud Native Computing Foundation (CNCF) — the same organization behind Kubernetes — and has become the industry standard for application instrumentation.
+
+## Optimized Row Columnar (ORC)
+#machinelearning #dataengineering
+ A columnar data format similar to Parquet. ORC is typically used in big data workloads, such as Apache Hive and Spark. With the columnar format, you can efficiently compress data and improve performance. These performance benefits make ORC a widely chosen data format for ML workloads.
+
 ## Out of Vocabulary (OOV)
 #artificialintelligence #machinelearning #datascience #LLM #NLP 
 
@@ -1239,6 +1338,15 @@ Also known as Positive Predictive Value (PPV)
 % of predicted positive that were correct
 
 Precision = TP/(TP+FP) = 1 - FDR
+
+## Protobuf
+#Programming #softwareengineering #machinelearning 
+
+Protobuf serializes data into an efficient binary format that is both **smaller in size** and **faster to read/write** compared to text-based formats like CSV.
+
+It's serialization, not compression - but the serialization itself is so efficient in how it represents data in binary that you end up with significantly smaller file sizes compared to text formats like CSV. And on top of the space savings, you also get the speed benefit of faster reading and parsing since the data is already in a machine-friendly binary format.
+
+For more details, refer [[AWS Concepts#RecordIO-protobuf]]
 
 ## Portmanteau
 
@@ -1474,6 +1582,14 @@ Often used in natural language processing (NLP) and computer vision to pre-train
 
 **Example:** Transformer models like GPT, BERT, BART, T5, etc. have been trained as language models on large amounts of raw data in a self-supervised fashion. This type of model develops a statistical understanding of the language it has been trained on, but it's not very useful for specific practical tasks. Because of this, the general pretrained model then goes through a process called [[Transfer learning|transfer learning]].
 
+## Secular
+
+**Secular** means the separation of religion from the affairs of the state and government. A secular state does not officially promote or favor any particular religion and treats all religions equally. It ensures that government decisions, laws, and policies are based on civil and rational considerations rather than religious doctrine.
+
+e.g., India, Singapore
+
+For more details, refer [[Sovereignty, Secularism & Theocracy]]
+
 ## Secure Hash Algorithm (SHA)
 #algorithm #security 
 
@@ -1550,7 +1666,7 @@ Example: He shuddered, and very quickly he was plain Mr. Baggins again.
 An activation function that maps any real number to a value between 0 and 1, commonly used in binary classification problems.
 
 
-# Simpson's Paradox
+## Simpson's Paradox
 #finance #statistics 
 
 Simpson's Paradox is a statistical phenomenon where a trend observed in multiple, separate groups of data disappears or reverses when the groups are combined (aggregated). This happens because of a lurking ([[Glossary#Confounding Variable|confounding]]) variable that affects the groups differently, leading to opposite conclusions based on whether data is viewed in isolation or in total.
@@ -1566,6 +1682,26 @@ See also: [[Glossary#Confounding Variable|Confounding Variable]], [[Glossary#Eco
 #machinelearning #datascience #Statistics 
 
 Normalises the quantities so that (each row in the matrix) sum up to 1.
+
+## Software Development Kit (SDK)
+#softwareengineering #Programming 
+
+It's a collection of tools, libraries, documentation, and code samples that developers use to build applications for a specific platform or service.
+
+e.g., `boto3` is the official AWS SDK for Python. It lets you create, configure, and manage AWS services (S3, EC2, DynamoDB, Lambda, etc.) programmatically from Python code. It provides both a high-level resource API and a low-level client API for interacting with AWS services.
+
+## Sovereignty
+
+**Sovereignty** means the supreme authority or power of a state to govern itself independently, without interference from external forces. It refers to the full right and power of a governing body over itself, without any outside control.
+
+Key aspects of sovereignty include:
+
+- **Political independence** - the ability of a nation to make its own laws and govern its own affairs.
+- **Territorial integrity** - exclusive authority over a defined territory.
+- **Legal supremacy** - the state is the highest legal authority within its borders.
+- **Self-determination** - the people or government have the right to choose their own political system.
+
+In **Tamil**, sovereignty is called **இறையாண்மை** (pronounced *Iraiyāṇmai*).
 
 ## Special Purpose LLMs
 
@@ -1689,6 +1825,12 @@ Categorizing text into predefined labels.
 Generating the continuation of a given text.
 
 **Example:** [[GPT-3]] completes text based on context.
+
+## Theocracy
+
+**Theocracy** comes from the Greek words **"theos"** (God) and **"kratos"** (rule), so it literally means **"rule by God"** or **"government of God."** In practice, a theocracy is a form of government where **religious leaders or institutions hold political power**, and the laws of the state are derived from religious scriptures or doctrines. The clergy or religious authorities either directly govern or heavily influence governance, and religious law (like Sharia or Canon law) serves as the legal foundation.
+
+For more details, refer [[Sovereignty, Secularism & Theocracy]]
 
 ## Theology
 Related to the study of the nature of God and religious belief.

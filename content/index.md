@@ -24,9 +24,10 @@ Welcome to my digital garden — a collection of notes, learnings, and writings 
 - **Books**: [[My Book Collection]] · [[Situational Awareness]] · [[The Psychology of Money]] · [[Build a LLM from Scratch]] · [[Atomic Habits]]
 
 **Posts**
+- [[2026-03-14 What My Dad Taught Me About Insurance]]
 - [[2025-02-01 Reflections on Meeting with Magesh]]
 
 **Projects**
 - Media: [[YouTube Downloader]] · [[Music Player]] · [[Media Converter]]
 - AI: [[Personal Chatbot]]
-- Finance: [[Asset Class Comparison]]
+- Finance: [[Asset Class Comparison]] · [Family Insurance Dashboard](https://insurance.prasanth.io/Family%20Insurance%20Dashboard.html)

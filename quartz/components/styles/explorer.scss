@@ -229,6 +229,13 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
         transform: translateX(-100vw);
         visibility: hidden;
       }
+
+      // Override .folder-outer.open's visibility: visible which otherwise
+      // leaks through the parent's visibility: hidden (CSS spec allows
+      // children to override inherited visibility).
+      .folder-outer.open {
+        visibility: hidden;
+      }
     }
 
     &:not(.collapsed) {
