@@ -379,6 +379,36 @@ Here are the books I've read, currently reading, or plan to read:
   </div>
 </a>
 
+<a href="TBA: The Checklist Manifesto" class="book-card">
+  <div class="book-image"><img src="" alt="The Checklist Manifesto cover"></div>
+  <div class="book-content">
+    <div class="book-title">The Checklist Manifesto: How to Get Things Right</div>
+    <div class="book-author">by Atul Gawande</div>
+    <div class="book-summary"></div>
+    <div class="book-status status-to-read">#ToRead</div>
+  </div>
+</a>
+
+<a href="TBA: How to Fail at Almost Everything and Still Win Big" class="book-card">
+  <div class="book-image"><img src="" alt="How to Fail at Almost Everything and Still Win Big cover"></div>
+  <div class="book-content">
+    <div class="book-title">How to Fail at Almost Everything and Still Win Big</div>
+    <div class="book-author">by Scott Adams</div>
+    <div class="book-summary"></div>
+    <div class="book-status status-to-read">#ToRead</div>
+  </div>
+</a>
+
+<a href="TBA: Practicing Trustworthy Machine Learning" class="book-card">
+  <div class="book-image"><img src="" alt="Practicing Trustworthy Machine Learning cover"></div>
+  <div class="book-content">
+    <div class="book-title">Practicing Trustworthy Machine Learning</div>
+    <div class="book-author">by Yada Pruksachatkun, Matthew McAteer, Subhabrata Mukherjee</div>
+    <div class="book-summary"></div>
+    <div class="book-status status-to-read">#ToRead</div>
+  </div>
+</a>
+
   
 <!--
   <a href="Let's Talk Money.md" class="book-card">

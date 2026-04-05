@@ -26,6 +26,66 @@ Talks, podcasts, webinars, and meetups I've attended or listened to:
   </div>
 </a>
 
+<a href="From Skeptic to True Believer - How OpenClaw Changed My Life - Claire Vo - Lenny's Podcast.md" class="book-card">
+  <div class="book-image-placeholder">🎙️</div>
+  <div class="book-content">
+    <div class="book-title">From Skeptic to True Believer: How OpenClaw Changed My Life</div>
+    <div class="book-author">Claire Vo · Lenny's Podcast</div>
+    <div class="book-summary">Claire Vo shares her journey from OpenClaw skeptic to running nine specialized agents across her business and personal life. Packed with practical agent setup advice, plus some unexpectedly moving reflections on priorities and what truly matters.</div>
+    <div class="book-status status-completed">#Listened</div>
+  </div>
+</a>
+
+<a href="Tilly Lockey - Lost Both Hands at 15 Months, Leading the Bionic Generation - Gobinath Podcast.md" class="book-card">
+  <div class="book-image-placeholder">🎙️</div>
+  <div class="book-content">
+    <div class="book-title">Lost Both Hands at 15 Months, Leading the Bionic Generation</div>
+    <div class="book-author">Tilly Lockey · The Gobinath Podcast</div>
+    <div class="book-summary">Tilly Lockey lost both hands to meningococcal septicaemia at 15 months old. Now 20, she's a bionic technology pioneer and disability advocate collaborating with Open Bionics. An inspiring, touching, and humbling conversation about turning pain into purpose and negativity into positivity.</div>
+    <div class="book-status status-completed">#Listened</div>
+  </div>
+</a>
+
+<a href="TBA: Stanford MedAI - Me-LLaMA" class="book-card">
+  <div class="book-image-placeholder">🎙️</div>
+  <div class="book-content">
+    <div class="book-title">MedAI #130: Me-LLaMA — Medical Foundation LLMs for Text Analysis and Beyond</div>
+    <div class="book-author">Qianqian Xie · Stanford MedAI</div>
+    <div class="book-summary"></div>
+    <div class="book-status status-to-read">#ToListen</div>
+  </div>
+</a>
+
+<a href="TBA: Latent Space - The AI Architect — Bret Taylor" class="book-card">
+  <div class="book-image-placeholder">🎙️</div>
+  <div class="book-content">
+    <div class="book-title">The AI Architect — Bret Taylor</div>
+    <div class="book-author">Latent Space Podcast</div>
+    <div class="book-summary"><i>Note: Recommended by Dharmesh Shah (Founder and CTO, HubSpot).</i></div>
+    <div class="book-status status-to-read">#ToListen</div>
+  </div>
+</a>
+
+<a href="TBA: Dwarkesh Podcast - Dario Amodei" class="book-card">
+  <div class="book-image-placeholder">🎙️</div>
+  <div class="book-content">
+    <div class="book-title">Dario Amodei (Anthropic CEO) — Scaling, Alignment, & AI Progress</div>
+    <div class="book-author">Dwarkesh Podcast</div>
+    <div class="book-summary"></div>
+    <div class="book-status status-to-read">#ToListen</div>
+  </div>
+</a>
+
+<a href="TBA: Dwarkesh Podcast - Will Scaling Work" class="book-card">
+  <div class="book-image-placeholder">🎙️</div>
+  <div class="book-content">
+    <div class="book-title">Will Scaling Work?</div>
+    <div class="book-author">Dwarkesh Podcast</div>
+    <div class="book-summary"></div>
+    <div class="book-status status-to-read">#ToListen</div>
+  </div>
+</a>
+
 </div>
 
 ## Conference Talks & Keynotes

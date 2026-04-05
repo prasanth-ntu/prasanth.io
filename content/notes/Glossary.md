@@ -5,6 +5,7 @@ tags:
   - deep-learning
   - finance
   - gpu
+  - health
   - machine-learning
   - science
   - software-engineering
@@ -52,11 +53,11 @@ The region 1q43-44 on chromosome 1 is associated with a syndrome characterized b
 - ASC 606: Revenue from Contracts with Customers [^5]
 
 ## Accuracy
-#machinelearning #datascience #DataAnalytics #metrics
+#machine-learning #data-science #data-analytics #metrics
 % of observations that are correctly predicted.
 
 ## Activation Functions
-#machinelearning #artificialintelligence
+#machine-learning #ai
 
 Functions that enable neural networks to learn non-linear relationships between features and the label.
 
@@ -74,7 +75,7 @@ It can occur in organs such as the lungs, colon, breast, prostate, or pancreas.
 **Example**: The biopsy revealed that the tumor was an **adenocarcinoma** of the colon. 
 
 ## American Standard Code for Information Interchange (ASCII)
-#Programming #softwareengineering #standards #datascience #machinelearning 
+#programming #software-engineering #standards #data-science #machine-learning 
 
 ASCII (American Standard Code for Information Interchange) is ==a 7-bit character encoding standard developed in the 1960s to represent 128 English characters, including control characters, digits, uppercase/lowercase letters, and punctuation==. It maps binary numbers (0–127) to specific symbols, with 95 printable characters, forming the basis for modern character sets like UTF-8. 
 
@@ -103,7 +104,7 @@ Intangible assets could include Patents, Copyrights, & IPs.
 Example: Imagine your business has purchased a patent for $10,000 which has a useful life of five years and no salvage value. The amortization = $\$10,000 / 5 = \$2,000$. This means the annual amortization expense is $2,000.
 
 ## Anagram
-#Programming #Coding 
+#programming #coding 
 
 An anagram is a word or phrase made by rearranging the letters of another word or phrase, using all the original letters exactly once to form a new, meaningful word or phrase, like "listen" becoming "silent," or "a gentleman" becoming "elegant man". It's a popular form of wordplay, used in puzzles, literature, and humor to create hidden meanings or witty connections. 
 
@@ -137,7 +138,7 @@ Synonyms / Related Terms:
 	•	Disease-fighting proteins
 	•	Immune proteins
 ## Architecture
-#machinelearning #artificialintelligence
+#machine-learning #ai
 
 The skeleton of the model — the definition of each layer and each operation that happens within the model.
 
@@ -154,7 +155,7 @@ The extra return the (active) fund manager can generate over the (passive) index
 (*Biology*) Tip or bottom point of the heart.
 
 ## Arxiv
-#techology #science #ResearchPaper #research #openaccess
+#technology #science #research-paper #research #open-access
 
 arXiv is **a curated research-sharing platform open to anyone**. It is s a pioneer in digital open access.
 
@@ -181,13 +182,13 @@ arXiv (pronounced as "[archive](https://en.wikipedia.org/wiki/Archive "Archive")
  ==ADHD (Attention-Deficit/Hyperactivity Disorder) is considered a form of neurodivergence==, falling under the neurodiversity umbrella alongside conditions like autism, dyslexia, and dyspraxia, as it involves natural variations in brain function and information processing that differ from the "neurotypical" norm.
 
 ## Augment
-#datascience #machinelearning #LLM 
+#data-science #machine-learning #llm 
 
 ---
 # B
 
 ## Bagging
-#machinelearning 
+#machine-learning 
 
 Short form: Bagging
 Long form: Bootstrap Aggregation, where
@@ -195,7 +196,7 @@ Long form: Bootstrap Aggregation, where
 - Aggregation = combining model predictions by averaging (regression) or majority voting (classification)
 
 ## base64
-#Programming #softwareengineering 
+#programming #software-engineering 
 
 
 ## Basic Healthcare Sum (BHS)
@@ -249,7 +250,7 @@ The prostate is located just below the bladder, and when prostate cancer:
 - Treating the underlying cancer (e.g. hormone therapy, radiation)
 
 ## BLEU
-#machinelearning #artificialintelligence #LLM #metrics 
+#machine-learning #ai #llm #metrics 
 
 Measures the quality of text translated, similar to [[Glossary#Precision|Precision]].
 
@@ -272,7 +273,7 @@ It gives:
 Paige.AI received this status in 2019, meaning the FDA saw its AI cancer diagnostic system as high-potential and innovative.
 
 ## Bootstrap
-#machinelearning 
+#machine-learning 
 
 In ML context, it means creating multiple training sets by resampling with replacement from original dataset.
 
@@ -280,7 +281,7 @@ In ML context, it means creating multiple training sets by resampling with repla
 # C
 
 ## Canonical
-#softwareengineering #Coding 
+#software-engineering #coding 
 
 Conforming to a rule, standard, or accepted principle, often referring to official, authoritative or standard form in literature, religion, science, or computing. 
 
@@ -314,7 +315,7 @@ There are various types of cardiomyopathy. The main types include dilated, hyper
 Source: https://www.mayoclinic.org/diseases-conditions/cardiomyopathy/symptoms-causes/syc-20370709
 
 ## Causal
-#datascience
+#data-science
 
 Relating to or acting as a cause.
 
@@ -323,7 +324,7 @@ Relating to or acting as a cause.
 **Pronunciation:** kaw·zl
 
 ## Causality
-#datascience
+#data-science
 
 The relationship between cause and effect.
 
@@ -337,7 +338,7 @@ The relationship between cause and effect.
 #singapore #aviation
 
 ## Common Vulnerabilities and Exposures (CVEs)
-#security #softwareengineering 
+#security #software-engineering 
 
 A standardized, industry-recognized dictionary of publicly known cybersecurity flaws in software, hardware, and firmware.
 
@@ -363,7 +364,7 @@ Sources
 A CE mark allows you to legally market a device in Europe.
 
 ## Confounding Variable
-#datascience #statistics
+#data-science #statistics
 
 A confounding variable (also called a lurking variable) is a hidden third factor that influences both the independent variable (the "cause") and the dependent variable (the "effect"), creating a misleading appearance of a direct relationship between them.
 
@@ -394,7 +395,7 @@ A secret plan by a group to do something unlawful or harmful.
 Similar words: plot, scheme, plan
 
 ## Container
-#techology #DevOps 
+#technology #devops 
 
 For more details, refer [[Docker]].
 
@@ -440,9 +441,9 @@ In anatomy, cortex refers to ==the outer layer of an organ or body part==. It's 
 
 Designed to measure the **average price changes** of a **fixed basket** of consumption goods and services commonly purchased by resident households over time. It is widely used as a measure of consumer price inflation.
 
-#Singapore CPI increased 2.4% in 2024. For more details, refer [SINGAPORE CONSUMER PRICE INDEX](https://www.singstat.gov.sg/modules/infographics/consumer-price-index) by Department of Statistics.
+#singapore CPI increased 2.4% in 2024. For more details, refer [SINGAPORE CONSUMER PRICE INDEX](https://www.singstat.gov.sg/modules/infographics/consumer-price-index) by Department of Statistics.
 
-#International CPI increased 5.7% in 2023. For more details, refer [IMF report](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?name_desc=false)
+#international CPI increased 5.7% in 2023. For more details, refer [IMF report](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?name_desc=false)
 
 
 ## Crony Capitalism
@@ -451,7 +452,7 @@ Designed to measure the **average price changes** of a **fixed basket** of consu
 Crony capitalism is a corrupt economic system where businesses gain success through close relationships with political leaders, not merit, securing unfair advantages like subsidies, tax breaks, and favorable contracts, distorting markets and increasing inequality. It's characterized by collusion between the business and political classes, leading to bailouts, regulatory favoritism, and corruption, ultimately stifling innovation, harming public trust, and favoring special interests over fair competition.
 
 ## curl
-#Programming #softwareengineering 
+#programming #software-engineering 
 
 **Command line tool and library** to make HTTP requests and fetch content (i.e., transfer data) from URLs.
 
@@ -461,7 +462,7 @@ For more details, refer the [official documentation](https://curl.se/docs/manpag
 # D
 
 ## Daemon (computing)
-#Programming #softwareengineering 
+#programming #software-engineering 
 
 In [computing](https://en.wikipedia.org/wiki/Computing "Computing"), a **daemon** is a [program](https://en.wikipedia.org/wiki/Computer_program "Computer program") that runs as a [background computer process](https://en.wikipedia.org/wiki/Background_process "Background process"), rather than being under the direct control of an interactive user.
 
@@ -522,7 +523,7 @@ Think of the heart as a muscular pump. For every beat, it has to squeeze and the
 - **In a Blood Pressure Reading:** It represents the pressure in your arteries when the heart is at rest between beats.
 
 ## Direct Preference Optimization (DPO)
-#datascience #artificialintelligence #LLM #AGI 
+#data-science #ai #llm #agi 
 
 Direct preference optimization (DPO) is a new method that helps large, unsupervised language models better match human preferences using a simple classification approach.[^1]
 
@@ -569,12 +570,12 @@ For example
 - Year 7: 0% → No more commissions.
 
 ## Do Not Repeat (DRY)
-#softwareengineering #Coding 
+#software-engineering #coding 
 
 A software engineering principle - avoid duplicating _logic_.
 
 ## Docker
-#techology #devops #mlops 
+#technology #devops #mlops 
 
 A system that packages applications and their dependencies into **containers** for consistent execution across various machines.
 
@@ -583,7 +584,7 @@ Docker benefits like in consistency, portability, and isolation.
 For more details, refer [[Docker]].
 
 ## Domain Name System (DNS)
-#techology #network
+#technology #network
 DNS is the internet's phonebook, translating human-friendly website names (like `google.com`) into numerical IP addresses (like `142.250.186.46`) that computers use to find and connect to each other online. It allows users to type memorable domain names instead of long strings of numbers, making the internet navigable by mapping text to the correct server locations.
 
 **Key Functions**
@@ -600,7 +601,7 @@ The phrase "as fierce as a dragon in a pinch" is an idiom, meaning ==someone can
 # E
 
 ## Ecological Fallacy
-#datascience
+#data-science
 
 Occurs when one draws conclusions about individuals based solely on group-level data.
 
@@ -621,7 +622,7 @@ A punctuation mark consisting of a series of three dots. An ellipsis can be used
 Similar words: emergy, come out, originate, arise, start
 
 ## Empirical
-#datascience
+#data-science
 
 Based on, concerned with, or verifiable by observation or experience rather than theory or pure logic.
 
@@ -630,7 +631,7 @@ Based on, concerned with, or verifiable by observation or experience rather than
 **Opposite words:** theoretical, non-empirical
 
 ## Ephemeral
-#datascience #linguistics  
+#data-science #linguistics  
 
 Lasting for a very short time.
 
@@ -653,7 +654,7 @@ Lasting for a very short time.
 An equity fund that gets the tax benefit.
 
 ## Espionage
-#techology #GAI #LLM #machinelearning #datascience 
+#technology #gen-ai #llm #machine-learning #data-science 
 
 The practice of spying or of using spies, typically by governments to obtain political and military information
 
@@ -681,7 +682,7 @@ Having an external cause or origin
 # F
 
 ## Facebook AI Similarity Search (FAISS)
-#LLM #Embeddings #AI #machinelearning #datascience 
+#llm #embeddings #ai #machine-learning #data-science 
 
 > [!TODO] To be added soon.
 
@@ -730,7 +731,7 @@ Debt, and Equity
 #finance
 
 ## Floating Point
-#softwareengineering #Coding #datascience #machinelearning #LLM #gpu 
+#software-engineering #coding #data-science #machine-learning #llm #gpu 
 
 A floating-point number is a way to represent real numbers in computers, similar to scientific notation in base 10, but using base 2 (binary). It is composed of three main parts:
 1. **Sign bit (1 bit)**: This single bit specifies the number's sign — 0 means positive, and 1 means negative.
@@ -763,7 +764,7 @@ This floating-point format makes it efficient to represent and compute on real n
 For more details, refer [[Data Types]]
 
 ## Floating Point Operations Per Second (FLOPS)
-#softwareengineering #Coding #datascience #LLM #gpu 
+#software-engineering #coding #data-science #llm #gpu 
 
 Unit of compute.
 
@@ -783,7 +784,7 @@ A sudden intense feeling of fear.
 #science #medical #disease 
 
 ## F1 score
-#machinelearning #datascience #metrics 
+#machine-learning #data-science #metrics 
 
 Score that is a function (harmonic mean) of precision and recall. 
 
@@ -812,11 +813,15 @@ What do they do?
 - Identifies **non-cancerous conditions** (like infections, inflammation, or benign tumors)
 - Works closely with **urologists** and **oncologists** to guide treatment decisions
 
+## Glassmorphism 
+#uiux #software-engineering 
+Glassmorphism is a UI design trend that features translucent interface components to create depth.
+
 ## Government Technology Agency (GovTech)
-#singapore #techology 
+#singapore #technology 
 
 ## GPT-Generated Unified Format (GGUF)
-#machinelearning #deeplearning #LLM 
+#machine-learning #deep-learning #llm 
 
 GGUF is a binary format designed for efficient loading and inference of large language models (LLMs) on various hardware, particularly CPUs and consumer GPUs, using tools like llama.cpp and Ollama. The "Unified" part reflects its goal to provide a standardized, extensible, and efficient format that unifies model weights, metadata, and other necessary components into one fast-loading binary format optimized for inference and deployment.
 
@@ -828,7 +833,7 @@ Key points about GGUF:
 - GGUF is tightly integrated with projects like llama.cpp and supported by tools in the broader open-source LLM ecosystem, such as Hugging Face Transformers.
 
 ## Group Relative Policy Optimization (GRPO)
-#LLM #datascience #AGI #artificialintelligence 
+#llm #data-science #agi #ai 
 
 A reinforcement learning algorithm designed to train large language models (LLMs) for complex tasks like solving math problems or writing code. Unlike older methods, GRPO is memory-efficient because it doesn't use a separate "value function" (a model that estimates future rewards). Instead, it generates multiple answers for each question, scores them with a reward model, and uses the average score as a reference to decide which answers are better. This makes it easier to train large models on limited hardware, which is surprising because it still performs well on tough tasks like reasoning.
 
@@ -847,8 +852,36 @@ Place in a home where a fire is or was traditionally kept for home heating and f
 Fireplace or floor of the fireplace. 
 
 ## High Bandwidth Memory (HBM)
-#gpu #LLM #machinelearning #artificialintelligence 
+#gpu #llm #machine-learning #ai 
 
+
+## Humidity
+#science #health
+
+The amount of water vapor present in the air. Measured as a percentage — **relative humidity** is the ratio of current moisture to the maximum the air can hold at that temperature.
+
+- **Ideal indoor humidity:** 40–50%
+- **High humidity (>60%):** promotes mold, mildew, and dust mites
+- **Low humidity (<30%):** causes dry skin, irritated airways, and static electricity
+
+**Humid** describes air that is full of water vapor. Humid does not mean hot, but high humidity makes hot weather feel much hotter because sweat cannot evaporate efficiently. Conversely, humid air in winter feels colder because damp air transfers heat away from the body faster.
+
+**Why does high humidity feel unbearable?**
+Your body's primary cooling mechanism is **sweat evaporation** — the phase change from liquid to gas absorbs heat from your skin. In high humidity, the air is already saturated with water vapor, leaving little room for sweat to evaporate. So sweat just sits on your skin, drips off without cooling you, and your body keeps producing more in a futile attempt to cool down. This is why 32°C in Singapore (~80–90% humidity) feels far worse than 32°C in a desert — in dry heat, sweat evaporates almost instantly and cools you efficiently.
+
+> [!TIP] High humidity doesn't stop you from sweating — it stops sweat from **evaporating**, which is the actual cooling mechanism.
+
+**Where does evaporation get its energy?**
+Evaporation requires energy (latent heat of vaporization). Since sweat is in direct contact with your skin, it pulls heat primarily from **your skin and the tissue underneath** — not the ambient air. This is exactly why sweating works as a cooling mechanism: your body deliberately puts liquid on its own surface so that evaporation draws heat *out of your body*.
+
+This also explains why:
+- **Wiping sweat off** with a towel doesn't cool you — the liquid is removed before it can evaporate from your skin, so no heat is drawn away
+- **A fan** feels cool without lowering air temperature — it moves air across your skin, speeding up evaporation
+- **A wet floor feels cool** underfoot — the same principle; evaporation pulls heat from whatever surface the liquid is on
+
+**Example**: Summertime in Singapore is almost unbearably humid, often exceeding 80% relative humidity.
+
+See also: [[Home 101#Mold]]
 
 ## Hypertrophic cardiomyopathy
 #biology #science #syndrome #disease
@@ -916,12 +949,12 @@ To absorb (information) or take (food, drink, or another substance) into the bod
 **Similar words:** absorb, consume, eat
 
 ## Input/Output Operations Per Second (IOPs)
-#aws #cloud #machinelearning #mlops 
+#aws #cloud #machine-learning #mlops 
 
 In AWS context, it tells you how many individual read or write operations a storage device can handle every second.
 
 ## Interquartile Range (IQR)
-#Math #Statistics #DataAnalytics #datascience #machinelearning 
+#math #statistics #data-analytics #data-science #machine-learning 
 
 In statistics, the Interquartile Range (IQR) ==measures the spread of the middle 50% of your data, calculated as the difference between the third quartile (Q3, 75th percentile) and the first quartile (Q1, 25th percentile)==: IQR = Q3 - Q1. It indicates the variability of the central part of a dataset, ignoring extreme outliers, and is visualized by the box in a box plot.
 
@@ -954,7 +987,7 @@ Time for which we want to invest our money. Also known as "**tenor**"
 # J
 
 ## JavaScript Object Notation (JSON)
-#machinelearning #dataengineering 
+#machine-learning #data-engineering 
 
 A document-based data format that is both human and machine readable. ML models can learn from JSON because it has a flexible data structure. The data is compact, hierarchical, and easy to parse, which makes it suitable for many ML workloads.
 
@@ -965,7 +998,7 @@ An **object** is data defined by key-value pairs and enclosed in braces {}. Th
 An **array** is a collection of values enclosed in square brackets [] and can contain values that are separated by commas.
 
 ## JavaScript Object Notation Lines (JSONL)
-#machinelearning #dataengineering 
+#machine-learning #data-engineering 
 
 Also called newline-delimited JSON. It is a format for encoding JSON objects that are separated by new lines instead of being nested. Each JSON object is written on its own line, such as in the following example.
 
@@ -1024,7 +1057,7 @@ In contrast, standard JSON is generally unsuitable for true streaming because it
 # L
 
 ## Large Language Models  Meta AI (Llama)
-#artificialintelligence #LLM #OpenSource #AGI 
+#ai #llm #open-source #agi 
 As per [wiki](https://en.wikipedia.org/wiki/Llama_(language_model))
 **Llama** (**Large Language Model Meta AI**) is a family of [large language models](https://en.wikipedia.org/wiki/Large_language_model "Large language model") (LLMs) released by [Meta AI](https://en.wikipedia.org/wiki/Meta_AI "Meta AI") starting in February 2023. The latest version is Llama 4, released in April 2025.
 
@@ -1040,6 +1073,7 @@ The main pumping chamber of the heart. It sends oxygen-rich blood to the rest of
 LV apex trabeculation ==refers to the presence of prominent, finger-like projections (trabeculae) in the apex (tip) of the left ventricle of the heart==. It can be a normal variant, especially in athletes, but excessive trabeculation, particularly when accompanied by a thin compacted myocardial layer, can indicate a condition called [[Glossary#Left Ventricle Non-Compaction (LVNC)|LVNC]].
 
 ## Left Ventricle Non-Compaction (LVNC)
+
 LVNC is a type of cardiomyopathy associated with potential complications like heart failure, arrhythmias, and thromboembolism.
 
 ## Lilliputian
@@ -1049,7 +1083,12 @@ A trivial or very small person or thing.
 **Example:** Lilliput is the name of a fictional island whose people, the Lilliputians, stand only about six inches high.
 
 ## Loofah or Luffa
+
 A natural, fibrous sponge from gourd in the cucumber family, used for exfoliating and cleaning.
+
+## Loupe
+
+A loupe is a small, specialized magnifying tool used for close-up, detailed inspection in fields like watchmaking, jewelry, dentistry, and photography. Unlike a standard magnifying glass, a loupe is designed to be held very close to the eye or clipped to glasses, typically offering higher magnification (to or more) with higher quality, corrected lenses.
 
 ## Low-Rank Adaptation (LoRA)
 - Instead of finetuning the weights of the actual model, we fine-tune the low rank matrices (a.k.a. adapters which consists of low-rank matrices)
@@ -1072,7 +1111,7 @@ The tendency for the satisfaction from each additional unit to decrease as consu
 
 
 ## Minimum Detectable Effect (MDE)
-#Statistics #datascience #DataAnalytics 
+#statistics #data-science #data-analytics 
 
 In [[AB Testing & Experimentation]] and statistical analysis, the **Minimum Detectable Effect (MDE)** and the **p-value** are ==distinct but related concepts used to determine if a change is meaningful and statistically significant==.
 
@@ -1083,7 +1122,7 @@ In [[AB Testing & Experimentation]] and statistical analysis, the **Minimum Dete
 
 
 ## Median Absolute Deviation (MAD)
-#Statistics #Math #datascience #machinelearning 
+#statistics #math #data-science #machine-learning 
 
 The Median Absolute Deviation (MAD) is ==a robust measure of statistical dispersion, indicating how spread out a dataset is==. It's calculated by first finding the median of the dataset, then determining the absolute difference between each data point and the median, and finally finding the median of those absolute differences. MAD is particularly useful when dealing with datasets that may contain outliers or have non-normal distributions, as it is less sensitive to extreme values than measures like [standard deviation](https://www.google.com/search?sca_esv=fd4a6f8cbbc02fb2&rlz=1C5GCCM_en&cs=1&q=standard+deviation&sa=X&ved=2ahUKEwjHuPeM7pWPAxUKa2wGHQiMFSAQxccNegQIKBAB&mstk=AUtExfBpafNhTptr5E28aps95bvxiOV_5x_D6awkC4FNHd6Hb_chqukcSDUVtC2A7kYg1hJ9H5EO1FJb152OxyYf1P1yAi1jFZZoNINA2n2OalJQ2_cK2Zg72coYXJOwGZxMrUHPXm05bKZH-Fr2eEBAy3x-kBgR7ifcXRy75UHfIAW7dWj9RCN8zp0HnLCXkoVNC2bE&csui=3).
 
@@ -1111,6 +1150,51 @@ SEBI defines:
 - Small-caps are 251 and below.
 
 ---
+## Mildew
+#health #science
+
+A type of surface-level fungus (and a subset of mold) that grows flat on moist surfaces. Mildew has a powdery or downy texture and is typically white, gray, yellow, or brown. It is considered **early-stage mold** (per FEMA) and causes mostly cosmetic damage.
+
+Mildew thrives at 62–93°F (17–34°C) in warm, humid environments. It has a sweeter, musty smell (like damp socks). Common locations: window sills, shower walls, and other flat damp surfaces.
+
+**Example**: The bathroom window sill had a thin layer of white mildew after weeks of poor ventilation.
+
+See also: [[Home 101#Mold vs Mildew]], [[Glossary#Mold]], [[Glossary#Humidity]]
+
+## Mold
+#health #science
+
+A fungus that grows from microscopic spores floating in the air. Unlike mildew (which stays on surfaces), mold has fuzzy, raised filaments that **burrow underneath surfaces**, causing structural damage by decomposing organic material. Mold can be black, white, gray, blue, green, brown, or yellow, and has a strong tangy smell (like rotting wood/paper).
+
+Mold thrives in warm, dark, moist environments and can grow on virtually any surface — bathrooms, mattresses, attic insulation, behind walls. It poses greater health risks than mildew, including respiratory allergies, asthma triggers, and (in the case of **black mold** / *Stachybotrys chartarum*) nervous system effects.
+
+**Common allergy-causing molds:** *Aspergillus*, *Penicillium*, *Cladosporium*, *Alternaria*, *Stachybotrys*
+
+**Example**: After the flooding, mold had spread behind the drywall, requiring professional remediation.
+
+See also: [[Home 101#Mold vs Mildew]], [[Glossary#Mildew]], [[Glossary#Humidity]]
+
+## Moth
+#health
+
+A mostly nocturnal insect related to butterflies, known for its attraction to light. In the home context, **clothes moths** (*Tineola bisselliella*) are the primary concern — their larvae feed on natural fibers like wool, silk, cashmere, cotton, and fur, causing holes in clothing and fabrics.
+
+**Signs of moth infestation:**
+- Small holes in wool/silk garments
+- Silky webbing or tiny tubes on fabrics
+- Small cream-colored larvae (caterpillars)
+- Adult moths (small, beige/gold, ~6–8mm) fluttering in wardrobes
+
+**Prevention:**
+- Store clean clothes (moths are attracted to sweat/body oils)
+- Use cedar blocks, lavender sachets, or mothballs
+- Vacuum wardrobes and drawers regularly
+- Keep humidity low (moths prefer humid environments)
+
+**Example**: She discovered small holes in her cashmere sweater caused by clothes moth larvae.
+
+See also: [[Home 101]]
+
 ## Microcephaly
 #biology #science #disease 
 
@@ -1167,7 +1251,7 @@ MECE in Practice
 
 ## National Stock Exchange (NSE)
 
-In context of #India
+In context of #india
 
 ## Net Asset Value (NAV)
 
@@ -1204,7 +1288,7 @@ Non-player characters (NPCs) refers to any character that is not directly contro
 AI-powered NPCs (non-player characters) are ==characters in video games that are controlled by artificial intelligence rather than by human players==. These AI-driven characters can interact with players in more dynamic and realistic ways than traditional NPCs, leading to more immersive and engaging gameplay experiences.
 
 ## Normalized Discounted Cumulative Gain (NDCG or nDCG)
-#informationretrieval #rag #llm 
+#information-retrieval #rag #llm 
 
 Resources
 - https://en.wikipedia.org/wiki/Discounted_cumulative_gain
@@ -1223,21 +1307,21 @@ Doctors who specialize in the field of oncology are called oncologists. A doctor
 **Example**: She decided to specialize in oncology to help patients fighting cancer.
 
 ## One-Hot Encoding (OHE)
-#artificialintelligence #machinelearning #datascience #LLM #NLP 
+#ai #machine-learning #data-science #llm #nlp 
 
 ## OpenTelemetry (OTel)
-#softwareengineering #devops #machinelearning 
+#software-engineering #devops #machine-learning 
 
 > [!SUMMARY] An open standard for application tracking. 
 
 An open-source, vendor-neutral standard for collecting observability data from your applications. It's maintained by the Cloud Native Computing Foundation (CNCF) — the same organization behind Kubernetes — and has become the industry standard for application instrumentation.
 
 ## Optimized Row Columnar (ORC)
-#machinelearning #dataengineering
+#machine-learning #data-engineering
  A columnar data format similar to Parquet. ORC is typically used in big data workloads, such as Apache Hive and Spark. With the columnar format, you can efficiently compress data and improve performance. These performance benefits make ORC a widely chosen data format for ML workloads.
 
 ## Out of Vocabulary (OOV)
-#artificialintelligence #machinelearning #datascience #LLM #NLP 
+#ai #machine-learning #data-science #llm #nlp 
 
 ---
 # P
@@ -1291,13 +1375,13 @@ A doctor who studies disease by analyzing samples such as:
 This is a clinical term for good blood circulation. **Perfusion** is the process of the cardiovascular system (the heart and blood vessels) delivering oxygen-rich blood to all the tissues and organs of the body.
 
 ## Perplexity
-#artificialintelligence #machinelearning #LLM #metrics 
+#ai #machine-learning #llm #metrics 
 
 Quantifies how 'surprised' the model is to see some words together.
 
 
 ## PIP
-#Python #softwareengineering #OpenSource 
+#python #software-engineering #open-source 
 
 In Python, **PIP** is the ==standard **package manager** used to install, manage, and uninstall third-party software packages and libraries that are not part of the Python standard library==. The name is a recursive acronym for "**Pip Installs Packages**".
 
@@ -1331,7 +1415,7 @@ https://www.channelnewsasia.com/singapore/ong-ye-kung-workers-party-ge2025-racia
 A preliminary or preparatory statement; an introduction.
 
 ## Precision 
-#machinelearning #datascience #metrics 
+#machine-learning #data-science #metrics 
 
 Also known as Positive Predictive Value (PPV)
 
@@ -1340,7 +1424,7 @@ Also known as Positive Predictive Value (PPV)
 Precision = TP/(TP+FP) = 1 - FDR
 
 ## Protobuf
-#Programming #softwareengineering #machinelearning 
+#programming #software-engineering #machine-learning 
 
 Protobuf serializes data into an efficient binary format that is both **smaller in size** and **faster to read/write** compared to text-based formats like CSV.
 
@@ -1353,7 +1437,7 @@ For more details, refer [[AWS Concepts#RecordIO-protobuf]]
 A word blending the sounds and combining the meanings of two others, for example **motel** (*mo*tor ho*tel*) or **brunch** (*br*eakfast + l*unch*).
 
 ## Price-earnings ratio (P/E ratio or P/E)
-#finance #Investment #Stocks 
+#finance #investment #stocks 
 
 
 ## Prompt Engineering
@@ -1378,7 +1462,7 @@ It’s a part of the **male reproductive system** and is often discussed in rela
 #finance 
 
 ## Proximal Proxy Optimization (PPO)
-#artificialintelligence #datascience #LLM #AGI 
+#ai #data-science #llm #agi 
 
 _Proximal policy optimization (PPO_) is a reinforcement learning (RL) algorithm for training an intelligent agent.[^2]
 ## [[Psuedo-Labels]]
@@ -1396,9 +1480,19 @@ In other words, the model automatically generates the labelled data.
 In NLP, when training a model like BERT, random words in a sentence are masked. The model is trained to predict these masked words using the context ([[MLM]]).
 - Input: "The cat is ___ the table."
 - Pseudo-label: "on."
+
+
+## Psychosis
+#medical #syndrome 
+
+> [!SUMMARY] A collection of symptoms that happen when a person has trouble telling the difference between what’s real and what’s not
+
+Psychosis is ==a syndrome characterized by a loss of contact with reality, involving symptoms like hallucinations (seeing/hearing things not there) and delusions (false, firm beliefs)==. It affects thoughts, emotions, and behavior, often leading to severe functional impairment, but recovery is possible with early treatment, including medication and therapy.
+
+For more details, refer to [Cleveland Clinic article](https://my.clevelandclinic.org/health/symptoms/23012-psychosis).
 ## Public Provident Fund (PPF)
 
-In context of #India 
+In context of #india 
 
 ## Pydantic
 
@@ -1415,7 +1509,7 @@ Pylance is a powerful and popular extension for Visual Studio Code that provides
 At its core, Pylance is powered by Microsoft's open-source static type checking tool, Pyright. This foundation allows Pylance to deliver a superior IntelliSense experience, offering intelligent autocompletions, detailed function signature help, and rapid code navigation. By leveraging type information, Pylance can provide more accurate and context-aware suggestions, helping developers write cleaner and more error-free code
 
 ## Python Package Index (pyPI)
-#Python  #Programming #softwareengineering #OpenSource 
+#python  #programming #software-engineering #open-source 
 
 A repository of software for the Python programming language.
 PyPI help you find and install software developed and shared by the python community.
@@ -1434,14 +1528,14 @@ PyPI help you find and install software developed and shared by the python commu
 # R
 
 ## Random Access Memory (RAM)
-#machinelearning #datascience #softwareengineering #LLM #gpu 
+#machine-learning #data-science #software-engineering #llm #gpu 
 
 General-purpose memory accessed by the CPU. 
 
 In LLM workflows, RAM is used primarily for loading the model from disk and managing tasks outside the GPU, such as operating system functions, data preprocessing, and orchestration by the CPU. While RAM is important for overall system operation and initial model loading, it is much slower than VRAM for neural network computations. Its size often needs to be at least equal to the uncompressed model size, but it doesn't directly speed up the heavy computations.
 
 ## Remote Code Execution (RCE)
-#security #softwareengineering 
+#security #software-engineering 
 
 A remote code execution (RCE) attack is one where an attacker can run malicious code on an organization's computers or network. The ability to execute attacker-controlled code can be used for various purposes, including deploying additional malware or stealing sensitive data.
 
@@ -1450,7 +1544,7 @@ A remote code execution (RCE) attack is one where an attacker can run malicious 
 A popular activation function that outputs the input directly if it's positive, otherwise it outputs zero.
 
 ## Real Assets
-#finance #Investment 
+#finance #investment 
 Gold and Real estate
 
 ## Recall
@@ -1484,11 +1578,11 @@ A type of neural network designed for sequential data processing, where connecti
 #finance 
 
 ## Reinforcement Learning from Human Feedback (RLHF)
-#artificialintelligence #datascience #LLM #AGI 
+#ai #data-science #llm #agi 
 A machine learning technique that aligns artificial intelligence (AI) models, especially Large Language Models (LLMs), with human preferences and values.[^3]
 
 ## Reinforcement Learning with Verifiable Rewards (RLVR)
-#artificialintelligence #datascience #LLM #AGI 
+#ai #data-science #llm #agi 
 
 ## REINFORCE Leave One-Out (RLOO)
 Resources: https://huggingface.co/blog/putting_rl_back_in_rlhf_with_rloo
@@ -1536,7 +1630,7 @@ A software architectural style that defines a set of constraints for creating we
 RoBERTa (Robustly Optimized BERT Pretraining Approach) is an optimized version of BERT that removes the Next Sentence Prediction task and uses different training configurations.
 
 ## ROUGE
-#metrics #machinelearning #artificialintelligence #LLM #metrics 
+#metrics #machine-learning #ai #llm #metrics 
 
 Measures the quality of text generated, similar to [[Glossary#Recall|Recall]].
 
@@ -1619,7 +1713,7 @@ SHA-256 is widely used because it balances **security** (no known collisions) an
 
 ## Securities and Exchange Board (SEBI)
 
-In context of #India
+In context of #india
 
 Sets up the rules of the game around the equity market. Stock exchanges have to abide by them. The firms that publicly list must abide by SEBI and stock exchange rules.
 
@@ -1637,7 +1731,7 @@ Detecting the emotional tone of text. Identifying and classifying entities like 
 
 ## Sensex
 
-In context of #India
+In context of #india
 
 A stock market index. It's made up of 30 most representative companies that are listed in BSE. The index has an initial value of 100, as on 1 Apr 1979.
 
@@ -1679,12 +1773,12 @@ See also: [[Glossary#Confounding Variable|Confounding Variable]], [[Glossary#Eco
 
 
 ## Softmax
-#machinelearning #datascience #Statistics 
+#machine-learning #data-science #statistics 
 
 Normalises the quantities so that (each row in the matrix) sum up to 1.
 
 ## Software Development Kit (SDK)
-#softwareengineering #Programming 
+#software-engineering #programming 
 
 It's a collection of tools, libraries, documentation, and code samples that developers use to build applications for a specific platform or service.
 
@@ -1745,7 +1839,7 @@ Briefly and clearly expressed.
 
 
 ## Standard Deviation
-#Math #DataAnalytics #Statistics 
+#math #data-analytics #statistics 
 
 Standard Deviation ($\sigma$) is just the square root of [[Glossary#Variance]]
 
@@ -1754,7 +1848,7 @@ For more details, refer
 - [[Standard Deviation]]
 
 ## Stochastic
-#Statistics #datascience #machinelearning #AI 
+#statistics #data-science #machine-learning #ai 
 
 
 ## Stock Exchange
@@ -1774,7 +1868,7 @@ Example: Gandalf strode away.
 A popular American ice cream with scoops of ice cream topped with sweet sauce or syrup (like fudge or caramel), whipped cream, nuts, sprinkles, and a cherry
 
 ## Swagger
-#Programming #softwareengineering 
+#programming #software-engineering 
 API documentation. Aids in testing and debugging.
 
 Swagger is ==a popular set of open-source tools and a specification for designing, building, documenting, and consuming RESTful APIs==, allowing developers to describe APIs in a machine-readable format (JSON/YAML) for interactive docs, code generation, and testing, making API management much smoother and collaborative. Think of it as a blueprint for your API, enabling tools to automatically create beautiful documentation ([Swagger UI](https://www.google.com/search?q=Swagger+UI&oq=what+is+swa&gs_lcrp=EgZjaHJvbWUqBwgCEAAYgAQyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDIyNzZqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8&ved=2ahUKEwiP3siFutuRAxWoT2wGHaxaBj8QgK4QegYIAQgAEAY)), client libraries, and tests.
@@ -1893,12 +1987,12 @@ A UKCA mark ensures the product meets UK-specific safety and regulatory requirem
 
 
 ## Unicode
-#Programming #softwareengineering #machinelearning #datascience 
+#programming #software-engineering #machine-learning #data-science 
 
 An international character encoding standard for use with different languages and scripts, by which each letter, digit, or symbol is assigned a unique numeric value (e.g., `U+0041` for 'A') that applies across different platforms and programs. It enables consistent text representation, storage, and exchange across different platforms, operating systems, and applications. It serves as a superior alternative to older, limited standards like ASCII.
 
 ## Unicode Tranformation Format (UTF)
-#Programming #softwareengineering #machinelearning #datascience 
+#programming #software-engineering #machine-learning #data-science 
 
 UTF (Unicode Transformation Format) is a character encoding standard that allows computers to represent text in any language across platforms using Unicode code points. UTF-8 is the dominant standard for the internet (99.9% of web pages), using 1 to 4 bytes for encoding, and is fully backward compatible with ASCII. 
 
@@ -1925,6 +2019,12 @@ set or turn (something) on its end or upside down.
 
 Example:  The security inspector *upended* my bag and dumped everything out.
 
+## Upheaval
+
+ A violent or sudden change or disruption to something
+
+Example: major upheavals in the finance market
+
 ---
 # V
 
@@ -1939,7 +2039,7 @@ A problem in training deep neural networks where gradients become exponentially 
 For more details, refer to [Google Developers ML Course](https://developers.google.com/machine-learning/crash-course/neural-networks/backpropagation#vanishing_gradients).
 
 ## Variance
-#Math #datascience #DataAnalytics #Statistics 
+#math #data-science #data-analytics #statistics 
 
 Variance ($\sigma^2$) is computed as the average of the squared differences from the Mean.
 
@@ -1956,14 +2056,14 @@ For more details, refer
 
 
 ## Video RAM (VRAM)
-#artificialintelligence #machinelearning #LLM #AI #datascience #gpu 
+#ai #machine-learning #llm #ai #data-science #gpu 
 
 Dedicated memory on GPUs, which are the main processors used to train and run LLMs efficiently. VRAM is much faster and has higher bandwidth than system RAM. It stores **model weights**, **intermediate computations (like gradients during training)**, and **key-value caches (context for inference)** during operation. Having enough VRAM is critical because if the model size or context window exceeds VRAM capacity, performance drops drastically, or the process fails to run.
 
 For example, refer to [[How to Fine-tune LLMs with Unsloth - Complete Guide by Pookie#Which open-source models? Which variants?]] on various model parameters and their correponding VRAM requirements.
 
 ## Virtual Large Language Model (vLLM)
-#machinelearning #datascience #LLM #OpenSource 
+#machine-learning #data-science #llm #open-source 
 
 vLLM is a fast and easy-to-use library for open-source LLM inference and serving.
 
@@ -1977,7 +2077,7 @@ For more details, refer
 # W
 
 ## Willingness to Pay (WTP)
-#Startup 
+#startups 
 
 ## Wintering
 

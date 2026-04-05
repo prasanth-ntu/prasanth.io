@@ -10,9 +10,11 @@ description: Claude Code - Amazing agentic coding tool from Anthropic
 aliases:
   - Knowledge/Tools/Claude Code
 ---
-Resources
+## Resources
 - https://www.anthropic.com/claude-code#get-started
 - https://docs.anthropic.com/en/docs/claude-code/overview
+- Pricing: https://platform.claude.com/docs/en/about-claude/pricing
+- Models Overview: https://platform.claude.com/docs/en/about-claude/models/overview
 
 # Keyboard Shortcuts
 - `Cmd + Esc`: Opens Claude Code Session inside our Code Editor.

@@ -93,6 +93,16 @@ Here are the courses I've completed, currently taking, or plan to take:
   </div>
 </a>
 
+<a href="TBA: Neural Networks Zero to Hero" class="book-card">
+  <div class="book-image-placeholder">🧠</div>
+  <div class="book-content">
+    <div class="book-title">Neural Networks: Zero to Hero</div>
+    <div class="book-author">Andrej Karpathy</div>
+    <div class="book-summary">A series of lectures building neural networks from scratch — covering backpropagation, language modelling, MLPs, CNNs, RNNs, transformers, and GPT. All the way from micrograd to nanoGPT.</div>
+    <div class="book-status status-to-read">#ToStart</div>
+  </div>
+</a>
+
 <a href="aws-certification-plan.md" class="book-card">
   <div class="book-image-placeholder">☁️</div>
   <div class="book-content">

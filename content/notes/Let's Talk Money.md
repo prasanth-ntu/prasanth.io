@@ -767,7 +767,7 @@ e.g., If Rs 1 lakh will grow to Rs 2 lakh in 15 yrs, our return per year is ~72/
 > [!INFO] What's an "expense ratio"?
 > The fees that a mutual fund charges investors for its costs and the profit it makes.
 
-In the context of #India 
+In the context of #india 
 
 | Fund type                                | Expense ratio per Rs 100 invested |
 | ---------------------------------------- | --------------------------------- |

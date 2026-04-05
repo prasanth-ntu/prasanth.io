@@ -18,7 +18,7 @@
     "format": "npx prettier . --write",
     "test": "tsx --test",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
-    "prebuild": "python scripts/blog_stats.py --output 'content/notes/Page Tree.md' && bash scripts/sync-slideshow.sh && bash scripts/sync-html.sh",
+    "prebuild": "python scripts/lint_tags.py && python scripts/blog_stats.py --output 'content/notes/Page Tree.md' && bash scripts/sync-slideshow.sh && bash scripts/sync-html.sh",
     "build": "npx quartz build",
     "serve": "npx quartz build --serve",
     "sync": "npx quartz sync",

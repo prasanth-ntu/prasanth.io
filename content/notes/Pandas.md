@@ -4,7 +4,6 @@ tags:
   - python
   - software-engineering
   - statistics
-  - tool
 aliases:
   - Knowledge/Tech-Science/Pandas
 ---

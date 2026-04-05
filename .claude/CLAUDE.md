@@ -50,10 +50,10 @@ Quartz is a static site generator for digital gardens, built with a plugin-based
   - `/util`: Utilities
 
 - `/content`: Where user content lives (Markdown files)
-  - `notes/`: All knowledge — tech, tools, books, courses, papers, talks, finance, health (~270 files, flat)
-  - `posts/`: Original writings (~1+ files, flat)
-  - `projects/`: Things built (~9 files, flat)
-  - Root files: `index.md` (content hub), `about.md` (CV), `Featured links.md` (navigation)
+  - `notes/`: All knowledge — tech, tools, books, courses, papers, talks, finance, health (~285 files, flat). Content type is distinguished by tags, not folders.
+  - `posts/`: Original writings (date-prefixed filenames, flat)
+  - `projects/`: Things built (~8 files, flat)
+  - Root files: `index.md` (content hub), `about.md` (CV)
 - `/scripts`: Custom build/utility scripts (not part of upstream Quartz)
   - `sync-slideshow.sh`: Prebuild script for Paige AI slideshow (source: `content/notes/paige-ai-report/`)
   - `sync-html.sh`: Prebuild script for architecture HTML pages (source: `content/notes/*.html`)

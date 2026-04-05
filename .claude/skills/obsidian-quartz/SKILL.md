@@ -3,9 +3,10 @@ name: obsidian-quartz
 description: >-
   Manage the Obsidian vault published via Quartz at prasanth.io.
   Creates, edits, and organizes Markdown notes following vault conventions
-  for file naming, frontmatter, wikilinks, callouts, and directory placement.
+  for file naming, frontmatter, tags, wikilinks, callouts, and directory placement.
   Use when creating notes, editing vault content, adding glossary entries,
-  updating index.md pages, cross-linking notes, or working with the Quartz
+  updating index.md pages, cross-linking notes, advising on naming conventions
+  or tag usage, querying vault structure, or working with the Quartz
   build and deploy pipeline.
 ---
 
@@ -182,6 +183,57 @@ date: YYYY-MM-DD
 # Section Heading
 Content...
 ```
+
+### Talk/event note (in `notes/`)
+
+```markdown
+---
+tags:
+  - talk
+  - topic-tag
+  - organiser-tag
+date: YYYY-MM-DD
+event: Full Event Name
+organiser: Organiser Name
+location: Venue — Address
+speakers:
+  - Speaker One
+  - Speaker Two
+draft: true
+aliases:
+  - Talks/YYYY-MM-DD Organiser - Event Name
+---
+
+[Event link](URL) | [Photos](URL)
+
+**Agenda**
+
+- **HH:MM AM – HH:MM AM** _Talk Title_ — Speaker Name
+
+---
+# Talk Title — Speaker Name
+
+> Synopsis as blockquote
+
+- Bullet-point notes
+
+---
+# Key Takeaways
+
+-
+
+---
+# Action Items
+
+- [ ]
+
+---
+# Resources / Links
+
+-
+```
+
+Filename: `YYYY-MM-DD Organiser - Event Name.md` (date prefix for chronological sorting, consistent with posts convention).
 
 ### Original writing (in `posts/`)
 

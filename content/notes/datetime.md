@@ -4,7 +4,6 @@ tags:
   - documentation
   - python
   - software-engineering
-  - tool
 aliases:
   - Knowledge/Tech-Science/datetime
 ---
